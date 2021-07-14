@@ -7,6 +7,7 @@ import NBanner from "../src/components/Banner";
 import NTopPost from "../src/components/TopPost";
 import NCardPost from "../src/components/CardPost";
 import NCardPostTitle from "../src/components/CardPostTitle";
+import NEditor from "../src/components/Editor";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -143,6 +144,13 @@ const Atoms = () => {
             <NCardPostTitle paddingTop="54.21%" noImage />
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Editor" hasBorder></NTitle>
+        <Box mb={2} />
+        <NEditor />
+        <NEditor />
+        <NEditor />
       </Box>
     </Box>
   );

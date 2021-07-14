@@ -12,9 +12,9 @@ export default createMuiTheme({
     secondary: {
       main: Colors.secondary,
     },
-    // background: {
-    //   default: Colors.grey[100],
-    // },
+    background: {
+      default: Colors.white,
+    },
     // error: {
     //   main: "#F7F735",
     // },
@@ -61,9 +61,13 @@ export default createMuiTheme({
       fontWeight: 400,
       lineHeight: "20px",
     },
-    // caption: {
-    //   fontSize: 12,
-    // },
+    caption: {
+      fontFamily: "Roboto Condensed",
+      fontWeight: 400,
+      fontSize: 12,
+      lineHeight: "10px",
+      color: Colors.text,
+    },
     // overline: {
     //   fontSize: 10,
     //   textTransform: "initial",

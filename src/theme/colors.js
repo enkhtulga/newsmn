@@ -13,6 +13,7 @@ export const Colors = {
   title: "#1a1a1a",
   sphere: "#b3b3b3",
   line: "#EFEFEF",
+  line_2: "#E9E9E9",
   hover_1: "#F51428",
   hover_2: "#001E64",
   button: "#F51428",
@@ -20,4 +21,6 @@ export const Colors = {
   aux_orange: "#ff7c24",
   aux_green: "#33cc66",
   number_blue: "#16357C",
+  black: "#000000",
+  white: "#ffffff",
 };

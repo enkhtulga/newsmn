@@ -1,10 +1,12 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import NTitle from "../src/components/Title";
 import NHitNewsItem from "../src/components/HitNewsItem";
 import NAvatar from "../src/components/Avatar";
 import NBanner from "../src/components/Banner";
 import NTopPost from "../src/components/TopPost";
+import NCardPost from "../src/components/CardPost";
+import NCardPostTitle from "../src/components/CardPostTitle";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -75,6 +77,72 @@ const Atoms = () => {
       </Box>
       <Box marginTop={2} width={960} maxWidth="100%">
         <NTopPost hasPhotoBy />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Post" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPost />
+          </Grid>
+        </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Post Title" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" />
+          </Grid>
+        </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Post Title with No Image" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" noImage />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" noImage />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" noImage />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle paddingTop="54.21%" noImage />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

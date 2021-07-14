@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../theme/colors";
 
 const NCardMedia = ({ children, ...rest }) => {
-  const classes = useStyles();
+  const classes = useStyles(rest);
 
   return (
     <Box className={classes.mediaWrap}>
@@ -17,7 +17,7 @@ const NCardMedia = ({ children, ...rest }) => {
 const useStyles = makeStyles(() => ({
   mediaWrap: {
     position: "relative",
-    paddingTop: "56.25%",
+    paddingTop: (rest) => (rest.paddingTop ? rest.paddingTop : "56.25%"),
     overflow: "hidden",
     borderRadius: 5,
   },

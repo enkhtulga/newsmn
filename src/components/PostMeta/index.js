@@ -7,11 +7,11 @@ import {
   VideocamOutlined as IconVideocamOutlined,
 } from "@material-ui/icons";
 
-const NPostMeta = ({ videoIcon }) => {
-  const classes = useStyles();
+const NPostMeta = ({ videoIcon, className, hasBorder }) => {
+  const classes = useStyles(hasBorder);
 
   return (
-    <Box className={classes.metaWrap}>
+    <Box className={`${className} ${classes.metaWrap}`}>
       <Box className={classes.dateWrap}>
         <Typography variant="caption" className={classes.date}>
           4 цагийн өмнө
@@ -28,6 +28,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    borderBottom: (hasBorder) =>
+      hasBorder == true ? "1px solid transparent" : "none",
+    borderBottomColor: (hasBorder) =>
+      hasBorder == true ? Colors.line : "transparent",
+    paddingBottom: (hasBorder) => (hasBorder == true ? theme.spacing(1.5) : 0),
   },
   dateWrap: {
     display: "flex",

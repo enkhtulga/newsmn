@@ -4,6 +4,7 @@ import NTitle from "../src/components/Title";
 import NHitNewsItem from "../src/components/HitNewsItem";
 import NAvatar from "../src/components/Avatar";
 import NBanner from "../src/components/Banner";
+import NTopPost from "../src/components/TopPost";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -71,6 +72,9 @@ const Atoms = () => {
           height={380}
           link="https://recruitment.minii-suljee.mn/"
         />
+      </Box>
+      <Box marginTop={2} width={960} maxWidth="100%">
+        <NTopPost hasPhotoBy />
       </Box>
     </Box>
   );

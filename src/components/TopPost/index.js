@@ -5,10 +5,7 @@ import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
-import {
-  BookmarkBorder as IconBookmarkBorder,
-  VideocamOutlined as IconVideocamOutlined,
-} from "@material-ui/icons";
+import NPostMeta from "../PostMeta";
 
 const NTopPost = ({ hasPhotoBy }) => {
   const classes = useStyles();
@@ -20,7 +17,7 @@ const NTopPost = ({ hasPhotoBy }) => {
           <NCardMedia image={"/top_post.png"} />
           {hasPhotoBy && (
             <Typography variant="body2" className={classes.photoBy}>
-              Гэрэл зурагийг: З.Аранзал
+              Гэрэл зургийг: З.Аранзал
             </Typography>
           )}
         </Box>
@@ -43,15 +40,7 @@ const NTopPost = ({ hasPhotoBy }) => {
             насны гурван хүн эмнэлэгт 6-16 хоног хэвтэн эмчлүүлж байгаад нэн
             хүнд хэлбэрээр нас барлаа.
           </Typography>
-          <Box className={classes.metaWrap}>
-            <Box className={classes.dateWrap}>
-              <Typography variant="caption" className={classes.date}>
-                4 цагийн өмнө
-              </Typography>
-              <IconVideocamOutlined fontSize="small" />
-            </Box>
-            <IconBookmarkBorder fontSize="small" />
-          </Box>
+          <NPostMeta videoIcon />
         </NCardContent>
       </NCard>
     </Box>
@@ -107,21 +96,6 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Spectral",
       fontSize: 48,
     },
-  },
-  date: {
-    color: Colors.secondary,
-    display: "block",
-    paddingRight: theme.spacing(1),
-  },
-  metaWrap: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  dateWrap: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
   },
 }));
 

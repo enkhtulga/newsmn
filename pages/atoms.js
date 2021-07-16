@@ -9,6 +9,7 @@ import NCardPost from "../src/components/CardPost";
 import NCardPostTitle from "../src/components/CardPostTitle";
 import NEditor from "../src/components/Editor";
 import NCardSlidePost from "../src/components/CardSlidePost";
+import NInfoPartnerPost from "../src/components/InfoPartnerPost";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -170,6 +171,14 @@ const Atoms = () => {
             <NCardSlidePost />
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Info Partner Post" hasBorder></NTitle>
+        <Box mb={2} />
+        <NInfoPartnerPost />
+        <NInfoPartnerPost />
+        <NInfoPartnerPost />
+        <NInfoPartnerPost />
       </Box>
     </Box>
   );

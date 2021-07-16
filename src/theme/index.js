@@ -74,6 +74,13 @@ export default createMuiTheme({
     // },
   },
   overrides: {
+    MuiCardContent: {
+      root: {
+        "&:last-child": {
+          paddingBottom: 0,
+        },
+      },
+    },
     MuiButton: {
       // root: {
       //   padding: "7px 16px",

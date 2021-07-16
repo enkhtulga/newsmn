@@ -8,6 +8,7 @@ import NTopPost from "../src/components/TopPost";
 import NCardPost from "../src/components/CardPost";
 import NCardPostTitle from "../src/components/CardPostTitle";
 import NEditor from "../src/components/Editor";
+import NCardSlidePost from "../src/components/CardSlidePost";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -151,6 +152,24 @@ const Atoms = () => {
         <NEditor />
         <NEditor />
         <NEditor />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Slide Post" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NCardSlidePost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardSlidePost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardSlidePost />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardSlidePost />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

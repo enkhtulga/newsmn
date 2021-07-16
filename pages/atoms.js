@@ -11,6 +11,7 @@ import NEditor from "../src/components/Editor";
 import NCardSlidePost from "../src/components/CardSlidePost";
 import NInfoPartnerPost from "../src/components/InfoPartnerPost";
 import NJournalist from "../src/components/Journalist";
+import NTourMasonry from "../src/components/TourMasonry";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -204,6 +205,11 @@ const Atoms = () => {
             <NJournalist />
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Tour Masonry" hasBorder></NTitle>
+        <Box mb={2} />
+        <NTourMasonry />
       </Box>
     </Box>
   );

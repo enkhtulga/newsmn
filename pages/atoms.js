@@ -14,6 +14,7 @@ import NJournalist from "../src/components/Journalist";
 import NTourMasonry from "../src/components/TourMasonry";
 import NCarousel from "../src/components/Carousel";
 import NShopItem from "../src/components/ShopItem";
+import NRealStateItem from "../src/components/RealStateItem";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -263,6 +264,38 @@ const Atoms = () => {
           </Grid>
         </Grid>
       </Box>
+      <Box marginTop={5}>
+        <NTitle title="Real State Item" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={2}>
+          <Grid item xs={2}>
+            <NRealStateItem />
+          </Grid>
+          <Grid item xs={2}>
+            <NRealStateItem />
+          </Grid>
+          <Grid item xs={2}>
+            <NRealStateItem />
+          </Grid>
+          <Grid item xs={2}>
+            <NRealStateItem />
+          </Grid>
+          <Grid item xs={2}>
+            <NRealStateItem />
+          </Grid>
+          <Grid item xs={2}>
+            <NRealStateItem />
+          </Grid>
+        </Grid>
+      </Box>
+      <Box mt={4} pt={10} pb={10} className={classes.blackBg}>
+        <NTitle
+          title="Видео сан"
+          hasBorder
+          className={classes.blackTitle}
+        ></NTitle>
+        <Box mb={9} />
+      </Box>
     </Box>
   );
 };
@@ -271,6 +304,17 @@ const useStyles = makeStyles((theme) => ({
   temp: {},
   avatar: {
     backgroundColor: Colors.primary,
+  },
+  blackBg: {
+    backgroundColor: Colors.title,
+    marginLeft: "-2rem",
+    marginRight: "-2rem",
+    paddingLeft: "2rem",
+    paddingRight: "2rem",
+  },
+  blackTitle: {
+    color: Colors.white,
+    marginBottom: theme.spacing(9),
   },
 }));
 

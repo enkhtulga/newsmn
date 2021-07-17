@@ -12,6 +12,7 @@ import NCardSlidePost from "../src/components/CardSlidePost";
 import NInfoPartnerPost from "../src/components/InfoPartnerPost";
 import NJournalist from "../src/components/Journalist";
 import NTourMasonry from "../src/components/TourMasonry";
+import NCarousel from "../src/components/Carousel";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -210,6 +211,32 @@ const Atoms = () => {
         <NTitle title="Tour Masonry" hasBorder></NTitle>
         <Box mb={2} />
         <NTourMasonry />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Carousel" hasBorder></NTitle>
+        <Box mb={2} />
+        <NCarousel
+          slidesPerView={6}
+          navigation
+          pagination
+          items={[
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+            <NJournalist />,
+          ]}
+        />
       </Box>
     </Box>
   );

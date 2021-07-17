@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { ThemeProvider } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
 import "./../src/theme/globalcss/main.css";
 import theme from "./../src/theme/index";
 

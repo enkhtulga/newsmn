@@ -1,9 +1,9 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 import { Colors } from "./colors";
 
 const font = "'Roboto Condensed', 'Roboto', sans-serif";
 
-export default createMuiTheme({
+export default createTheme({
   palette: {
     // type: "dark",
     primary: {

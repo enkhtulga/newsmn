@@ -27,3 +27,9 @@ body {
 .module__content {
   padding: 0 2rem;
 }
+.slideWrap {
+  position: relative;
+}
+.slideWrap .swiper-button-disabled {
+  display: none;
+}

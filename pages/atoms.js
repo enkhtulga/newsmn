@@ -15,6 +15,7 @@ import NTourMasonry from "../src/components/TourMasonry";
 import NCarousel from "../src/components/Carousel";
 import NShopItem from "../src/components/ShopItem";
 import NRealStateItem from "../src/components/RealStateItem";
+import NCardVideoLarge from "../src/components/CardVideoLarge";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -288,13 +289,20 @@ const Atoms = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box mt={4} pt={10} pb={10} className={classes.blackBg}>
+      <Box mt={4} pt={10} pb={10} pl={30} pr={30} className={classes.blackBg}>
         <NTitle
           title="Видео сан"
           hasBorder
           className={classes.blackTitle}
         ></NTitle>
-        <Box mb={9} />
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <NCardVideoLarge />
+          </Grid>
+          <Grid item xs={6}>
+            <NCardVideoLarge />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
@@ -309,8 +317,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: Colors.title,
     marginLeft: "-2rem",
     marginRight: "-2rem",
-    paddingLeft: "2rem",
-    paddingRight: "2rem",
   },
   blackTitle: {
     color: Colors.white,

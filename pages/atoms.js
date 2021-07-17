@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from "@material-ui/core";
+import { Box, Typography, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import NTitle from "../src/components/Title";
 import NHitNewsItem from "../src/components/HitNewsItem";
@@ -16,6 +16,7 @@ import NCarousel from "../src/components/Carousel";
 import NShopItem from "../src/components/ShopItem";
 import NRealStateItem from "../src/components/RealStateItem";
 import NCardVideoLarge from "../src/components/CardVideoLarge";
+import NCardVideoSmall from "../src/components/CardVideoSmall";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -289,7 +290,7 @@ const Atoms = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box mt={4} pt={10} pb={10} pl={30} pr={30} className={classes.blackBg}>
+      <Box mt={4} pt={10} pb={10} pl={20} pr={20} className={classes.blackBg}>
         <NTitle
           title="Видео сан"
           hasBorder
@@ -301,6 +302,25 @@ const Atoms = () => {
           </Grid>
           <Grid item xs={6}>
             <NCardVideoLarge />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardVideoSmall />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardVideoSmall />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardVideoSmall />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardVideoSmall />
+          </Grid>
+          <Grid item xs={12}>
+            <Box display="flex" justifyContent="flex-end">
+              <Button variant="outlined" className={classes.buttonWhite}>
+                Бүгдийг харах+
+              </Button>
+            </Box>
           </Grid>
         </Grid>
       </Box>
@@ -321,6 +341,10 @@ const useStyles = makeStyles((theme) => ({
   blackTitle: {
     color: Colors.white,
     marginBottom: theme.spacing(9),
+  },
+  buttonWhite: {
+    borderColor: Colors.white,
+    color: Colors.white,
   },
 }));
 

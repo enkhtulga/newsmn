@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const MainLayout = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -14,6 +15,7 @@ const MainLayout = ({ children }) => {
       <main role="main" className="main">
         {children}
       </main>
+      <Footer />
     </div>
   );
 };

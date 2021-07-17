@@ -9,6 +9,7 @@ export const Colors = {
   text: "#4d4d4d",
   dark_blue: "#001E64",
   border_gray: "#c4c4c4",
+  border_gray_2: "#E5E5E5",
   border_red: "#FF1313",
   title: "#1a1a1a",
   sphere: "#b3b3b3",

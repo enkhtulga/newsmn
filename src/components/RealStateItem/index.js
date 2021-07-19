@@ -68,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
   },
   locationLabel: {
     display: "block",
-    textAlign: "center",
     fontSize: 14,
     lineHeight: "16px",
     fontWeight: 700,
@@ -76,7 +75,6 @@ const useStyles = makeStyles((theme) => ({
   },
   location: {
     display: "block",
-    textAlign: "center",
     fontSize: 14,
     lineHeight: "16px",
   },

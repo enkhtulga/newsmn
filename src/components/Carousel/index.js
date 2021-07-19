@@ -15,6 +15,7 @@ const NCarousel = ({
   navigation,
   pagination,
   slidesPerView,
+  spaceBetween,
   breakpoints,
   containerClass,
   ...rest
@@ -26,7 +27,7 @@ const NCarousel = ({
   const { ...props } = rest;
 
   const customPagination = {
-    clickable: pagination,
+    clickable: true,
     type: "bullets",
   };
 
@@ -35,10 +36,10 @@ const NCarousel = ({
       <Swiper
         slidesPerView={slidesPerView}
         slidesPerGroup={1}
-        spaceBetween={0}
+        spaceBetween={spaceBetween}
         observeParents={true}
         observer={true}
-        pagination={customPagination}
+        pagination={pagination && customPagination}
         {...props}
         className={classes.wrap}
         breakpoints={breakpoints}

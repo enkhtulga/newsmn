@@ -23,6 +23,7 @@ import { NRoutes } from "./../../constants/route.constants";
 import { useRouter } from "next/router";
 import { Colors } from "./../../theme/colors";
 import NMegaMenu from "./../../components/MegaMenu";
+import NBanner from "../../components/Banner";
 
 const Header = ({ toggleDrawer, open }) => {
   const classes = useStyles();
@@ -34,6 +35,9 @@ const Header = ({ toggleDrawer, open }) => {
 
   return (
     <div className={classes.grow}>
+      <Box mt={5} mb={5} textAlign="center">
+        <NBanner src="/banner_home_top.jpg" width={1180} height={204} />
+      </Box>
       <AppBar className={classes.appBar} position="static" elevation={0}>
         <Toolbar
           className={`${classes.toolbar} module__content`}

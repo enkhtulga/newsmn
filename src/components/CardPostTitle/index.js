@@ -7,11 +7,11 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 
-const NCardPostTitle = ({ paddingTop, noImage }) => {
+const NCardPostTitle = ({ paddingTop, noImage, hasBorder }) => {
   const classes = useStyles(noImage);
 
   return (
-    <Box className={classes.wrap}>
+    <Box className={hasBorder ? classes.wrapBorder : classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <NCardContent className={classes.contentWrap}>
           <Typography variant="caption" className={classes.subtitle}>
@@ -38,7 +38,13 @@ const NCardPostTitle = ({ paddingTop, noImage }) => {
 
 const useStyles = makeStyles((theme) => ({
   wrap: {
-    backgroundColor: Colors.primary,
+    marginBottom: theme.spacing(2),
+  },
+  wrapBorder: {
+    paddingBottom: theme.spacing(2),
+    borderBottom: "1px solid",
+    borderBottomColor: Colors.line,
+    marginBottom: theme.spacing(2),
   },
   contentWrap: {
     paddingRight: 0,

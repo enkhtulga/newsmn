@@ -1,30 +1,424 @@
 import React from "react";
-import { Box } from "@material-ui/core";
+import { Box, Grid, Typography, Button } from "@material-ui/core";
 import StickySidebar from "../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../theme/colors";
 import NTitle from "../../components/Title";
+import NTopPost from "../../components/TopPost";
+import NCardPost from "../../components/CardPost";
+import NBanner from "../../components/Banner";
+import NCardPostTitle from "../../components/CardPostTitle";
+import NEditor from "../../components/Editor";
+import NCardSlidePost from "../../components/CardSlidePost";
+import NCarousel from "../../components/Carousel";
+import NHitNewsItem from "../../components/HitNewsItem";
+import NInfoPartnerPost from "../../components/InfoPartnerPost";
+import NJournalist from "../../components/Journalist";
+import NCardVideoLarge from "../../components/CardVideoLarge";
+import NCardVideoSmall from "../../components/CardVideoSmall";
+import NShopItem from "../../components/ShopItem";
+import NTourMasonry from "../../components/TourMasonry";
+import NRealStateItem from "../../components/RealStateItem";
+import {
+  ShoppingCart as IconShoppingCard,
+  Flight as IconFlight,
+  Room as IconRoom,
+  House as IconHouse,
+} from "@material-ui/icons";
 
 const HomeContainer = () => {
   const classes = useStyles();
 
   return (
-    <Box>
-      <section className={classes.sectionTop}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
-        erat nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada
-      </section>
+    <Box mt={5}>
+      <section className={classes.sectionTop}></section>
       <section className={classes.sectionWrap}>
         <StickySidebar
           className={classes.stickySidebar}
+          offsetTop={10}
+          offsetBottom={10}
+        >
+          <NTitle title="Шинэ мэдээ" hasBorder />
+          <Box mt={2} />
+          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+          <NCardPostTitle paddingTop="54.21%" hasBorder />
+          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+          <Box mb={2}>
+            <NBanner
+              src="/banner_home_4.jpg"
+              width={325}
+              height={150}
+              link="https://recruitment.minii-suljee.mn/"
+            />
+          </Box>
+          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+        </StickySidebar>
+        <Box className={classes.contentTop}>
+          <NTopPost hasPhotoBy />
+          <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPost />
+            </Grid>
+          </Grid>
+        </Box>
+      </section>
+      <section className={classes.sectionMiddle}>
+        <Box mt={12} bgcolor={"#dbdbdb"} height={200}>
+          <Typography variant="h1">Podcast section</Typography>
+        </Box>
+        <Box mt={10} mb={10} textAlign="center">
+          <NBanner
+            src="/banner_home_1.jpg"
+            width={1144}
+            height={201}
+            link="https://recruitment.minii-suljee.mn/"
+          />
+        </Box>
+        <NTitle title="Редакцийн сонголт" />
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NEditor />
+          </Grid>
+          <Grid item xs={3}>
+            <NEditor />
+          </Grid>
+          <Grid item xs={3}>
+            <NEditor />
+          </Grid>
+          <Grid item xs={3}>
+            <NEditor />
+          </Grid>
+        </Grid>
+        <Box mt={10} mb={5}>
+          <NCarousel
+            slidesPerView={4}
+            spaceBetween={16}
+            navigation
+            pagination
+            items={[
+              <NCardSlidePost />,
+              <NCardSlidePost />,
+              <NCardSlidePost />,
+              <NCardSlidePost />,
+              <NCardSlidePost />,
+              <NCardSlidePost />,
+            ]}
+          />
+        </Box>
+      </section>
+      <section className={classes.sectionMiddle2}>
+        <Box className={classes.sidebar}>
+          <NTitle title="Hit news" hasBorder />
+          <NHitNewsItem
+            isFirst
+            number={"1"}
+            text={"Цаг агаарын аюулт үзэгдлээс сэрэмжлүүлж байна"}
+          />
+          <NHitNewsItem
+            number={"2"}
+            text={
+              "Л.Оюун-Эрдэнэ: Бид парламентын тогтолцооноосоо ухарч болохгүй"
+            }
+          />
+          <NHitNewsItem
+            number={"3"}
+            text={
+              "Путин: Бид нацизмыг сөнөөсөн үндэстэн гэдгээрээ үеийн үед бахархах ёстой!"
+            }
+          />
+          <NHitNewsItem
+            number={"4"}
+            text={"'Миний хувьд энэ вакцины асуудалд нөлөөлөх боломжгүй'"}
+          />
+          <NHitNewsItem
+            number={"5"}
+            text={"Дуучин М.Нарантуяа У.Хүрэлсүхэд шаардлага хүргүүлэв"}
+          />
+          <NHitNewsItem
+            number={"6"}
+            text={"Төрийн банк: Харилцагчдын анхааралд"}
+          />
+          <NHitNewsItem
+            number={"7"}
+            text={"Элон Маск Аспергерийн синдромтой гэдгээ зарлав"}
+          />
+          <Box mb={5} />
+        </Box>
+        <Box className={classes.content}>
+          <NTitle title="Цогц мэдээ" hasBorder />
+          <Box mt={5} />
+          <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <NCardPostTitle paddingTop="54.21%" />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPostTitle paddingTop="54.21%" />
+            </Grid>
+            <Grid item xs={4}>
+              <NCardPostTitle paddingTop="54.21%" />
+            </Grid>
+            <Grid item xs={12}>
+              <Box display="flex" justifyContent="flex-end">
+                <Button variant="outlined" className={classes.buttonWhite}>
+                  Бүгдийг харах+
+                </Button>
+              </Box>
+            </Grid>
+          </Grid>
+          <Box mt={5} mb={5} textAlign="center">
+            <NBanner
+              src="/banner_home_2.jpg"
+              width={1028}
+              height={230}
+              link="https://recruitment.minii-suljee.mn/"
+            />
+          </Box>
+        </Box>
+      </section>
+      <section className={classes.sectionMiddle3}>
+        <NTitle title="Мэдээллийн түншлэгч" hasBorder />
+        <Box mt={5} mb={10}>
+          <Grid container spacing={2}>
+            <Grid item xs={3}>
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+            </Grid>
+            <Grid item xs={3}>
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+            </Grid>
+            <Grid item xs={3}>
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+            </Grid>
+            <Grid item xs={3}>
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+              <NInfoPartnerPost />
+            </Grid>
+          </Grid>
+        </Box>
+      </section>
+      <section className={classes.sectionMiddle4}>
+        <NTitle title="Дэлгэрэнгүй" hasBorder />
+        <Box mt={5} mb={9}>
+          <Grid container spacing={2}>
+            <Grid item xs={3}>
+              <NTitle title="Улс төр" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NTitle title="Спорт" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" />
+            </Grid>
+            <Grid item xs={3}>
+              <NTitle title="Нийгэм" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle paddingTop="54.21%" noImage />
+              <NTitle title="Эдийн засаг" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage />
+            </Grid>
+            <Grid item xs={3}>
+              <NTitle title="Шар мэдээ" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NTitle title="Парламент 76" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle paddingTop="54.21%" />
+            </Grid>
+            <Grid item xs={3}>
+              <NTitle title="Дэлхий" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NTitle title="Эдийн засаг" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle paddingTop="54.21%" noImage />
+            </Grid>
+          </Grid>
+        </Box>
+      </section>
+      <section className={classes.sectionPress}>
+        <NTitle title="Нийтлэл" hasBorder />
+        <Box mb={10}>
+          <Box mt={5} mb={9}>
+            <Typography variant="h4">• Сэтгүүлчдийн платформ</Typography>
+          </Box>
+          <NCarousel
+            slidesPerView={6}
+            spaceBetween={16}
+            navigation
+            pagination
+            items={[
+              <NJournalist />,
+              <NJournalist />,
+              <NJournalist />,
+              <NJournalist />,
+              <NJournalist />,
+              <NJournalist />,
+              <NJournalist />,
+              <NJournalist />,
+            ]}
+          />
+        </Box>
+      </section>
+      <section>
+        <Box mt={4} pt={10} pb={10} pl={20} pr={20} className={classes.blackBg}>
+          <NTitle
+            title="Видео сан"
+            hasBorder
+            className={classes.blackTitle}
+          ></NTitle>
+          <Grid container spacing={2}>
+            <Grid item xs={6}>
+              <NCardVideoLarge />
+            </Grid>
+            <Grid item xs={6}>
+              <NCardVideoLarge />
+            </Grid>
+            <Grid item xs={3}>
+              <NCardVideoSmall />
+            </Grid>
+            <Grid item xs={3}>
+              <NCardVideoSmall />
+            </Grid>
+            <Grid item xs={3}>
+              <NCardVideoSmall />
+            </Grid>
+            <Grid item xs={3}>
+              <NCardVideoSmall />
+            </Grid>
+            <Grid item xs={12}>
+              <Box display="flex" justifyContent="flex-end">
+                <Button variant="outlined" className={classes.buttonWhite}>
+                  Бүгдийг харах+
+                </Button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </section>
+      <section>
+        <NTitle title="Онлайн худалдаа" hasBorder>
+          <IconShoppingCard style={{ marginRight: 8 }} />
+        </NTitle>
+        <Box mt={10} mb={10}>
+          <Grid container spacing={2}>
+            <Grid item xs={2}>
+              <Box>
+                <NBanner src="/banner_home_3.jpg" width={216} height={369} />
+              </Box>
+            </Grid>
+            <Grid item xs={2}>
+              <NShopItem />
+            </Grid>
+            <Grid item xs={2}>
+              <NShopItem />
+            </Grid>
+            <Grid item xs={2}>
+              <NShopItem />
+            </Grid>
+            <Grid item xs={2}>
+              <NShopItem />
+            </Grid>
+            <Grid item xs={2}>
+              <NShopItem />
+              <Box display="flex" justifyContent="flex-end" mt={6}>
+                <Button variant="outlined">Бүгдийг харах+</Button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </section>
+      <section>
+        <NTitle title="Аялал" hasBorder>
+          <IconFlight style={{ marginRight: 8 }} />
+        </NTitle>
+        <Box mt={10} mb={2}>
+          <NTourMasonry />
+        </Box>
+      </section>
+      <section>
+        <NTitle title="Үл хөдлөх" hasBorder>
+          <IconHouse style={{ marginRight: 8 }} />
+        </NTitle>
+        <Box mt={5}>
+          <NCarousel
+            slidesPerView={8}
+            spaceBetween={16}
+            pagination={false}
+            items={[
+              <NRealStateItem />,
+              <NRealStateItem />,
+              <NRealStateItem />,
+              <NRealStateItem />,
+              <NRealStateItem />,
+              <NRealStateItem />,
+              <NRealStateItem />,
+              <NRealStateItem />,
+            ]}
+          />
+        </Box>
+      </section>
+      <section>
+        <NTitle title="Нээлттэй платформ" hasBorder />
+      </section>
+      <section className={classes.sectionStickyWrap}>
+        <StickySidebar
+          className={classes.sidebar}
           offsetTop={10}
           offsetBottom={0}
         >
@@ -40,7 +434,7 @@ const HomeContainer = () => {
           pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
           Cras at malesuada
         </StickySidebar>
-        <Box className={classes.contentTop}>
+        <Box className={classes.content}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
           quis risus eleifend auctor nec sed mauris. In bibendum suscipit
@@ -51,39 +445,37 @@ const HomeContainer = () => {
           et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
           suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
           pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada lectus. Donec sit amet posuere est. Nulla egestas
-          dolor sem, nec gravida erat luctus eget. Integer quis nibh sed libero
-          ultrices tristique nec ut felis. Quisque vulputate rutrum ex, eget
-          blandit metus varius a. Phasellus mollis vel mi vel tempus. In eget
-          massa aliquam, iaculis felis id, dignissim dui. Duis tempus eget metus
-          sit amet rhoncus. Nulla ut lectus est. Vivamus lobortis ligula sit
-          amet mauris sagittis commodo. Aliquam velit nisi, consectetur a
-          venenatis in, rutrum vel diam. Nunc tempor dignissim iaculis. Nulla
-          egestas convallis ullamcorper. Sed augue lorem, tincidunt at finibus
-          porta, luctus vel risus. Duis fermentum quis lectus et fermentum.
-          Praesent a interdum ante, in ullamcorper orci. Pellentesque commodo
-          vulputate ante, in vestibulum neque porttitor vel. Integer faucibus mi
-          vel neque pretium euismod. Ut nec nibh aliquet, lobortis ligula
-          interdum, luctus elit. Nam euismod rutrum quam ut rhoncus.
-          Pellentesque suscipit metus et commodo congue. Praesent vel dictum
-          ante, in scelerisque arcu. Morbi sollicitudin ex in libero pulvinar
-          feugiat. Nunc vitae rhoncus risus, non sollicitudin erat. Nunc
-          volutpat, mauris eget mollis porttitor, nunc justo pellentesque
-          turpis, a varius neque enim non dui. Suspendisse potenti. Integer
-          fermentum justo aliquam, sagittis leo sit amet, tincidunt risus. In
-          ultrices felis nec dui sodales tincidunt. Sed accumsan, ligula
-          tristique tempus viverra, eros lacus rutrum arcu, vel sodales leo
-          justo non eros. Donec sed commodo turpis. Vestibulum id pharetra
-          libero. Sed rutrum feugiat arcu, at luctus massa mollis bibendum.
-          Praesent sit amet nisi elit. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nam semper nulla enim, sed ultrices tortor egestas
-          id. Cras ac lectus at risus facilisis ornare. Nulla blandit bibendum
-          risus. Sed tincidunt libero nisi, sed placerat enim vehicula sed.
-          Integer id nunc eleifend velit congue ullamcorper. Maecenas sagittis
-          condimentum enim vel pulvinar. Cras et purus non velit euismod
-          sagittis. Etiam ullamcorper felis quis diam lacinia, in molestie
-          lectus feugiat. Nunc condimentum venenatis cursus. In suscipit quam
-          nec iaculis pellentesque. Aenean sed aliquet felis, a molestie felis.
+          Cras at malesuada Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Donec hendrerit erat nulla, vel volutpat dolor gravida faucibus.
+          Sed a eros quis risus eleifend auctor nec sed mauris. In bibendum
+          suscipit scelerisque. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed
+          vel risus sapien. Nullam nisl ligula, dignissim ut molestie vel,
+          viverra at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi.
+          Maecenas et libero at ante ultricies lacinia ut eu ligula. Nulla lorem
+          felis, suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus
+          pretium pellentesque. Cras eu sollicitudin libero. Vivamus vel
+          eleifend lacus. Cras at malesuada Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Donec hendrerit erat nulla, vel volutpat
+          dolor gravida faucibus. Sed a eros quis risus eleifend auctor nec sed
+          mauris. In bibendum suscipit scelerisque. Class aptent taciti sociosqu
+          ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in
+          mollis sapien. Sed vel risus sapien. Nullam nisl ligula, dignissim ut
+          molestie vel, viverra at dui. Mauris sed elit finibus, rhoncus eros
+          et, tempus mi. Maecenas et libero at ante ultricies lacinia ut eu
+          ligula. Nulla lorem felis, suscipit id ligula eget, imperdiet rutrum
+          leo. Nam rhoncus pretium pellentesque. Cras eu sollicitudin libero.
+          Vivamus vel eleifend lacus. Cras at malesuada Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Donec hendrerit erat nulla, vel
+          volutpat dolor gravida faucibus. Sed a eros quis risus eleifend auctor
+          nec sed mauris. In bibendum suscipit scelerisque. Class aptent taciti
+          sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam nisl
+          ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+          finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+          ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+          eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+          sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
           quis risus eleifend auctor nec sed mauris. In bibendum suscipit
@@ -94,270 +486,38 @@ const HomeContainer = () => {
           et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
           suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
           pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada lectus. Donec sit amet posuere est. Nulla egestas
-          dolor sem, nec gravida erat luctus eget. Integer quis nibh sed libero
-          ultrices tristique nec ut felis. Quisque vulputate rutrum ex, eget
-          blandit metus varius a. Phasellus mollis vel mi vel tempus. In eget
-          massa aliquam, iaculis felis id, dignissim dui. Duis tempus eget metus
-          sit amet rhoncus. Nulla ut lectus est. Vivamus lobortis ligula sit
-          amet mauris sagittis commodo. Aliquam velit nisi, consectetur a
-          venenatis in, rutrum vel diam. Nunc tempor dignissim iaculis. Nulla
-          egestas convallis ullamcorper. Sed augue lorem, tincidunt at finibus
-          porta, luctus vel risus. Duis fermentum quis lectus et fermentum.
-          Praesent a interdum ante, in ullamcorper orci. Pellentesque commodo
-          vulputate ante, in vestibulum neque porttitor vel. Integer faucibus mi
-          vel neque pretium euismod. Ut nec nibh aliquet, lobortis ligula
-          interdum, luctus elit. Nam euismod rutrum quam ut rhoncus.
-          Pellentesque suscipit metus et commodo congue. Praesent vel dictum
-          ante, in scelerisque arcu. Morbi sollicitudin ex in libero pulvinar
-          feugiat. Nunc vitae rhoncus risus, non sollicitudin erat. Nunc
-          volutpat, mauris eget mollis porttitor, nunc justo pellentesque
-          turpis, a varius neque enim non dui. Suspendisse potenti. Integer
-          fermentum justo aliquam, sagittis leo sit amet, tincidunt risus. In
-          ultrices felis nec dui sodales tincidunt. Sed accumsan, ligula
-          tristique tempus viverra, eros lacus rutrum arcu, vel sodales leo
-          justo non eros. Donec sed commodo turpis. Vestibulum id pharetra
-          libero. Sed rutrum feugiat arcu, at luctus massa mollis bibendum.
-          Praesent sit amet nisi elit. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nam semper nulla enim, sed ultrices tortor egestas
-          id. Cras ac lectus at risus facilisis ornare. Nulla blandit bibendum
-          risus. Sed tincidunt libero nisi, sed placerat enim vehicula sed.
-          Integer id nunc eleifend velit congue ullamcorper. Maecenas sagittis
-          condimentum enim vel pulvinar. Cras et purus non velit euismod
-          sagittis. Etiam ullamcorper felis quis diam lacinia, in molestie
-          lectus feugiat. Nunc condimentum venenatis cursus. In suscipit quam
-          nec iaculis pellentesque. Aenean sed aliquet felis, a molestie felis.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
-          quis risus eleifend auctor nec sed mauris. In bibendum suscipit
-          scelerisque. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed vel
-          risus sapien. Nullam nisl ligula, dignissim ut molestie vel, viverra
-          at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi. Maecenas
-          et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
-          suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
-          pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada lectus. Donec sit amet posuere est. Nulla egestas
-          dolor sem, nec gravida erat luctus eget. Integer quis nibh sed libero
-          ultrices tristique nec ut felis. Quisque vulputate rutrum ex, eget
-          blandit metus varius a. Phasellus mollis vel mi vel tempus. In eget
-          massa aliquam, iaculis felis id, dignissim dui. Duis tempus eget metus
-          sit amet rhoncus. Nulla ut lectus est. Vivamus lobortis ligula sit
-          amet mauris sagittis commodo. Aliquam velit nisi, consectetur a
-          venenatis in, rutrum vel diam. Nunc tempor dignissim iaculis. Nulla
-          egestas convallis ullamcorper. Sed augue lorem, tincidunt at finibus
-          porta, luctus vel risus. Duis fermentum quis lectus et fermentum.
-          Praesent a interdum ante, in ullamcorper orci. Pellentesque commodo
-          vulputate ante, in vestibulum neque porttitor vel. Integer faucibus mi
-          vel neque pretium euismod. Ut nec nibh aliquet, lobortis ligula
-          interdum, luctus elit. Nam euismod rutrum quam ut rhoncus.
-          Pellentesque suscipit metus et commodo congue. Praesent vel dictum
-          ante, in scelerisque arcu. Morbi sollicitudin ex in libero pulvinar
-          feugiat. Nunc vitae rhoncus risus, non sollicitudin erat. Nunc
-          volutpat, mauris eget mollis porttitor, nunc justo pellentesque
-          turpis, a varius neque enim non dui. Suspendisse potenti. Integer
-          fermentum justo aliquam, sagittis leo sit amet, tincidunt risus. In
-          ultrices felis nec dui sodales tincidunt. Sed accumsan, ligula
-          tristique tempus viverra, eros lacus rutrum arcu, vel sodales leo
-          justo non eros. Donec sed commodo turpis. Vestibulum id pharetra
-          libero. Sed rutrum feugiat arcu, at luctus massa mollis bibendum.
-          Praesent sit amet nisi elit. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nam semper nulla enim, sed ultrices tortor egestas
-          id. Cras ac lectus at risus facilisis ornare. Nulla blandit bibendum
-          risus. Sed tincidunt libero nisi, sed placerat enim vehicula sed.
-          Integer id nunc eleifend velit congue ullamcorper. Maecenas sagittis
-          condimentum enim vel pulvinar. Cras et purus non velit euismod
-          sagittis. Etiam ullamcorper felis quis diam lacinia, in molestie
-          lectus feugiat. Nunc condimentum venenatis cursus. In suscipit quam
-          nec iaculis pellentesque. Aenean sed aliquet felis, a molestie felis.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
-          quis risus eleifend auctor nec sed mauris. In bibendum suscipit
-          scelerisque. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed vel
-          risus sapien. Nullam nisl ligula, dignissim ut molestie vel, viverra
-          at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi. Maecenas
-          et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
-          suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
-          pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada lectus. Donec sit amet posuere est. Nulla egestas
-          dolor sem, nec gravida erat luctus eget. Integer quis nibh sed libero
-          ultrices tristique nec ut felis. Quisque vulputate rutrum ex, eget
-          blandit metus varius a. Phasellus mollis vel mi vel tempus. In eget
-          massa aliquam, iaculis felis id, dignissim dui. Duis tempus eget metus
-          sit amet rhoncus. Nulla ut lectus est. Vivamus lobortis ligula sit
-          amet mauris sagittis commodo. Aliquam velit nisi, consectetur a
-          venenatis in, rutrum vel diam. Nunc tempor dignissim iaculis. Nulla
-          egestas convallis ullamcorper. Sed augue lorem, tincidunt at finibus
-          porta, luctus vel risus. Duis fermentum quis lectus et fermentum.
-          Praesent a interdum ante, in ullamcorper orci. Pellentesque commodo
-          vulputate ante, in vestibulum neque porttitor vel. Integer faucibus mi
-          vel neque pretium euismod. Ut nec nibh aliquet, lobortis ligula
-          interdum, luctus elit. Nam euismod rutrum quam ut rhoncus.
-          Pellentesque suscipit metus et commodo congue. Praesent vel dictum
-          ante, in scelerisque arcu. Morbi sollicitudin ex in libero pulvinar
-          feugiat. Nunc vitae rhoncus risus, non sollicitudin erat. Nunc
-          volutpat, mauris eget mollis porttitor, nunc justo pellentesque
-          turpis, a varius neque enim non dui. Suspendisse potenti. Integer
-          fermentum justo aliquam, sagittis leo sit amet, tincidunt risus. In
-          ultrices felis nec dui sodales tincidunt. Sed accumsan, ligula
-          tristique tempus viverra, eros lacus rutrum arcu, vel sodales leo
-          justo non eros. Donec sed commodo turpis. Vestibulum id pharetra
-          libero. Sed rutrum feugiat arcu, at luctus massa mollis bibendum.
-          Praesent sit amet nisi elit. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nam semper nulla enim, sed ultrices tortor egestas
-          id. Cras ac lectus at risus facilisis ornare. Nulla blandit bibendum
-          risus. Sed tincidunt libero nisi, sed placerat enim vehicula sed.
-          Integer id nunc eleifend velit congue ullamcorper. Maecenas sagittis
-          condimentum enim vel pulvinar. Cras et purus non velit euismod
-          sagittis. Etiam ullamcorper felis quis diam lacinia, in molestie
-          lectus feugiat. Nunc condimentum venenatis cursus. In suscipit quam
-          nec iaculis pellentesque. Aenean sed aliquet felis, a molestie felis.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
-          quis risus eleifend auctor nec sed mauris. In bibendum suscipit
-          scelerisque. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed vel
-          risus sapien. Nullam nisl ligula, dignissim ut molestie vel, viverra
-          at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi. Maecenas
-          et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
-          suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
-          pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada lectus. Donec sit amet posuere est. Nulla egestas
-          dolor sem, nec gravida erat luctus eget. Integer quis nibh sed libero
-          ultrices tristique nec ut felis. Quisque vulputate rutrum ex, eget
-          blandit metus varius a. Phasellus mollis vel mi vel tempus. In eget
-          massa aliquam, iaculis felis id, dignissim dui. Duis tempus eget metus
-          sit amet rhoncus. Nulla ut lectus est. Vivamus lobortis ligula sit
-          amet mauris sagittis commodo. Aliquam velit nisi, consectetur a
-          venenatis in, rutrum vel diam. Nunc tempor dignissim iaculis. Nulla
-          egestas convallis ullamcorper. Sed augue lorem, tincidunt at finibus
-          porta, luctus vel risus. Duis fermentum quis lectus et fermentum.
-          Praesent a interdum ante, in ullamcorper orci. Pellentesque commodo
-          vulputate ante, in vestibulum neque porttitor vel. Integer faucibus mi
-          vel neque pretium euismod. Ut nec nibh aliquet, lobortis ligula
-          interdum, luctus elit. Nam euismod rutrum quam ut rhoncus.
-          Pellentesque suscipit metus et commodo congue. Praesent vel dictum
-          ante, in scelerisque arcu. Morbi sollicitudin ex in libero pulvinar
-          feugiat. Nunc vitae rhoncus risus, non sollicitudin erat. Nunc
-          volutpat, mauris eget mollis porttitor, nunc justo pellentesque
-          turpis, a varius neque enim non dui. Suspendisse potenti. Integer
-          fermentum justo aliquam, sagittis leo sit amet, tincidunt risus. In
-          ultrices felis nec dui sodales tincidunt. Sed accumsan, ligula
-          tristique tempus viverra, eros lacus rutrum arcu, vel sodales leo
-          justo non eros. Donec sed commodo turpis. Vestibulum id pharetra
-          libero. Sed rutrum feugiat arcu, at luctus massa mollis bibendum.
-          Praesent sit amet nisi elit. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nam semper nulla enim, sed ultrices tortor egestas
-          id. Cras ac lectus at risus facilisis ornare. Nulla blandit bibendum
-          risus. Sed tincidunt libero nisi, sed placerat enim vehicula sed.
-          Integer id nunc eleifend velit congue ullamcorper. Maecenas sagittis
-          condimentum enim vel pulvinar. Cras et purus non velit euismod
-          sagittis. Etiam ullamcorper felis quis diam lacinia, in molestie
-          lectus feugiat. Nunc condimentum venenatis cursus. In suscipit quam
-          nec iaculis pellentesque. Aenean sed aliquet felis, a molestie felis.
+          Cras at malesuada Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Donec hendrerit erat nulla, vel volutpat dolor gravida faucibus.
+          Sed a eros quis risus eleifend auctor nec sed mauris. In bibendum
+          suscipit scelerisque. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed
+          vel risus sapien. Nullam nisl ligula, dignissim ut molestie vel,
+          viverra at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi.
+          Maecenas et libero at ante ultricies lacinia ut eu ligula. Nulla lorem
+          felis, suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus
+          pretium pellentesque. Cras eu sollicitudin libero. Vivamus vel
+          eleifend lacus. Cras at malesuada Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Donec hendrerit erat nulla, vel volutpat
+          dolor gravida faucibus. Sed a eros quis risus eleifend auctor nec sed
+          mauris. In bibendum suscipit scelerisque. Class aptent taciti sociosqu
+          ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in
+          mollis sapien. Sed vel risus sapien. Nullam nisl ligula, dignissim ut
+          molestie vel, viverra at dui. Mauris sed elit finibus, rhoncus eros
+          et, tempus mi. Maecenas et libero at ante ultricies lacinia ut eu
+          ligula. Nulla lorem felis, suscipit id ligula eget, imperdiet rutrum
+          leo. Nam rhoncus pretium pellentesque. Cras eu sollicitudin libero.
+          Vivamus vel eleifend lacus. Cras at malesuada
         </Box>
       </section>
       <section className={classes.sectionBottom}>
-        <NTitle title="Онлайн худалдаа"></NTitle>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
-        erat nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada
-        lectus. Donec sit amet posuere est. Nulla egestas dolor sem, nec gravida
-        erat luctus eget. Integer quis nibh sed libero ultrices tristique nec ut
-        felis. Quisque vulputate rutrum ex, eget blandit metus varius a.
-        Phasellus mollis vel mi vel tempus. In eget massa aliquam, iaculis felis
-        id, dignissim dui. Duis tempus eget metus sit amet rhoncus. Nulla ut
-        lectus est. Vivamus lobortis ligula sit amet mauris sagittis commodo.
-        Aliquam velit nisi, consectetur a venenatis in, rutrum vel diam. Nunc
-        tempor dignissim iaculis. Nulla egestas convallis ullamcorper. Sed augue
-        lorem, tincidunt at finibus porta, luctus vel risus. Duis fermentum quis
-        lectus et fermentum. Praesent a interdum ante, in ullamcorper orci.
-        Pellentesque commodo vulputate ante, in vestibulum neque porttitor vel.
-        Integer faucibus mi vel neque pretium euismod. Ut nec nibh aliquet,
-        lobortis ligula interdum, luctus elit. Nam euismod rutrum quam ut
-        rhoncus. Pellentesque suscipit metus et commodo congue. Praesent vel
-        dictum ante, in scelerisque arcu. Morbi sollicitudin ex in libero
-        pulvinar feugiat. Nunc vitae rhoncus risus, non sollicitudin erat. Nunc
-        volutpat, mauris eget mollis porttitor, nunc justo pellentesque turpis,
-        a varius neque enim non dui. Suspendisse potenti. Integer fermentum
-        justo aliquam, sagittis leo sit amet, tincidunt risus. In ultrices felis
-        nec dui sodales tincidunt. Sed accumsan, ligula tristique tempus
-        viverra, eros lacus rutrum arcu, vel sodales leo justo non eros. Donec
-        sed commodo turpis. Vestibulum id pharetra libero. Sed rutrum feugiat
-        arcu, at luctus massa mollis bibendum. Praesent sit amet nisi elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper
-        nulla enim, sed ultrices tortor egestas id. Cras ac lectus at risus
-        facilisis ornare. Nulla blandit bibendum risus. Sed tincidunt libero
-        nisi, sed placerat enim vehicula sed. Integer id nunc eleifend velit
-        congue ullamcorper. Maecenas sagittis condimentum enim vel pulvinar.
-        Cras et purus non velit euismod sagittis. Etiam ullamcorper felis quis
-        diam lacinia, in molestie lectus feugiat. Nunc condimentum venenatis
-        cursus. In suscipit quam nec iaculis pellentesque. Aenean sed aliquet
-        felis, a molestie felis.
-      </section>
-      <section className={classes.sectionBottom}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
-        erat nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada
-        lectus. Donec sit amet posuere est. Nulla egestas dolor sem, nec gravida
-        erat luctus eget. Integer quis nibh sed libero ultrices tristique nec ut
-        felis. Quisque vulputate rutrum ex, eget blandit metus varius a.
-        Phasellus mollis vel mi vel tempus. In eget massa aliquam, iaculis felis
-        id, dignissim dui. Duis tempus eget metus sit amet rhoncus. Nulla ut
-        lectus est. Vivamus lobortis ligula sit amet mauris sagittis commodo.
-        Aliquam velit nisi, consectetur a venenatis in, rutrum vel diam. Nunc
-        tempor dignissim iaculis. Nulla egestas convallis ullamcorper. Sed augue
-        lorem, tincidunt at finibus porta, luctus vel risus. Duis fermentum quis
-        lectus et fermentum. Praesent a interdum ante, in ullamcorper orci.
-        Pellentesque commodo vulputate ante, in vestibulum neque porttitor vel.
-        Integer faucibus mi vel neque pretium euismod. Ut nec nibh aliquet,
-        lobortis ligula interdum, luctus elit. Nam euismod rutrum quam ut
-        rhoncus. Pellentesque suscipit metus et commodo congue. Praesent vel
-        dictum ante, in scelerisque arcu. Morbi sollicitudin ex in libero
-        pulvinar feugiat. Nunc vitae rhoncus risus, non sollicitudin erat. Nunc
-        volutpat, mauris eget mollis porttitor, nunc justo pellentesque turpis,
-        a varius neque enim non dui. Suspendisse potenti. Integer fermentum
-        justo aliquam, sagittis leo sit amet, tincidunt risus. In ultrices felis
-        nec dui sodales tincidunt. Sed accumsan, ligula tristique tempus
-        viverra, eros lacus rutrum arcu, vel sodales leo justo non eros. Donec
-        sed commodo turpis. Vestibulum id pharetra libero. Sed rutrum feugiat
-        arcu, at luctus massa mollis bibendum. Praesent sit amet nisi elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper
-        nulla enim, sed ultrices tortor egestas id. Cras ac lectus at risus
-        facilisis ornare. Nulla blandit bibendum risus. Sed tincidunt libero
-        nisi, sed placerat enim vehicula sed. Integer id nunc eleifend velit
-        congue ullamcorper. Maecenas sagittis condimentum enim vel pulvinar.
-        Cras et purus non velit euismod sagittis. Etiam ullamcorper felis quis
-        diam lacinia, in molestie lectus feugiat. Nunc condimentum venenatis
-        cursus. In suscipit quam nec iaculis pellentesque. Aenean sed aliquet
-        felis, a molestie felis.
+        <NTitle title="Судалгаа" hasBorder />
       </section>
     </Box>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
-  sectionTop: {
-    padding: theme.spacing(2),
-    backgroundColor: "#dbdbdb",
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-  },
+  sectionTop: {},
   sectionWrap: {
     display: "flex",
     flexDirection: "row",
@@ -374,11 +534,43 @@ const useStyles = makeStyles((theme) => ({
   contentTop: {
     width: "calc(100% - 340px)",
     paddingRight: theme.spacing(2),
-    // border: "3px solid blue",
+  },
+  sectionMiddle2: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "flex-start",
+  },
+  sectionStickyWrap: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "flex-start",
+  },
+  sidebar: {
+    width: 340,
+    paddingRight: theme.spacing(2),
+  },
+  content: {
+    width: "calc(100% - 340px)",
   },
   sectionBottom: {
     marginTop: 50,
-    height: "100vh",
+    marginBottom: 50,
+  },
+  blackBg: {
+    backgroundColor: Colors.title,
+    marginLeft: "-2rem",
+    marginRight: "-2rem",
+    marginBottom: theme.spacing(9),
+  },
+  blackTitle: {
+    color: Colors.white,
+    marginBottom: theme.spacing(9),
+  },
+  buttonWhite: {
+    borderColor: Colors.white,
+    color: Colors.white,
   },
 }));
 

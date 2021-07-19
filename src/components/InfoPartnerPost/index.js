@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mediaOuterWrap: {
     width: 100,
+    minWidth: 100,
   },
   contentWrap: {
     paddingBottom: 0,

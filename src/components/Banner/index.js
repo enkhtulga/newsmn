@@ -19,6 +19,7 @@ const NBanner = (props) => {
 const useStyles = makeStyles((theme) => ({
   wrap: {
     borderRadius: 5,
+    textAlign: "center",
   },
   width: (props) => props.width,
   height: (props) => props.height,

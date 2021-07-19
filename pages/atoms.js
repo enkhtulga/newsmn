@@ -1,6 +1,7 @@
 import { Box, Typography, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import NTitle from "../src/components/Title";
+import NSelectTitle from "../src/components/SelectTitle";
 import NHitNewsItem from "../src/components/HitNewsItem";
 import NAvatar from "../src/components/Avatar";
 import NBanner from "../src/components/Banner";
@@ -43,6 +44,9 @@ const Atoms = () => {
         <NTitle title="Аялал" hasBorder>
           <IconFlight style={{ marginRight: 8 }} />
         </NTitle>
+        <NSelectTitle title="Аялал">
+          <IconFlight style={{ marginRight: 8 }} />
+        </NSelectTitle>
       </Box>
       <Box marginTop={2} width={"331px"}>
         <NHitNewsItem

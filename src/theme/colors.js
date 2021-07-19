@@ -8,6 +8,7 @@ export const Colors = {
   secondary: "#4b4b4b",
   text: "#4d4d4d",
   dark_blue: "#001E64",
+  text_gray: "#dadada",
   border_gray: "#c4c4c4",
   border_gray_2: "#E5E5E5",
   border_red: "#FF1313",

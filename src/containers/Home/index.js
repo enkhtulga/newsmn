@@ -4,6 +4,7 @@ import StickySidebar from "../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../theme/colors";
 import NTitle from "../../components/Title";
+import NSelectTitle from "../../components/SelectTitle";
 import NTopPost from "../../components/TopPost";
 import NCardPost from "../../components/CardPost";
 import NBanner from "../../components/Banner";
@@ -100,7 +101,15 @@ const HomeContainer = () => {
             link="https://recruitment.minii-suljee.mn/"
           />
         </Box>
-        <NTitle title="Редакцийн сонголт" />
+        <NTitle title="Редакцийн сонголт">
+          <img
+            src="/hee_1.png"
+            alt="Редакцийн сонголт"
+            width="26"
+            height="26"
+            style={{ marginRight: "4px" }}
+          />
+        </NTitle>
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <NEditor />
@@ -134,7 +143,15 @@ const HomeContainer = () => {
       </section>
       <section className={classes.sectionMiddle2}>
         <Box className={classes.sidebar}>
-          <NTitle title="Hit news" hasBorder />
+          <NSelectTitle title="Hit news" hasBorder>
+            <img
+              src="/hee_2.png"
+              alt="hit news"
+              width="26"
+              height="26"
+              style={{ marginRight: "4px" }}
+            />
+          </NSelectTitle>
           <NHitNewsItem
             isFirst
             number={"1"}
@@ -171,7 +188,15 @@ const HomeContainer = () => {
           <Box mb={5} />
         </Box>
         <Box className={classes.content}>
-          <NTitle title="Цогц мэдээ" hasBorder />
+          <NSelectTitle title="Цогц мэдээ" hasBorder>
+            <img
+              src="/hee_4.png"
+              alt="Цогц мэдээ"
+              width="26"
+              height="26"
+              style={{ marginRight: "4px" }}
+            />
+          </NSelectTitle>
           <Box mt={5} />
           <Grid container spacing={2}>
             <Grid item xs={4}>
@@ -202,28 +227,40 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section className={classes.sectionMiddle3}>
-        <NTitle title="Мэдээллийн түншлэгч" hasBorder />
+        <NTitle title="Мэдээллийн түншлэгч" hasBorder>
+          <img
+            src="/hee_4.png"
+            alt="Мэдээллийн түншлэгч"
+            width="26"
+            height="26"
+            style={{ marginRight: "4px" }}
+          />
+        </NTitle>
         <Box mt={5} mb={10}>
           <Grid container spacing={2}>
             <Grid item xs={3}>
+              <NSelectTitle title="• Baabar.mn" />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
             </Grid>
             <Grid item xs={3}>
+              <NSelectTitle title="• CCTV" />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
             </Grid>
             <Grid item xs={3}>
+              <NSelectTitle title="• Риа новости" />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
             </Grid>
             <Grid item xs={3}>
+              <NSelectTitle title="• Түнш" />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
               <NInfoPartnerPost />
@@ -232,16 +269,72 @@ const HomeContainer = () => {
           </Grid>
         </Box>
       </section>
+      <section>
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NTitle title="News Brand">
+              <img
+                src="/hee_5.png"
+                alt="News Brand"
+                width="26"
+                height="26"
+                style={{ marginRight: "4px" }}
+              />
+            </NTitle>
+          </Grid>
+          <Grid item xs={3}>
+            <NTitle title="Булангууд">
+              <img
+                src="/hee_3.png"
+                alt="Булангууд"
+                width="26"
+                height="26"
+                style={{ marginRight: "4px" }}
+              />
+            </NTitle>
+          </Grid>
+          <Grid item xs={3}>
+            <NTitle title="Цогц Мэдээ">
+              <img
+                src="/hee_4.png"
+                alt="Цогц Мэдээ"
+                width="26"
+                height="26"
+                style={{ marginRight: "4px" }}
+              />
+            </NTitle>
+          </Grid>
+          <Grid item xs={3}>
+            <NTitle title="Архив">
+              <img
+                src="/hee_4.png"
+                alt="Архив"
+                width="26"
+                height="26"
+                style={{ marginRight: "4px" }}
+              />
+            </NTitle>
+          </Grid>
+        </Grid>
+      </section>
       <section className={classes.sectionMiddle4}>
-        <NTitle title="Дэлгэрэнгүй" hasBorder />
+        <NTitle title="Дэлгэрэнгүй" hasBorder>
+          <img
+            src="/hee_6.png"
+            alt="Дэлгэрэнгүй"
+            width="26"
+            height="26"
+            style={{ marginRight: "4px" }}
+          />
+        </NTitle>
         <Box mt={5} mb={9}>
           <Grid container spacing={2}>
             <Grid item xs={3}>
-              <NTitle title="Улс төр" hasBorder />
+              <NSelectTitle title="Улс төр" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" />
-              <NTitle title="Спорт" hasBorder />
+              <NSelectTitle title="Спорт" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
@@ -251,13 +344,13 @@ const HomeContainer = () => {
               <NCardPostTitle paddingTop="54.21%" />
             </Grid>
             <Grid item xs={3}>
-              <NTitle title="Нийгэм" hasBorder />
+              <NSelectTitle title="Нийгэм" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" />
               <NCardPostTitle paddingTop="54.21%" noImage />
-              <NTitle title="Эдийн засаг" hasBorder />
+              <NSelectTitle title="Эдийн засаг" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" />
@@ -265,17 +358,17 @@ const HomeContainer = () => {
               <NCardPostTitle paddingTop="54.21%" noImage />
             </Grid>
             <Grid item xs={3}>
-              <NTitle title="Шар мэдээ" hasBorder />
+              <NSelectTitle title="Шар мэдээ" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" />
               <NCardPostTitle paddingTop="54.21%" />
-              <NTitle title="Парламент 76" hasBorder />
+              <NSelectTitle title="Парламент 76" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" />
               <NCardPostTitle paddingTop="54.21%" />
             </Grid>
             <Grid item xs={3}>
-              <NTitle title="Дэлхий" hasBorder />
+              <NSelectTitle title="Дэлхий" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
@@ -283,7 +376,7 @@ const HomeContainer = () => {
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NTitle title="Эдийн засаг" hasBorder />
+              <NSelectTitle title="Эдийн засаг" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" />
               <NCardPostTitle paddingTop="54.21%" noImage />
@@ -292,7 +385,15 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section className={classes.sectionPress}>
-        <NTitle title="Нийтлэл" hasBorder />
+        <NTitle title="Нийтлэл" hasBorder>
+          <img
+            src="/hee_4.png"
+            alt="Нийтлэл"
+            width="26"
+            height="26"
+            style={{ marginRight: "4px" }}
+          />
+        </NTitle>
         <Box mb={10}>
           <Box mt={5} mb={9}>
             <Typography variant="h4">• Сэтгүүлчдийн платформ</Typography>
@@ -317,11 +418,19 @@ const HomeContainer = () => {
       </section>
       <section>
         <Box mt={4} pt={10} pb={10} pl={20} pr={20} className={classes.blackBg}>
-          <NTitle
+          <NSelectTitle
             title="Видео сан"
             hasBorder
             className={classes.blackTitle}
-          ></NTitle>
+          >
+            <img
+              src="/hee_3.png"
+              alt="Видео сан"
+              width="26"
+              height="26"
+              style={{ marginRight: "4px" }}
+            />
+          </NSelectTitle>
           <Grid container spacing={2}>
             <Grid item xs={6}>
               <NCardVideoLarge />
@@ -414,7 +523,15 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section>
-        <NTitle title="Нээлттэй платформ" hasBorder />
+        <NTitle title="Нээлттэй платформ" hasBorder>
+          <img
+            src="/hee_2.png"
+            alt="Нээлттэй платформ"
+            width="26"
+            height="26"
+            style={{ marginRight: "4px" }}
+          />
+        </NTitle>
       </section>
       <section className={classes.sectionStickyWrap}>
         <StickySidebar
@@ -510,7 +627,15 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section className={classes.sectionBottom}>
-        <NTitle title="Судалгаа" hasBorder />
+        <NTitle title="Судалгаа" hasBorder>
+          <img
+            src="/hee_3.png"
+            alt="Судалгаа"
+            width="26"
+            height="26"
+            style={{ marginRight: "4px" }}
+          />
+        </NTitle>
       </section>
     </Box>
   );
@@ -563,6 +688,12 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-2rem",
     marginRight: "-2rem",
     marginBottom: theme.spacing(9),
+    "& .MuiSelect-icon": {
+      color: Colors.text_gray,
+    },
+    "& .MuiInputBase-input": {
+      color: Colors.text_gray,
+    },
   },
   blackTitle: {
     color: Colors.white,

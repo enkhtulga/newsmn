@@ -102,6 +102,11 @@ export default createTheme({
       //   },
       // },
     },
+    MuiSelect: {
+      root: {
+        fontSize: 12,
+      },
+    },
     // MuiContainer: {
     //   root: {
     //     paddingLeft: 24,

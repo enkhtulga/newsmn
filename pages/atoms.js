@@ -18,6 +18,7 @@ import NShopItem from "../src/components/ShopItem";
 import NRealStateItem from "../src/components/RealStateItem";
 import NCardVideoLarge from "../src/components/CardVideoLarge";
 import NCardVideoSmall from "../src/components/CardVideoSmall";
+import NAudioPlayer from "../src/components/AudioPlayer";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -327,6 +328,11 @@ const Atoms = () => {
             </Box>
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Audio Player" hasBorder></NTitle>
+        <Box mb={2} />
+        <NAudioPlayer />
       </Box>
     </Box>
   );

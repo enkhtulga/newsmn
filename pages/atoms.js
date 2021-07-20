@@ -20,6 +20,7 @@ import NCardVideoLarge from "../src/components/CardVideoLarge";
 import NCardVideoSmall from "../src/components/CardVideoSmall";
 import NAudioPlayer from "../src/components/AudioPlayer";
 import NHighlightPosts from "../src/components/HighlightPosts";
+import NEditorPost from "../src/components/EditorPost";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -163,9 +164,32 @@ const Atoms = () => {
       <Box marginTop={5}>
         <NTitle title="Editor" hasBorder></NTitle>
         <Box mb={2} />
-        <NEditor />
-        <NEditor />
-        <NEditor />
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
+          </Grid>
+          <Grid item xs={3}>
+            <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
+          </Grid>
+        </Grid>
       </Box>
       <Box marginTop={5}>
         <NTitle title="Card Slide Post" hasBorder></NTitle>

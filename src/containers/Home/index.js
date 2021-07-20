@@ -22,6 +22,7 @@ import NTourMasonry from "../../components/TourMasonry";
 import NRealStateItem from "../../components/RealStateItem";
 import NAudioPlayer from "../../components/AudioPlayer";
 import NHighlightPosts from "../../components/HighlightPosts";
+import NEditorPost from "../../components/EditorPost";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -128,15 +129,27 @@ const HomeContainer = () => {
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
           </Grid>
           <Grid item xs={3}>
             <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
           </Grid>
           <Grid item xs={3}>
             <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
           </Grid>
           <Grid item xs={3}>
             <NEditor />
+            <Box mb={4} />
+            <NEditorPost />
+            <NEditorPost />
           </Grid>
         </Grid>
         <Box mt={10} mb={5}>

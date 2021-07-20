@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
   wrap: {
     display: "flex",
     alignItems: "center",
+    paddingTop: theme.spacing(5),
+    borderTop: "1px solid",
+    borderTopColor: Colors.border_gray,
   },
   contentWrap: {
     paddingLeft: theme.spacing(3),

@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 0,
     backgroundColor: Colors.bg_gray,
     width: 680,
+    maxWidth: "100%",
     borderRadius: 5,
   },
   contentWrap: {

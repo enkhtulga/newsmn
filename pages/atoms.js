@@ -19,6 +19,7 @@ import NRealStateItem from "../src/components/RealStateItem";
 import NCardVideoLarge from "../src/components/CardVideoLarge";
 import NCardVideoSmall from "../src/components/CardVideoSmall";
 import NAudioPlayer from "../src/components/AudioPlayer";
+import NHighlightPosts from "../src/components/HighlightPosts";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -330,9 +331,22 @@ const Atoms = () => {
         </Grid>
       </Box>
       <Box marginTop={5}>
-        <NTitle title="Audio Player" hasBorder></NTitle>
+        <NTitle title="Audio Player & Highlight Posts" hasBorder></NTitle>
         <Box mb={2} />
-        <NAudioPlayer />
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <NAudioPlayer />
+          </Grid>
+          <Grid item xs={6}>
+            <NHighlightPosts>
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+            </NHighlightPosts>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

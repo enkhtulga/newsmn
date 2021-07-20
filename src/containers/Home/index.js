@@ -20,6 +20,8 @@ import NCardVideoSmall from "../../components/CardVideoSmall";
 import NShopItem from "../../components/ShopItem";
 import NTourMasonry from "../../components/TourMasonry";
 import NRealStateItem from "../../components/RealStateItem";
+import NAudioPlayer from "../../components/AudioPlayer";
+import NHighlightPosts from "../../components/HighlightPosts";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -90,8 +92,21 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section className={classes.sectionMiddle}>
-        <Box mt={12} bgcolor={"#dbdbdb"} height={200}>
-          <Typography variant="h1">Podcast section</Typography>
+        <Box mt={10}>
+          <Grid container spacing={2}>
+            <Grid item xs={6}>
+              <NAudioPlayer />
+            </Grid>
+            <Grid item xs={6}>
+              <NHighlightPosts>
+                <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+                <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+                <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+                <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+                <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              </NHighlightPosts>
+            </Grid>
+          </Grid>
         </Box>
         <Box mt={10} mb={10} textAlign="center">
           <NBanner

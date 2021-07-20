@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     borderBottomColor: Colors.line,
     marginBottom: theme.spacing(2),
   },
+  cardWrap: {
+    backgroundColor: "transparent",
+  },
   contentWrap: {
     paddingRight: 0,
     paddingLeft: 0,

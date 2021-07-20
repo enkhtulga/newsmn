@@ -65,7 +65,7 @@ const NAudioPlayer = () => {
               volumeMute: <IconVolumeOff />,
             }}
             style={{
-              width: "680px",
+              width: "542px",
             }}
           />
         </NCardContent>
@@ -80,8 +80,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     paddingLeft: theme.spacing(2),
     paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
-    paddingRight: theme.spacing(5),
+    paddingBottom: 38,
+    paddingRight: 0,
     backgroundColor: Colors.bg_gray,
     width: 680,
     borderRadius: 5,

@@ -10,6 +10,7 @@ import {
   ListItem as MuiListItem,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@material-ui/core";
 import Link from "next/link";
 import {
@@ -43,6 +44,12 @@ const Header = ({ toggleDrawer, open }) => {
           className={`${classes.toolbar} module__content`}
           disableGutters
         >
+          <Box className={classes.logoWrap}>
+            <Typography variant="h1" className={classes.slagon}>
+              Мэдээллийн эх сурвалж
+            </Typography>
+            <img src="/logo_main.png" alt="logo main" width={149} height={49} />
+          </Box>
           <Button variant="contained" className={classes.registerButton}>
             Бүртгүүлэх
           </Button>
@@ -183,6 +190,22 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     background: "linear-gradient(50deg, #F51428 50%, #001E64 50%)",
     height: 110,
+    position: "relative",
+  },
+  logoWrap: {
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    display: "flex",
+    alignItems: "center",
+  },
+  slagon: {
+    paddingRight: 120,
+    color: Colors.white,
+    fontWeight: 700,
+    fontSize: 13,
+    lineHeight: "35px",
   },
   registerButton: {
     marginRight: 8, //theme.spacing(1),

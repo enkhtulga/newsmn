@@ -23,6 +23,8 @@ import NHighlightPosts from "../src/components/HighlightPosts";
 import NEditorPost from "../src/components/EditorPost";
 import NCardGroupPost from "../src/components/CardGroupPost";
 import NFamousNewsItem from "../src/components/FamousNewsItem";
+import NCardArticlePost from "../src/components/CardArticlePost";
+import NCardArticleItem from "../src/components/CardArticleItem";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -425,6 +427,49 @@ const Atoms = () => {
             commentCount={58}
           />
         </Box>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Article Post" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={2}>
+          <Grid item xs={5}>
+            <NCardArticlePost />
+          </Grid>
+          <Grid item xs={7}>
+            <NCardArticleItem
+              image={"/card_article_item_1.jpg"}
+              editor={"Б.Дэлгэрцэцэг"}
+              title={"Байр суурь: Үндэсний үйлдвэрлэл дампуурч байна"}
+              star={5}
+              commentCount={58}
+            />
+            <NCardArticleItem
+              image={"/card_article_item_2.jpg"}
+              editor={"Б.Дэлгэрцэцэг"}
+              title={"Зэсийн алтан үе айсуй"}
+              star={5}
+              commentCount={58}
+            />
+            <NCardArticleItem
+              image={"/card_article_item_3.jpg"}
+              editor={"Б.Дэлгэрцэцэг"}
+              title={
+                "ПОЭЗЧУ-2021: Монгол, Оросын олон улсын интеграци ба хил орчмын хамтын ажиллагаа"
+              }
+              star={5}
+              commentCount={58}
+            />
+            <NCardArticleItem
+              image={"/card_article_item_4.jpg"}
+              editor={"Б.Дэлгэрцэцэг"}
+              title={
+                "“ЭТТ” бонд: Гадаадын хөрөнгө оруулагчдыг татан оролцуулна"
+              }
+              star={5}
+              commentCount={58}
+            />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

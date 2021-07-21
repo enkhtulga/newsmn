@@ -25,6 +25,8 @@ import NHighlightPosts from "../../components/HighlightPosts";
 import NEditorPost from "../../components/EditorPost";
 import NCardGroupPost from "../../components/CardGroupPost";
 import NFamousNewsItem from "../../components/FamousNewsItem";
+import NCardArticlePost from "../../components/CardArticlePost";
+import NCardArticleItem from "../../components/CardArticleItem";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -41,8 +43,8 @@ const HomeContainer = () => {
       <section className={classes.sectionWrap}>
         <StickySidebar
           className={classes.stickySidebar}
-          offsetTop={10}
-          offsetBottom={10}
+          offsetTop={16}
+          offsetBottom={16}
         >
           <NTitle title="Шинэ мэдээ" hasBorder />
           <Box mt={2} />
@@ -694,8 +696,8 @@ const HomeContainer = () => {
       <section className={classes.sectionStickyWrap}>
         <StickySidebar
           className={classes.sidebar}
-          offsetTop={10}
-          offsetBottom={0}
+          offsetTop={16}
+          offsetBottom={16}
         >
           <NSelectTitle title="Алдартай" hasBorder>
             <img
@@ -746,78 +748,46 @@ const HomeContainer = () => {
             />
           </NSelectTitle>
           <Box mt={4} />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
-          quis risus eleifend auctor nec sed mauris. In bibendum suscipit
-          scelerisque. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed vel
-          risus sapien. Nullam nisl ligula, dignissim ut molestie vel, viverra
-          at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi. Maecenas
-          et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
-          suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
-          pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Donec hendrerit erat nulla, vel volutpat dolor gravida faucibus.
-          Sed a eros quis risus eleifend auctor nec sed mauris. In bibendum
-          suscipit scelerisque. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed
-          vel risus sapien. Nullam nisl ligula, dignissim ut molestie vel,
-          viverra at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi.
-          Maecenas et libero at ante ultricies lacinia ut eu ligula. Nulla lorem
-          felis, suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus
-          pretium pellentesque. Cras eu sollicitudin libero. Vivamus vel
-          eleifend lacus. Cras at malesuada Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Donec hendrerit erat nulla, vel volutpat
-          dolor gravida faucibus. Sed a eros quis risus eleifend auctor nec sed
-          mauris. In bibendum suscipit scelerisque. Class aptent taciti sociosqu
-          ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in
-          mollis sapien. Sed vel risus sapien. Nullam nisl ligula, dignissim ut
-          molestie vel, viverra at dui. Mauris sed elit finibus, rhoncus eros
-          et, tempus mi. Maecenas et libero at ante ultricies lacinia ut eu
-          ligula. Nulla lorem felis, suscipit id ligula eget, imperdiet rutrum
-          leo. Nam rhoncus pretium pellentesque. Cras eu sollicitudin libero.
-          Vivamus vel eleifend lacus. Cras at malesuada Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Donec hendrerit erat nulla, vel
-          volutpat dolor gravida faucibus. Sed a eros quis risus eleifend auctor
-          nec sed mauris. In bibendum suscipit scelerisque. Class aptent taciti
-          sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam nisl
-          ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-          finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-          ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-          eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-          sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
-          quis risus eleifend auctor nec sed mauris. In bibendum suscipit
-          scelerisque. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed vel
-          risus sapien. Nullam nisl ligula, dignissim ut molestie vel, viverra
-          at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi. Maecenas
-          et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
-          suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
-          pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Donec hendrerit erat nulla, vel volutpat dolor gravida faucibus.
-          Sed a eros quis risus eleifend auctor nec sed mauris. In bibendum
-          suscipit scelerisque. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed
-          vel risus sapien. Nullam nisl ligula, dignissim ut molestie vel,
-          viverra at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi.
-          Maecenas et libero at ante ultricies lacinia ut eu ligula. Nulla lorem
-          felis, suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus
-          pretium pellentesque. Cras eu sollicitudin libero. Vivamus vel
-          eleifend lacus. Cras at malesuada Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Donec hendrerit erat nulla, vel volutpat
-          dolor gravida faucibus. Sed a eros quis risus eleifend auctor nec sed
-          mauris. In bibendum suscipit scelerisque. Class aptent taciti sociosqu
-          ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in
-          mollis sapien. Sed vel risus sapien. Nullam nisl ligula, dignissim ut
-          molestie vel, viverra at dui. Mauris sed elit finibus, rhoncus eros
-          et, tempus mi. Maecenas et libero at ante ultricies lacinia ut eu
-          ligula. Nulla lorem felis, suscipit id ligula eget, imperdiet rutrum
-          leo. Nam rhoncus pretium pellentesque. Cras eu sollicitudin libero.
-          Vivamus vel eleifend lacus. Cras at malesuada
+          <Grid container spacing={2}>
+            <Grid item xs={5}>
+              <NCardArticlePost />
+            </Grid>
+            <Grid item xs={7}>
+              <NCardArticleItem
+                image={"/card_article_item_1.jpg"}
+                editor={"Б.Дэлгэрцэцэг"}
+                title={"Байр суурь: Үндэсний үйлдвэрлэл дампуурч байна"}
+                star={5}
+                commentCount={58}
+              />
+              <NCardArticleItem
+                image={"/card_article_item_2.jpg"}
+                editor={"Б.Дэлгэрцэцэг"}
+                title={"Зэсийн алтан үе айсуй"}
+                star={5}
+                commentCount={58}
+              />
+              <NCardArticleItem
+                image={"/card_article_item_3.jpg"}
+                editor={"Б.Дэлгэрцэцэг"}
+                title={
+                  "ПОЭЗЧУ-2021: Монгол, Оросын олон улсын интеграци ба хил орчмын хамтын ажиллагаа"
+                }
+                star={5}
+                commentCount={58}
+              />
+              <NCardArticleItem
+                image={"/card_article_item_4.jpg"}
+                editor={"Б.Дэлгэрцэцэг"}
+                title={
+                  "“ЭТТ” бонд: Гадаадын хөрөнгө оруулагчдыг татан оролцуулна"
+                }
+                star={5}
+                commentCount={58}
+              />
+              <Button variant="outlined">Бүгдийг харах</Button>
+            </Grid>
+          </Grid>
         </Box>
       </section>
       <section className={classes.sectionBottom}>

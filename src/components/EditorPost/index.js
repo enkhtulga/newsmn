@@ -9,10 +9,10 @@ const NEditorPost = () => {
 
   return (
     <Box className={classes.wrap}>
-      <Typography variant="body2" className={classes.category}>
-        Улс төр - Нийтлэл |
-      </Typography>
       <Typography variant="body2" className={classes.title}>
+        <Typography variant="body2" className={classes.category}>
+          Улс төр - Нийтлэл |
+        </Typography>
         Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
       </Typography>
       <NPostMeta videoIcon />
@@ -31,11 +31,19 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spectral",
     fontWeight: 700,
     color: Colors.border_red,
+    display: "inline-block",
+    paddingRight: theme.spacing(0.5),
   },
   title: {
     fontFamily: "Spectral",
     fontWeight: 700,
     marginBottom: theme.spacing(1),
+    display: "-webkit-box",
+    WebkitBoxOrient: "vertical",
+    WebkitLineClamp: 2,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    height: 40,
   },
 }));
 

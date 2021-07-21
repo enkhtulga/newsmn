@@ -5,11 +5,6 @@ import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
-import NAvatar from "../Avatar";
-import {
-  Videocam as IconVideocam,
-  Image as IconImage,
-} from "@material-ui/icons";
 
 const NCardSlidePost = () => {
   const classes = useStyles();
@@ -28,9 +23,7 @@ const NCardSlidePost = () => {
             <Typography variant="h1" className={classes.title}>
               АНУ Тайванийг асуудал гэж харахаа больсон гэв
             </Typography>
-            <NAvatar size={76} hasBorder className={classes.avatar}>
-              <IconVideocam />
-            </NAvatar>
+            <Box className={classes.line} />
           </Box>
         </NCardContent>
       </NCard>
@@ -77,11 +70,15 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
   },
-  avatar: {
+  line: {
     backgroundColor: Colors.primary,
     margin: "0 auto",
     marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(6),
+    height: 4,
+    borderRadius: 5,
+    width: 94,
+    maxWidth: "100%",
   },
 }));
 

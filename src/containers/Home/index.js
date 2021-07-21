@@ -509,36 +509,43 @@ const HomeContainer = () => {
       <section>
         <Box mt={4} pt={10} pb={10} pl={20} pr={20} className={classes.blackBg}>
           <NSelectTitle
-            title="Видео сан"
+            title="Видео суваг"
             hasBorder
             className={classes.blackTitle}
           >
             <img
               src="/hee_3.png"
-              alt="Видео сан"
+              alt="Видео суваг"
               width="26"
               height="26"
               style={{ marginRight: "4px" }}
             />
           </NSelectTitle>
           <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item sm={5}>
               <NCardVideoLarge />
             </Grid>
-            <Grid item xs={6}>
-              <NCardVideoLarge />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall />
+            <Grid item sm={7}>
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <NCardVideoSmall />
+                </Grid>
+                <Grid item xs={4}>
+                  <NCardVideoSmall />
+                </Grid>
+                <Grid item xs={4}>
+                  <NCardVideoSmall />
+                </Grid>
+                <Grid item xs={4}>
+                  <NCardVideoSmall />
+                </Grid>
+                <Grid item xs={4}>
+                  <NCardVideoSmall />
+                </Grid>
+                <Grid item xs={4}>
+                  <NCardVideoSmall />
+                </Grid>
+              </Grid>
             </Grid>
             <Grid item xs={12}>
               <Box display="flex" justifyContent="flex-end">

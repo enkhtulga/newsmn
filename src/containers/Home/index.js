@@ -24,6 +24,7 @@ import NAudioPlayer from "../../components/AudioPlayer";
 import NHighlightPosts from "../../components/HighlightPosts";
 import NEditorPost from "../../components/EditorPost";
 import NCardGroupPost from "../../components/CardGroupPost";
+import NFamousNewsItem from "../../components/FamousNewsItem";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -619,6 +620,76 @@ const HomeContainer = () => {
             style={{ marginRight: "4px" }}
           />
         </NTitle>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
+        erat nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
+        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
+        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
+        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
+        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
+        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
+        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
+        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
+        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
+        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
+        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
+        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
+        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
+        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
+        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
+        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
+        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
+        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
+        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
+        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
+        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
+        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
+        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
+        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
+        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada
       </section>
       <section className={classes.sectionStickyWrap}>
         <StickySidebar
@@ -626,19 +697,55 @@ const HomeContainer = () => {
           offsetTop={10}
           offsetBottom={0}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
-          quis risus eleifend auctor nec sed mauris. In bibendum suscipit
-          scelerisque. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Sed in mollis sapien. Sed vel
-          risus sapien. Nullam nisl ligula, dignissim ut molestie vel, viverra
-          at dui. Mauris sed elit finibus, rhoncus eros et, tempus mi. Maecenas
-          et libero at ante ultricies lacinia ut eu ligula. Nulla lorem felis,
-          suscipit id ligula eget, imperdiet rutrum leo. Nam rhoncus pretium
-          pellentesque. Cras eu sollicitudin libero. Vivamus vel eleifend lacus.
-          Cras at malesuada
+          <NSelectTitle title="Алдартай" hasBorder>
+            <img
+              src="/hee_2.png"
+              alt="Алдартай"
+              width="26"
+              height="26"
+              style={{ marginRight: "4px" }}
+            />
+          </NSelectTitle>
+          <NFamousNewsItem
+            number={"1"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={5}
+            commentCount={58}
+          />
+          <NFamousNewsItem
+            number={"2"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={5}
+            commentCount={58}
+          />
+          <NFamousNewsItem
+            number={"3"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={4}
+            commentCount={58}
+          />
+          <NFamousNewsItem
+            number={"4"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={3}
+            commentCount={58}
+          />
         </StickySidebar>
         <Box className={classes.content}>
+          <NSelectTitle title="Нийтлэл" hasBorder>
+            <img
+              src="/hee_2.png"
+              alt="Нийтлэл"
+              width="26"
+              height="26"
+              style={{ marginRight: "4px" }}
+            />
+          </NSelectTitle>
+          <Box mt={4} />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           hendrerit erat nulla, vel volutpat dolor gravida faucibus. Sed a eros
           quis risus eleifend auctor nec sed mauris. In bibendum suscipit

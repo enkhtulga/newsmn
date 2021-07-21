@@ -22,6 +22,7 @@ import NAudioPlayer from "../src/components/AudioPlayer";
 import NHighlightPosts from "../src/components/HighlightPosts";
 import NEditorPost from "../src/components/EditorPost";
 import NCardGroupPost from "../src/components/CardGroupPost";
+import NFamousNewsItem from "../src/components/FamousNewsItem";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -390,6 +391,40 @@ const Atoms = () => {
             <NCardGroupPost />
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Famous News Item" hasBorder></NTitle>
+        <Box mb={2} />
+        <Box marginTop={2} width={"331px"}>
+          <NFamousNewsItem
+            number={"1"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={5}
+            commentCount={58}
+          />
+          <NFamousNewsItem
+            number={"2"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={5}
+            commentCount={58}
+          />
+          <NFamousNewsItem
+            number={"3"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={4}
+            commentCount={58}
+          />
+          <NFamousNewsItem
+            number={"4"}
+            editor={"Б.Дэлгэрцэцэг"}
+            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+            star={3}
+            commentCount={58}
+          />
+        </Box>
       </Box>
     </Box>
   );

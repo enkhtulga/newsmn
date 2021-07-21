@@ -23,6 +23,7 @@ import NRealStateItem from "../../components/RealStateItem";
 import NAudioPlayer from "../../components/AudioPlayer";
 import NHighlightPosts from "../../components/HighlightPosts";
 import NEditorPost from "../../components/EditorPost";
+import NCardGroupPost from "../../components/CardGroupPost";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -298,52 +299,110 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section>
-        <Grid container spacing={2}>
-          <Grid item xs={3}>
-            <NTitle title="News Brand">
-              <img
-                src="/hee_5.png"
-                alt="News Brand"
-                width="26"
-                height="26"
-                style={{ marginRight: "4px" }}
-              />
-            </NTitle>
-          </Grid>
-          <Grid item xs={3}>
-            <NTitle title="Булангууд">
-              <img
-                src="/hee_3.png"
-                alt="Булангууд"
-                width="26"
-                height="26"
-                style={{ marginRight: "4px" }}
-              />
-            </NTitle>
-          </Grid>
-          <Grid item xs={3}>
-            <NTitle title="Цогц Мэдээ">
-              <img
-                src="/hee_4.png"
-                alt="Цогц Мэдээ"
-                width="26"
-                height="26"
-                style={{ marginRight: "4px" }}
-              />
-            </NTitle>
-          </Grid>
-          <Grid item xs={3}>
-            <NTitle title="Архив">
-              <img
-                src="/hee_4.png"
-                alt="Архив"
-                width="26"
-                height="26"
-                style={{ marginRight: "4px" }}
-              />
-            </NTitle>
-          </Grid>
-        </Grid>
+        <NCarousel
+          slidesPerView={4}
+          spaceBetween={16}
+          navigation
+          pagination
+          items={[
+            <>
+              <NTitle title="News Brand">
+                <img
+                  src="/hee_5.png"
+                  alt="News Brand"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+            <>
+              <NTitle title="Булангууд">
+                <img
+                  src="/hee_3.png"
+                  alt="Булангууд"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+            <>
+              <NTitle title="Цогц Мэдээ">
+                <img
+                  src="/hee_4.png"
+                  alt="Цогц Мэдээ"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+            <>
+              <NTitle title="Архив">
+                <img
+                  src="/hee_4.png"
+                  alt="Архив"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+            <>
+              <NTitle title="News Brand">
+                <img
+                  src="/hee_5.png"
+                  alt="News Brand"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+            <>
+              <NTitle title="Булангууд">
+                <img
+                  src="/hee_3.png"
+                  alt="Булангууд"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+            <>
+              <NTitle title="Цогц Мэдээ">
+                <img
+                  src="/hee_4.png"
+                  alt="Цогц Мэдээ"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+            <>
+              <NTitle title="Архив">
+                <img
+                  src="/hee_4.png"
+                  alt="Архив"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NTitle>
+              <NCardGroupPost />
+            </>,
+          ]}
+        />
       </section>
       <section className={classes.sectionMiddle4}>
         <NTitle title="Дэлгэрэнгүй" hasBorder>

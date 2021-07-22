@@ -80,11 +80,7 @@ const PoliticsContainer = () => {
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={2}>
-          <StickySidebar
-            // className={classes.stickySidebar}
-            offsetTop={16}
-            offsetBottom={16}
-          >
+          <StickySidebar offsetTop={16} offsetBottom={16}>
             <NBanner
               src="https://via.placeholder.com/216x700"
               width={217}

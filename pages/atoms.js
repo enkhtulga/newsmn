@@ -29,6 +29,7 @@ import NBreadcrumbs from "../src/components/Breadcrumbs";
 import NPageMenu from "../src/components/PageMenu";
 import NCardNewsItem from "../src/components/CardNewsItem";
 import NTopPoliticsPost from "../src/components/TopPoliticsPost";
+import NAuthorInfo from "../src/components/AuthorInfo";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -569,6 +570,11 @@ const Atoms = () => {
             />
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Author Info" hasBorder></NTitle>
+        <Box mb={2} />
+        <NAuthorInfo />
       </Box>
     </Box>
   );

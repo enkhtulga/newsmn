@@ -29,7 +29,7 @@ export default createTheme({
       lineHeight: "36.53px",
       fontSize: 24,
       fontWeight: 600,
-      color: Colors.dark_blue,
+      color: Colors.title,
     },
     h2: {
       fontFamily: "PT Serif",

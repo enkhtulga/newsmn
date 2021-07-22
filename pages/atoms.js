@@ -25,6 +25,7 @@ import NCardGroupPost from "../src/components/CardGroupPost";
 import NFamousNewsItem from "../src/components/FamousNewsItem";
 import NCardArticlePost from "../src/components/CardArticlePost";
 import NCardArticleItem from "../src/components/CardArticleItem";
+import NBreadcrumbs from "../src/components/Breadcrumbs";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -470,6 +471,12 @@ const Atoms = () => {
             />
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Breadcrumbs - Dark & Light" hasBorder></NTitle>
+        <Box mb={2} />
+        <NBreadcrumbs />
+        <NBreadcrumbs dark />
       </Box>
     </Box>
   );

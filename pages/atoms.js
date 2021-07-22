@@ -26,6 +26,7 @@ import NFamousNewsItem from "../src/components/FamousNewsItem";
 import NCardArticlePost from "../src/components/CardArticlePost";
 import NCardArticleItem from "../src/components/CardArticleItem";
 import NBreadcrumbs from "../src/components/Breadcrumbs";
+import NPageMenu from "../src/components/PageMenu";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -477,6 +478,37 @@ const Atoms = () => {
         <Box mb={2} />
         <NBreadcrumbs />
         <NBreadcrumbs dark />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Page Menu" hasBorder></NTitle>
+        <Box mb={2} />
+        <NPageMenu
+          items={[
+            { name: "Мэдээ", link: "/aa" },
+            { name: "Ярилцлага", link: "/b" },
+            { name: "Нийтлэл", link: "/atoms" },
+            { name: "Ерөнхийлөгч", link: "/d" },
+            { name: "УИХ", link: "/e" },
+            { name: "Засгийн газар", link: "/f" },
+            { name: "Намууд", link: "/g" },
+            { name: "Бусад", link: "/h" },
+          ]}
+          primaryColor={Colors.primary}
+        />
+        <Box mb={2} />
+        <NPageMenu
+          items={[
+            { name: "Мэдээ", link: "/aa" },
+            { name: "Ярилцлага", link: "/b" },
+            { name: "Нийтлэл", link: "/atoms" },
+            { name: "Ерөнхийлөгч", link: "/d" },
+            { name: "УИХ", link: "/e" },
+            { name: "Засгийн газар", link: "/f" },
+            { name: "Намууд", link: "/g" },
+            { name: "Бусад", link: "/h" },
+          ]}
+          primaryColor={Colors.yellow}
+        />
       </Box>
     </Box>
   );

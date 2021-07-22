@@ -230,8 +230,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 3,
     position: "relative",
     "&:hover": {
+      backgroundColor: "transparent",
       "&::before": {
-        backgroundColor: Colors.border_red,
+        backgroundColor: Colors.primary,
       },
     },
     "&::before": {

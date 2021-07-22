@@ -81,37 +81,28 @@ export default createTheme({
         },
       },
     },
-    MuiButton: {
-      // root: {
-      //   padding: "7px 16px",
-      // },
-      // containedSizeLarge: {
-      //   padding: "12px 22px",
-      // },
-      // outlinedSizeLarge: {
-      //   padding: "12px 22px",
-      // },
-      // outlined: {
-      //   padding: "6px 15px",
-      // },
-    },
-    MuiButtonBase: {
-      // root: {
-      //   "&.button-primary.primary-small": {
-      //     fontWeight: 400,
-      //   },
-      // },
-    },
     MuiSelect: {
       root: {
         fontSize: 12,
       },
     },
-    // MuiContainer: {
-    //   root: {
-    //     paddingLeft: 24,
-    //     paddingRight: 24,
-    //   },
-    // },
+    MuiListItem: {
+      root: {
+        "&$selected": {
+          backgroundColor: "transparent",
+          "&:hover": {
+            backgroundColor: "transparent",
+          },
+          "& span": {
+            fontWeight: 700,
+          },
+        },
+      },
+      button: {
+        "&:hover": {
+          backgroundColor: "transparent",
+        },
+      },
+    },
   },
 });

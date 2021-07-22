@@ -25,4 +25,5 @@ export const Colors = {
   number_blue: "#16357C",
   black: "#000000",
   white: "#ffffff",
+  yellow: "#FFB800",
 };

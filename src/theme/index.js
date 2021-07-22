@@ -68,10 +68,14 @@ export default createTheme({
       lineHeight: "10px",
       color: Colors.text,
     },
-    // overline: {
-    //   fontSize: 10,
-    //   textTransform: "initial",
-    // },
+    overline: {
+      fontFamily: "Roboto Condensed",
+      fontWeight: 400,
+      fontSize: 9,
+      lineHeight: "10px",
+      color: Colors.text,
+      textTransform: "initial",
+    },
   },
   overrides: {
     MuiCardContent: {

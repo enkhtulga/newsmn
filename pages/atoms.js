@@ -27,6 +27,7 @@ import NCardArticlePost from "../src/components/CardArticlePost";
 import NCardArticleItem from "../src/components/CardArticleItem";
 import NBreadcrumbs from "../src/components/Breadcrumbs";
 import NPageMenu from "../src/components/PageMenu";
+import NCardNewsItem from "../src/components/CardNewsItem";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -509,6 +510,24 @@ const Atoms = () => {
           ]}
           primaryColor={Colors.yellow}
         />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card News Item" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={2}>
+          <Grid item xs={2}>
+            <NBanner
+              src="https://via.placeholder.com/216x700"
+              width={217}
+              height={700}
+            />
+          </Grid>
+          <Grid item xs={9}>
+            <NCardNewsItem hasPhotoBy />
+            <NCardNewsItem hasPhotoBy />
+            <NCardNewsItem hasPhotoBy />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

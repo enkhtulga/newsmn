@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     position: "relative",
     paddingTop: (rest) => (rest.paddingTop ? rest.paddingTop : "56.25%"),
     overflow: "hidden",
-    borderRadius: 5,
+    borderRadius: (rest) => (rest.borderRadius ? rest.borderRadius : 5),
   },
   media: {
     position: "absolute",

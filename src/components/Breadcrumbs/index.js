@@ -4,13 +4,13 @@ import { Box, Breadcrumbs, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import { NavigateNext as IconNavigateNext } from "@material-ui/icons";
 
-const NBreadcrumbs = ({ dark }) => {
+const NBreadcrumbs = ({ dark, className }) => {
   const classes = useStyles(dark);
 
   const handleClick = () => {};
 
   return (
-    <Box className={classes.wrap}>
+    <Box className={`${className} ${classes.wrap}`}>
       <Typography variant="h1" className={classes.title}>
         Улс төр
       </Typography>

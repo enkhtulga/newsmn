@@ -28,6 +28,7 @@ import NCardArticleItem from "../src/components/CardArticleItem";
 import NBreadcrumbs from "../src/components/Breadcrumbs";
 import NPageMenu from "../src/components/PageMenu";
 import NCardNewsItem from "../src/components/CardNewsItem";
+import NTopPoliticsPost from "../src/components/TopPoliticsPost";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -526,6 +527,46 @@ const Atoms = () => {
             <NCardNewsItem hasPhotoBy />
             <NCardNewsItem hasPhotoBy />
             <NCardNewsItem hasPhotoBy />
+          </Grid>
+        </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Top Politics Post" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={0}>
+          <Grid item xs={4}>
+            <NTopPoliticsPost
+              image={"/top_politics_post_1.jpg"}
+              category={"Улс төр - Мэдээ"}
+              title={
+                "С.Эрдэнийг заналхийлсэн хэргийг шалгуулахаар хуулийн байгууллагад хандлаа"
+              }
+              content={
+                "Ардчилсан намаас Ерөнхийлөгчийн сонгуульд нэр дэвшигч С.Эрдэнэ рүү өчигдөр шөнийн 02:00 цагт 99113020 утаснаас залгаж, амь нас, эрүүл мэндэд нь халдана хэмээн заналхийлсэн юм."
+              }
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <NTopPoliticsPost
+              image={"/top_politics_post_2.jpg"}
+              category={"Улс төр - Мэдээ"}
+              title={
+                "Ерөнхийлөгчийн сонгуульд 18647 төрийн албан хаагч ажиллана"
+              }
+              content={
+                "Монгол Улсын зургаа дахт Ерөнхийлөгчийг сонгох ээлжит сонгуулийн санал хурааль зургадугаар сарын 9-нд явагдана. Энэ удаагийн сонгуульд парламентад суудалтай гурван нам оролцож байгаа юм."
+              }
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <NTopPoliticsPost
+              image={"/top_politics_post_3.jpg"}
+              category={"Улс төр - Мэдээ"}
+              title={"ҮАБЗ хүүхдийн мөнгийг олгох эсэх асуудлаар хуралджээ"}
+              content={
+                "-Өнөөдөр 'Зөв хүн электорат' эвслээс Монгол Улсын Ерөнхийлөгчийн сонгуульд нэр дэвшигчийг бүртгэсэн авсан албан ёсны мэдээ ирлээ. Сонгуулийн тухай хуулийн 28 дугаар зүйлийн 28.6-д заасны дагуу Д.Энхбатыг СЕХ бүртгэж, үнэмлэх олгохоор шийдвэрлэлээ."
+              }
+            />
           </Grid>
         </Grid>
       </Box>

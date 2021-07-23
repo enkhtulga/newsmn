@@ -60,6 +60,7 @@ export default createTheme({
       fontSize: 14,
       fontWeight: 400,
       lineHeight: "20px",
+      position: "relative",
     },
     caption: {
       fontFamily: "Roboto Condensed",

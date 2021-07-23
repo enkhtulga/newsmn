@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
   wrap: {
     borderRadius: 5,
     textAlign: "center",
+    width: (props) => props.width,
+    height: (props) => props.height,
+    maxWidth: "100%",
+    maxHeight: "100%",
   },
-  width: (props) => props.width,
-  height: (props) => props.height,
-  maxWidth: "100%",
-  maxHeight: "100%",
 }));
 
 export default NBanner;

@@ -30,6 +30,7 @@ import NPageMenu from "../src/components/PageMenu";
 import NCardNewsItem from "../src/components/CardNewsItem";
 import NTopPoliticsPost from "../src/components/TopPoliticsPost";
 import NAuthorInfo from "../src/components/AuthorInfo";
+import NSocialVertical from "../src/components/SocialVertical";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -575,6 +576,11 @@ const Atoms = () => {
         <NTitle title="Author Info" hasBorder></NTitle>
         <Box mb={2} />
         <NAuthorInfo />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Social Vertical" hasBorder></NTitle>
+        <Box mb={2} />
+        <NSocialVertical />
       </Box>
     </Box>
   );

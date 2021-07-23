@@ -40,6 +40,7 @@ import {
   Room as IconRoom,
 } from "@material-ui/icons";
 import { Colors } from "../src/theme/colors";
+import NTopYellowPost from "../src/components/TopYellowPost";
 
 const Atoms = () => {
   const classes = useStyles();
@@ -619,6 +620,36 @@ const Atoms = () => {
           </Grid>
         </Grid>
       </Box>
+      <Box marginTop={5}>
+        <NTitle title="Top Yellow Post" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={0}>
+          <Grid item xs={4}>
+            <NTopYellowPost
+              yellowCategory="Шар мэдээ - "
+              category="Дуулиан"
+              title='"Land Cruiser 300" Монголд зураг авхуулав'
+              image="/yellow_news_top_post_1.jpg"
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <NTopYellowPost
+              yellowCategory="Шар мэдээ - "
+              category="Дуулиан"
+              title="АНУ: Дууны хурдтай пуужингийн туршилтад 4 дун, 90 хясаа өртөнө"
+              image="/yellow_news_top_post_2.jpg"
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <NTopYellowPost
+              yellowCategory="Шар мэдээ - "
+              category="Дуулиан"
+              title="Амны хаалт зүүгээгүй Бразилын Ерөнхийлөгч дахин торгуулжээ"
+              image="/yellow_news_top_post_3.jpg"
+            />
+          </Grid>
+        </Grid>
+      </Box>
     </Box>
   );
 };
@@ -630,8 +661,6 @@ const useStyles = makeStyles((theme) => ({
   },
   blackBg: {
     backgroundColor: Colors.title,
-    marginLeft: "-2rem",
-    marginRight: "-2rem",
   },
   blackTitle: {
     color: Colors.white,

@@ -27,6 +27,9 @@ body {
 .module__content {
   padding: 0 2rem;
 }
+.module__content_margin {
+  margin: 0 -2rem;
+}
 .slideWrap {
   position: relative;
 }

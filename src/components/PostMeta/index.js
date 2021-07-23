@@ -7,8 +7,8 @@ import {
   VideocamOutlined as IconVideocamOutlined,
 } from "@material-ui/icons";
 
-const NPostMeta = ({ videoIcon, className, hasBorder }) => {
-  const classes = useStyles(hasBorder);
+const NPostMeta = ({ videoIcon, className, hasBorder, justifyContent }) => {
+  const classes = useStyles({ hasBorder, justifyContent });
 
   return (
     <Box className={`${className} ${classes.metaWrap}`}>
@@ -26,13 +26,15 @@ const NPostMeta = ({ videoIcon, className, hasBorder }) => {
 const useStyles = makeStyles((theme) => ({
   metaWrap: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: (props) =>
+      props.justifyContent ? props.justifyContent : "space-between",
     alignItems: "center",
-    borderBottom: (hasBorder) =>
-      hasBorder == true ? "1px solid transparent" : "none",
-    borderBottomColor: (hasBorder) =>
-      hasBorder == true ? Colors.line : "transparent",
-    paddingBottom: (hasBorder) => (hasBorder == true ? theme.spacing(1.5) : 0),
+    borderBottom: (props) =>
+      props.hasBorder == true ? "1px solid transparent" : "none",
+    borderBottomColor: (props) =>
+      props.hasBorder == true ? Colors.line : "transparent",
+    paddingBottom: (props) =>
+      props.hasBorder == true ? theme.spacing(1.5) : 0,
   },
   dateWrap: {
     display: "flex",

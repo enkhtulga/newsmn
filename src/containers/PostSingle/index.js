@@ -21,7 +21,7 @@ const PostSingleContainer = ({ postId }) => {
   return (
     <Box>
       <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" />
+        <NBreadcrumbs className="module__content" title={"Улс төр"} />
       </Box>
       <Grid container spacing={2}>
         <Grid item xs={3}>

@@ -4,7 +4,7 @@ import { Box, Breadcrumbs, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import { NavigateNext as IconNavigateNext } from "@material-ui/icons";
 
-const NBreadcrumbs = ({ dark, className }) => {
+const NBreadcrumbs = ({ dark, className, title }) => {
   const classes = useStyles(dark);
 
   const handleClick = () => {};
@@ -12,7 +12,7 @@ const NBreadcrumbs = ({ dark, className }) => {
   return (
     <Box className={`${className} ${classes.wrap}`}>
       <Typography variant="h1" className={classes.title}>
-        Улс төр
+        {title}
       </Typography>
       <Breadcrumbs
         separator={

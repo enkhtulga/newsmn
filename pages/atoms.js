@@ -32,6 +32,8 @@ import NTopPoliticsPost from "../src/components/TopPoliticsPost";
 import NAuthorInfo from "../src/components/AuthorInfo";
 import NSocialVertical from "../src/components/SocialVertical";
 import NSelectPopularTitle from "../src/components/SelectPopularTitle";
+import NCardPostTitleExcerpt from "../src/components/CardPostTitleExcerpt";
+import NCardSportNewsItem from "../src/components/CardSportNewsItem";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -583,6 +585,39 @@ const Atoms = () => {
         <NTitle title="Social Vertical" hasBorder></NTitle>
         <Box mb={2} />
         <NSocialVertical />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Post Title & Excerpt" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={0}>
+          <Grid item xs={6}>
+            <NCardPostTitleExcerpt
+              paddingTop="65.44%"
+              subtitle="Спорт - Мэдээ 2021-06-27"
+              title="Бельги vs Португал: Аваргыг давж аварга"
+              excerpt="Хэсгийн шатанд сайн тоглосон Бельгийн шигшээ болон үхлийн хэсгээс гарч ирсэн Португалын шигшээ багуудын тоглолт өнөөдөр/2021.06.27/ шөнө 03:00 цагаас Ла Картужа цэнгэлдэх хүрээлэнд явагдах гэж байна. Бельгийн шигшээ 'B' хэсгээс есөн оноотой төвөггүйхэн хасагдах шатанд шалгарсан. Харин Португалын шигшээ баг хэсгийн гурван тоглолтдоо нэг тэнцэж, нэг хожигдож, нэг хожил байгуулж дөрвөн оноотой гутгаар байраар хасагдах шат руу орж ирсэн билээ.Хоёр багийн аль хожсон баг нь Италийн шигшээ багийн эсрэг тоглоно."
+              image="/card_post_title_excerpt.jpg"
+            />
+          </Grid>
+        </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Sport News Item" hasBorder></NTitle>
+        <Box mb={2} />
+        <Grid container spacing={0}>
+          <Grid item xs={6}>
+            <NCardSportNewsItem
+              title="Өдрийн тойм: Дани финал хүрэх үү? Итали цом өргөх үү?"
+              excerpt="Аугаа их Эх орны дайны Ялалтын 76 жилийн ой өнөөдөр/2021.5.9/ тохиож байна. ОХУ-ын нийслэл Москва хотын улаан талбайд Ялалтын баярын цэргийн жагсаал сүр жавхлантайгаар эхэллээ."
+              image="/card_sport_news_item_1.jpg"
+            />
+            <NCardSportNewsItem
+              title="Тоглолтын өмнө: Азтай учраа Дани vs Уэльс"
+              excerpt="Аугаа их Эх орны дайны Ялалтын 76 жилийн ой өнөөдөр/2021.5.9/ тохиож байна. ОХУ-ын нийслэл Москва хотын улаан талбайд Ялалтын баярын цэргийн жагсаал сүр жавхлантайгаар эхэллээ. "
+              image="/card_sport_news_item_2.jpg"
+            />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

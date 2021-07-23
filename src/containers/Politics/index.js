@@ -18,7 +18,7 @@ const PoliticsContainer = () => {
   return (
     <Box>
       <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" />
+        <NBreadcrumbs className="module__content" title={"Улс төр"} />
       </Box>
       <Box className={classes.topPoliticsPostWrap}>
         <Grid container spacing={0}>

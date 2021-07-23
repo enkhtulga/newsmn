@@ -1,10 +1,10 @@
 import MainLayout from "../../src/layouts/MainLayout";
 import PoliticsContainer from "../../src/containers/Politics";
 
-const PolicticsPage = () => {
+const PoliticsPage = () => {
   return <PoliticsContainer />;
 };
 
-PolicticsPage.Layout = MainLayout;
+PoliticsPage.Layout = MainLayout;
 
-export default PolicticsPage;
+export default PoliticsPage;

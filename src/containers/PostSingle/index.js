@@ -13,6 +13,7 @@ import NPostEdited from "../../components/PostEdited";
 import NSelectTitle from "../../components/SelectTitle";
 import NCardPostTitle from "../../components/CardPostTitle";
 import NHitNewsItem from "../../components/HitNewsItem";
+import NSelectPopularTitle from "../../components/SelectPopularTitle";
 
 const PostSingleContainer = ({ postId }) => {
   const classes = useStyles();
@@ -150,7 +151,15 @@ const PostSingleContainer = ({ postId }) => {
         <Grid item xs={3}>
           <StickySidebar offsetTop={16} offsetBottom={16}>
             <Box className={classes.sidebar} mb={5}>
-              <NTitle title="Шинэ мэдээ" hasBorder />
+              <NSelectPopularTitle hasBorder>
+                <img
+                  src="/hee_5.png"
+                  alt="New news"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NSelectPopularTitle>
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" hasBorder />

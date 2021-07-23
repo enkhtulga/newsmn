@@ -31,6 +31,7 @@ import NCardNewsItem from "../src/components/CardNewsItem";
 import NTopPoliticsPost from "../src/components/TopPoliticsPost";
 import NAuthorInfo from "../src/components/AuthorInfo";
 import NSocialVertical from "../src/components/SocialVertical";
+import NSelectPopularTitle from "../src/components/SelectPopularTitle";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -60,6 +61,7 @@ const Atoms = () => {
         <NSelectTitle title="Аялал">
           <IconFlight style={{ marginRight: 8 }} />
         </NSelectTitle>
+        <NSelectPopularTitle />
       </Box>
       <Box marginTop={2} width={"331px"}>
         <NHitNewsItem

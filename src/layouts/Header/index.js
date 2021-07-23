@@ -26,7 +26,7 @@ import { Colors } from "./../../theme/colors";
 import NMegaMenu from "./../../components/MegaMenu";
 import NBanner from "../../components/Banner";
 
-const Header = ({ toggleDrawer, open }) => {
+const Header = ({ toggleDrawer, open, yellow }) => {
   const classes = useStyles();
   const router = useRouter();
 
@@ -41,7 +41,9 @@ const Header = ({ toggleDrawer, open }) => {
       </Box>
       <AppBar className={classes.appBar} position="static" elevation={0}>
         <Toolbar
-          className={`${classes.toolbar} module__content`}
+          className={`${
+            yellow ? classes.toolbarYellow : classes.toolbar
+          } module__content`}
           disableGutters
         >
           <Box className={classes.logoWrap}>
@@ -189,6 +191,15 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     justifyContent: "flex-end",
     background: "linear-gradient(50deg, #F51428 50%, #001E64 50%)",
+    height: 110,
+    position: "relative",
+  },
+  toolbarYellow: {
+    display: "flex",
+    alignItems: "center",
+    height: "100%",
+    justifyContent: "flex-end",
+    background: "linear-gradient(50deg, #FFB800 50%, #001E64 50%)",
     height: 110,
     position: "relative",
   },

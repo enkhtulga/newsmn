@@ -12,6 +12,7 @@ export const Colors = {
   text_gray_2: "#50535B",
   border_gray: "#c4c4c4",
   border_gray_2: "#E5E5E5",
+  border_gray_3: "#6B6A6A",
   border_red: "#FF1313",
   bg_gray: "#F7F7F7",
   title: "#1a1a1a",

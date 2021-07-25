@@ -2,8 +2,11 @@ import MainLayout from "../../src/layouts/MainLayout";
 import YellowNewsContainer from "../../src/containers/YellowNews";
 
 const YellowNewsPage = () => {
+  const headerProps = {
+    yellow: true,
+  };
   return (
-    <MainLayout yellow>
+    <MainLayout headerProps={headerProps}>
       <YellowNewsContainer />
     </MainLayout>
   );

@@ -26,7 +26,7 @@ import { Colors } from "./../../theme/colors";
 import NMegaMenu from "./../../components/MegaMenu";
 import NBanner from "../../components/Banner";
 
-const Header = ({ toggleDrawer, open, yellow }) => {
+const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
   const router = useRouter();
 
@@ -36,9 +36,11 @@ const Header = ({ toggleDrawer, open, yellow }) => {
 
   return (
     <div className={classes.grow}>
-      <Box mt={5} mb={5} textAlign="center">
-        <NBanner src="/banner_home_top.jpg" width={1180} height={204} />
-      </Box>
+      {hasBanner && (
+        <Box mt={5} mb={5} textAlign="center">
+          <NBanner src="/banner_home_top.jpg" width={1180} height={204} />
+        </Box>
+      )}
       <AppBar className={classes.appBar} position="static" elevation={0}>
         <Toolbar
           className={`${

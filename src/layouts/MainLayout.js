@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const MainLayout = ({ children, yellow }) => {
+const MainLayout = ({ children, headerProps }) => {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (open) => {
@@ -11,7 +11,7 @@ const MainLayout = ({ children, yellow }) => {
 
   return (
     <div className="main-wrapper">
-      <Header open={open} toggleDrawer={toggleDrawer} yellow={yellow} />
+      <Header open={open} toggleDrawer={toggleDrawer} {...headerProps} />
       <main role="main" className="main">
         {children}
       </main>

@@ -1,14 +1,14 @@
 import MainLayout from "../../../src/layouts/MainLayout";
-import PostSingleContainer from "../../../src/containers/PostSingle";
+import PostDetailContainer from "../../../src/containers/PostDetail";
 import { useRouter } from "next/router";
 
-const PostSinglePage = () => {
+const PostDetailPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  return <PostSingleContainer postId={id} />;
+  return <PostDetailContainer postId={id} />;
 };
 
-PostSinglePage.Layout = MainLayout;
+PostDetailPage.Layout = MainLayout;
 
-export default PostSinglePage;
+export default PostDetailPage;

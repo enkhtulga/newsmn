@@ -8,15 +8,21 @@ import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 import { PlayArrow as IconPlayArrow } from "@material-ui/icons";
 
-const NCardVideoLarge = ({ title, image, largeTitle }) => {
-  const classes = useStyles({ largeTitle });
+const NCardVideoLarge = ({
+  title,
+  image,
+  largeTitle,
+  paddingTop,
+  maxWidth,
+}) => {
+  const classes = useStyles({ largeTitle, maxWidth });
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
           <NCardMedia
-            paddingTop="55.88%"
+            paddingTop={paddingTop || "55.88%"}
             image={image || "/card_video_large.jpg"}
           />
           <Box className={classes.playWrap}>
@@ -38,7 +44,10 @@ const NCardVideoLarge = ({ title, image, largeTitle }) => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  wrap: {},
+  wrap: {
+    maxWidth: (props) => props.maxWidth,
+    margin: (props) => (props.maxWidth ? "0 auto" : 0),
+  },
   cardWrap: {
     backgroundColor: "transparent",
   },

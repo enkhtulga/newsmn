@@ -15,7 +15,7 @@ import NCardPostTitle from "../../components/CardPostTitle";
 import NHitNewsItem from "../../components/HitNewsItem";
 import NSelectPopularTitle from "../../components/SelectPopularTitle";
 
-const PostSingleContainer = ({ postId }) => {
+const PostDetailContainer = ({ postId }) => {
   const classes = useStyles();
 
   return (
@@ -377,4 +377,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default PostSingleContainer;
+export default PostDetailContainer;

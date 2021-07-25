@@ -4,22 +4,28 @@ import { Box } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import {
   Twitter as IconTwitter,
+  YouTube as IconYouTube,
   Facebook as IconFacebook,
-  Print as IconPrint,
-  Bookmark as IconBookmark,
 } from "@material-ui/icons";
 
-const NSocialVertical = () => {
+const NSocialHorizontal = () => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
       <a
-        href={"https://twitter.com"}
+        href={"https://youtube.com"}
         target="_blank"
-        className={classes.iconTwitterWrap}
+        className={classes.iconYoutubeWrap}
       >
-        <IconTwitter className={classes.icon} fontSize="small" />
+        <IconYouTube className={classes.icon} fontSize="small" />
+      </a>
+      <a
+        href={"https://gmail.com"}
+        target="_blank"
+        className={classes.iconGmailWrap}
+      >
+        <img src="/icon_gmail.png" className={classes.icon} width={16} />
       </a>
       <a
         href={"https://facebook.com"}
@@ -29,17 +35,11 @@ const NSocialVertical = () => {
         <IconFacebook className={classes.icon} fontSize="small" />
       </a>
       <a
-        href={"https://gmail.com"}
+        href={"https://twitter.com"}
         target="_blank"
-        className={classes.iconGmailWrap}
+        className={classes.iconTwitterWrap}
       >
-        <img src="/icon_gmail.png" className={classes.icon} width={16} />
-      </a>
-      <a href={"/bookmark"} className={classes.iconWrap}>
-        <IconBookmark className={classes.iconPrimary} fontSize="small" />
-      </a>
-      <a href={"/print"} className={classes.iconWrap}>
-        <IconPrint className={classes.iconPrimary} fontSize="small" />
+        <IconTwitter className={classes.icon} fontSize="small" />
       </a>
     </Box>
   );
@@ -47,7 +47,17 @@ const NSocialVertical = () => {
 
 const useStyles = makeStyles((theme) => ({
   wrap: {
-    display: "inline-block",
+    display: "flex",
+  },
+  iconYoutubeWrap: {
+    width: 32,
+    height: 32,
+    backgroundColor: "#FF0000",
+    borderRadius: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: theme.spacing(2),
   },
   iconTwitterWrap: {
     width: 32,
@@ -57,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: theme.spacing(2),
+    marginRight: theme.spacing(2),
   },
   iconFacebookWrap: {
     width: 32,
@@ -67,34 +77,21 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: theme.spacing(2),
+    marginRight: theme.spacing(2),
   },
   iconGmailWrap: {
-    backgroundColor: Colors.line,
+    backgroundColor: Colors.white,
     width: 32,
     height: 32,
     borderRadius: "50%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: theme.spacing(2),
-  },
-  iconWrap: {
-    backgroundColor: Colors.line,
-    width: 32,
-    height: 32,
-    borderRadius: "50%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: theme.spacing(2),
+    marginRight: theme.spacing(2),
   },
   icon: {
     color: Colors.white,
   },
-  iconPrimary: {
-    color: Colors.primary,
-  },
 }));
 
-export default NSocialVertical;
+export default NSocialHorizontal;

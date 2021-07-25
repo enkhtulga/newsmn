@@ -34,6 +34,9 @@ import NSocialVertical from "../src/components/SocialVertical";
 import NSelectPopularTitle from "../src/components/SelectPopularTitle";
 import NCardPostTitleExcerpt from "../src/components/CardPostTitleExcerpt";
 import NCardSportNewsItem from "../src/components/CardSportNewsItem";
+import NCardVideoSmallCentered from "../src/components/CardVideoSmallCentered";
+import NCardVideoHorizontal from "../src/components/CardVideoHorizontal";
+import NCustomScrollArea from "../src/components/CustomScrollArea";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -649,6 +652,84 @@ const Atoms = () => {
             />
           </Grid>
         </Grid>
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Video Small Centered" hasBorder></NTitle>
+        <Box mb={2} />
+        <NCarousel
+          slidesPerView={6}
+          spaceBetween={16}
+          pagination={false}
+          items={[
+            <NCardVideoSmallCentered
+              title="Монголыг төлөөлөх 5 сурагчийг хайж байна"
+              image="/surgalt_1.jpg"
+              star={5}
+            />,
+            <NCardVideoSmallCentered
+              title="Хөтөлбөртөө элсээд сертификатаа аваарай"
+              image="/surgalt_2.jpg"
+              star={5}
+            />,
+            <NCardVideoSmallCentered
+              title="Диплом подкастын нэгдүгээр улиралд гарсан онцлох санаанууд"
+              image="/surgalt_3.jpg"
+              star={5}
+            />,
+            <NCardVideoSmallCentered
+              title="2021 онд гадаад хэл сурах хүсэлтэй хүмүүст олдож буй боломжууд"
+              image="/surgalt_4.jpg"
+              star={5}
+            />,
+            <NCardVideoSmallCentered
+              title="Дэлхийн топ 8 улсад суралцах арга замыг 2 өдрийн дотор мэдээрэй"
+              image="/surgalt_5.jpg"
+              star={5}
+            />,
+            <NCardVideoSmallCentered
+              title='Курс, дамжаа, сургалтын төвүүдэд дараах "ЗӨВЛӨМЖ"-ийг ....'
+              image="/surgalt_6.jpg"
+              star={5}
+            />,
+            <NCardVideoSmallCentered
+              title="Хөтөлбөртөө элсээд сертификатаа аваарай"
+              image="/surgalt_2.jpg"
+              star={5}
+            />,
+          ]}
+        />
+      </Box>
+      <Box marginTop={5}>
+        <NTitle title="Card Video Small Centered" hasBorder></NTitle>
+        <Box mt={2} bgcolor={Colors.black}>
+          <Grid container spacing={2}>
+            <Grid item xs={8}>
+              <NCustomScrollArea height={1100} scrollColor={Colors.border_red}>
+                <NCardVideoHorizontal />
+                <NCardVideoHorizontal
+                  title="Б.Үйлстөгс: “Мамбо” 100 дугаар хүрээд дуусна"
+                  excerpt="Радиогийн хөтлөгч байхаасаа олонд танигдсан Б.Үйлстөгсийг Мамбо эсвэл Санти нэрээр нь залуус андахгүй. Санти сүүлийн үед мамбо гэхээсээ илүү өөрийн бие даасан тоглолтдоо анхаарч байгаа бөгөөд ирэх аравдугаар сарын 12-нд гурав дахь удаагийн тоглолтоо хийхээр төлөвлөж байгаа юм байна."
+                />
+                <NCardVideoHorizontal
+                  title="Эрүүл мэндээ сошиалд даатгасан монголчууд"
+                  excerpt="Өвөл болохоор хүйтэн болдог гэдэг шиг өвөл болохоор ханиад, томууны улирал эхэлж, эмнэлгийн ачаалал нэмэгддэгийг бид маш сайн мэдэх билээ..."
+                />
+                <NCardVideoHorizontal
+                  title="Эрүүл мэндээ сошиалд даатгасан монголчууд"
+                  excerpt="Өвөл болохоор хүйтэн болдог гэдэг шиг өвөл болохоор ханиад, томууны улирал эхэлж, эмнэлгийн ачаалал нэмэгддэгийг бид маш сайн мэдэх билээ. Тэртээ социализмын үед ч гэсэн томуу, томуу төст өвчнөөр иргэд өвчлөх нь их, эмнэлэг нь ачааллаа дийлэхгүй, анагаахын төгсөх курсын оюутнууд ч дайчилгаанд хамрагддаг байсан тухай эмч мэргэжилтнүүд ярьдаг."
+                />
+                <NCardVideoHorizontal
+                  title="Эрүүл мэндээ сошиалд даатгасан монголчууд"
+                  excerpt="Өвөл болохоор хүйтэн болдог гэдэг шиг өвөл болохоор ханиад, томууны улирал эхэлж, эмнэлгийн ачаалал нэмэгддэгийг бид маш сайн мэдэх билээ..."
+                />
+                <NCardVideoHorizontal
+                  title="Эрүүл мэндээ сошиалд даатгасан монголчууд"
+                  excerpt="Өвөл болохоор хүйтэн болдог гэдэг шиг өвөл болохоор ханиад, томууны улирал эхэлж, эмнэлгийн ачаалал нэмэгддэгийг бид маш сайн мэдэх билээ..."
+                />
+              </NCustomScrollArea>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
     </Box>
   );

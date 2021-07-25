@@ -3,8 +3,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography, Select, MenuItem } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 
-const NSelectTitle = ({ title, hasBorder, children, className, ...rest }) => {
-  const classes = useStyles();
+const NSelectTitle = ({
+  coloredTitle,
+  title,
+  color,
+  hasBorder,
+  children,
+  dark,
+  className,
+  ...rest
+}) => {
+  const classes = useStyles({ color, dark });
   const { ...props } = rest;
 
   return (
@@ -16,7 +25,12 @@ const NSelectTitle = ({ title, hasBorder, children, className, ...rest }) => {
     >
       <Box display="flex" alignItems="center">
         {children}
-        <Typography variant="h4">{title}</Typography>
+        <Box display="flex">
+          <Typography variant="h4" className={classes.coloredTitle}>
+            {coloredTitle}
+          </Typography>
+          <Typography variant="h4">{title}</Typography>
+        </Box>
       </Box>
       <Select id="simple-select" value={70} disableUnderline>
         <MenuItem value={10}>Даваа 2021-05-09</MenuItem>
@@ -37,6 +51,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    color: (props) => (props.dark ? Colors.white : "inherit"),
+    "& .MuiInputBase-root": {
+      color: (props) => (props.dark ? Colors.text_gray : "inherit"),
+    },
+    "& .MuiSelect-icon": {
+      color: (props) => (props.dark ? Colors.text_gray : "inherit"),
+    },
   },
   wrapBorder: {
     paddingBottom: theme.spacing(2),
@@ -45,6 +66,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  coloredTitle: {
+    paddingRight: theme.spacing(0.5),
+    color: (props) => props.color,
   },
 }));
 

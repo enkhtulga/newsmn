@@ -5,20 +5,17 @@ import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
-import NPostMeta from "../PostMeta";
 import { PlayArrow as IconPlayArrow } from "@material-ui/icons";
+import Rating from "@material-ui/lab/Rating";
 
-const NCardVideoLarge = ({ title, image, largeTitle }) => {
-  const classes = useStyles({ largeTitle });
+const NCardVideoSmallCentered = ({ title, image, star, dark }) => {
+  const classes = useStyles({ dark });
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia
-            paddingTop="55.88%"
-            image={image || "/card_video_large.jpg"}
-          />
+          <NCardMedia paddingTop="62.03%" image={image} />
           <Box className={classes.playWrap}>
             <Box className={classes.playInnerWrap}>
               <IconPlayArrow className={classes.play} />
@@ -26,11 +23,16 @@ const NCardVideoLarge = ({ title, image, largeTitle }) => {
           </Box>
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <NPostMeta videoIcon />
           <Typography variant="h1" className={classes.title}>
-            {title ||
-              "ХӨСҮТ-ийн эмч А.Амбасэлмаад Эрүүлийг хамгаалахын гавъяат ажилтан цол хүртлээ"}
+            {title}
           </Typography>
+          <Rating
+            name="read-only"
+            value={star}
+            readOnly
+            size="small"
+            className={classes.rating}
+          />
         </NCardContent>
       </NCard>
     </Box>
@@ -46,12 +48,13 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
     paddingRight: 0,
     paddingLeft: 0,
+    textAlign: "center",
   },
   title: {
-    fontSize: (props) => (props.largeTitle ? 30 : 24),
-    lineHeight: "30px",
-    color: Colors.white,
-    paddingBottom: theme.spacing(3),
+    fontSize: 18,
+    lineHeight: "20px",
+    paddingBottom: theme.spacing(1),
+    color: (props) => (props.dark ? Colors.white : "inherit"),
   },
   mediaOuterWrap: {
     position: "relative",
@@ -84,6 +87,11 @@ const useStyles = makeStyles((theme) => ({
   play: {
     fontSize: 50,
   },
+  rating: {
+    "& .MuiRating-iconEmpty": {
+      color: (props) => (props.dark ? Colors.text_gray_2 : "inherit"),
+    },
+  },
 }));
 
-export default NCardVideoLarge;
+export default NCardVideoSmallCentered;

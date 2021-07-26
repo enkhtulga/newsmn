@@ -540,7 +540,7 @@ const VideoContainer = () => {
 
 const useStyles = makeStyles((theme) => ({
   breadcrumbsWrap: {
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
   bgGray: {
     backgroundColor: Colors.title,

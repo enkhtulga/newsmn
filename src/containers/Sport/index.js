@@ -306,12 +306,12 @@ const SportContainer = () => {
 
 const useStyles = makeStyles((theme) => ({
   breadcrumbsWrap: {
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
   blackBg: {
     backgroundColor: Colors.title,
-    marginLeft: "-2rem",
-    marginRight: "-2rem",
+    marginLeft: "-4rem",
+    marginRight: "-4rem",
     marginBottom: theme.spacing(9),
     "& .MuiSelect-icon": {
       color: Colors.text_gray,

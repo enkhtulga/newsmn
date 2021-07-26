@@ -179,7 +179,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
   appBar: {
     backgroundColor: "white",

@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Colors } from "../../theme/colors";
 import { useRouter } from "next/router";
 
-const NPageMenu = ({ items, primaryColor }) => {
-  const classes = useStyles({ primaryColor });
+const NPageMenu = ({ items, primaryColor, justifyContent }) => {
+  const classes = useStyles({ primaryColor, justifyContent });
   const router = useRouter();
 
   const isSelected = (routeName) => {
@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0,
     borderBottom: "1px solid",
     borderBottomColor: Colors.border_gray_2,
+    justifyContent: (props) => props.justifyContent,
   },
   list: {
     "&:first-child": {

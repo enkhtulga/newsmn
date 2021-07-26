@@ -856,8 +856,8 @@ const useStyles = makeStyles((theme) => ({
   },
   blackBg: {
     backgroundColor: Colors.title,
-    marginLeft: "-2rem",
-    marginRight: "-2rem",
+    marginLeft: "-4rem",
+    marginRight: "-4rem",
     marginBottom: theme.spacing(9),
     "& .MuiSelect-icon": {
       color: Colors.text_gray,

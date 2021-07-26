@@ -543,7 +543,7 @@ const Footer = () => {
 const useStyles = makeStyles((theme) => ({
   wrap: {
     backgroundColor: Colors.hover_2,
-    margin: "0 -2rem",
+    margin: "0 -4rem",
     position: "relative",
     // "&::after": {
     //   content: "''",

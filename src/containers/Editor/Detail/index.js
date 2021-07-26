@@ -181,7 +181,7 @@ const EditorDetailContainer = () => {
 
 const useStyles = makeStyles((theme) => ({
   breadcrumbsWrap: {
-    margin: "0 -2rem",
+    margin: "0 -4rem",
     paddingBottom: theme.spacing(1),
   },
   imageWrap: {

@@ -8,14 +8,19 @@ import NCardContent from "../Card/CardContent";
 import { ShoppingCart as IconShoppingCart } from "@material-ui/icons";
 import Rating from "@material-ui/lab/Rating";
 
-const NShopItem = () => {
+const NShopItem = ({ title, image, paddingTop }) => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia paddingTop="105.09%" image={"/shop_item.jpg"} />
+          <Box className={classes.mediaInnerWrap}>
+            <NCardMedia
+              paddingTop={paddingTop || "105.09%"}
+              image={image || "/shop_item.jpg"}
+            />
+          </Box>
           <IconShoppingCart className={classes.cartIcon} fontSize="small" />
         </Box>
         <NCardContent className={classes.contentWrap}>
@@ -32,7 +37,7 @@ const NShopItem = () => {
             />
           </Box>
           <Typography variant="h1" className={classes.title}>
-            WIC. T CYCLING BEAR
+            {title || "WIC. T CYCLING BEAR"}
           </Typography>
           <Typography variant="caption" className={classes.price_label}>
             Онлайн авах үнэ
@@ -60,6 +65,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 5,
     padding: theme.spacing(2),
     position: "relative",
+  },
+  mediaInnerWrap: {
+    width: 137,
+    margin: "0 auto",
   },
   cartIcon: {
     position: "absolute",

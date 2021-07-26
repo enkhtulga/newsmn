@@ -211,10 +211,10 @@ const PoliticsContainer = () => {
 
 const useStyles = makeStyles((theme) => ({
   breadcrumbsWrap: {
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
   topPoliticsPostWrap: {
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
 }));
 

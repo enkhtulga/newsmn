@@ -169,7 +169,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
   appBar: {
     backgroundColor: "white",
@@ -188,7 +188,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoWrap: {
     position: "absolute",
-    left: "2rem",
+    left: "4rem",
     top: "50%",
     transform: "translateY(-50%)",
     display: "flex",

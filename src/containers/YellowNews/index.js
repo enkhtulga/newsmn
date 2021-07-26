@@ -151,7 +151,7 @@ const YellowNewsContainer = () => {
 
 const useStyles = makeStyles((theme) => ({
   breadcrumbsWrap: {
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
   sidebar: {
     borderLeft: "1px solid",

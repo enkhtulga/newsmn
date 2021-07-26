@@ -109,5 +109,32 @@ export default createTheme({
         },
       },
     },
+    MuiOutlinedInput: {
+      input: {
+        padding: "12px 14px",
+      },
+    },
+    MuiInputLabel: {
+      outlined: {
+        transform: "translate(14px, 14px) scale(1)",
+      },
+    },
+    MuiSlider: {
+      rail: {
+        height: 5,
+        color: "#e1e1e1",
+        borderRadius: 30,
+      },
+      track: {
+        height: 5,
+        borderRadius: 30,
+      },
+      thumb: {
+        width: 16,
+        height: 16,
+        border: "3px solid",
+        backgroundColor: Colors.white,
+      },
+    },
   },
 });

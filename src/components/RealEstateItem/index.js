@@ -7,22 +7,25 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import Rating from "@material-ui/lab/Rating";
 
-const NRealStateItem = () => {
+const NRealEstateItem = ({ title, rating, image }) => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia paddingTop="64.81%" image={"/realstate_item.jpg"} />
+          <NCardMedia
+            paddingTop="64.81%"
+            image={image || "/realstate_item.jpg"}
+          />
         </Box>
         <NCardContent className={classes.contentWrap}>
           <Typography variant="h1" className={classes.title}>
-            Нарны хороолол
+            {title || "Нарны хороолол"}
           </Typography>
           <Rating
             name="read-only"
-            value={4}
+            value={rating || 5}
             readOnly
             size="small"
             className={classes.rating}
@@ -59,12 +62,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     display: "flex",
     justifyContent: "center",
-    paddingBottom: theme.spacing(2),
-    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
   },
   title: {
     color: Colors.title,
     textAlign: "center",
+    paddingTop: theme.spacing(2),
   },
   locationLabel: {
     display: "block",
@@ -86,4 +89,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default NRealStateItem;
+export default NRealEstateItem;

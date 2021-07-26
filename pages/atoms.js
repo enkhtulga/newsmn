@@ -15,7 +15,7 @@ import NJournalist from "../src/components/Journalist";
 import NTourMasonry from "../src/components/TourMasonry";
 import NCarousel from "../src/components/Carousel";
 import NShopItem from "../src/components/ShopItem";
-import NRealStateItem from "../src/components/RealStateItem";
+import NRealEstateItem from "../src/components/RealStateItem";
 import NCardVideoLarge from "../src/components/CardVideoLarge";
 import NCardVideoSmall from "../src/components/CardVideoSmall";
 import NAudioPlayer from "../src/components/AudioPlayer";
@@ -319,22 +319,22 @@ const Atoms = () => {
         <Box mb={2} />
         <Grid container spacing={2}>
           <Grid item xs={2}>
-            <NRealStateItem />
+            <NRealEstateItem />
           </Grid>
           <Grid item xs={2}>
-            <NRealStateItem />
+            <NRealEstateItem />
           </Grid>
           <Grid item xs={2}>
-            <NRealStateItem />
+            <NRealEstateItem />
           </Grid>
           <Grid item xs={2}>
-            <NRealStateItem />
+            <NRealEstateItem />
           </Grid>
           <Grid item xs={2}>
-            <NRealStateItem />
+            <NRealEstateItem />
           </Grid>
           <Grid item xs={2}>
-            <NRealStateItem />
+            <NRealEstateItem />
           </Grid>
         </Grid>
       </Box>

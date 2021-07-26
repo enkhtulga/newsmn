@@ -19,7 +19,7 @@ import NCardVideoLarge from "../../components/CardVideoLarge";
 import NCardVideoSmall from "../../components/CardVideoSmall";
 import NShopItem from "../../components/ShopItem";
 import NTourMasonry from "../../components/TourMasonry";
-import NRealStateItem from "../../components/RealStateItem";
+import NRealEstateItem from "../../components/RealStateItem";
 import NAudioPlayer from "../../components/AudioPlayer";
 import NHighlightPosts from "../../components/HighlightPosts";
 import NEditorPost from "../../components/EditorPost";
@@ -607,14 +607,14 @@ const HomeContainer = () => {
             spaceBetween={16}
             pagination={false}
             items={[
-              <NRealStateItem />,
-              <NRealStateItem />,
-              <NRealStateItem />,
-              <NRealStateItem />,
-              <NRealStateItem />,
-              <NRealStateItem />,
-              <NRealStateItem />,
-              <NRealStateItem />,
+              <NRealEstateItem />,
+              <NRealEstateItem />,
+              <NRealEstateItem />,
+              <NRealEstateItem />,
+              <NRealEstateItem />,
+              <NRealEstateItem />,
+              <NRealEstateItem />,
+              <NRealEstateItem />,
             ]}
           />
         </Box>

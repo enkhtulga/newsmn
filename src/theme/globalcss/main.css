@@ -41,7 +41,7 @@ div.rhap_container {
   padding: 0;
   box-shadow: none;
   padding-left: 40px;
-  background-color: #f7f7f7;
+  background-color: transparent;
 }
 .rhap_container .rhap_header {
   margin-bottom: 0;

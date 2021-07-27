@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
-import NAvatar from "../Avatar";
 import NCardContent from "../Card/CardContent";
+import NCardMedia from "../Card/CardMedia";
 import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import {
@@ -15,18 +15,18 @@ import {
 } from "@material-ui/icons";
 import Rating from "@material-ui/lab/Rating";
 
-const NAudioPlayer = ({ image, podcastName, rating, shadowLayout }) => {
+const NCardHorizontal = ({ image, podcastName, rating, content }) => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
-      <NCard
-        className={`${
-          shadowLayout ? classes.shadowCardWrap : classes.cardWrap
-        }`}
-        square
-      >
-        <NAvatar size={122} src={image || "/audio_pic.jpg"} />
+      <NCard className={classes.shadowCardWrap} square>
+        <Box className={classes.mediaOuterWrap}>
+          <NCardMedia
+            paddingTop="95.48%"
+            image={image || "/podcast_card_img_5.jpg"}
+          />
+        </Box>
         <NCardContent className={classes.contentWrap}>
           <AudioPlayer
             autoPlay={false}
@@ -50,6 +50,10 @@ const NAudioPlayer = ({ image, podcastName, rating, shadowLayout }) => {
                 </Typography>
                 <Typography className={classes.subtitle}>
                   Emilio Montes - December 10, 2019
+                </Typography>
+                <Typography variant="body2" className={classes.content}>
+                  {content ||
+                    'Мэдээлэл технологийн ТӨСЛИЙН МЕНЕЖЕР гэж хэн бэ? Яагаад дэлхий дахинаа сайн менежрийн эрэлд гарсан бэ? Эдгээр асуултын хариултыг "Дата Сайнс" ХХК, Гүйцэтгэх захирал Б.Болор өглөө.Мэдээлэл технологийн ТӨСЛИЙН МЕНЕЖЕР гэж хэн бэ? Яагаад дэлхий дахинаа сайн менежрийн эрэлд гарсан бэ? Эдгээр асуултын хариултыг "Дата Сайнс" ХХК, Гүйцэтгэх захирал Б.Болор өглөө.'}
                 </Typography>
               </Box>
             }
@@ -79,15 +83,9 @@ const NAudioPlayer = ({ image, podcastName, rating, shadowLayout }) => {
 const useStyles = makeStyles((theme) => ({
   shadowCardWrap: {
     display: "flex",
-    paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(5),
-    paddingBottom: 38,
-    paddingRight: 0,
+    paddingLeft: theme.spacing(0.5),
     backgroundColor: Colors.white,
     maxWidth: "100%",
-    borderRadius: 5,
-    boxShadow: "0px 8px 10px #E5E5E5",
-    marginBottom: theme.spacing(5),
     "& .rhap_main-controls .rhap_main-controls-button": {
       color: Colors.border_red,
     },
@@ -105,21 +103,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   wrap: {},
-  cardWrap: {
-    display: "flex",
-    paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(5),
-    paddingBottom: 38,
-    paddingRight: 0,
-    backgroundColor: Colors.bg_gray,
-    width: 680,
-    maxWidth: "100%",
-    borderRadius: 5,
-  },
   contentWrap: {
     paddingRight: 0,
     paddingLeft: 0,
     width: "100%",
+    "& div.rhap_container": {
+      paddingLeft: theme.spacing(2),
+    },
   },
   rating: {
     marginLeft: theme.spacing(2),
@@ -140,6 +130,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(0.5),
     color: Colors.text_gray_2,
   },
+  mediaOuterWrap: {
+    width: 332,
+    minWidth: 332,
+  },
+  content: {
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    color: Colors.black,
+  },
 }));
 
-export default NAudioPlayer;
+export default NCardHorizontal;

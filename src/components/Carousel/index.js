@@ -18,9 +18,10 @@ const NCarousel = ({
   spaceBetween,
   breakpoints,
   containerClass,
+  arrowSpacing,
   ...rest
 }) => {
-  const classes = useStyles();
+  const classes = useStyles({ arrowSpacing });
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -83,6 +84,7 @@ const NCarousel = ({
 
 const useStyles = makeStyles((theme) => ({
   wrap: {
+    position: "initial",
     paddingBottom: theme.spacing(6),
     "& > .swiper-pagination": {
       bottom: 0,
@@ -106,7 +108,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
-    right: theme.spacing(1),
+    right: (props) =>
+      props.arrowSpacing ? props.arrowSpacing : theme.spacing(1),
     top: "50%",
     transform: "translateY(-10px)",
     visibility: "visible",
@@ -121,7 +124,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
-    left: theme.spacing(1),
+    left: (props) =>
+      props.arrowSpacing ? props.arrowSpacing : theme.spacing(1),
     top: "50%",
     transform: "translateY(-10px)",
     visibility: "visible",

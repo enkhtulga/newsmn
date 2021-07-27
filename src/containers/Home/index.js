@@ -19,7 +19,7 @@ import NCardVideoLarge from "../../components/CardVideoLarge";
 import NCardVideoSmall from "../../components/CardVideoSmall";
 import NShopItem from "../../components/ShopItem";
 import NTourMasonry from "../../components/TourMasonry";
-import NRealEstateItem from "../../components/RealStateItem";
+import NRealEstateItem from "../../components/RealEStateItem";
 import NAudioPlayer from "../../components/AudioPlayer";
 import NHighlightPosts from "../../components/HighlightPosts";
 import NEditorPost from "../../components/EditorPost";

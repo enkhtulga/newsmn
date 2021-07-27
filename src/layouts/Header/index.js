@@ -25,6 +25,7 @@ import { useRouter } from "next/router";
 import { Colors } from "./../../theme/colors";
 import NMegaMenu from "./../../components/MegaMenu";
 import NBanner from "../../components/Banner";
+import NMegaHome from "./MegaHome";
 
 const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
@@ -76,7 +77,19 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             aria-labelledby="nested-list-subheader"
             className={classes.rootNav}
           >
-            <Link href={NRoutes.HOME} passHref>
+            <Box mr={2}>
+              <NMegaMenu
+                menuText={"Мэдээ"}
+                iconComponent={
+                  <ListItemIcon className={classes.icon}>
+                    <IconHome fontSize="small" />
+                  </ListItemIcon>
+                }
+              >
+                <NMegaHome />
+              </NMegaMenu>
+            </Box>
+            {/* <Link href={NRoutes.HOME} passHref>
               <ListItem
                 className={classes.list}
                 button
@@ -91,7 +104,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                   primary={"Мэдээ"}
                 />
               </ListItem>
-            </Link>
+            </Link> */}
             <Link href={NRoutes.ARTICLE} passHref>
               <ListItem
                 className={classes.list}

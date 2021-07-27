@@ -15,42 +15,29 @@ import {
 } from "@material-ui/icons";
 import Rating from "@material-ui/lab/Rating";
 
-const NAudioPlayer = ({ image, podcastName, rating, shadowLayout }) => {
+const NAudioPlayerTransparent = ({ image, podcastName, rating }) => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
-      <NCard
-        className={`${
-          shadowLayout ? classes.shadowCardWrap : classes.cardWrap
-        }`}
-        square
-      >
-        <NAvatar size={122} src={image || "/audio_pic.jpg"} />
+      <NCard className={classes.shadowCardWrap} square>
+        <NAvatar size={184} src={image || "/podcast_page_slider_img_1.jpg"} />
         <NCardContent className={classes.contentWrap}>
           <AudioPlayer
             autoPlay={false}
             src="/audio_sample.mp3"
             header={
               <Box>
-                <Box display="flex">
-                  <Typography variant="h1" className={classes.podcast}>
-                    Шинэ подкаст
-                  </Typography>
-                  <Rating
-                    name="read-only"
-                    value={rating || 5}
-                    readOnly
-                    size="small"
-                    className={classes.rating}
-                  />
-                </Box>
                 <Typography variant="body2" className={classes.title}>
-                  {podcastName || "MIderee's podcast 74: Amarkhuu, Duuchin"}
+                  {podcastName || "LOKI + Black Widow"}
                 </Typography>
-                <Typography className={classes.subtitle}>
-                  Emilio Montes - December 10, 2019
-                </Typography>
+                <Rating
+                  name="read-only"
+                  value={rating || 5}
+                  readOnly
+                  size="small"
+                  className={classes.rating}
+                />
               </Box>
             }
             customProgressBarSection={[
@@ -83,13 +70,12 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(5),
     paddingBottom: 38,
     paddingRight: 0,
-    backgroundColor: Colors.white,
+    backgroundColor: "transparent",
     maxWidth: "100%",
-    borderRadius: 5,
-    boxShadow: "0px 8px 10px #E5E5E5",
+    width: 670,
     marginBottom: theme.spacing(5),
     "& .rhap_main-controls .rhap_main-controls-button": {
-      color: Colors.border_red,
+      color: Colors.white,
     },
     "& .rhap_progress-container .rhap_progress-filled": {
       backgroundColor: Colors.border_red,
@@ -102,6 +88,15 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .rhap_volume-controls .rhap_volume-button": {
       color: Colors.border_red,
+    },
+    "& .rhap_progress-section .rhap_time": {
+      color: Colors.white,
+    },
+    "& .rhap_progress-container .rhap_progress-bar-show-download": {
+      backgroundColor: "rgba(255,255,255,.4)",
+    },
+    "& .rhap_volume-controls .rhap_volume-bar": {
+      backgroundColor: "rgba(255,255,255,.4)",
     },
   },
   wrap: {},
@@ -120,26 +115,19 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 0,
     paddingLeft: 0,
     width: "100%",
+    "& div.rhap_container": {
+      paddingLeft: theme.spacing(3),
+    },
   },
   rating: {
-    marginLeft: theme.spacing(2),
     fontSize: 14,
-    marginTop: 3,
-  },
-  podcast: {
-    fontSize: 18,
-    lineHeight: "20px",
-    color: Colors.title,
-  },
-  title: {
-    fontSize: 18,
     marginTop: theme.spacing(1),
   },
-  subtitle: {
-    lineHeight: "30px",
-    marginTop: theme.spacing(0.5),
-    color: Colors.text_gray_2,
+  title: {
+    fontSize: 48,
+    lineHeight: "48px",
+    color: Colors.white,
   },
 }));
 
-export default NAudioPlayer;
+export default NAudioPlayerTransparent;

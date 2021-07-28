@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Box, Typography, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import NTitle from "../src/components/Title";
@@ -15,7 +16,7 @@ import NJournalist from "../src/components/Journalist";
 import NTourMasonry from "../src/components/TourMasonry";
 import NCarousel from "../src/components/Carousel";
 import NShopItem from "../src/components/ShopItem";
-import NRealEstateItem from "../src/components/RealStateItem";
+import NRealEstateItem from "../src/components/RealEstateItem";
 import NCardVideoLarge from "../src/components/CardVideoLarge";
 import NCardVideoSmall from "../src/components/CardVideoSmall";
 import NAudioPlayer from "../src/components/AudioPlayer";
@@ -37,6 +38,9 @@ import NCardSportNewsItem from "../src/components/CardSportNewsItem";
 import NCardVideoSmallCentered from "../src/components/CardVideoSmallCentered";
 import NCardVideoHorizontal from "../src/components/CardVideoHorizontal";
 import NCustomScrollArea from "../src/components/CustomScrollArea";
+import NVerticalTabs from "../src/components/VerticalTabs";
+import NVerticalTab from "../src/components/VerticalTab";
+import NVerticalTabPanel from "../src/components/VerticalTabPanel";
 import {
   ShoppingCart as IconShoppingCard,
   Flight as IconFlight,
@@ -47,6 +51,7 @@ import NTopYellowPost from "../src/components/TopYellowPost";
 
 const Atoms = () => {
   const classes = useStyles();
+  const [tab, setTab] = useState(0);
 
   return (
     <Box margin={2}>
@@ -214,16 +219,16 @@ const Atoms = () => {
         <Box mb={2} />
         <Grid container spacing={2}>
           <Grid item xs={3}>
-            <NCardSlidePost />
+            <NCardSlidePost category="Дэлхий - Нийтлэл" />
           </Grid>
           <Grid item xs={3}>
-            <NCardSlidePost />
+            <NCardSlidePost category="Дэлхий - Нийтлэл" />
           </Grid>
           <Grid item xs={3}>
-            <NCardSlidePost />
+            <NCardSlidePost category="Дэлхий - Нийтлэл" />
           </Grid>
           <Grid item xs={3}>
-            <NCardSlidePost />
+            <NCardSlidePost category="Дэлхий - Нийтлэл" />
           </Grid>
         </Grid>
       </Box>
@@ -731,6 +736,38 @@ const Atoms = () => {
           </Grid>
         </Box>
       </Box>
+      <Box marginTop={5}>
+        <NTitle title="Vertical Tabs" hasBorder></NTitle>
+        <Box mb={2} />
+        <Box className={classes.tabWrap}>
+          <Grid container spacing={2}>
+            <Grid item xs={2}>
+              <NVerticalTabs
+                value={tab}
+                onChange={(_, v) => setTab(v)}
+                orientation="vertical"
+                variant="scrollable"
+                className={classes.tabs}
+              >
+                <NVerticalTab label="Item One" value={0} />
+                <NVerticalTab label="Item Two" value={1} />
+                <NVerticalTab label="Item Three" value={2} />
+              </NVerticalTabs>
+            </Grid>
+            <Grid item xs={10}>
+              <NVerticalTabPanel value={tab} index={0}>
+                1
+              </NVerticalTabPanel>
+              <NVerticalTabPanel value={tab} index={1}>
+                2
+              </NVerticalTabPanel>
+              <NVerticalTabPanel value={tab} index={2}>
+                3
+              </NVerticalTabPanel>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };
@@ -750,6 +787,20 @@ const useStyles = makeStyles((theme) => ({
   buttonWhite: {
     borderColor: Colors.white,
     color: Colors.white,
+  },
+  tabWrap: {},
+  tabs: {
+    position: "relative",
+    "&::after": {
+      content: "''",
+      position: "absolute",
+      top: 0,
+      right: 0,
+      height: "100%",
+      width: 2,
+      backgroundColor: Colors.border_gray,
+      borderRadius: 5,
+    },
   },
 }));
 

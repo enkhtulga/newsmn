@@ -136,5 +136,16 @@ export default createTheme({
         backgroundColor: Colors.white,
       },
     },
+    MuiTab: {
+      root: {
+        padding: 0,
+        minHeight: "auto",
+      },
+    },
+    MuiTabs: {
+      indicator: {
+        zIndex: 1,
+      },
+    },
   },
 });

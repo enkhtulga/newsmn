@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
   AppBar,
@@ -26,10 +26,28 @@ import { Colors } from "./../../theme/colors";
 import NMegaMenu from "./../../components/MegaMenu";
 import NBanner from "../../components/Banner";
 import NMegaHome from "./MegaHome";
+import NMegaArticle from "./MegaArticle";
+import NMegaTrade from "./MegaTrade";
+import NMegaRealEstate from "./MegaRealEstate";
 
 const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
   const router = useRouter();
+  const [homeCurrentTab, setHomeCurrentTab] = useState(0);
+  const [articleCurrentTab, setArticleCurrentTab] = useState(0);
+  const [tradeCurrentTab, setTradeCurrentTab] = useState(0);
+
+  const onChangeHomeTab = (value) => {
+    setHomeCurrentTab(value);
+  };
+
+  const onChangeArticleTab = (value) => {
+    setArticleCurrentTab(value);
+  };
+
+  const onChangeTradeTab = (value) => {
+    setTradeCurrentTab(value);
+  };
 
   const isSelected = (routeName) => {
     return router.pathname && router.pathname.startsWith(routeName);
@@ -80,44 +98,25 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             <Box mr={2}>
               <NMegaMenu
                 menuText={"Мэдээ"}
+                homeCurrentTab={homeCurrentTab}
                 iconComponent={
                   <ListItemIcon className={classes.icon}>
                     <IconHome fontSize="small" />
                   </ListItemIcon>
                 }
               >
-                <NMegaHome />
+                <NMegaHome
+                  onChangeHomeTab={onChangeHomeTab}
+                  homeCurrentTab={homeCurrentTab}
+                />
               </NMegaMenu>
             </Box>
-            {/* <Link href={NRoutes.HOME} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.HOME)}
-              >
-                <ListItemIcon className={classes.icon}>
-                  <IconHome fontSize="small" />
-                </ListItemIcon>
-                <ListItemText
-                  className={classes.listTextWithDot}
-                  primary={"Мэдээ"}
-                />
-              </ListItem>
-            </Link> */}
-            <Link href={NRoutes.ARTICLE} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.ARTICLE)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Нийтлэл"}
-                />
-              </ListItem>
-            </Link>
+            <NMegaMenu menuText={"Нийтлэл"}>
+              <NMegaArticle
+                onChangeArticleTab={onChangeArticleTab}
+                articleCurrentTab={articleCurrentTab}
+              />
+            </NMegaMenu>
             <Link href={NRoutes.CONTENT} passHref>
               <ListItem
                 className={classes.list}
@@ -131,19 +130,12 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY1} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.DUMMY1)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Худалдаа"}
-                />
-              </ListItem>
-            </Link>
+            <NMegaMenu menuText={"Худалдаа"}>
+              <NMegaTrade
+                onChangeTradeTab={onChangeTradeTab}
+                tradeCurrentTab={tradeCurrentTab}
+              />
+            </NMegaMenu>
             <Link href={NRoutes.DUMMY2} passHref>
               <ListItem
                 className={classes.list}
@@ -154,19 +146,9 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 <ListItemText className={classes.listText} primary={"Аялал"} />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY3} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.DUMMY3)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Үл хөдлөх"}
-                />
-              </ListItem>
-            </Link>
+            <NMegaMenu menuText={"Үл хөдлөх"}>
+              <NMegaRealEstate />
+            </NMegaMenu>
             <Link href={NRoutes.DUMMY4} passHref>
               <ListItem
                 className={classes.list}
@@ -253,7 +235,7 @@ const useStyles = makeStyles((theme) => ({
   },
   list: {
     width: "initial",
-    paddingBottom: 3,
+    paddingBottom: theme.spacing(2),
     position: "relative",
     "&:hover": {
       backgroundColor: "transparent",

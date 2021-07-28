@@ -6,7 +6,7 @@ import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 
-const NCardSlidePost = () => {
+const NCardSlidePost = ({ category, title }) => {
   const classes = useStyles();
 
   return (
@@ -16,12 +16,14 @@ const NCardSlidePost = () => {
           <NCardMedia paddingTop="146.08%" image={"/card_slide_post.jpg"} />
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Typography variant="caption" className={classes.subtitle}>
-            Дэлхий - Нийтлэл
-          </Typography>
+          {category && (
+            <Typography variant="caption" className={classes.category}>
+              {category}
+            </Typography>
+          )}
           <Box>
             <Typography variant="h1" className={classes.title}>
-              АНУ Тайванийг асуудал гэж харахаа больсон гэв
+              {title || "АНУ Тайванийг асуудал гэж харахаа больсон гэв"}
             </Typography>
             <Box className={classes.line} />
           </Box>
@@ -49,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  subtitle: {
+  category: {
     backgroundColor: Colors.border_red,
     padding: "10px 30px",
     borderRadius: 5,

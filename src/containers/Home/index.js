@@ -163,12 +163,12 @@ const HomeContainer = () => {
             navigation
             pagination
             items={[
-              <NCardSlidePost />,
-              <NCardSlidePost />,
-              <NCardSlidePost />,
-              <NCardSlidePost />,
-              <NCardSlidePost />,
-              <NCardSlidePost />,
+              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
+              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
+              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
+              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
+              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
+              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
             ]}
           />
         </Box>

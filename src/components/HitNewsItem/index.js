@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     color: (isFirst) =>
       isFirst === true ? Colors.border_red : Colors.number_blue,
     paddingRight: theme.spacing(6),
+    paddingLeft: theme.spacing(2),
     lineHeight: "72px",
   },
   text: {

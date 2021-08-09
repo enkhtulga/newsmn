@@ -10,9 +10,7 @@ const Sample = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  wrap: {
-    backgroundColor: Colors.primary,
-  },
+  wrap: {},
 }));
 
 export default Sample;

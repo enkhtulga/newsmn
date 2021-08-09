@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
   AppBar,
@@ -10,6 +10,7 @@ import {
   ListItem as MuiListItem,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@material-ui/core";
 import Link from "next/link";
 import {
@@ -23,10 +24,30 @@ import { NRoutes } from "./../../constants/route.constants";
 import { useRouter } from "next/router";
 import { Colors } from "./../../theme/colors";
 import NMegaMenu from "./../../components/MegaMenu";
+import NBanner from "../../components/Banner";
+import NMegaHome from "./MegaHome";
+import NMegaArticle from "./MegaArticle";
+import NMegaTrade from "./MegaTrade";
+import NMegaRealEstate from "./MegaRealEstate";
 
-const Header = ({ toggleDrawer, open }) => {
+const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
   const router = useRouter();
+  const [homeCurrentTab, setHomeCurrentTab] = useState(0);
+  const [articleCurrentTab, setArticleCurrentTab] = useState(0);
+  const [tradeCurrentTab, setTradeCurrentTab] = useState(0);
+
+  const onChangeHomeTab = (value) => {
+    setHomeCurrentTab(value);
+  };
+
+  const onChangeArticleTab = (value) => {
+    setArticleCurrentTab(value);
+  };
+
+  const onChangeTradeTab = (value) => {
+    setTradeCurrentTab(value);
+  };
 
   const isSelected = (routeName) => {
     return router.pathname && router.pathname.startsWith(routeName);
@@ -34,11 +55,24 @@ const Header = ({ toggleDrawer, open }) => {
 
   return (
     <div className={classes.grow}>
+      {hasBanner && (
+        <Box mt={5} mb={5} textAlign="center">
+          <NBanner src="/banner_home_top.jpg" width={1180} height={204} />
+        </Box>
+      )}
       <AppBar className={classes.appBar} position="static" elevation={0}>
         <Toolbar
-          className={`${classes.toolbar} module__content`}
+          className={`${
+            yellow ? classes.toolbarYellow : classes.toolbar
+          } module__content`}
           disableGutters
         >
+          <Box className={classes.logoWrap}>
+            <Typography variant="h1" className={classes.slagon}>
+              Мэдээллийн эх сурвалж
+            </Typography>
+            <img src="/logo_main.png" alt="logo main" width={149} height={49} />
+          </Box>
           <Button variant="contained" className={classes.registerButton}>
             Бүртгүүлэх
           </Button>
@@ -61,35 +95,28 @@ const Header = ({ toggleDrawer, open }) => {
             aria-labelledby="nested-list-subheader"
             className={classes.rootNav}
           >
-            <Link href={NRoutes.HOME} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.HOME)}
+            <Box mr={2}>
+              <NMegaMenu
+                menuText={"Мэдээ"}
+                homeCurrentTab={homeCurrentTab}
+                iconComponent={
+                  <ListItemIcon className={classes.icon}>
+                    <IconHome fontSize="small" />
+                  </ListItemIcon>
+                }
               >
-                <ListItemIcon className={classes.icon}>
-                  <IconHome fontSize="small" />
-                </ListItemIcon>
-                <ListItemText
-                  className={classes.listTextWithDot}
-                  primary={"Мэдээ"}
+                <NMegaHome
+                  onChangeHomeTab={onChangeHomeTab}
+                  homeCurrentTab={homeCurrentTab}
                 />
-              </ListItem>
-            </Link>
-            <Link href={NRoutes.ARTICLE} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.ARTICLE)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Нийтлэл"}
-                />
-              </ListItem>
-            </Link>
+              </NMegaMenu>
+            </Box>
+            <NMegaMenu menuText={"Нийтлэл"}>
+              <NMegaArticle
+                onChangeArticleTab={onChangeArticleTab}
+                articleCurrentTab={articleCurrentTab}
+              />
+            </NMegaMenu>
             <Link href={NRoutes.CONTENT} passHref>
               <ListItem
                 className={classes.list}
@@ -103,19 +130,12 @@ const Header = ({ toggleDrawer, open }) => {
                 />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY1} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.DUMMY1)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Худалдаа"}
-                />
-              </ListItem>
-            </Link>
+            <NMegaMenu menuText={"Худалдаа"}>
+              <NMegaTrade
+                onChangeTradeTab={onChangeTradeTab}
+                tradeCurrentTab={tradeCurrentTab}
+              />
+            </NMegaMenu>
             <Link href={NRoutes.DUMMY2} passHref>
               <ListItem
                 className={classes.list}
@@ -126,19 +146,9 @@ const Header = ({ toggleDrawer, open }) => {
                 <ListItemText className={classes.listText} primary={"Аялал"} />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY3} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.DUMMY3)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Үл хөдлөх"}
-                />
-              </ListItem>
-            </Link>
+            <NMegaMenu menuText={"Үл хөдлөх"}>
+              <NMegaRealEstate />
+            </NMegaMenu>
             <Link href={NRoutes.DUMMY4} passHref>
               <ListItem
                 className={classes.list}
@@ -164,7 +174,7 @@ const Header = ({ toggleDrawer, open }) => {
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    margin: "0 -2rem",
+    margin: "0 -4rem",
   },
   appBar: {
     backgroundColor: "white",
@@ -179,6 +189,31 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     background: "linear-gradient(50deg, #F51428 50%, #001E64 50%)",
     height: 110,
+    position: "relative",
+  },
+  toolbarYellow: {
+    display: "flex",
+    alignItems: "center",
+    height: "100%",
+    justifyContent: "flex-end",
+    background: "linear-gradient(50deg, #FFB800 50%, #001E64 50%)",
+    height: 110,
+    position: "relative",
+  },
+  logoWrap: {
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    display: "flex",
+    alignItems: "center",
+  },
+  slagon: {
+    paddingRight: 120,
+    color: Colors.white,
+    fontWeight: 700,
+    fontSize: 13,
+    lineHeight: "35px",
   },
   registerButton: {
     marginRight: 8, //theme.spacing(1),
@@ -200,11 +235,12 @@ const useStyles = makeStyles((theme) => ({
   },
   list: {
     width: "initial",
-    paddingBottom: 3,
+    paddingBottom: theme.spacing(2),
     position: "relative",
     "&:hover": {
+      backgroundColor: "transparent",
       "&::before": {
-        backgroundColor: Colors.border_red,
+        backgroundColor: Colors.primary,
       },
     },
     "&::before": {

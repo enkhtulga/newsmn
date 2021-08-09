@@ -1,5 +1,6 @@
 export const NRoutes = {
   HOME: "/",
+  VIDEO: "/video",
   ARTICLE: "/article",
   CONTENT: "/content",
   DUMMY1: "/dummy1",

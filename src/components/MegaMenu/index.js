@@ -3,8 +3,15 @@ import { Box, ListItem, ListItemText, Menu } from "@material-ui/core";
 import makeStyles from "@material-ui/styles/makeStyles";
 import { Colors } from "./../../theme/colors";
 
-const NMegaMenu = ({ children, menuText }) => {
-  const classes = useStyles();
+const NMegaMenu = ({
+  children,
+  menuText,
+  iconComponent,
+  homeCurrentTab = 0,
+}) => {
+  const isDark = homeCurrentTab != 0 ? true : false;
+
+  const classes = useStyles({ isDark });
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -17,19 +24,21 @@ const NMegaMenu = ({ children, menuText }) => {
 
   return (
     <Box>
-      {/* <ListItem
+      <ListItem
         className={classes.list}
         button
         onClick={handleClick}
         disableRipple
+        disableGutters
       >
+        {iconComponent}
         <ListItemText className={classes.listItemText} primary={menuText} />
-      </ListItem> */}
+      </ListItem>
       <Menu
-        // PopoverClasses={{
-        //   paper: classes.popoverPaper,
-        //   root: classes.popoverRoot,
-        // }}
+        PopoverClasses={{
+          paper: classes.popoverPaper,
+          root: classes.popoverRoot,
+        }}
         elevation={0}
         anchorEl={anchorEl}
         getContentAnchorEl={null}
@@ -56,19 +65,22 @@ const useStyles = makeStyles((theme) => ({
   },
   popoverPaper: {
     width: "100%",
-    height: 369,
-    top: "170px !important",
+    top: "178px !important",
     left: "0px !important",
     maxWidth: "100%",
-    // backgroundColor: "white",
-    backgroundColor: Colors.border_gray,
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(5),
+    paddingLeft: "4rem",
+    paddingRight: "4rem",
+    backgroundColor: (props) =>
+      props.isDark == true ? Colors.title : Colors.white,
     borderRadius: 0,
     borderBottom: "1px solid",
-    borderBottomColor: Colors.border_gray,
+    boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.25)",
   },
   list: {
     width: "initial",
-    paddingBottom: 3,
+    paddingBottom: theme.spacing(2),
     position: "relative",
     "&:hover": {
       "&::before": {

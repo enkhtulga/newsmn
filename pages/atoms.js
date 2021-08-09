@@ -1,3 +1,23 @@
+// TODOS
+/*
+- Mega Menu duusgah
+- Arkhiv page
+- Bulanguud page
+- Tsogts medee page
+- Entertaiment page
+- + nemegdsen page uud
+- Button zasah
+- Sudalgaa hiih
+- Podcast page deerh slider iin player iig arilgah
+- Text tom jijigruuldegiig hiih
+- Search Modal hiih
+- Ehnees ni huudas bureer shalgah
+- Link, Card hover uud iig hiih
+- Footer N usgiig asuuh
+- Responsive hiih ( Tabled deer mega menu bn. tuunees doosh megamenu bhgui.)
+
+
+*/
 import React, { useState } from "react";
 import { Box, Typography, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";

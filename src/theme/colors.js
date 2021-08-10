@@ -10,6 +10,7 @@ export const Colors = {
   dark_blue: "#001E64",
   text_gray: "#dadada",
   text_gray_2: "#50535B",
+  text_gray_3: "#b7b7b7",
   border_gray: "#c4c4c4",
   border_gray_2: "#E5E5E5",
   border_gray_3: "#6B6A6A",

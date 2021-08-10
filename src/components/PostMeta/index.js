@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(1),
   },
   icon: {
-    color: Colors.border_gray_3,
+    color: Colors.text_gray_3,
   },
 }));
 

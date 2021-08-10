@@ -31,6 +31,7 @@ import NBanner from "../../components/Banner";
 import NMegaHome from "./MegaHome";
 import NMegaArticle from "./MegaArticle";
 import NMegaTrade from "./MegaTrade";
+import NMegaResearch from "./MegaResearch";
 import NMegaTrip from "./MegaTrip";
 import NMegaContent from "./MegaContent";
 import NMegaRealEstate from "./MegaRealEstate";
@@ -46,6 +47,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const [tripCurrentTab, setTripCurrentTab] = useState(0);
   const [contentCurrentTab, setContentCurrentTab] = useState(0);
   const [newsPlusCurrentTab, setNewsPlusCurrentTab] = useState(0);
+  const [researchCurrentTab, setResearchCurrentTab] = useState(0);
 
   const [selectedNormal, setSelectedNormal] = useState("selected");
   const [selectedLarge, setSelectedLarge] = useState("");
@@ -73,6 +75,10 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
 
   const onChangeNewsPlusTab = (value) => {
     setNewsPlusCurrentTab(value);
+  };
+
+  const onChangeResearchTab = (value) => {
+    setResearchCurrentTab(value);
   };
 
   const isSelected = (routeName) => {
@@ -214,22 +220,19 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </NMegaMenu>
             </Box>
-            <NMegaMenu menuText={"Үл хөдлөх"}>
-              <NMegaRealEstate />
-            </NMegaMenu>
-            <Link href={NRoutes.DUMMY4}>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.DUMMY4)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Судалгаа"}
+            <Box mr={4}>
+              <NMegaMenu menuText={"Үл хөдлөх"}>
+                <NMegaRealEstate />
+              </NMegaMenu>
+            </Box>
+            <Box mr={4}>
+              <NMegaMenu menuText={"Судалгаа"}>
+                <NMegaResearch
+                  onChangeResearchTab={onChangeResearchTab}
+                  researchCurrentTab={researchCurrentTab}
                 />
-              </ListItem>
-            </Link>
+              </NMegaMenu>
+            </Box>
             <Box mr={4}>
               <NMegaMenu menuText={"News+"}>
                 <NMegaNewsPlus
@@ -338,7 +341,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 120,
     color: Colors.white,
     fontWeight: 700,
-    fontSize: 13,
+    fontSize: 16,
     lineHeight: "35px",
   },
   navbarWrapper: {

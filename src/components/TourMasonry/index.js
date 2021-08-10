@@ -6,6 +6,7 @@ import {
   ImageListItem,
   Button,
   Typography,
+  Link,
 } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import itemData from "./itemData";
@@ -27,13 +28,20 @@ const NTourMasonry = () => {
               <Typography className={classes.subtitle}>
                 {item.subtitle}
               </Typography>
-              <Typography className={classes.title}>{item.title}</Typography>
+              <Link color="initial" href={"/posts/1"} underline="none">
+                <Typography className={classes.title}>{item.title}</Typography>
+              </Link>
             </Box>
           </ImageListItem>
         ))}
       </ImageList>
       <Box width="100%" textAlign="right">
-        <Button variant="outlined" className={classes.button}>
+        <Button
+          disableRipple
+          variant="outlined"
+          disableRipple
+          className={classes.button}
+        >
           Бүгдийг харах+
         </Button>
       </Box>
@@ -73,6 +81,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     fontSize: 24,
     lineHeight: "30px",
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   subtitle: {
     paddingBottom: theme.spacing(1),

@@ -7,12 +7,14 @@ import {
   FormControlLabel,
   Radio,
 } from "@material-ui/core";
+import { useRouter } from "next/router";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NCardSlideMenuPost from "../../../../../components/CardSlideMenuPost";
 import { Colors } from "../../../../../theme/colors";
 
 const NEarth = ({ isDark }) => {
   const classes = useStyles({ isDark });
+  const router = useRouter();
   const [earthCategoryChecked, setEarchCategoryChecked] = useState("a");
 
   const handleChangeEarthCategory = (event) => {
@@ -122,7 +124,9 @@ const NEarth = ({ isDark }) => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Button
           variant="outlined"
+          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/politics")}
         >
           Бүгдийг харах
         </Button>

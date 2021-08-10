@@ -3,9 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Button } from "@material-ui/core";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NCardSlideMenuPost from "../../../../../components/CardSlideMenuPost";
+import { useRouter } from "next/router";
 
 const NEconomy = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <>
@@ -46,7 +48,9 @@ const NEconomy = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Button
           variant="outlined"
+          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/politics")}
         >
           Бүгдийг харах
         </Button>

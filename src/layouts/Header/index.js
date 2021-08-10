@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Toolbar,
-  Button,
+  ButtonBase,
   IconButton,
   Box,
   List,
@@ -11,14 +11,17 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
+  MenuItem,
+  Select,
+  Link,
 } from "@material-ui/core";
-import Link from "next/link";
 import {
   Menu as IconMenu,
   Search as IconSearch,
   Bookmark as IconBookmark,
   AccountCircle as IconAccountCircle,
   Home as IconHome,
+  VolumeUp as IconVolumeUp,
 } from "@material-ui/icons";
 import { NRoutes } from "./../../constants/route.constants";
 import { useRouter } from "next/router";
@@ -28,7 +31,11 @@ import NBanner from "../../components/Banner";
 import NMegaHome from "./MegaHome";
 import NMegaArticle from "./MegaArticle";
 import NMegaTrade from "./MegaTrade";
+import NMegaTrip from "./MegaTrip";
+import NMegaContent from "./MegaContent";
 import NMegaRealEstate from "./MegaRealEstate";
+import NMegaNewsPlus from "./MegaNewsPlus";
+import NButtonPrimary from "../../components/ButtonPrimary";
 
 const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
@@ -36,6 +43,13 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const [homeCurrentTab, setHomeCurrentTab] = useState(0);
   const [articleCurrentTab, setArticleCurrentTab] = useState(0);
   const [tradeCurrentTab, setTradeCurrentTab] = useState(0);
+  const [tripCurrentTab, setTripCurrentTab] = useState(0);
+  const [contentCurrentTab, setContentCurrentTab] = useState(0);
+  const [newsPlusCurrentTab, setNewsPlusCurrentTab] = useState(0);
+
+  const [selectedNormal, setSelectedNormal] = useState("selected");
+  const [selectedLarge, setSelectedLarge] = useState("");
+  const [selectedVeryLarge, setSelectedVeryLarge] = useState("");
 
   const onChangeHomeTab = (value) => {
     setHomeCurrentTab(value);
@@ -49,9 +63,57 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
     setTradeCurrentTab(value);
   };
 
+  const onChangeTripTab = (value) => {
+    setTripCurrentTab(value);
+  };
+
+  const onChangeContentTab = (value) => {
+    setContentCurrentTab(value);
+  };
+
+  const onChangeNewsPlusTab = (value) => {
+    setNewsPlusCurrentTab(value);
+  };
+
   const isSelected = (routeName) => {
     return router.pathname && router.pathname.startsWith(routeName);
   };
+
+  const changeBodyFont = (selected) => {
+    switch (selected) {
+      case "normal":
+        setSelectedNormal("selected");
+        setSelectedLarge("");
+        setSelectedVeryLarge("");
+        break;
+      case "large":
+        setSelectedNormal("");
+        setSelectedLarge("selected");
+        setSelectedVeryLarge("");
+        break;
+      case "very_large":
+        setSelectedNormal("");
+        setSelectedLarge("");
+        setSelectedVeryLarge("selected");
+        break;
+    }
+  };
+
+  useEffect(() => {
+    if (selectedNormal === "selected") {
+      document.body.classList.add("font-normal");
+      document.body.classList.remove("font-large");
+      document.body.classList.remove("font-very-large");
+    } else if (selectedLarge === "selected") {
+      document.body.classList.remove("font-normal");
+      document.body.classList.add("font-large");
+      document.body.classList.remove("font-very-large");
+    } else if (selectedVeryLarge === "selected") {
+      document.body.classList.remove("font-normal");
+      document.body.classList.remove("font-large");
+      document.body.classList.add("font-very-large");
+    }
+  }, [selectedNormal, selectedLarge, selectedVeryLarge]);
 
   return (
     <div className={classes.grow}>
@@ -71,11 +133,20 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             <Typography variant="h1" className={classes.slagon}>
               Мэдээллийн эх сурвалж
             </Typography>
-            <img src="/logo_main.png" alt="logo main" width={149} height={49} />
+            <Link color="initial" href={"/"} underline="none">
+              <img
+                src="/logo_main.png"
+                alt="logo main"
+                width={149}
+                height={49}
+              />
+            </Link>
           </Box>
-          <Button variant="contained" className={classes.registerButton}>
-            Бүртгүүлэх
-          </Button>
+          <Box mr={1}>
+            <NButtonPrimary onClick={() => console.log("clicked")}>
+              Бүртгүүлэх
+            </NButtonPrimary>
+          </Box>
           <IconButton color="inherit" aria-label="menu">
             <IconAccountCircle />
           </IconButton>
@@ -111,45 +182,42 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </NMegaMenu>
             </Box>
-            <NMegaMenu menuText={"Нийтлэл"}>
-              <NMegaArticle
-                onChangeArticleTab={onChangeArticleTab}
-                articleCurrentTab={articleCurrentTab}
-              />
-            </NMegaMenu>
-            <Link href={NRoutes.CONTENT} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.CONTENT)}
-              >
-                <ListItemText
-                  className={classes.listText}
-                  primary={"Контент"}
+            <Box mr={2}>
+              <NMegaMenu menuText={"Нийтлэл"}>
+                <NMegaArticle
+                  onChangeArticleTab={onChangeArticleTab}
+                  articleCurrentTab={articleCurrentTab}
                 />
-              </ListItem>
-            </Link>
-            <NMegaMenu menuText={"Худалдаа"}>
-              <NMegaTrade
-                onChangeTradeTab={onChangeTradeTab}
-                tradeCurrentTab={tradeCurrentTab}
-              />
-            </NMegaMenu>
-            <Link href={NRoutes.DUMMY2} passHref>
-              <ListItem
-                className={classes.list}
-                button
-                disableRipple
-                selected={isSelected(NRoutes.DUMMY2)}
-              >
-                <ListItemText className={classes.listText} primary={"Аялал"} />
-              </ListItem>
-            </Link>
+              </NMegaMenu>
+            </Box>
+            <Box mr={2}>
+              <NMegaMenu menuText={"Контент"}>
+                <NMegaContent
+                  onChangeContentTab={onChangeContentTab}
+                  contentCurrentTab={contentCurrentTab}
+                />
+              </NMegaMenu>
+            </Box>
+            <Box mr={2}>
+              <NMegaMenu menuText={"Худалдаа"}>
+                <NMegaTrade
+                  onChangeTradeTab={onChangeTradeTab}
+                  tradeCurrentTab={tradeCurrentTab}
+                />
+              </NMegaMenu>
+            </Box>
+            <Box mr={2}>
+              <NMegaMenu menuText={"Аялал"}>
+                <NMegaTrip
+                  onChangeTripTab={onChangeTripTab}
+                  tripCurrentTab={tripCurrentTab}
+                />
+              </NMegaMenu>
+            </Box>
             <NMegaMenu menuText={"Үл хөдлөх"}>
               <NMegaRealEstate />
             </NMegaMenu>
-            <Link href={NRoutes.DUMMY4} passHref>
+            <Link href={NRoutes.DUMMY4}>
               <ListItem
                 className={classes.list}
                 button
@@ -162,9 +230,67 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </ListItem>
             </Link>
-            <NMegaMenu menuText={"News+"}>Mega Menu Content</NMegaMenu>
+            <Box mr={2}>
+              <NMegaMenu menuText={"News+"}>
+                <NMegaNewsPlus
+                  onChangeNewsPlusTab={onChangeNewsPlusTab}
+                  newsPlusCurrentTab={newsPlusCurrentTab}
+                />
+              </NMegaMenu>
+            </Box>
           </List>
-          <Box>Хувилбар</Box>
+          <Box display="flex" alignItems="center">
+            <Box display="flex" alignItems="center">
+              <Box display="flex" alignItems="center" mr={2}>
+                <Typography
+                  variant="body2"
+                  className={`${classes.volumeLabel} freeze`}
+                >
+                  Сонсох
+                </Typography>
+                <ButtonBase>
+                  <IconVolumeUp fontSize="small" className={classes.volume} />
+                </ButtonBase>
+              </Box>
+              <Typography variant="body2" className="freeze">
+                Текст томруулах
+              </Typography>
+              <Box display="flex" alignItems="center">
+                <ButtonBase
+                  className={`${classes.fontNormal} ${selectedNormal}`}
+                  onClick={() => changeBodyFont("normal")}
+                >
+                  A
+                </ButtonBase>
+                <ButtonBase
+                  className={`${classes.fontLarge} ${selectedLarge}`}
+                  onClick={() => changeBodyFont("large")}
+                >
+                  A
+                </ButtonBase>
+                <ButtonBase
+                  className={`${classes.fontVeryLarge} ${selectedVeryLarge}`}
+                  onClick={() => changeBodyFont("very_large")}
+                >
+                  A
+                </ButtonBase>
+              </Box>
+            </Box>
+            <Select
+              id="simple-select"
+              value=""
+              disableUnderline
+              displayEmpty
+              className={classes.variant}
+            >
+              <MenuItem value="" disabled>
+                Хувилбар
+              </MenuItem>
+              <MenuItem value={10}>1. Монгол хэл</MenuItem>
+              <MenuItem value={20}>2. Монгол бичиг</MenuItem>
+              <MenuItem value={30}>3. Англи хэл</MenuItem>
+            </Select>
+          </Box>
         </Box>
       </AppBar>
     </div>
@@ -214,9 +340,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     fontSize: 13,
     lineHeight: "35px",
-  },
-  registerButton: {
-    marginRight: 8, //theme.spacing(1),
   },
   navbarWrapper: {
     display: "flex",
@@ -278,34 +401,100 @@ const useStyles = makeStyles((theme) => ({
       position: "absolute",
     },
   },
+  variant: {
+    lineHeight: "20px",
+    marginLeft: theme.spacing(2),
+    "&>div": {
+      fontSize: 14,
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
+  },
+  fontNormal: {
+    color: Colors.border_gray,
+    backgroundColor: Colors.line,
+    borderRadius: 2,
+    width: 11,
+    height: 11,
+    marginLeft: theme.spacing(1),
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: 10,
+    color: Colors.border_gray,
+    "&.selected": {
+      backgroundColor: Colors.border_red,
+      color: Colors.white,
+    },
+  },
+  fontLarge: {
+    color: Colors.border_gray,
+    backgroundColor: Colors.line,
+    borderRadius: 2,
+    width: 13,
+    height: 13,
+    marginLeft: theme.spacing(1),
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: 14,
+    color: Colors.border_gray,
+    "&.selected": {
+      backgroundColor: Colors.border_red,
+      color: Colors.white,
+    },
+  },
+  fontVeryLarge: {
+    color: Colors.border_gray,
+    backgroundColor: Colors.line,
+    borderRadius: 2,
+    width: 15,
+    height: 15,
+    marginLeft: theme.spacing(1),
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: 18,
+    color: Colors.border_gray,
+    "&.selected": {
+      backgroundColor: Colors.border_red,
+      color: Colors.white,
+    },
+  },
+  volume: {
+    color: Colors.text_gray_2,
+  },
+  volumeLabel: {
+    marginRight: theme.spacing(1),
+  },
 }));
 
 const ListItem = withStyles({
   root: {
-    "&$selected": {
-      "&::before": {
-        backgroundColor: Colors.border_red,
-      },
-      // backgroundColor: "transparent",
-      // color: Colors.primary,
-      // borderRight: `2px solid ${Colors.primary}`,
-      // "& .MuiListItemIcon-root": {
-      //   color: Colors.primary,
-      // },
-      // "& .MuiListItemText-root": {
-      //   color: Colors.primary,
-      // },
-    },
-    "&$selected:hover": {
-      // backgroundColor: "transparent",
-      // color: Colors.primary,
-      // "& .MuiListItemIcon-root": {
-      //   color: Colors.primary,
-      // },
-      // "& .MuiListItemText-root": {
-      //   color: Colors.primary,
-      // },
-    },
+    // "&$selected": {
+    //   "&::before": {
+    //     backgroundColor: Colors.border_red,
+    //   },
+    // backgroundColor: "transparent",
+    // color: Colors.primary,
+    // borderRight: `2px solid ${Colors.primary}`,
+    // "& .MuiListItemIcon-root": {
+    //   color: Colors.primary,
+    // },
+    // "& .MuiListItemText-root": {
+    //   color: Colors.primary,
+    // },
+    // },
+    // "&$selected:hover": {
+    // backgroundColor: "transparent",
+    // color: Colors.primary,
+    // "& .MuiListItemIcon-root": {
+    //   color: Colors.primary,
+    // },
+    // "& .MuiListItemText-root": {
+    //   color: Colors.primary,
+    // },
+    // },
   },
 })(MuiListItem);
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -36,9 +36,11 @@ const NShopItem = ({ title, image, paddingTop }) => {
               className={classes.rating}
             />
           </Box>
-          <Typography variant="h1" className={classes.title}>
-            {title || "WIC. T CYCLING BEAR"}
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              {title || "WIC. T CYCLING BEAR"}
+            </Typography>
+          </Link>
           <Typography variant="caption" className={classes.price_label}>
             Онлайн авах үнэ
           </Typography>
@@ -98,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
     lineHeight: "20px",
     color: Colors.title,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   price_label: {
     lineHeight: "25px",

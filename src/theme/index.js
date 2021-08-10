@@ -54,6 +54,7 @@ export default createTheme({
     body1: {
       fontSize: 14,
       fontWeight: 400,
+      position: "relative",
     },
     body2: {
       fontFamily: "Roboto Condensed",
@@ -61,6 +62,7 @@ export default createTheme({
       fontWeight: 400,
       lineHeight: "20px",
       position: "relative",
+      color: Colors.secondary,
     },
     caption: {
       fontFamily: "Roboto Condensed",
@@ -95,11 +97,14 @@ export default createTheme({
       root: {
         "&$selected": {
           backgroundColor: "transparent",
+          "&:before": {
+            backgroundColor: Colors.border_red,
+          },
           "&:hover": {
             backgroundColor: "transparent",
           },
           "& span": {
-            fontWeight: 700,
+            // fontWeight: 700,
           },
         },
       },
@@ -145,6 +150,29 @@ export default createTheme({
     MuiTabs: {
       indicator: {
         zIndex: 1,
+      },
+    },
+    MuiLink: {
+      root: {
+        "&>h1": { transition: "color 0.25s ease" },
+        "&>h2": { transition: "color 0.25s ease" },
+        "&>h3": { transition: "color 0.25s ease" },
+        "&>h4": { transition: "color 0.25s ease" },
+        "&>h5": { transition: "color 0.25s ease" },
+        "&>h6": { transition: "color 0.25s ease" },
+      },
+    },
+    MuiButton: {
+      outlined: {
+        transition: "all 0.25s ease",
+        "&:hover": {
+          borderColor: Colors.primary,
+          color: Colors.primary,
+          backgroundColor: "transparent",
+          ".MuiButton-label": {
+            color: Colors.primary,
+          },
+        },
       },
     },
   },

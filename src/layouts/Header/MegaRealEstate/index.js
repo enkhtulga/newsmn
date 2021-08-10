@@ -4,9 +4,11 @@ import { Grid, Box, Button } from "@material-ui/core";
 import NMenuCarousel from "../../../components/MenuCarousel";
 import NRealEstateItem from "../../../components/RealEstateItem";
 import { Colors } from "../../../theme/colors";
+import { useRouter } from "next/router";
 
 const NMegaRealEstate = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <Grid container spacing={2}>
@@ -54,7 +56,9 @@ const NMegaRealEstate = () => {
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Button
             variant="outlined"
+            disableRipple
             style={{ borderColor: "#FF1313", color: "#FF1313" }}
+            onClick={() => router.push("/realestate")}
           >
             Бүгдийг харах
           </Button>

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -27,9 +27,11 @@ const NCardVideoSmall = ({ title, image }) => {
         </Box>
         <NCardContent className={classes.contentWrap}>
           <NPostMeta videoIcon />
-          <Typography variant="h1" className={classes.title}>
-            {title || "Дуучин Д.Болд: Би сураггүй алга болоогүй"}
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              {title || "Дуучин Д.Болд: Би сураггүй алга болоогүй"}
+            </Typography>
+          </Link>
         </NCardContent>
       </NCard>
     </Box>
@@ -52,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "20px",
     color: Colors.white,
     paddingBottom: theme.spacing(3),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   mediaOuterWrap: {
     position: "relative",

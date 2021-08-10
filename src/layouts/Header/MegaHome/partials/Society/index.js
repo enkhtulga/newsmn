@@ -8,12 +8,14 @@ import {
   Radio,
   Grid,
 } from "@material-ui/core";
+import { useRouter } from "next/router";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NCardSlideMenuPost from "../../../../../components/CardSlideMenuPost";
 import { Colors } from "../../../../../theme/colors";
 
 const NSociety = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <>
@@ -135,7 +137,9 @@ const NSociety = () => {
       >
         <Button
           variant="outlined"
+          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/politics")}
         >
           Бүгдийг харах
         </Button>

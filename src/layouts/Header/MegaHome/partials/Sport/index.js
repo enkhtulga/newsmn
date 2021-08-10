@@ -10,9 +10,11 @@ import {
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NCardSlideMenuPost from "../../../../../components/CardSlideMenuPost";
 import { Colors } from "../../../../../theme/colors";
+import { useRouter } from "next/router";
 
 const NSport = ({ isDark }) => {
   const classes = useStyles({ isDark });
+  const router = useRouter();
 
   const [sportCategoryChecked, setSportCategoryChecked] = useState("a");
 
@@ -123,7 +125,9 @@ const NSport = ({ isDark }) => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Button
           variant="outlined"
+          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/sport")}
         >
           Бүгдийг харах
         </Button>

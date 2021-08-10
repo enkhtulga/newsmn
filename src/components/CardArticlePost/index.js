@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography, Button } from "@material-ui/core";
+import { Box, Typography, Button, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -24,9 +24,11 @@ const NCardArticlePost = () => {
           <Typography variant="caption" className={classes.subtitle}>
             News.MN
           </Typography>
-          <Typography variant="h1" className={classes.title}>
-            Төгрөгийн ханш эрс унаж, инфляц жолоодлогогүй болох уу?
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              Төгрөгийн ханш эрс унаж, инфляц жолоодлогогүй болох уу?
+            </Typography>
+          </Link>
           <Box mb={6}>
             <Typography>
               Төгрөгийн тогтвортой байдлыг хангах үндсэн зорилтын хүрээнд Төв
@@ -39,7 +41,9 @@ const NCardArticlePost = () => {
               тогтворжуулахыг зорьж буй.
             </Typography>
           </Box>
-          <Button variant="outlined">Дэлгэрэнгүй</Button>
+          <Button disableRipple variant="outlined" disableRipple>
+            Дэлгэрэнгүй
+          </Button>
         </NCardContent>
       </NCard>
     </Box>
@@ -65,6 +69,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "30px",
     color: Colors.title,
     paddingBottom: theme.spacing(1),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   quote: {
     paddingTop: theme.spacing(1),

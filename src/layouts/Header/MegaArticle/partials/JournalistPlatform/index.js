@@ -1,11 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Button } from "@material-ui/core";
+import { useRouter } from "next/router";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NJournalist from "../../../../../components/Journalist";
 
 const NJournalistPlatform = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <>
@@ -27,7 +29,9 @@ const NJournalistPlatform = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Button
           variant="outlined"
+          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/editors")}
         >
           Бүгдийг харах
         </Button>

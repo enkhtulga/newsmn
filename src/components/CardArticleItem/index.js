@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import Rating from "@material-ui/lab/Rating";
 import NCardMedia from "../Card/CardMedia";
@@ -21,9 +21,11 @@ const NCardArticleItem = ({ image, editor, title, star, commentCount }) => {
         <Typography variant="body2" className={classes.editor}>
           {editor}
         </Typography>
-        <Typography variant="h1" className={classes.title}>
-          {title}
-        </Typography>
+        <Link color="initial" href={"/posts/1"} underline="none">
+          <Typography variant="h1" className={classes.title}>
+            {title}
+          </Typography>
+        </Link>
         <Box
           display="flex"
           justifyContent="space-between"
@@ -80,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
     height: 60,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   metaWrap: {
     paddingTop: theme.spacing(0.5),

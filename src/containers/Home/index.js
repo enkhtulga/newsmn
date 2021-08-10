@@ -242,7 +242,11 @@ const HomeContainer = () => {
             </Grid>
             <Grid item xs={12}>
               <Box display="flex" justifyContent="flex-end">
-                <Button variant="outlined" className={classes.buttonWhite}>
+                <Button
+                  variant="outlined"
+                  disableRipple
+                  className={classes.buttonWhite}
+                >
                   Бүгдийг харах+
                 </Button>
               </Box>
@@ -549,7 +553,12 @@ const HomeContainer = () => {
             </Grid>
             <Grid item xs={12}>
               <Box display="flex" justifyContent="flex-end">
-                <Button variant="outlined" className={classes.buttonWhite}>
+                <Button
+                  disableRipple
+                  variant="outlined"
+                  disableRipple
+                  className={classes.buttonWhite}
+                >
                   Бүгдийг харах+
                 </Button>
               </Box>
@@ -583,7 +592,9 @@ const HomeContainer = () => {
             <Grid item xs={2}>
               <NShopItem />
               <Box display="flex" justifyContent="flex-end" mt={6}>
-                <Button variant="outlined">Бүгдийг харах+</Button>
+                <Button disableRipple variant="outlined" disableRipple>
+                  Бүгдийг харах+
+                </Button>
               </Box>
             </Grid>
           </Grid>
@@ -601,7 +612,7 @@ const HomeContainer = () => {
         <NTitle title="Үл хөдлөх" hasBorder>
           <IconHouse style={{ marginRight: 8 }} />
         </NTitle>
-        <Box mt={5}>
+        <Box mt={5} className={classes.realestateWrap}>
           <NCarousel
             slidesPerView={8}
             spaceBetween={16}
@@ -629,76 +640,7 @@ const HomeContainer = () => {
             style={{ marginRight: "4px" }}
           />
         </NTitle>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
-        erat nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
-        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
-        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
-        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
-        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
-        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit erat
-        nulla, vel volutpat dolor gravida faucibus. Sed a eros quis risus
-        eleifend auctor nec sed mauris. In bibendum suscipit scelerisque. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Sed in mollis sapien. Sed vel risus sapien. Nullam
-        nisl ligula, dignissim ut molestie vel, viverra at dui. Mauris sed elit
-        finibus, rhoncus eros et, tempus mi. Maecenas et libero at ante
-        ultricies lacinia ut eu ligula. Nulla lorem felis, suscipit id ligula
-        eget, imperdiet rutrum leo. Nam rhoncus pretium pellentesque. Cras eu
-        sollicitudin libero. Vivamus vel eleifend lacus. Cras at malesuada
+        <Box mt={4} />
       </section>
       <section className={classes.sectionStickyWrap}>
         <StickySidebar
@@ -792,7 +734,9 @@ const HomeContainer = () => {
                 star={5}
                 commentCount={58}
               />
-              <Button variant="outlined">Бүгдийг харах</Button>
+              <Button disableRipple variant="outlined" disableRipple>
+                Бүгдийг харах
+              </Button>
             </Grid>
           </Grid>
         </Box>
@@ -819,6 +763,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     flexWrap: "wrap",
     alignItems: "flex-start",
+    position: "relative",
   },
   stickySidebar: {
     order: 1,
@@ -873,6 +818,10 @@ const useStyles = makeStyles((theme) => ({
   buttonWhite: {
     borderColor: Colors.white,
     color: Colors.white,
+  },
+  realestateWrap: {
+    marginLeft: "-3rem",
+    marginRight: "-3rem",
   },
 }));
 

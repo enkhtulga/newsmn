@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography, Button } from "@material-ui/core";
+import { Box, Typography, Button, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -15,36 +15,46 @@ const NCardGroupPost = () => {
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
           <NCardMedia paddingTop="54.21%" image={"/card_group_post.jpg"} />
-          <Button className={classes.followButton} variant="outlined">
+          <Button
+            className={classes.followButton}
+            variant="outlined"
+            disableRipple
+          >
             +Дагах
           </Button>
         </Box>
         <NCardContent className={classes.contentWrap}>
           <Box className={classes.contentItemWrap}>
-            <Typography variant="body2" className={classes.title}>
-              <Typography variant="body2" className={classes.category}>
-                Улс төр - Нийтлэл |
+            <Link color="initial" href={"/posts/1"} underline="none">
+              <Typography variant="body2" className={classes.title}>
+                <Typography variant="body2" className={classes.category}>
+                  Улс төр - Нийтлэл |
+                </Typography>
+                Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
               </Typography>
-              Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
-            </Typography>
+            </Link>
             <NPostMeta videoIcon />
           </Box>
           <Box className={classes.contentItemWrap}>
-            <Typography variant="body2" className={classes.title}>
-              <Typography variant="body2" className={classes.category}>
-                Улс төр - Нийтлэл |
+            <Link color="initial" href={"/posts/1"} underline="none">
+              <Typography variant="body2" className={classes.title}>
+                <Typography variant="body2" className={classes.category}>
+                  Улс төр - Нийтлэл |
+                </Typography>
+                Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
               </Typography>
-              Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
-            </Typography>
+            </Link>
             <NPostMeta videoIcon />
           </Box>
           <Box className={classes.contentItemWrap}>
-            <Typography variant="body2" className={classes.title}>
-              <Typography variant="body2" className={classes.category}>
-                Улс төр - Нийтлэл |
+            <Link color="initial" href={"/posts/1"} underline="none">
+              <Typography variant="body2" className={classes.title}>
+                <Typography variant="body2" className={classes.category}>
+                  Улс төр - Нийтлэл |
+                </Typography>
+                Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
               </Typography>
-              Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
-            </Typography>
+            </Link>
             <NPostMeta videoIcon />
           </Box>
         </NCardContent>
@@ -90,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
     height: 40,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   mediaOuterWrap: {
     position: "relative",

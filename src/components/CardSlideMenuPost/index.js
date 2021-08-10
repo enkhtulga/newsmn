@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -19,9 +19,11 @@ const NCardSlideMenuPost = ({ title, image, paddingTop }) => {
           />
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Typography variant="h1" className={classes.title}>
-            {title || '"Улсын төсөвт тодотгол хийхгүй"'}
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              {title || '"Улсын төсөвт тодотгол хийхгүй"'}
+            </Typography>
+          </Link>
           <Typography variant="caption" className={classes.date}>
             35 минутын өмнө
           </Typography>
@@ -71,6 +73,9 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 3,
     overflow: "hidden",
     textOverflow: "ellipsis",
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   date: {
     paddingTop: theme.spacing(1),

@@ -22,7 +22,7 @@ const NPageMenu = ({ items, primaryColor, justifyContent }) => {
       >
         {items.map((item, index) => {
           return (
-            <Link key={index} href={item.link} passHref>
+            <Link key={index} href={item.link}>
               <ListItem
                 className={classes.list}
                 button

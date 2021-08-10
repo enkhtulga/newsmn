@@ -1,32 +1,41 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography, Button } from "@material-ui/core";
+import { Box, Typography, Button, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NAvatar from "../Avatar";
 import { ZoomIn as IconZoomIn } from "@material-ui/icons";
+import NButtonPrimary from "../ButtonPrimary";
+import { useRouter } from "next/router";
 
 const NJournalist = ({ size, hasHover }) => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <Box className={classes.wrap}>
       <Box className={classes.avatarWrap}>
         <NAvatar size={size || 106} src={"/journalist.jpg"} />
         {hasHover && (
-          <Box id="avatarOverlay" className={classes.avatarOverlay}>
-            <IconZoomIn
-              className={classes.avatarOverlayIcon}
-              fontSize="small"
-            />
-          </Box>
+          <Link color="initial" href={"/editors/1"} underline="none">
+            <Box id="avatarOverlay" className={classes.avatarOverlay}>
+              <IconZoomIn
+                className={classes.avatarOverlayIcon}
+                fontSize="small"
+              />
+            </Box>
+          </Link>
         )}
       </Box>
       <Box className={classes.contentWrap}>
-        <Typography className={classes.name}>Ж. Нямсүрэн</Typography>
+        <Link color="initial" href={"/editors/1"} underline="none">
+          <Typography className={classes.name}>Ж. Нямсүрэн</Typography>
+        </Link>
         <Typography className={classes.occupation}>Сэтгүүлч</Typography>
       </Box>
       <Box>
-        <Button variant="contained">Дагах +</Button>
+        <NButtonPrimary onClick={() => console.log("to follow")} bold>
+          Дагах +
+        </NButtonPrimary>
       </Box>
     </Box>
   );
@@ -48,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     lineHeight: "20px",
     color: Colors.title,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   occupation: {
     fontSize: 12,

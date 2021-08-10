@@ -10,6 +10,7 @@ import NEditor from "../../../components/Editor";
 import NEditorPost from "../../../components/EditorPost";
 import NCarousel from "../../../components/Carousel";
 import NJournalist from "../../../components/Journalist";
+import NButtonPrimary from "../../../components/ButtonPrimary";
 
 const EditorDetailContainer = () => {
   const classes = useStyles();
@@ -55,7 +56,7 @@ const EditorDetailContainer = () => {
               <Box mb={3} />
               <NSocialHorizontal />
               <Box mb={5} />
-              <Button variant="contained">Дагах +</Button>
+              <NButtonPrimary>Дагах +</NButtonPrimary>
             </Grid>
           </Grid>
         </Box>

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -20,9 +20,11 @@ const NCardPost = () => {
           <Typography variant="caption" className={classes.subtitle}>
             Дэлхий - Хөрш орнууд
           </Typography>
-          <Typography variant="h1" className={classes.title}>
-            “Ерөнхийлөгч У.Хүрэлсүх тангаргаа өргөж, иргэд зул өргөв”
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              “Ерөнхийлөгч У.Хүрэлсүх тангаргаа өргөж, иргэд зул өргөв”
+            </Typography>
+          </Link>
           <NPostMeta videoIcon />
         </NCardContent>
       </NCard>
@@ -49,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     color: Colors.title,
     paddingBottom: theme.spacing(3),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
 }));
 

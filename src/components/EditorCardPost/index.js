@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NPostMeta from "../PostMeta";
 import NCardMedia from "../Card/CardMedia";
@@ -17,14 +17,16 @@ const NEditorCardPost = ({ redTitle, title, excerpt, image }) => {
         />
       </Box>
       <Box className={classes.contentWrap}>
-        <Typography variant="body2" className={classes.title}>
-          <Typography variant="body2" className={classes.category}>
-            {redTitle || "Улс төр - Нийтлэл |"}
+        <Link color="initial" href={"/posts/1"} underline="none">
+          <Typography variant="body2" className={classes.title}>
+            <Typography variant="body2" className={classes.category}>
+              {redTitle || "Улс төр - Нийтлэл |"}
+            </Typography>
+            {title ||
+              "Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!"}
           </Typography>
-          {title ||
-            "Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!"}
-        </Typography>
-        <Typography variant="body2">
+        </Link>
+        <Typography variant="body2" className={classes.excerpt}>
           {excerpt ||
             "Аугаа их Эх орны дайны Ялалтын 76 жилийн ой өнөөдөр/2021.5.9/ тохиож байна. ОХУ-ын нийслэл Москва хотын улаан талбайд Ялалтын баярын цэргийн жагсаал сүр жавхлантайгаар эхэллээ."}
         </Typography>
@@ -63,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
     height: 40,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
 }));
 

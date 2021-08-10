@@ -67,7 +67,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
             disablePadding
             className={classes.rootNav}
           >
-            <Link href={NRoutes.HOME} passHref>
+            <Link href={NRoutes.HOME}>
               <ListItem
                 className={classes.list}
                 button
@@ -81,7 +81,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
                 <ListItemText className={classes.listText} primary={"Нүүр"} />
               </ListItem>
             </Link>
-            <Link href={NRoutes.ARTICLE} passHref>
+            <Link href={NRoutes.ARTICLE}>
               <ListItem
                 className={classes.list}
                 button
@@ -92,7 +92,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
                 <ListItemText className={classes.listText} primary={"Мэдээ"} />
               </ListItem>
             </Link>
-            <Link href={NRoutes.CONTENT} passHref>
+            <Link href={NRoutes.CONTENT}>
               <ListItem
                 className={classes.list}
                 button
@@ -106,7 +106,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
                 />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY1} passHref>
+            <Link href={NRoutes.DUMMY1}>
               <ListItem
                 className={classes.list}
                 button
@@ -120,7 +120,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
                 />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY2} passHref>
+            <Link href={NRoutes.DUMMY2}>
               <ListItem
                 className={classes.list}
                 button
@@ -134,7 +134,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
                 />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY3} passHref>
+            <Link href={NRoutes.DUMMY3}>
               <ListItem
                 className={classes.list}
                 button
@@ -148,7 +148,7 @@ const VideoHeader = ({ toggleDrawer, open }) => {
                 />
               </ListItem>
             </Link>
-            <Link href={NRoutes.DUMMY4} passHref>
+            <Link href={NRoutes.DUMMY4}>
               <ListItem
                 className={classes.list}
                 button

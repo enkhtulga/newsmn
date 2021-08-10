@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 
 const NHitNewsItem = ({ isFirst, number, text }) => {
@@ -11,9 +11,11 @@ const NHitNewsItem = ({ isFirst, number, text }) => {
       <Typography variant="h1" className={classes.number}>
         {number}
       </Typography>
-      <Typography variant="h1" className={classes.text}>
-        {text}
-      </Typography>
+      <Link color="initial" href={"/posts/1"} underline="none">
+        <Typography variant="h1" className={classes.text}>
+          {text}
+        </Typography>
+      </Link>
     </Box>
   );
 };
@@ -42,13 +44,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: (isFirst) => (isFirst === true ? 800 : 700),
     lineHeight: "20px",
     color: Colors.title,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
-  // plain: {
-  //   color: Colors.grey[100],
-  //   wordBreak: "break-all",
-  //   whiteSpace: (props: MessageTextProps) =>
-  //     props.preWrap ? "pre-wrap" : "inherit",
-  // },
 }));
 
 export default NHitNewsItem;

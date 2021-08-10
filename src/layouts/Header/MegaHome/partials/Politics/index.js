@@ -1,11 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Button } from "@material-ui/core";
+import { useRouter } from "next/router";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NRealEstateNewsItem from "../../../../../components/RealEstateNewsItem";
 
 const NPolitics = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <>
@@ -38,7 +40,13 @@ const NPolitics = () => {
         ]}
       />
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Button variant="outlined">Бүгдийг харах</Button>
+        <Button
+          variant="outlined"
+          disableRipple
+          onClick={() => router.push("/politics")}
+        >
+          Бүгдийг харах
+        </Button>
       </Box>
     </>
   );

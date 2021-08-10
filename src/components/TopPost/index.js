@@ -1,13 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 
-const NTopPost = ({ hasPhotoBy }) => {
+const NTopPost = ({ hasPhotoBy, link }) => {
   const classes = useStyles();
 
   return (
@@ -25,9 +25,11 @@ const NTopPost = ({ hasPhotoBy }) => {
           <Typography variant="caption" className={classes.subtitle}>
             Дэлхий - Хөрш орнууд
           </Typography>
-          <Typography variant="h1" className={classes.title}>
-            ЭМЯ: 13 хүн нас барсны дунд хоёр сартай нярай байна
-          </Typography>
+          <Link color="initial" href={link || "/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              ЭМЯ: 13 хүн нас барсны дунд хоёр сартай нярай байна
+            </Typography>
+          </Link>
           <Typography variant="body2" className={classes.content}>
             Сүүлийн 24 цагт 2432 шинэ тохиолдол илэрч, 13 нас барлаа.
             Харамсалтай нь хоёр сартай нярай нэн хүнд хэлбэрээр эмнэлэгт гурав
@@ -75,9 +77,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: 800,
-    color: Colors.title,
-    lineHeight: "20px",
+    color: Colors.dark_blue,
+    lineHeight: "30px",
     paddingBottom: theme.spacing(1),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   quote: {
     paddingTop: theme.spacing(1),

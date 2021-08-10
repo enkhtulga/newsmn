@@ -6,6 +6,7 @@ import {
   BookmarkBorder as IconBookmarkBorder,
   VideocamOutlined as IconVideocamOutlined,
 } from "@material-ui/icons";
+import _ from "lodash";
 
 const NPostMeta = ({ videoIcon, className, hasBorder, justifyContent }) => {
   const classes = useStyles({ hasBorder, justifyContent });
@@ -14,11 +15,14 @@ const NPostMeta = ({ videoIcon, className, hasBorder, justifyContent }) => {
     <Box className={`${className} ${classes.metaWrap}`}>
       <Box className={classes.dateWrap}>
         <Typography variant="caption" className={classes.date}>
-          4 цагийн өмнө
+          {_.sample([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])}{" "}
+          {_.sample(["минутын", "цагийн", "өдрийн", "сарын"])} өмнө
         </Typography>
-        {videoIcon && <IconVideocamOutlined fontSize="small" />}
+        {videoIcon && (
+          <IconVideocamOutlined fontSize="small" className={classes.icon} />
+        )}
       </Box>
-      <IconBookmarkBorder fontSize="small" />
+      <IconBookmarkBorder fontSize="small" className={classes.icon} />
     </Box>
   );
 };
@@ -45,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
     color: Colors.secondary,
     display: "block",
     paddingRight: theme.spacing(1),
+  },
+  icon: {
+    color: Colors.border_gray_3,
   },
 }));
 

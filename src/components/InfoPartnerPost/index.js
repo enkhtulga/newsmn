@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -21,10 +21,12 @@ const NInfoPartnerPost = () => {
             35 минутын өмнө
           </Typography>
           <Box>
-            <Typography variant="h1" className={classes.title}>
-              Монголоос луйвардсан 70 тэрбум төгрөг буюу Медипас эмнэлгээ буцааж
-              авья
-            </Typography>
+            <Link color="initial" href={"/posts/1"} underline="none">
+              <Typography variant="h1" className={classes.title}>
+                Монголоос луйвардсан 70 тэрбум төгрөг буюу Медипас эмнэлгээ
+                буцааж авья
+              </Typography>
+            </Link>
             <IconBookmarkBorder fontSize="small" />
           </Box>
         </NCardContent>
@@ -63,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis",
     height: 31,
     marginBottom: theme.spacing(0.5),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
 }));
 

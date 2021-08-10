@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -20,9 +20,11 @@ const NRealEstateItem = ({ title, rating, image }) => {
           />
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Typography variant="h1" className={classes.title}>
-            {title || "Нарны хороолол"}
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              {title || "Нарны хороолол"}
+            </Typography>
+          </Link>
           <Rating
             name="read-only"
             value={rating || 5}
@@ -68,6 +70,11 @@ const useStyles = makeStyles((theme) => ({
     color: Colors.title,
     textAlign: "center",
     paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(1),
+    lineHeight: "26px",
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   locationLabel: {
     display: "block",

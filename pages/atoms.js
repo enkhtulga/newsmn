@@ -390,7 +390,11 @@ const Atoms = () => {
           </Grid>
           <Grid item xs={12}>
             <Box display="flex" justifyContent="flex-end">
-              <Button variant="outlined" className={classes.buttonWhite}>
+              <Button
+                variant="outlined"
+                disableRipple
+                className={classes.buttonWhite}
+              >
                 Бүгдийг харах+
               </Button>
             </Box>

@@ -30,6 +30,7 @@ const NMegaMenu = ({
         onClick={handleClick}
         disableRipple
         disableGutters
+        selected={anchorEl}
       >
         {iconComponent}
         <ListItemText className={classes.listItemText} primary={menuText} />

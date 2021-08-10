@@ -96,3 +96,29 @@ div.rhap_container {
   font-size: 35px;
 }
 /* Audio Player Style ===== END */
+.MuiButtonBase-root.button-primary {
+  padding: 10px 36px;
+  background-color: #f51428;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Roboto Condensed";
+  color: #fff;
+}
+.MuiButtonBase-root.button-primary.full-width {
+  width: 100%;
+}
+.MuiButtonBase-root.button-primary.font-bold {
+  font-weight: 700;
+}
+body.font-normal .MuiTypography-body2:not(.freeze) {
+  font-size: initial;
+  line-height: 20px;
+}
+body.font-large .MuiTypography-body2:not(.freeze) {
+  font-size: 18px;
+  line-height: 22px;
+}
+body.font-very-large .MuiTypography-body2:not(.freeze) {
+  font-size: 24px;
+  line-height: 28px;
+}

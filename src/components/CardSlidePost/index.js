@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -22,9 +22,11 @@ const NCardSlidePost = ({ category, title }) => {
             </Typography>
           )}
           <Box>
-            <Typography variant="h1" className={classes.title}>
-              {title || "АНУ Тайванийг асуудал гэж харахаа больсон гэв"}
-            </Typography>
+            <Link color="initial" href={"/posts/1"} underline="none">
+              <Typography variant="h1" className={classes.title}>
+                {title || "АНУ Тайванийг асуудал гэж харахаа больсон гэв"}
+              </Typography>
+            </Link>
             <Box className={classes.line} />
           </Box>
         </NCardContent>
@@ -71,6 +73,9 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 3,
     overflow: "hidden",
     textOverflow: "ellipsis",
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   line: {
     backgroundColor: Colors.primary,

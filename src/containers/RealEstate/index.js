@@ -195,7 +195,11 @@ const RealEstateContainer = () => {
           <Box mt={10}>
             <Grid container spacing={2}>
               <Grid item xs={2}>
-                <FormControl variant="outlined" className={classes.formControl}>
+                <FormControl
+                  variant="outlined"
+                  disableRipple
+                  className={classes.formControl}
+                >
                   <InputLabel id="category-label">Төрөл</InputLabel>
                   <Select
                     labelId="category-label"
@@ -215,7 +219,11 @@ const RealEstateContainer = () => {
                 </FormControl>
               </Grid>
               <Grid item xs={3}>
-                <FormControl variant="outlined" className={classes.formControl}>
+                <FormControl
+                  variant="outlined"
+                  disableRipple
+                  className={classes.formControl}
+                >
                   <InputLabel id="district-label">Дүүрэг</InputLabel>
                   <Select
                     labelId="district-label"
@@ -234,7 +242,11 @@ const RealEstateContainer = () => {
                 </FormControl>
               </Grid>
               <Grid item xs={3}>
-                <FormControl variant="outlined" className={classes.formControl}>
+                <FormControl
+                  variant="outlined"
+                  disableRipple
+                  className={classes.formControl}
+                >
                   <InputLabel id="rank-label">Зэрэглэл</InputLabel>
                   <Select
                     labelId="rank-label"
@@ -253,7 +265,11 @@ const RealEstateContainer = () => {
                 </FormControl>
               </Grid>
               <Grid item xs={2}>
-                <FormControl variant="outlined" className={classes.formControl}>
+                <FormControl
+                  variant="outlined"
+                  disableRipple
+                  className={classes.formControl}
+                >
                   <InputLabel id="room-label">Өрөө</InputLabel>
                   <Select
                     labelId="room-label"
@@ -272,7 +288,11 @@ const RealEstateContainer = () => {
                 </FormControl>
               </Grid>
               <Grid item xs={2}>
-                <FormControl variant="outlined" className={classes.formControl}>
+                <FormControl
+                  variant="outlined"
+                  disableRipple
+                  className={classes.formControl}
+                >
                   <InputLabel id="percentage-label">Барилгын явц</InputLabel>
                   <Select
                     labelId="percentage-label"
@@ -383,7 +403,11 @@ const RealEstateContainer = () => {
               </Grid>
               <Grid item xs={12}>
                 <Box display="flex" justifyContent="flex-end" mb={5}>
-                  <Button variant="outlined" style={{ marginRight: 16 }}>
+                  <Button
+                    variant="outlined"
+                    disableRipple
+                    style={{ marginRight: 16 }}
+                  >
                     Арилгах
                   </Button>
                   <Button variant="contained">Хайх</Button>

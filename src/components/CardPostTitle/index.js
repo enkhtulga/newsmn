@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -17,9 +17,11 @@ const NCardPostTitle = ({ paddingTop, noImage, hasBorder }) => {
           <Typography variant="caption" className={classes.subtitle}>
             Спорт - Үндэсний спорт
           </Typography>
-          <Typography variant="h1" className={classes.title}>
-            Үндэсний бөхийн барилдаан Хүй долоон худагт болно
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              Үндэсний бөхийн барилдаан Хүй долоон худагт болно
+            </Typography>
+          </Link>
         </NCardContent>
         <Box className={classes.mediaOuterWrap}>
           {/* aspect ratio calculation: height / width * 100% */}
@@ -64,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     color: Colors.title,
     paddingBottom: (noImage) => (noImage ? 0 : theme.spacing(1.5)),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   postMeta: {
     paddingTop: (noImage) => (noImage ? theme.spacing(1) : theme.spacing(1.5)),

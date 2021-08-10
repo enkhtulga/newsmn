@@ -41,6 +41,7 @@ const NPolitics = () => {
       />
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Button
+          style={{ fontSize: 10 }}
           variant="outlined"
           disableRipple
           onClick={() => router.push("/politics")}

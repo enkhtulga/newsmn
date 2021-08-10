@@ -84,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     position: "relative",
     "&:hover": {
+      "& span": {
+        color: Colors.primary,
+      },
       "&::before": {
         backgroundColor: Colors.border_red,
       },

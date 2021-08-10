@@ -166,7 +166,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             aria-labelledby="nested-list-subheader"
             className={classes.rootNav}
           >
-            <Box mr={2}>
+            <Box mr={4}>
               <NMegaMenu
                 menuText={"Мэдээ"}
                 homeCurrentTab={homeCurrentTab}
@@ -182,7 +182,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </NMegaMenu>
             </Box>
-            <Box mr={2}>
+            <Box mr={4}>
               <NMegaMenu menuText={"Нийтлэл"}>
                 <NMegaArticle
                   onChangeArticleTab={onChangeArticleTab}
@@ -190,7 +190,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </NMegaMenu>
             </Box>
-            <Box mr={2}>
+            <Box mr={4}>
               <NMegaMenu menuText={"Контент"}>
                 <NMegaContent
                   onChangeContentTab={onChangeContentTab}
@@ -198,7 +198,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </NMegaMenu>
             </Box>
-            <Box mr={2}>
+            <Box mr={4}>
               <NMegaMenu menuText={"Худалдаа"}>
                 <NMegaTrade
                   onChangeTradeTab={onChangeTradeTab}
@@ -206,7 +206,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </NMegaMenu>
             </Box>
-            <Box mr={2}>
+            <Box mr={4}>
               <NMegaMenu menuText={"Аялал"}>
                 <NMegaTrip
                   onChangeTripTab={onChangeTripTab}
@@ -230,7 +230,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
                 />
               </ListItem>
             </Link>
-            <Box mr={2}>
+            <Box mr={4}>
               <NMegaMenu menuText={"News+"}>
                 <NMegaNewsPlus
                   onChangeNewsPlusTab={onChangeNewsPlusTab}

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography, Link } from "@material-ui/core";
+import { Box, Typography, Link, IconButton } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -31,7 +31,9 @@ const NInfoPartnerPost = ({ title, image }) => {
                   "Монголоос луйвардсан 70 тэрбум төгрөг буюу Медипас эмнэлгээ буцааж авья"}
               </Typography>
             </Link>
-            <IconBookmarkBorder fontSize="small" />
+            <IconButton size="small" className={classes.bookmark}>
+              <IconBookmarkBorder fontSize="small" className={classes.icon} />
+            </IconButton>
           </Box>
         </NCardContent>
       </NCard>
@@ -71,6 +73,16 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(0.5),
     "&:hover": {
       color: Colors.primary,
+    },
+  },
+  icon: {
+    color: Colors.text_gray_3,
+  },
+  bookmark: {
+    "&:hover": {
+      "& svg": {
+        color: Colors.primary,
+      },
     },
   },
 }));

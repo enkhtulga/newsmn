@@ -797,15 +797,7 @@ const HomeContainer = () => {
           offsetTop={16}
           offsetBottom={16}
         >
-          <NSelectTitle title="Алдартай" hasBorder>
-            <img
-              src="/hee_2.png"
-              alt="Алдартай"
-              width="26"
-              height="26"
-              style={{ marginRight: "4px" }}
-            />
-          </NSelectTitle>
+          <NSelectTitle title="Алдартай" hasBorder />
           <NFamousNewsItem
             number={"1"}
             editor={"Б.Дэлгэрцэцэг"}
@@ -834,17 +826,14 @@ const HomeContainer = () => {
             star={3}
             commentCount={58}
           />
+          <Box mt={2}>
+            <Button disableRipple variant="outlined" disableRipple>
+              Бүгдийг харах
+            </Button>
+          </Box>
         </StickySidebar>
         <Box className={classes.content}>
-          <NSelectTitle title="Нийтлэл" hasBorder>
-            <img
-              src="/hee_2.png"
-              alt="Нийтлэл"
-              width="26"
-              height="26"
-              style={{ marginRight: "4px" }}
-            />
-          </NSelectTitle>
+          <NSelectTitle title="Нийтлэл" hasBorder />
           <Box mt={4} />
           <Grid container spacing={2}>
             <Grid item xs={5}>

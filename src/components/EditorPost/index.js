@@ -10,8 +10,8 @@ const NEditorPost = () => {
   return (
     <Box className={classes.wrap}>
       <Link color="initial" href={"/posts/1"} underline="none">
-        <Typography variant="body2" className={classes.title}>
-          <Typography variant="body2" className={classes.category}>
+        <Typography variant="body1" className={classes.title}>
+          <Typography variant="body1" className={classes.category}>
             Улс төр - Нийтлэл |
           </Typography>
           Ерөнхий сайдаас АСУУЯ: Улсаас урвасан улстөрчдийг нэрлэнэ үү!
@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
     height: 40,
+    color: Colors.secondary,
     "&:hover": {
       color: Colors.primary,
     },

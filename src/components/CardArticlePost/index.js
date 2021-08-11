@@ -51,9 +51,7 @@ const NCardArticlePost = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  wrap: {
-    backgroundColor: Colors.primary,
-  },
+  wrap: {},
   contentWrap: {
     paddingTop: theme.spacing(2),
     paddingRight: 0,

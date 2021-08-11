@@ -7,14 +7,14 @@ import { ZoomIn as IconZoomIn } from "@material-ui/icons";
 import NButtonPrimary from "../ButtonPrimary";
 import { useRouter } from "next/router";
 
-const NJournalist = ({ size, hasHover }) => {
+const NJournalist = ({ size, hasHover, image }) => {
   const classes = useStyles();
   const router = useRouter();
 
   return (
     <Box className={classes.wrap}>
       <Box className={classes.avatarWrap}>
-        <NAvatar size={size || 106} src={"/journalist.jpg"} />
+        <NAvatar size={size || 106} src={image || "/journalist.jpg"} />
         {hasHover && (
           <Link color="initial" href={"/editors/1"} underline="none">
             <Box id="avatarOverlay" className={classes.avatarOverlay}>

@@ -111,14 +111,18 @@ div.rhap_container {
   font-weight: 700;
 }
 body.font-normal .MuiTypography-body2:not(.freeze) {
-  font-size: initial;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 24px;
 }
 body.font-large .MuiTypography-body2:not(.freeze) {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 24px;
 }
 body.font-very-large .MuiTypography-body2:not(.freeze) {
   font-size: 24px;
   line-height: 28px;
+}
+.imageIconHover {
+  display: none;
+  position: absolute;
 }

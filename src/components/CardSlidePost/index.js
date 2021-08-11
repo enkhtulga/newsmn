@@ -6,14 +6,17 @@ import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 
-const NCardSlidePost = ({ category, title }) => {
+const NCardSlidePost = ({ category, title, image }) => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia paddingTop="146.08%" image={"/card_slide_post.jpg"} />
+          <NCardMedia
+            paddingTop="146.08%"
+            image={image || "/card_slide_post.jpg"}
+          />
         </Box>
         <NCardContent className={classes.contentWrap}>
           {category && (
@@ -52,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
+    width: "-webkit-fill-available",
   },
   category: {
     backgroundColor: Colors.border_red,
@@ -65,14 +69,16 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     lineHeight: "25px",
     color: Colors.white,
-    paddingRight: theme.spacing(3),
-    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
     textAlign: "center",
     display: "-webkit-box",
     WebkitBoxOrient: "vertical",
     WebkitLineClamp: 3,
     overflow: "hidden",
     textOverflow: "ellipsis",
+    fontSize: 24,
+    height: 75,
     "&:hover": {
       color: Colors.primary,
     },

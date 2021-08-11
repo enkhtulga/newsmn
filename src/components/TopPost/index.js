@@ -16,7 +16,7 @@ const NTopPost = ({ hasPhotoBy, link }) => {
         <Box className={classes.mediaOuterWrap}>
           <NCardMedia image={"/top_post.png"} />
           {hasPhotoBy && (
-            <Typography variant="body2" className={classes.photoBy}>
+            <Typography variant="body2" className={`${classes.photoBy} freeze`}>
               Гэрэл зургийг: З.Аранзал
             </Typography>
           )}
@@ -76,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
   },
   title: {
+    fontSize: 24,
     fontWeight: 800,
     color: Colors.dark_blue,
     lineHeight: "30px",

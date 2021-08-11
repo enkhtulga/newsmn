@@ -7,14 +7,17 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 
-const NCardGroupPost = () => {
+const NCardGroupPost = ({ image }) => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia paddingTop="54.21%" image={"/card_group_post.jpg"} />
+          <NCardMedia
+            paddingTop="54.21%"
+            image={image || "/card_group_post.jpg"}
+          />
           <Button
             className={classes.followButton}
             variant="outlined"
@@ -64,9 +67,7 @@ const NCardGroupPost = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  wrap: {
-    backgroundColor: Colors.primary,
-  },
+  wrap: {},
   contentWrap: {
     paddingTop: theme.spacing(2),
     paddingRight: 0,

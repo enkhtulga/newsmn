@@ -8,10 +8,11 @@ const NMegaMenu = ({
   menuText,
   iconComponent,
   homeCurrentTab = 0,
+  isPrimary = false,
 }) => {
   const isDark = homeCurrentTab != 0 ? true : false;
 
-  const classes = useStyles({ isDark });
+  const classes = useStyles({ isDark, isPrimary });
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -66,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
   },
   popoverPaper: {
     width: "100%",
-    top: "178px !important",
+    // top: "178px !important",
     left: "0px !important",
     maxWidth: "100%",
     paddingTop: theme.spacing(5),
@@ -106,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
   listItemText: {
     "&>span": {
       fontSize: 18,
-      color: Colors.title,
+      color: (props) => (props.isPrimary ? Colors.primary : Colors.title),
     },
   },
 }));

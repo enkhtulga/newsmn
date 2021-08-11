@@ -4,14 +4,14 @@ import { Box, Typography } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NAvatar from "../Avatar";
 
-const NEditor = () => {
+const NEditor = ({ image, name }) => {
   const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
-      <NAvatar size={55} hasBorder src={"https://picsum.photos/55/55"} />
+      <NAvatar size={55} hasBorder src={image || "/home_img_10.jpg"} />
       <Box className={classes.contentWrap}>
-        <Typography className={classes.name}>Б.Анхтуяа</Typography>
+        <Typography className={classes.name}>{name || "Б.Анхтуяа"}</Typography>
         <Typography className={classes.occupation}>Сэтгүүлч</Typography>
       </Box>
     </Box>

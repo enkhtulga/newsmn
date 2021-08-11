@@ -48,9 +48,27 @@ const HomeContainer = () => {
         >
           <NTitle title="Шинэ мэдээ" hasBorder />
           <Box mt={2} />
-          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-          <NCardPostTitle paddingTop="54.21%" hasBorder />
-          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+          <NCardPostTitle
+            title="ЗГ: УИХ-аар Covid-19-ийг давах санхүүжилтийг хэлэлцүүлнэ"
+            noImage
+            hasBorder
+          />
+          <NCardPostTitle
+            title="Фото: Ерөнхийлөгч У.Хүрэлсүхийн тангараг өргөх ёслолын ЖАГСААЛ"
+            hasBorder
+            image="/home_img_8.jpg"
+          />
+          <NCardPostTitle
+            title="“Хямралыг хамтдаа давъя” уриатай цахим үзэсгэлэн болж байна"
+            paddingTop="54.21%"
+            hasBorder
+            image="/home_img_9.jpg"
+          />
+          <NCardPostTitle
+            title="Хар тэнгист нэвтэрсэн АНУ-ын сөнөөгч хөлгийг ажиглаж байна"
+            noImage
+            hasBorder
+          />
           <Box mb={2}>
             <NBanner
               src="/banner_home_4.jpg"
@@ -59,39 +77,75 @@ const HomeContainer = () => {
               link="https://recruitment.minii-suljee.mn/"
             />
           </Box>
-          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-          <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+          <NCardPostTitle
+            title="Москвад суугаа Барууны элчин сайдууд “хууль зөрчив”"
+            noImage
+            hasBorder
+          />
+          <NCardPostTitle
+            title="Москвад суугаа Барууны элчин сайдууд “хууль зөрчив”"
+            noImage
+            hasBorder
+          />
+          <NCardPostTitle
+            title="Москвад суугаа Барууны элчин сайдууд “хууль зөрчив”"
+            noImage
+            hasBorder
+          />
         </StickySidebar>
         <Box className={classes.contentTop}>
           <NTopPost hasPhotoBy />
           <Grid container spacing={2}>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost image="/home_img_1.jpg" />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost title="“Орон нутагт халдварын тархалт нэмэгдэж, 179 суманд хөл хорилоо”" />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost
+                image="/post_single.jpg"
+                title='"Шүгэл үлээгчдийг дэмжиж, эрх зүйн орчныг бүрдүүлнэ"'
+                link="/posts/2"
+                postMetaProps={{ editedLabel: "2021.05.01 засвар хийсэн" }}
+              />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost
+                image="/home_img_2.jpg"
+                title="“12-15 настай хүүхдүүдийг маргаашнаас вакцинжуулна"
+                postMetaProps={{ partnerLabel: "Түншлэл: Арт эженси ХХК" }}
+              />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost
+                title='“Архангай аймаг наадам хүртэл "улаан түвшин"-д хатуу хөл хорино”'
+                image="/home_img_3.jpg"
+              />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost
+                image="/home_img_4.jpg"
+                title="“Дельта” хувилбарын эсрэг вакцины нэмэлт тун хийх шаардлагатай”"
+              />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost
+                image="/home_img_5.jpg"
+                title="Хар тэнгист нэвтэрсэн АНУ-ын сөнөөгч хөлгийг ажиглаж байна"
+              />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost
+                image="/home_img_6.jpg"
+                title="“Монголын “ТОП-100 ААН”-ийг маргааш цахимаар тодруулна”"
+              />
             </Grid>
             <Grid item xs={4}>
-              <NCardPost />
+              <NCardPost
+                image="/home_img_7.jpg"
+                title="“Дельта” хувилбарын эсрэг вакцины нэмэлт тун хийх шаардлагатай”"
+              />
             </Grid>
           </Grid>
         </Box>
@@ -138,19 +192,19 @@ const HomeContainer = () => {
             <NEditorPost />
           </Grid>
           <Grid item xs={3}>
-            <NEditor />
+            <NEditor image="/home_img_11.jpg" />
             <Box mb={4} />
             <NEditorPost />
             <NEditorPost />
           </Grid>
           <Grid item xs={3}>
-            <NEditor />
+            <NEditor image="/home_img_12.jpg" />
             <Box mb={4} />
             <NEditorPost />
             <NEditorPost />
           </Grid>
           <Grid item xs={3}>
-            <NEditor />
+            <NEditor image="/home_img_13.jpg" />
             <Box mb={4} />
             <NEditorPost />
             <NEditorPost />
@@ -164,9 +218,21 @@ const HomeContainer = () => {
             pagination
             items={[
               <NCardSlidePost category="Дэлхий - Нийтлэл" />,
-              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
-              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
-              <NCardSlidePost category="Дэлхий - Нийтлэл" />,
+              <NCardSlidePost
+                category="Дэлхий - Нийтлэл"
+                title="Нийслэлд өнөөдөр 3188 иргэнийг дархлаажуулна"
+                image="/card_slide_img_2.jpg"
+              />,
+              <NCardSlidePost
+                category="Дэлхий - Нийтлэл"
+                title="У.Хүрэлсүхийн тангаргийн ёслолын АЛДААНУУД"
+                image="/card_slide_img_3.jpg"
+              />,
+              <NCardSlidePost
+                category="Дэлхий - Нийтлэл"
+                title="Өдрийн тойм: 6 минутын өмнө шийдэгдсэн үхлийн хэсгийн тулаанууд"
+                image="/card_slide_img_4.jpg"
+              />,
               <NCardSlidePost category="Дэлхий - Нийтлэл" />,
               <NCardSlidePost category="Дэлхий - Нийтлэл" />,
             ]}
@@ -232,21 +298,20 @@ const HomeContainer = () => {
           <Box mt={5} />
           <Grid container spacing={2}>
             <Grid item xs={4}>
-              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle image="/home_img_14.jpg" />
             </Grid>
             <Grid item xs={4}>
-              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle title="Дабль стандарт: Ардын наадам болохоос ах дүү хоёрын баяр биш шүү!" />
             </Grid>
             <Grid item xs={4}>
-              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle
+                title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
+                image="/home_img_15.jpg"
+              />
             </Grid>
             <Grid item xs={12}>
               <Box display="flex" justifyContent="flex-end">
-                <Button
-                  variant="outlined"
-                  disableRipple
-                  className={classes.buttonWhite}
-                >
+                <Button variant="outlined" disableRipple>
                   Бүгдийг харах+
                 </Button>
               </Box>
@@ -277,30 +342,72 @@ const HomeContainer = () => {
             <Grid item xs={3}>
               <NSelectTitle title="• Baabar.mn" />
               <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
+              <NInfoPartnerPost title="Атаархал" image="/home_img_16.jpg" />
+              <NInfoPartnerPost
+                title="МОНГОЛ ГЭДЭГ ЭРХЭМ"
+                image="/home_img_17.jpg"
+              />
+              <NInfoPartnerPost
+                title="Но, как заметил К.Поппер, марксизм"
+                image="/home_img_18.jpg"
+              />
             </Grid>
             <Grid item xs={3}>
               <NSelectTitle title="• CCTV" />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
+              <NInfoPartnerPost
+                title="“70 агшин-70 түүх” уралдаан зарлав"
+                image="/home_img_19.jpg"
+              />
+              <NInfoPartnerPost
+                title="Бээжин хот жолоочгүй автобустай болно"
+                image="/home_img_20.jpg"
+              />
+              <NInfoPartnerPost
+                title="Шинжлэх ухааны түүхэн дэх хамгийн хачирхалтай"
+                image="/home_img_21.jpg"
+              />
+              <NInfoPartnerPost
+                title="Хятад өвлийн спортын гол орон болно"
+                image="/home_img_22.jpg"
+              />
             </Grid>
             <Grid item xs={3}>
               <NSelectTitle title="• Риа новости" />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
+              <NInfoPartnerPost
+                title='Оросын үндэсний төлбөрийн "Мир" систем БНСУ-д туршилтаа эхлүүллээ'
+                image="/home_img_23.jpg"
+              />
+              <NInfoPartnerPost
+                title="Кремлийг чимэх гацуурыг Москвад авчирлаа"
+                image="/home_img_24.jpg"
+              />
+              <NInfoPartnerPost
+                title="Нийслэл салатны орцод ордог бүх барааны борлуулалт нэмэгджээ"
+                image="/home_img_25.jpg"
+              />
+              <NInfoPartnerPost
+                title="ОХУ-ын Башкир улс Марокко руу зөгийн бал экспортолж эхэллээ"
+                image="/home_img_26.jpg"
+              />
             </Grid>
             <Grid item xs={3}>
               <NSelectTitle title="• Түнш" />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
-              <NInfoPartnerPost />
+              <NInfoPartnerPost
+                title="Huawei Mate X хүйтэнд тэсвэр муутай"
+                image="/home_img_27.jpg"
+              />
+              <NInfoPartnerPost
+                title="Аварга тосонгоос аврал эрэх хэрэггүй"
+                image="/home_img_28.jpg"
+              />
+              <NInfoPartnerPost
+                title="Европын холбоонд элсүүлэх талаар тохиролцоонд хүрч чадсангүй"
+                image="/home_img_29.jpg"
+              />
+              <NInfoPartnerPost
+                title="ДЭМБ: Томуугийн вакцин нь өвчлөлийг бууруулахад чиглэсэн хамгийн шилдэг арга..."
+                image="/home_img_30.jpg"
+              />
             </Grid>
           </Grid>
         </Box>
@@ -309,7 +416,7 @@ const HomeContainer = () => {
         <NCarousel
           slidesPerView={4}
           spaceBetween={16}
-          navigation
+          navigation={false}
           pagination
           items={[
             <>
@@ -334,7 +441,7 @@ const HomeContainer = () => {
                   style={{ marginRight: "4px" }}
                 />
               </NTitle>
-              <NCardGroupPost />
+              <NCardGroupPost image="/home_img_31.jpg" />
             </>,
             <>
               <NTitle title="Цогц Мэдээ">
@@ -346,7 +453,7 @@ const HomeContainer = () => {
                   style={{ marginRight: "4px" }}
                 />
               </NTitle>
-              <NCardGroupPost />
+              <NCardGroupPost image="/home_img_32.png" />
             </>,
             <>
               <NTitle title="Архив">
@@ -358,7 +465,7 @@ const HomeContainer = () => {
                   style={{ marginRight: "4px" }}
                 />
               </NTitle>
-              <NCardGroupPost />
+              <NCardGroupPost image="/home_img_33.jpg" />
             </>,
             <>
               <NTitle title="News Brand">
@@ -499,13 +606,13 @@ const HomeContainer = () => {
             pagination
             items={[
               <NJournalist />,
-              <NJournalist />,
-              <NJournalist />,
-              <NJournalist />,
-              <NJournalist />,
-              <NJournalist />,
-              <NJournalist />,
-              <NJournalist />,
+              <NJournalist image="/journalist_2.jpeg" />,
+              <NJournalist image="/journalist_3.jpeg" />,
+              <NJournalist image="/journalist_4.jpeg" />,
+              <NJournalist image="/journalist_5.jpeg" />,
+              <NJournalist image="/journalist_6.jpeg" />,
+              <NJournalist image="/journalist_7.jpeg" />,
+              <NJournalist image="/journalist_8.jpeg" />,
             ]}
           />
         </Box>
@@ -527,27 +634,48 @@ const HomeContainer = () => {
           </NSelectTitle>
           <Grid container spacing={2}>
             <Grid item sm={5}>
-              <NCardVideoLarge />
+              <NCardVideoLarge
+                image="/video_page_img_1.jpg"
+                title="Н.Төгсцогт: Би ийм тулаан хийх гэж л төрсөн"
+              />
             </Grid>
             <Grid item sm={7}>
               <Grid container spacing={2}>
                 <Grid item xs={4}>
-                  <NCardVideoSmall />
+                  <NCardVideoSmall
+                    image="/video_page_img_2.jpg"
+                    title="Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"
+                  />
                 </Grid>
                 <Grid item xs={4}>
-                  <NCardVideoSmall />
+                  <NCardVideoSmall
+                    image="/video_page_img_3.jpg"
+                    title="Монгол Улсын Ерөнхийлөгч Ухнаагийн Хүрэлсүх"
+                  />
                 </Grid>
                 <Grid item xs={4}>
-                  <NCardVideoSmall />
+                  <NCardVideoSmall
+                    image="/video_page_img_4.jpg"
+                    title="Загвар өмсөгч BILLY"
+                  />
                 </Grid>
                 <Grid item xs={4}>
-                  <NCardVideoSmall />
+                  <NCardVideoSmall
+                    image="/video_page_img_5.jpg"
+                    title="20 жил өнгөрсөн ч үнэн илэрсэнгүй"
+                  />
                 </Grid>
                 <Grid item xs={4}>
-                  <NCardVideoSmall />
+                  <NCardVideoSmall
+                    image="/video_page_img_6.jpg"
+                    title="Rokitbay: Монголоос үнэгүй тоглох боломжтой"
+                  />
                 </Grid>
                 <Grid item xs={4}>
-                  <NCardVideoSmall />
+                  <NCardVideoSmall
+                    image="/video_page_img_7.jpg"
+                    title="Мото гэр бүл"
+                  />
                 </Grid>
               </Grid>
             </Grid>
@@ -578,16 +706,16 @@ const HomeContainer = () => {
               </Box>
             </Grid>
             <Grid item xs={2}>
-              <NShopItem />
+              <NShopItem image="/shop_item_2.jpg" />
             </Grid>
             <Grid item xs={2}>
-              <NShopItem />
+              <NShopItem image="/shop_item_3.jpg" />
             </Grid>
             <Grid item xs={2}>
-              <NShopItem />
+              <NShopItem image="/shop_item_4.jpg" />
             </Grid>
             <Grid item xs={2}>
-              <NShopItem />
+              <NShopItem image="/shop_item_5.jpg" />
             </Grid>
             <Grid item xs={2}>
               <NShopItem />
@@ -618,14 +746,35 @@ const HomeContainer = () => {
             spaceBetween={16}
             pagination={false}
             items={[
-              <NRealEstateItem />,
-              <NRealEstateItem />,
-              <NRealEstateItem />,
-              <NRealEstateItem />,
-              <NRealEstateItem />,
-              <NRealEstateItem />,
-              <NRealEstateItem />,
-              <NRealEstateItem />,
+              <NRealEstateItem image="/realestate_item_1.jpg" />,
+              <NRealEstateItem
+                title="River Garden 2"
+                image="/realestate_item_2.jpg"
+              />,
+              <NRealEstateItem
+                title="Tokyo residence"
+                image="/realestate_item_3.jpg"
+              />,
+              <NRealEstateItem
+                title="Tokyo Tower"
+                image="/realestate_item_4.jpg"
+              />,
+              <NRealEstateItem
+                title="Garden City"
+                image="/realestate_item_5.jpg"
+              />,
+              <NRealEstateItem
+                title="Tokyo residence"
+                image="/realestate_item_6.jpg"
+              />,
+              <NRealEstateItem
+                title="River Garden 2"
+                image="/realestate_item_7.jpg"
+              />,
+              <NRealEstateItem
+                title="River Garden 3"
+                image="/realestate_item_8.jpg"
+              />,
             ]}
           />
         </Box>

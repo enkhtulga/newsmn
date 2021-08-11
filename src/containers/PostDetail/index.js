@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography, Button } from "@material-ui/core";
 import StickySidebar from "../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,6 +17,13 @@ import NSelectPopularTitle from "../../components/SelectPopularTitle";
 
 const PostDetailContainer = ({ postId }) => {
   const classes = useStyles();
+  const [hasEditable, setHasEditable] = useState(false);
+
+  useEffect(() => {
+    if (postId && postId == 2) {
+      setHasEditable(true);
+    }
+  }, [postId]);
 
   return (
     <Box>
@@ -28,7 +35,10 @@ const PostDetailContainer = ({ postId }) => {
           <NAuthorInfo />
           <Box mb={8}></Box>
           <StickySidebar offsetTop={16} offsetBottom={16}>
-            <Box display="flex" justifyContent="flex-end">
+            <Box
+              display="flex"
+              justifyContent={hasEditable ? "center" : "flex-end"}
+            >
               <NSocialVertical />
             </Box>
           </StickySidebar>
@@ -48,7 +58,7 @@ const PostDetailContainer = ({ postId }) => {
           <Typography variant="body2" className={classes.boldtext}>
             Ерөнхий сайд Л.Оюун-Эрдэнэ
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" align="justify">
             “Ардчилсан тогтолцоонд шилжээд 30 жил өнгөрсөн байна. 30 жилд бид
             чөлөөт хэвлэлтэй, ард түмний сонгуультай, засаглалын зарим
             үзүүлэлтүүд ахисан зэрэг олон сайн зүйл бий болсон. Сул талууд ч
@@ -56,13 +66,15 @@ const PostDetailContainer = ({ postId }) => {
             тушаалын хэрэг цэцэглэж, танил талгүй бол ажил явахаа байж, баян
             хоосны ялгаа эрс ихэсч, дундаж давхаргатай болж чадаагүй.
           </Typography>
-          <Typography variant="body2" className={classes.quote}>
+          <Typography variant="body2" className={classes.quote} align="justify">
             Цар тахал вакцинжуулалттай холбоотой эдийн засгийг сэргээх 10 их
             наядын хөтөлбөртэй холбоотой 100 гаруй хоног болж өнгөрлөө.
           </Typography>
           <Box mb={2} position="relative">
-            <Typography variant="body2">
-              <NPostEdited top={0} date={"2021.05.18/ 15:50"} />
+            <Typography variant="body2" align="justify">
+              {hasEditable && (
+                <NPostEdited top={0} date={"2021.05.18/ 15:50"} />
+              )}
               Өнгөрсөн 30 жилийн хугацаанд авлигатай тэмцэх чиглэлээр олон
               зүйлийг ярьж, хийсэн. Аль ч улс орны хувьд гүйцэтгэх засаглал
               авилгалтай тэмцдэг. Гүйцэтгэх засаглал авилгад өртөмхий
@@ -74,8 +86,10 @@ const PostDetailContainer = ({ postId }) => {
             </Typography>
           </Box>
           <Box mb={2} position="relative">
-            <Typography variant="body2">
-              <NPostEdited top={80} date={"2021.05.17/ 11:35"} />
+            <Typography variant="body2" align="justify">
+              {hasEditable && (
+                <NPostEdited top={80} date={"2021.05.17/ 11:35"} />
+              )}
               Дэвшүүлсэн дөрөв дэх зорилгын хүрээнд авлигатай тэмцэх тэмцэл,
               авлигын төсөөллийн индекстэй холбоотой АТГ болон хууль хяналтын
               байгууллагад дэмжлэг үзүүлж, гүйцэтгэх засаглалын хувьд хуулийн
@@ -86,7 +100,7 @@ const PostDetailContainer = ({ postId }) => {
               хэсгийн хүрээнд багцалж үзэхээс өөр гарцгүй.
             </Typography>
           </Box>
-          <Typography variant="body2">
+          <Typography variant="body2" align="justify">
             Цахим үндэстэнд шилжих зорилго тавьж буй боловч хойрго ханддаг
             төрийн байгууллага бий. Өмнө хэлсэнчлэн цахим шилжилт рүү орохгүй
             байгаа төрийн байгууллагыг авлигын индексийг бууруулахгүй байгаа тал
@@ -96,14 +110,16 @@ const PostDetailContainer = ({ postId }) => {
             зөвшөөрлийн асуудал бий.
           </Typography>
           <Box mb={2} />
-          <Typography variant="body2">
+          <Typography variant="body2" align="justify">
             ШҮГЭЛ ҮЛЭЭГЧДИЙГ ХАМГААЛСАН ЭРХ ЗҮЙН ОРЧИН, НИЙГМИЙН СЭТГЭЛ ЗҮЙГ
             БҮРДҮҮЛЭХ ХЭРЭГТЭЙ
           </Typography>
           <Box mb={2} />
           <Box mb={2} position="relative">
-            <Typography variant="body2">
-              <NPostEdited top={160} date={"2021.05.17/ 15:30"} />
+            <Typography variant="body2" align="justify">
+              {hasEditable && (
+                <NPostEdited top={160} date={"2021.05.17/ 15:30"} />
+              )}
               Мөн хэд хэдэн хуулийн асуудал бий. Үүнийг Засгийн газар энэ зуны
               хугацаанд боловсруулж, өргөн барихаас өөр аргагүй. Шүгэл
               үлээгчдийг дэмжинэ. Шүгэл үлээгчдийг хамгаалсан эрх зүйн орчин,
@@ -123,13 +139,13 @@ const PostDetailContainer = ({ postId }) => {
               үедээ үлдээх ёстой.
             </Typography>
           </Box>
-          <Typography variant="body2">
+          <Typography variant="body2" align="justify">
             Хоёр жилийн хугацаанд авлигын индексийг хоёр оронтой тоо руу оруулах
             нь маш том, хэцүү зорилт. Долоо хоног бүр 11-11 төв эсвэл "E
             mongolia"-д хамгийн их хүнд сурталтай газрыг нэгтгэж авах хэрэгтэй.
           </Typography>
           <Box mb={2} />
-          <Typography variant="body2">
+          <Typography variant="body2" align="justify">
             Улс төрийн намын санхүүжилтийн асуудлыг хөндөх зайлшгүй шаардлага
             үүснэ. Цаашлаад намын санхүүжилт хэрхэн ил тод байх уу, нэр
             дэвшигчдийн хандивын асуудал туйлын чухал байна. Үүнд дээр багц арга
@@ -140,14 +156,14 @@ const PostDetailContainer = ({ postId }) => {
             Банкуудын реформ цаашид үргэлжлээд явах хэрэгтэй.
           </Typography>
           <Box mb={2} />
-          <Typography variant="body2">
+          <Typography variant="body2" align="justify">
             Хөрөнгө орлогоо нотолж чадахгүй бол тэр хэний өмч вэ гэдэг асуудлыг
             эрх зүйн хувьд дахин авч үзэх шаардлагатай. Үүнийг цахим бүртгэлээр
             шийдэх хэрэгтэй. Авлигатай хийх тэмцлийг хэт агаарын байдлаар ярихаа
             болъё" гэлээ.
           </Typography>
           <Box mb={2} />
-          <Typography variant="body2">
+          <Typography variant="body2" align="justify">
             Үүний дараа АТГ-ын дэд дарга Г.Азжаргал авлигын индексийн талаар
             мэдээлэл өгөв.
           </Typography>
@@ -329,7 +345,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     lineHeight: "30px",
-    marginBottom: theme.spacing(8),
+    marginBottom: theme.spacing(4),
   },
   content: {
     textAlign: "justify",
@@ -352,6 +368,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     paddingLeft: theme.spacing(6),
     paddingBottom: theme.spacing(2),
+    paddingRight: theme.spacing(2),
     backgroundColor: Colors.light_blue,
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(2),

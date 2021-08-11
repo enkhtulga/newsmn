@@ -1,4 +1,4 @@
-import { createTheme } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { Colors } from "./colors";
 
 const font = "'Roboto Condensed', 'Roboto', sans-serif";
@@ -26,8 +26,8 @@ export default createTheme({
     fontFamily: font,
     h1: {
       fontFamily: "Spectral",
-      lineHeight: "36.53px",
-      fontSize: 24,
+      lineHeight: "27px",
+      fontSize: 18,
       fontWeight: 600,
       color: Colors.title,
     },
@@ -52,15 +52,18 @@ export default createTheme({
       lineHeight: "20px",
     },
     body1: {
+      fontFamily: "Roboto Condensed",
       fontSize: 14,
       fontWeight: 400,
+      position: "relative",
+      lineHeight: "20px",
       position: "relative",
     },
     body2: {
       fontFamily: "Roboto Condensed",
       fontSize: 14,
       fontWeight: 400,
-      lineHeight: "20px",
+      lineHeight: "24px",
       position: "relative",
       color: Colors.secondary,
     },
@@ -163,6 +166,9 @@ export default createTheme({
       },
     },
     MuiButton: {
+      root: {
+        fontSize: 10,
+      },
       outlined: {
         transition: "all 0.25s ease",
         "&:hover": {
@@ -173,6 +179,24 @@ export default createTheme({
             color: Colors.primary,
           },
         },
+      },
+    },
+    MuiTooltip: {
+      tooltip: {
+        backgroundColor: Colors.number_blue,
+        paddingTop: 8,
+        paddingBottom: 8,
+        paddingLeft: 24,
+        paddingRight: 24,
+        borderRadius: 5,
+        fontFamily: "Roboto Condensed",
+        fontWeight: 400,
+        fontSize: 9,
+        lineHeight: "10px",
+        textTransform: "initial",
+      },
+      arrow: {
+        color: Colors.number_blue,
       },
     },
   },

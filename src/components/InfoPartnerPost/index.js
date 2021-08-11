@@ -7,14 +7,18 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import { BookmarkBorder as IconBookmarkBorder } from "@material-ui/icons";
 
-const NInfoPartnerPost = () => {
+const NInfoPartnerPost = ({ title, image }) => {
   const classes = useStyles();
+  console.log(image);
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia paddingTop="77%" image={"/info_partner_post.jpg"} />
+          <NCardMedia
+            paddingTop="77%"
+            image={image || "/info_partner_post.jpg"}
+          />
         </Box>
         <NCardContent className={classes.contentWrap}>
           <Typography variant="caption" className={classes.subtitle}>
@@ -23,8 +27,8 @@ const NInfoPartnerPost = () => {
           <Box>
             <Link color="initial" href={"/posts/1"} underline="none">
               <Typography variant="h1" className={classes.title}>
-                Монголоос луйвардсан 70 тэрбум төгрөг буюу Медипас эмнэлгээ
-                буцааж авья
+                {title ||
+                  "Монголоос луйвардсан 70 тэрбум төгрөг буюу Медипас эмнэлгээ буцааж авья"}
               </Typography>
             </Link>
             <IconBookmarkBorder fontSize="small" />

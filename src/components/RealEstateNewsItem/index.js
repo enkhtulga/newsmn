@@ -7,8 +7,8 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 
-const NRealEstateNewsItem = ({ title, image }) => {
-  const classes = useStyles();
+const NRealEstateNewsItem = ({ title, image, large }) => {
+  const classes = useStyles({ large });
 
   return (
     <Box className={classes.wrap}>
@@ -42,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     paddingTop: theme.spacing(1),
     color: Colors.title,
-    fontSize: 12,
-    lineHeight: "14px",
+    fontSize: (props) => (props.large ? 14 : 12),
+    lineHeight: (props) => (props.large ? "20px" : "14px"),
     paddingBottom: theme.spacing(2),
     "&:hover": {
       color: Colors.primary,

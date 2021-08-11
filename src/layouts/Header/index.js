@@ -173,15 +173,20 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             className={classes.rootNav}
           >
             <Box mr={4}>
-              <NMegaMenu
-                menuText={"Мэдээ"}
-                homeCurrentTab={homeCurrentTab}
-                iconComponent={
-                  <ListItemIcon className={classes.icon}>
-                    <IconHome fontSize="small" />
-                  </ListItemIcon>
-                }
+              <ListItem
+                className={classes.list}
+                onClick={() => router.push("/")}
+                button
+                disableRipple
+                disableGutters
               >
+                <ListItemIcon className={classes.icon}>
+                  <IconHome fontSize="small" />
+                </ListItemIcon>
+              </ListItem>
+            </Box>
+            <Box mr={4}>
+              <NMegaMenu menuText={"Мэдээ"} homeCurrentTab={homeCurrentTab}>
                 <NMegaHome
                   onChangeHomeTab={onChangeHomeTab}
                   homeCurrentTab={homeCurrentTab}
@@ -234,7 +239,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"News+"}>
+              <NMegaMenu menuText={"News+"} isPrimary>
                 <NMegaNewsPlus
                   onChangeNewsPlusTab={onChangeNewsPlusTab}
                   newsPlusCurrentTab={newsPlusCurrentTab}
@@ -356,17 +361,20 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0,
   },
   icon: {
-    minWidth: 30,
+    minWidth: 20,
     color: Colors.primary,
   },
   list: {
+    height: 52,
     width: "initial",
     paddingBottom: theme.spacing(2),
     position: "relative",
     "&:hover": {
-      backgroundColor: "transparent",
+      "& span": {
+        color: Colors.primary,
+      },
       "&::before": {
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.border_red,
       },
     },
     "&::before": {

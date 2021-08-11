@@ -76,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: Colors.primary,
     },
+    height: 60,
   },
   date: {
     paddingTop: theme.spacing(1),

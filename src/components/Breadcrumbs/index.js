@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     color: (dark) => (dark == true ? Colors.white : Colors.black),
   },
   link: {
-    fontSize: 9,
+    fontSize: 10,
     color: (dark) => (dark == true ? Colors.white : Colors.black),
   },
   separator: {

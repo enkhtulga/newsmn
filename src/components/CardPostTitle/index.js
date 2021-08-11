@@ -7,7 +7,7 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 
-const NCardPostTitle = ({ paddingTop, noImage, hasBorder }) => {
+const NCardPostTitle = ({ title, paddingTop, noImage, hasBorder, image }) => {
   const classes = useStyles(noImage);
 
   return (
@@ -19,7 +19,7 @@ const NCardPostTitle = ({ paddingTop, noImage, hasBorder }) => {
           </Typography>
           <Link color="initial" href={"/posts/1"} underline="none">
             <Typography variant="h1" className={classes.title}>
-              Үндэсний бөхийн барилдаан Хүй долоон худагт болно
+              {title || "Үндэсний бөхийн барилдаан Хүй долоон худагт болно"}
             </Typography>
           </Link>
         </NCardContent>
@@ -27,8 +27,8 @@ const NCardPostTitle = ({ paddingTop, noImage, hasBorder }) => {
           {/* aspect ratio calculation: height / width * 100% */}
           {!noImage && (
             <NCardMedia
-              paddingTop={paddingTop}
-              image={"/card_post_title.jpg"}
+              paddingTop={paddingTop || "54.21%"}
+              image={image || "/card_post_title.jpg"}
             />
           )}
           <NPostMeta className={classes.postMeta} videoIcon />
@@ -56,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 0,
   },
   subtitle: {
-    fontSize: 9,
     paddingBottom: theme.spacing(1),
     display: "block",
   },

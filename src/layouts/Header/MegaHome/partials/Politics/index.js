@@ -17,25 +17,35 @@ const NPolitics = () => {
         navigation
         pagination={false}
         items={[
-          <NRealEstateNewsItem />,
           <NRealEstateNewsItem
-            title="“Бүх айлын захиалгыг м.кв нь 2.7 сая болгож нэмэгдүүлээгүй”"
-            image="/realestate_news_img_2.jpg"
+            large
+            title="МАН УЗ: Л.Оюун-Эрдэнийг намын даргад дэвшүүлнэ"
+            image="/mega_article_img_1.jpg"
           />,
-          <NRealEstateNewsItem />,
           <NRealEstateNewsItem
-            title="“Бүх айлын захиалгыг м.кв нь 2.7 сая болгож нэмэгдүүлээгүй”"
-            image="/realestate_news_img_2.jpg"
+            title='"2021 оны төсөвт наадмаас өмнө тодотгол хийнэ"'
+            image="/mega_article_img_2.jpg"
+            large
           />,
-          <NRealEstateNewsItem />,
           <NRealEstateNewsItem
-            title="“Бүх айлын захиалгыг м.кв нь 2.7 сая болгож нэмэгдүүлээгүй”"
-            image="/realestate_news_img_2.jpg"
+            title="МАН, АН-ын төлөөлөлд сонгогчдын нэрийн жагсаалт"
+            image="/mega_article_img_3.jpg"
+            large
           />,
-          <NRealEstateNewsItem />,
           <NRealEstateNewsItem
-            title="“Бүх айлын захиалгыг м.кв нь 2.7 сая болгож нэмэгдүүлээгүй”"
-            image="/realestate_news_img_2.jpg"
+            title="Н.Энхбаяр: МАХН-ын 2200 хүн намын албан тушаалд очно..."
+            image="/mega_article_img_4.jpg"
+            large
+          />,
+          <NRealEstateNewsItem
+            title="Э.Бат-Үүл: У.Хүрэлсүх Ардчилсан намыг устгах"
+            image="/mega_article_img_5.jpg"
+            large
+          />,
+          <NRealEstateNewsItem
+            title="Н.Энхбаяр: МАХН-ын 2200 хүн намын албан тушаалд очно..."
+            image="/mega_article_img_4.jpg"
+            large
           />,
         ]}
       />

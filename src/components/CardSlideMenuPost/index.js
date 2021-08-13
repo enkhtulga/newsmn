@@ -39,6 +39,11 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     borderRadius: 5,
     backgroundColor: "transparent",
+    transition: "0.5s",
+    transform: "scale(1.01)",
+    "&:hover .MuiCardMedia-root": {
+      transform: "scale(1.04)",
+    },
     "&::after": {
       content: "''",
       background:
@@ -49,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       height: "100%",
       zIndex: 1,
+      transform: "scale(1.01)",
     },
   },
   contentWrap: {

@@ -9,7 +9,6 @@ import { BookmarkBorder as IconBookmarkBorder } from "@material-ui/icons";
 
 const NInfoPartnerPost = ({ title, image }) => {
   const classes = useStyles();
-  console.log(image);
 
   return (
     <Box className={classes.wrap}>

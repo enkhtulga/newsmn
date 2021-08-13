@@ -30,6 +30,7 @@ const useStyles = makeStyles(() => ({
     right: 0,
     bottom: 0,
     transition: "0.5s",
+    transform: "scale(1.01)",
     "&:hover": {
       transform: "scale(1.04)",
     },

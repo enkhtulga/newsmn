@@ -7,7 +7,17 @@ import Rating from "@material-ui/lab/Rating";
 import NPostMeta from "../PostMeta";
 import { Room as IconRoom } from "@material-ui/icons";
 
-const NTripItem = ({ title, text, image, location, price, reviewCount }) => {
+const NTripItem = ({
+  title,
+  text,
+  image,
+  location,
+  hasLocation = true,
+  price,
+  hasPrice = true,
+  reviewCount,
+  hasReview = true,
+}) => {
   const classes = useStyles();
 
   return (
@@ -22,30 +32,38 @@ const NTripItem = ({ title, text, image, location, price, reviewCount }) => {
         <Typography variant="h1" className={classes.title}>
           {title || '"Сарлагийн баяр" арга хэмжээ'}
         </Typography>
-        <Box display="flex" alignItems="center" mt={1} mb={0.5}>
-          <IconRoom fontSmall="small" className={classes.pinIcon} />
-          <Typography variant="body2" className={classes.location}>
-            {location || "Төв аймаг- Эрдэнэ сумын нутаг"}
-          </Typography>
-        </Box>
+        {hasLocation && (
+          <Box display="flex" alignItems="center" mt={1} mb={0.5}>
+            <IconRoom fontSmall="small" className={classes.pinIcon} />
+            <Typography variant="body2" className={classes.location}>
+              {location || "Төв аймаг- Эрдэнэ сумын нутаг"}
+            </Typography>
+          </Box>
+        )}
         <Typography variant="body2" className={classes.text}>
           {text ||
             "Өмнөговь аймагт зохион байгуулахаар төлөвлөсөн тэмээний баярыг албан ёсоор цуцалжээ. Албаныхан “Түмэн тэмээний баяр-2021” арга хэмжээг ирэх сарын 6-наас 7-нд зохион байгуулахаар төлөвлөж байна."}
         </Typography>
-        <Typography variant="body2" className={classes.price}>
-          {price || "$1950.99"}
-        </Typography>
+        {hasPrice && (
+          <Typography variant="body2" className={classes.price}>
+            {price || "$1950.99"}
+          </Typography>
+        )}
         <Box display="flex" justifyContent="space-between">
-          <Box display="flex" alignItems="center">
-            <Rating
-              name="read-only"
-              value={4}
-              readOnly
-              size="small"
-              className={classes.rating}
-            />
-            <Typography variant="caption">{reviewCount || "(3400)"}</Typography>
-          </Box>
+          {hasReview && (
+            <Box display="flex" alignItems="center">
+              <Rating
+                name="read-only"
+                value={4}
+                readOnly
+                size="small"
+                className={classes.rating}
+              />
+              <Typography variant="caption">
+                {reviewCount || "(3400)"}
+              </Typography>
+            </Box>
+          )}
           <NPostMeta justifyContent={"flex-end"} />
         </Box>
       </Box>

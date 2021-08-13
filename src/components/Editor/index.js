@@ -4,8 +4,8 @@ import { Box, Typography } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NAvatar from "../Avatar";
 
-const NEditor = ({ image, name }) => {
-  const classes = useStyles();
+const NEditor = ({ image, name, hasTopBorder = true }) => {
+  const classes = useStyles({ hasTopBorder });
 
   return (
     <Box className={classes.wrap}>
@@ -22,9 +22,11 @@ const useStyles = makeStyles((theme) => ({
   wrap: {
     display: "flex",
     alignItems: "center",
-    paddingTop: theme.spacing(5),
-    borderTop: "1px solid",
-    borderTopColor: Colors.border_gray,
+    paddingTop: (props) =>
+      props.hasTopBorder ? theme.spacing(5) : theme.spacing(0),
+    borderTop: (props) => (props.hasTopBorder ? "1px solid" : "none"),
+    borderTopColor: (props) =>
+      props.hasTopBorder ? Colors.border_gray : "initial",
   },
   contentWrap: {
     paddingLeft: theme.spacing(3),

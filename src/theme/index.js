@@ -199,5 +199,22 @@ export default createTheme({
         color: Colors.number_blue,
       },
     },
+    MuiPaginationItem: {
+      outlinedPrimary: {
+        fontWeight: 700,
+        borderColor: Colors.border_gray,
+        margin: "0 5px",
+        color: Colors.border_gray,
+        "&.Mui-selected": {
+          color: Colors.white,
+          backgroundColor: Colors.border_red,
+          borderColor: Colors.border_red,
+          "&:hover, &.Mui-focusVisible": {
+            backgroundColor: Colors.border_red,
+            borderColor: Colors.border_red,
+          },
+        },
+      },
+    },
   },
 });

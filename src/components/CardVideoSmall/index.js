@@ -8,7 +8,7 @@ import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 import { PlayArrow as IconPlayArrow } from "@material-ui/icons";
 
-const NCardVideoSmall = ({ title, image }) => {
+const NCardVideoSmall = ({ title, image, hasVideo = true }) => {
   const classes = useStyles();
 
   return (
@@ -19,11 +19,13 @@ const NCardVideoSmall = ({ title, image }) => {
             paddingTop="54.21%"
             image={image || "/card_video_small.jpg"}
           />
-          <Box className={classes.playWrap}>
-            <Box className={classes.playInnerWrap}>
-              <IconPlayArrow className={classes.play} />
+          {hasVideo && (
+            <Box className={classes.playWrap}>
+              <Box className={classes.playInnerWrap}>
+                <IconPlayArrow className={classes.play} />
+              </Box>
             </Box>
-          </Box>
+          )}
         </Box>
         <NCardContent className={classes.contentWrap}>
           <NPostMeta videoIcon />

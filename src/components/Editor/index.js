@@ -4,7 +4,7 @@ import { Box, Typography } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NAvatar from "../Avatar";
 
-const NEditor = ({ image, name, hasTopBorder = true }) => {
+const NEditor = ({ image, name, occupation, hasTopBorder = true }) => {
   const classes = useStyles({ hasTopBorder });
 
   return (
@@ -12,7 +12,9 @@ const NEditor = ({ image, name, hasTopBorder = true }) => {
       <NAvatar size={55} hasBorder src={image || "/home_img_10.jpg"} />
       <Box className={classes.contentWrap}>
         <Typography className={classes.name}>{name || "Б.Анхтуяа"}</Typography>
-        <Typography className={classes.occupation}>Сэтгүүлч</Typography>
+        <Typography className={classes.occupation}>
+          {occupation || "Сэтгүүлч"}
+        </Typography>
       </Box>
     </Box>
   );

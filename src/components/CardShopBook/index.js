@@ -32,7 +32,11 @@ const NCardShopBook = ({ title, author, publisher, image, price }) => {
           {"Үндсэн үнэ: "}
           {price}
         </Typography>
-        <Button variant="contained" size="small">
+        <Button
+          variant="contained"
+          size="small"
+          style={{ backgroundColor: "#fff" }}
+        >
           Сагсанд нэмэх +
         </Button>
       </Box>

@@ -180,6 +180,10 @@ export default createTheme({
           },
         },
       },
+      containedSizeSmall: {
+        fontSize: 10,
+        padding: "5px 15px",
+      },
     },
     MuiTooltip: {
       tooltip: {

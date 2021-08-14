@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Colors } from "../../theme/colors";
 import { useRouter } from "next/router";
 
-const NPageMenu = ({ items, primaryColor, justifyContent }) => {
-  const classes = useStyles({ primaryColor, justifyContent });
+const NPageMenu = ({ items, primaryColor, justifyContent, isDark }) => {
+  const classes = useStyles({ primaryColor, justifyContent, isDark });
   const router = useRouter();
 
   const isSelected = (routeName) => {
@@ -62,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     width: "initial",
     paddingBottom: theme.spacing(2),
     position: "relative",
+    "& span": {
+      color: (props) => (props.isDark ? Colors.border_gray_2 : "inherit"),
+    },
     "&.Mui-selected": {
       "& span": {
         fontWeight: 700,

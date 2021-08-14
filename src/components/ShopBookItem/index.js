@@ -7,7 +7,15 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import Rating from "@material-ui/lab/Rating";
 
-const NShopBookItem = ({ title, author, price, image, salePrice, rating }) => {
+const NShopBookItem = ({
+  title,
+  author,
+  price,
+  image,
+  salePrice,
+  rating,
+  hasAudioIcon,
+}) => {
   const classes = useStyles();
 
   return (
@@ -23,6 +31,16 @@ const NShopBookItem = ({ title, author, price, image, salePrice, rating }) => {
               <Typography variant="body2" className={classes.saleLabel}>
                 sale
               </Typography>
+            </Box>
+          )}
+          {hasAudioIcon && (
+            <Box className={classes.overlayWrap}>
+              <img
+                src="/icon_music.png"
+                width={20}
+                height={20}
+                className={classes.musicImage}
+              />
             </Box>
           )}
         </Box>
@@ -113,6 +131,25 @@ const useStyles = makeStyles((theme) => ({
   },
   rating: {
     paddingTop: theme.spacing(1),
+  },
+  overlayWrap: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 42,
+    height: 42,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: Colors.black,
+    border: "1px solid",
+    borderColor: Colors.white,
+    borderRadius: "50%",
+    cursor: "pointer",
+  },
+  musicImage: {
+    marginRight: 2,
   },
 }));
 

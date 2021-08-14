@@ -7,8 +7,8 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import { BookmarkBorder as IconBookmarkBorder } from "@material-ui/icons";
 
-const NInfoPartnerPost = ({ title, image }) => {
-  const classes = useStyles();
+const NInfoPartnerPost = ({ title, image, isDark }) => {
+  const classes = useStyles({ isDark });
 
   return (
     <Box className={classes.wrap}>
@@ -43,6 +43,7 @@ const NInfoPartnerPost = ({ title, image }) => {
 const useStyles = makeStyles((theme) => ({
   wrap: {},
   cardWrap: {
+    background: "transparent",
     display: "flex",
     marginBottom: theme.spacing(2),
   },
@@ -57,12 +58,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 10,
     lineHeight: "20px",
     color: Colors.secondary,
+    display: "block",
   },
   title: {
     fontWeight: 500,
     fontSize: 14,
     lineHeight: "15px",
-    color: Colors.black,
+    color: (props) => (props.isDark ? Colors.border_gray : Colors.black),
     display: "-webkit-box",
     WebkitBoxOrient: "vertical",
     WebkitLineClamp: 2,

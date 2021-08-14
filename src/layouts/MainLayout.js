@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import NDrawer from "./Drawer";
 
 const MainLayout = ({ children, headerProps }) => {
   const [open, setOpen] = useState(false);
@@ -16,6 +17,7 @@ const MainLayout = ({ children, headerProps }) => {
         {children}
       </main>
       <Footer />
+      <NDrawer open={open} toggleDrawer={toggleDrawer} />
     </div>
   );
 };

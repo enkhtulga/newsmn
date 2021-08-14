@@ -162,7 +162,12 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
           <IconButton color="inherit" aria-label="menu">
             <IconSearch />
           </IconButton>
-          <IconButton color="inherit" aria-label="menu" edge="end">
+          <IconButton
+            color="inherit"
+            aria-label="menu"
+            edge="end"
+            onClick={() => toggleDrawer(!open)}
+          >
             <IconMenu />
           </IconButton>
         </Toolbar>

@@ -13,6 +13,8 @@ import {
   MenuItem,
   Select,
   Link,
+  Badge,
+  Menu,
 } from "@material-ui/core";
 import {
   Menu as IconMenu,
@@ -36,6 +38,38 @@ import NMegaContent from "./MegaContent";
 import NMegaRealEstate from "./MegaRealEstate";
 import NMegaNewsPlus from "./MegaNewsPlus";
 import NButtonPrimary from "../../components/ButtonPrimary";
+import NDialog from "../../components/Dialog";
+import NLogin from "./Login";
+import NRegister from "./Register";
+
+const StyledBadge = withStyles((theme) => ({
+  badge: {
+    backgroundColor: "#44b700",
+    color: "#44b700",
+    boxShadow: `0 0 0 1px ${theme.palette.background.paper}`,
+    "&::after": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      animation: "$ripple 1.2s infinite ease-in-out",
+      border: "1px solid currentColor",
+      content: '""',
+    },
+  },
+  "@keyframes ripple": {
+    "0%": {
+      transform: "scale(.8)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(2.4)",
+      opacity: 0,
+    },
+  },
+}))(Badge);
 
 const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
@@ -54,6 +88,42 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const [selectedNormal, setSelectedNormal] = useState("selected");
   const [selectedLarge, setSelectedLarge] = useState("");
   const [selectedVeryLarge, setSelectedVeryLarge] = useState("");
+
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openRegister, setOpenRegister] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
+
+  const [accountAnchorEl, setAccountAnchorEl] = useState(null);
+
+  const handleCloseLogin = () => {
+    setOpenLogin(false);
+  };
+
+  const handleCloseRegister = () => {
+    setOpenRegister(false);
+  };
+
+  const onHandleRegister = () => {
+    setOpenLogin(false);
+    setOpenRegister(true);
+  };
+
+  const handleCloseSearch = () => {
+    setOpenSearch(false);
+  };
+
+  const onRegisterHandleBack = () => {
+    setOpenRegister(false);
+    setOpenLogin(true);
+  };
+
+  const handleClickAccount = (event) => {
+    setAccountAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseAccount = () => {
+    setAccountAnchorEl(null);
+  };
 
   const onChangeMegaMenuTab = (anchor, value) => {
     setCurrentMegaMenuTab({ ...currentMegaMenuTab, [anchor]: value });
@@ -99,6 +169,22 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
     }
   }, [selectedNormal, selectedLarge, selectedVeryLarge]);
 
+  const renderDialogContent = (value) => {
+    switch (value) {
+      case "login":
+        return <NLogin onHandleRegister={onHandleRegister} />;
+      case "register":
+        return (
+          <NRegister
+            handleBack={onRegisterHandleBack}
+            handleClose={handleCloseRegister}
+          />
+        );
+      case "search":
+        return <>Search</>;
+    }
+  };
+
   return (
     <div className={classes.grow}>
       {hasBanner && (
@@ -127,13 +213,56 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             </Link>
           </Box>
           <Box mr={1}>
-            <NButtonPrimary onClick={() => console.log("clicked")}>
-              Бүртгүүлэх
+            <NButtonPrimary onClick={() => setOpenLogin(!openLogin)}>
+              Нэвтрэх
             </NButtonPrimary>
           </Box>
-          <IconButton color="inherit" aria-label="menu">
-            <IconAccountCircle />
+          <IconButton
+            color="inherit"
+            aria-label="menu"
+            onClick={handleClickAccount}
+          >
+            <StyledBadge
+              overlap="circular"
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              variant="dot"
+            >
+              <IconAccountCircle />
+            </StyledBadge>
           </IconButton>
+          <Menu
+            id="account-menu"
+            anchorEl={accountAnchorEl}
+            keepMounted
+            open={Boolean(accountAnchorEl)}
+            onClose={handleCloseAccount}
+          >
+            <MenuItem onClick={() => router.push("/account")}>
+              Миний булан
+            </MenuItem>
+            <MenuItem onClick={() => router.push("/account/order-history")}>
+              Захиалгын түүх
+            </MenuItem>
+            <MenuItem onClick={() => router.push("/account/saved")}>
+              Хадгалсан бараа
+            </MenuItem>
+            <MenuItem onClick={() => router.push("/account/my-cart")}>
+              Миний сагс
+            </MenuItem>
+            <MenuItem onClick={() => router.push("/account/notifications")}>
+              мэдэгдэл
+            </MenuItem>
+            <MenuItem onClick={() => router.push("/account/following")}>
+              Дагаж байна
+            </MenuItem>
+            <MenuItem onClick={() => router.push("/account/settings")}>
+              Тохиргоо
+            </MenuItem>
+            <MenuItem onClick={handleCloseAccount}>Гарах</MenuItem>
+          </Menu>
           <IconButton color="inherit" aria-label="menu">
             <IconBookmark />
           </IconButton>
@@ -292,6 +421,15 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
           </Box>
         </Box>
       </AppBar>
+      <NDialog open={openLogin} handleClose={handleCloseLogin}>
+        {renderDialogContent("login")}
+      </NDialog>
+      <NDialog open={openRegister} handleClose={handleCloseRegister}>
+        {renderDialogContent("register")}
+      </NDialog>
+      <NDialog open={openSearch} handleClose={handleCloseSearch}>
+        {renderDialogContent("search")}
+      </NDialog>
     </div>
   );
 };

@@ -7,18 +7,19 @@ import NVerticalTab from "../../../components/VerticalTab";
 import NVerticalTabPanel from "../../../components/VerticalTabPanel";
 
 // partials
-// import NInternal from "./partials/Internal";
-// import NForeign from "./partials/Foreign";
+import NPodcast from "./partials/Podcast";
+import NVideoLibrary from "./partials/VideoLibrary";
 
-const NMegaContent = ({ contentCurrentTab, onChangeContentTab }) => {
-  const classes = useStyles();
+const NMegaContent = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
+  const isDark = true;
+  const classes = useStyles({ isDark });
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
         <NVerticalTabs
-          value={contentCurrentTab}
-          onChange={(_, v) => onChangeContentTab(v)}
+          value={currentMegaMenuTab?.content}
+          onChange={(_, v) => onChangeMegaMenuTab("content", v)}
           orientation="vertical"
           variant="scrollable"
           className={classes.tabs}
@@ -28,13 +29,11 @@ const NMegaContent = ({ contentCurrentTab, onChangeContentTab }) => {
         </NVerticalTabs>
       </Grid>
       <Grid item xs={10}>
-        <NVerticalTabPanel value={contentCurrentTab} index={0}>
-          content
-          {/* <NInternal /> */}
+        <NVerticalTabPanel value={currentMegaMenuTab?.content} index={0}>
+          <NPodcast />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={contentCurrentTab} index={1}>
-          {/* <NForeign /> */}
-          content 2
+        <NVerticalTabPanel value={currentMegaMenuTab?.content} index={1}>
+          <NVideoLibrary />
         </NVerticalTabPanel>
       </Grid>
     </Grid>

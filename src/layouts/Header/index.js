@@ -9,7 +9,6 @@ import {
   List,
   ListItem as MuiListItem,
   ListItemIcon,
-  ListItemText,
   Typography,
   MenuItem,
   Select,
@@ -41,44 +40,23 @@ import NButtonPrimary from "../../components/ButtonPrimary";
 const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
   const router = useRouter();
-  const [homeCurrentTab, setHomeCurrentTab] = useState(0);
-  const [articleCurrentTab, setArticleCurrentTab] = useState(0);
-  const [tradeCurrentTab, setTradeCurrentTab] = useState(0);
-  const [tripCurrentTab, setTripCurrentTab] = useState(0);
-  const [contentCurrentTab, setContentCurrentTab] = useState(0);
-  const [newsPlusCurrentTab, setNewsPlusCurrentTab] = useState(0);
-  const [researchCurrentTab, setResearchCurrentTab] = useState(0);
+
+  const [currentMegaMenuTab, setCurrentMegaMenuTab] = useState({
+    home: 0,
+    article: 0,
+    trade: 0,
+    trip: 0,
+    content: 0,
+    newsPlus: 0,
+    research: 0,
+  });
 
   const [selectedNormal, setSelectedNormal] = useState("selected");
   const [selectedLarge, setSelectedLarge] = useState("");
   const [selectedVeryLarge, setSelectedVeryLarge] = useState("");
 
-  const onChangeHomeTab = (value) => {
-    setHomeCurrentTab(value);
-  };
-
-  const onChangeArticleTab = (value) => {
-    setArticleCurrentTab(value);
-  };
-
-  const onChangeTradeTab = (value) => {
-    setTradeCurrentTab(value);
-  };
-
-  const onChangeTripTab = (value) => {
-    setTripCurrentTab(value);
-  };
-
-  const onChangeContentTab = (value) => {
-    setContentCurrentTab(value);
-  };
-
-  const onChangeNewsPlusTab = (value) => {
-    setNewsPlusCurrentTab(value);
-  };
-
-  const onChangeResearchTab = (value) => {
-    setResearchCurrentTab(value);
+  const onChangeMegaMenuTab = (anchor, value) => {
+    setCurrentMegaMenuTab({ ...currentMegaMenuTab, [anchor]: value });
   };
 
   const isSelected = (routeName) => {
@@ -191,63 +169,71 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
               </ListItem>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"Мэдээ"} homeCurrentTab={homeCurrentTab}>
+              <NMegaMenu
+                menuText={"Мэдээ"}
+                menuSlug={"home"}
+                currentMegaMenuTab={currentMegaMenuTab}
+              >
                 <NMegaHome
-                  onChangeHomeTab={onChangeHomeTab}
-                  homeCurrentTab={homeCurrentTab}
+                  onChangeMegaMenuTab={(_, v) => onChangeMegaMenuTab(_, v)}
+                  currentMegaMenuTab={currentMegaMenuTab}
                 />
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"Нийтлэл"}>
+              <NMegaMenu menuText={"Нийтлэл"} menuSlug={"article"}>
                 <NMegaArticle
-                  onChangeArticleTab={onChangeArticleTab}
-                  articleCurrentTab={articleCurrentTab}
+                  onChangeMegaMenuTab={(_, v) => onChangeMegaMenuTab(_, v)}
+                  currentMegaMenuTab={currentMegaMenuTab}
                 />
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"Контент"}>
+              <NMegaMenu
+                menuText={"Контент"}
+                menuSlug={"content"}
+                currentMegaMenuTab={currentMegaMenuTab}
+              >
                 <NMegaContent
-                  onChangeContentTab={onChangeContentTab}
-                  contentCurrentTab={contentCurrentTab}
+                  onChangeMegaMenuTab={(_, v) => onChangeMegaMenuTab(_, v)}
+                  currentMegaMenuTab={currentMegaMenuTab}
                 />
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"Худалдаа"}>
+              <NMegaMenu menuText={"Худалдаа"} menuSlug={"trade"}>
                 <NMegaTrade
-                  onChangeTradeTab={onChangeTradeTab}
-                  tradeCurrentTab={tradeCurrentTab}
+                  onChangeMegaMenuTab={(_, v) => onChangeMegaMenuTab(_, v)}
+                  currentMegaMenuTab={currentMegaMenuTab}
                 />
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"Аялал"}>
+              <NMegaMenu menuText={"Аялал"} menuSlug={"trip"}>
                 <NMegaTrip
-                  onChangeTripTab={onChangeTripTab}
-                  tripCurrentTab={tripCurrentTab}
+                  onChangeMegaMenuTab={(_, v) => onChangeMegaMenuTab(_, v)}
+                  currentMegaMenuTab={currentMegaMenuTab}
                 />
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"Үл хөдлөх"}>
+              <NMegaMenu menuText={"Үл хөдлөх"} menuSlug={"realestate"}>
                 <NMegaRealEstate />
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"Судалгаа"}>
+              <NMegaMenu menuText={"Судалгаа"} menuSlug={"research"}>
                 <NMegaResearch
-                  onChangeResearchTab={onChangeResearchTab}
-                  researchCurrentTab={researchCurrentTab}
+                  onChangeMegaMenuTab={(_, v) => onChangeMegaMenuTab(_, v)}
+                  currentMegaMenuTab={currentMegaMenuTab}
                 />
               </NMegaMenu>
             </Box>
             <Box mr={4}>
-              <NMegaMenu menuText={"News+"} isPrimary>
+              <NMegaMenu menuText={"News+"} isPrimary menuSlug={"newsPlus"}>
                 <NMegaNewsPlus
-                  onChangeNewsPlusTab={onChangeNewsPlusTab}
-                  newsPlusCurrentTab={newsPlusCurrentTab}
+                  onChangeMegaMenuTab={(_, v) => onChangeMegaMenuTab(_, v)}
+                  currentMegaMenuTab={currentMegaMenuTab}
                 />
               </NMegaMenu>
             </Box>

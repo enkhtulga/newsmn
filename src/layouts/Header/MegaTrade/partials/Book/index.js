@@ -3,9 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Button } from "@material-ui/core";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NShopBookItem from "../../../../../components/ShopBookItem";
+import { useRouter } from "next/router";
 
 const NBook = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <>
@@ -61,8 +63,8 @@ const NBook = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Button
           variant="outlined"
-          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/shop-ebook")}
         >
           Бүгдийг харах
         </Button>

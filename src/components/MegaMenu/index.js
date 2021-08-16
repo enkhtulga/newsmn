@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, ListItem, ListItemText, Menu } from "@material-ui/core";
 import makeStyles from "@material-ui/styles/makeStyles";
 import { Colors } from "./../../theme/colors";
@@ -6,11 +6,20 @@ import { Colors } from "./../../theme/colors";
 const NMegaMenu = ({
   children,
   menuText,
+  menuSlug,
   iconComponent,
-  homeCurrentTab = 0,
+  currentMegaMenuTab,
   isPrimary = false,
 }) => {
-  const isDark = homeCurrentTab != 0 ? true : false;
+  let isDark;
+  switch (menuSlug) {
+    case "home":
+      isDark = currentMegaMenuTab.home != 0 ? true : false;
+      break;
+    case "content":
+      isDark = true;
+      break;
+  }
 
   const classes = useStyles({ isDark, isPrimary });
   const [anchorEl, setAnchorEl] = useState(null);
@@ -75,6 +84,8 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "4rem",
     paddingRight: "4rem",
     backgroundColor: (props) =>
+      props.isDark == true ? Colors.title : Colors.white,
+    borderColor: (props) =>
       props.isDark == true ? Colors.title : Colors.white,
     borderRadius: 0,
     borderBottom: "1px solid",

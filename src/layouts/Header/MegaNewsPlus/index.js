@@ -7,20 +7,20 @@ import NVerticalTab from "../../../components/VerticalTab";
 import NVerticalTabPanel from "../../../components/VerticalTabPanel";
 
 // partials
-// import NArchive from "./partials/Archive";
-// import NNewsBrand from "./partials/NewsBrand";
-// import NCorners from "./partials/Corners";
-// import NComplexNews from "./partials/ComplexNews";
+import NArchive from "./partials/Archive";
+import NNewsBrand from "./partials/NewsBrand";
+import NCorners from "./partials/Corners";
+import NComplexNews from "./partials/ComplexNews";
 
-const NMegaNewsPlus = ({ newsPlusCurrentTab, onChangeNewsPlusTab }) => {
+const NMegaNewsPlus = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
   const classes = useStyles();
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
         <NVerticalTabs
-          value={newsPlusCurrentTab}
-          onChange={(_, v) => onChangeNewsPlusTab(v)}
+          value={currentMegaMenuTab?.newsPlus}
+          onChange={(_, v) => onChangeMegaMenuTab("newsPlus", v)}
           orientation="vertical"
           variant="scrollable"
           className={classes.tabs}
@@ -32,21 +32,17 @@ const NMegaNewsPlus = ({ newsPlusCurrentTab, onChangeNewsPlusTab }) => {
         </NVerticalTabs>
       </Grid>
       <Grid item xs={10}>
-        <NVerticalTabPanel value={newsPlusCurrentTab} index={0}>
-          Архив
-          {/* <NArchive /> */}
+        <NVerticalTabPanel value={currentMegaMenuTab?.newsPlus} index={0}>
+          <NArchive />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={newsPlusCurrentTab} index={1}>
-          {/* <NNewsBrand /> */}
-          News брэнд
+        <NVerticalTabPanel value={currentMegaMenuTab?.newsPlus} index={1}>
+          <NNewsBrand />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={newsPlusCurrentTab} index={2}>
-          {/* <NCorners /> */}
-          Булангууд
+        <NVerticalTabPanel value={currentMegaMenuTab?.newsPlus} index={2}>
+          <NCorners />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={newsPlusCurrentTab} index={3}>
-          {/* <NComplexNews /> */}
-          Цогц мэдээ
+        <NVerticalTabPanel value={currentMegaMenuTab?.newsPlus} index={3}>
+          <NComplexNews />
         </NVerticalTabPanel>
       </Grid>
     </Grid>

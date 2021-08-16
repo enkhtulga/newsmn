@@ -10,15 +10,15 @@ import NVerticalTabPanel from "../../../components/VerticalTabPanel";
 import NJournalistPlatform from "./partials/JournalistPlatform";
 import NOpenPlatform from "./partials/OpenPlatform";
 
-const NMegaArticle = ({ articleCurrentTab, onChangeArticleTab }) => {
+const NMegaArticle = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
   const classes = useStyles();
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
         <NVerticalTabs
-          value={articleCurrentTab}
-          onChange={(_, v) => onChangeArticleTab(v)}
+          value={currentMegaMenuTab?.article}
+          onChange={(_, v) => onChangeMegaMenuTab("article", v)}
           orientation="vertical"
           variant="scrollable"
           className={classes.tabs}
@@ -36,10 +36,10 @@ const NMegaArticle = ({ articleCurrentTab, onChangeArticleTab }) => {
         </NVerticalTabs>
       </Grid>
       <Grid item xs={10}>
-        <NVerticalTabPanel value={articleCurrentTab} index={0}>
+        <NVerticalTabPanel value={currentMegaMenuTab?.article} index={0}>
           <NJournalistPlatform />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={articleCurrentTab} index={1}>
+        <NVerticalTabPanel value={currentMegaMenuTab?.article} index={1}>
           <NOpenPlatform />
         </NVerticalTabPanel>
       </Grid>

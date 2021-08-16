@@ -4,8 +4,8 @@ import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCardMedia from "../Card/CardMedia";
 
-const NCardShopAudioBook = ({ title, author, image, isCircle }) => {
-  const classes = useStyles({ isCircle });
+const NCardShopAudioBook = ({ title, author, image, isCircle, link }) => {
+  const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
@@ -14,10 +14,11 @@ const NCardShopAudioBook = ({ title, author, image, isCircle }) => {
           paddingTop="98.64%"
           image={image || "/ebook_img_2.png"}
           borderRadius={isCircle ? "50%" : ""}
+          link={link}
         />
         <Box className={classes.overlayWrap}>
           <img
-            src="/icon_music.png"
+            src={"/icon_music.png"}
             width={8}
             height={8}
             className={classes.musicImage}
@@ -25,7 +26,7 @@ const NCardShopAudioBook = ({ title, author, image, isCircle }) => {
         </Box>
       </Box>
       <Box className={classes.contentWrap}>
-        <Link color="initial" href={"/posts/1"} underline="none">
+        <Link color="initial" href={link || "/posts/1"} underline="none">
           <Typography variant="body1" className={classes.title}>
             {title || "Шилийн богд"}
           </Typography>

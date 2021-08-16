@@ -15,17 +15,17 @@ import NSociety from "./partials/Society";
 import NEconomy from "./partials/Economy";
 import NPolitics from "./partials/Politics";
 
-const NMegaHome = ({ homeCurrentTab, onChangeHomeTab }) => {
-  const isDark = homeCurrentTab != 0 ? true : false;
-  const yellow = homeCurrentTab == 6 ? true : false;
+const NMegaHome = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
+  const isDark = currentMegaMenuTab.home != 0 ? true : false;
+  const yellow = currentMegaMenuTab.home == 6 ? true : false;
   const classes = useStyles({ isDark, yellow });
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
         <NVerticalTabs
-          value={homeCurrentTab}
-          onChange={(_, v) => onChangeHomeTab(v)}
+          value={currentMegaMenuTab.home}
+          onChange={(_, v) => onChangeMegaMenuTab("home", v)}
           orientation="vertical"
           variant="scrollable"
           className={classes.tabs}
@@ -44,25 +44,25 @@ const NMegaHome = ({ homeCurrentTab, onChangeHomeTab }) => {
         </NVerticalTabs>
       </Grid>
       <Grid item xs={10}>
-        <NVerticalTabPanel value={homeCurrentTab} index={0}>
+        <NVerticalTabPanel value={currentMegaMenuTab.home} index={0}>
           <NPolitics />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={homeCurrentTab} index={1}>
+        <NVerticalTabPanel value={currentMegaMenuTab.home} index={1}>
           <NEconomy />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={homeCurrentTab} index={2}>
+        <NVerticalTabPanel value={currentMegaMenuTab.home} index={2}>
           <NSociety />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={homeCurrentTab} index={3}>
+        <NVerticalTabPanel value={currentMegaMenuTab.home} index={3}>
           <NEarth isDark={isDark} />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={homeCurrentTab} index={4}>
+        <NVerticalTabPanel value={currentMegaMenuTab.home} index={4}>
           <NSport isDark={isDark} />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={homeCurrentTab} index={5}>
+        <NVerticalTabPanel value={currentMegaMenuTab.home} index={5}>
           <NEntertaiment />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={homeCurrentTab} index={6}>
+        <NVerticalTabPanel value={currentMegaMenuTab.home} index={6}>
           <NYellowNews />
         </NVerticalTabPanel>
       </Grid>

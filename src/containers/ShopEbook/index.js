@@ -27,42 +27,50 @@ const ShopEbook = () => {
           <Grid container spacing={2}>
             <Grid item xs={2}>
               <NCardShopAudioBook
-                author="Евгений Трифонов"
-                publisher="Нэпко хэвлэлийн газар"
+                title="Өөрөөр ажиллая"
+                image="/ebook_img_1.png"
+                author="Зохиолч: Викториа Эвиярд"
+                link="/shop-ebook/1"
               />
             </Grid>
             <Grid item xs={2}>
               <NCardShopAudioBook
-                author="Евгений Трифонов"
-                publisher="Нэпко хэвлэлийн газар"
-                price="27,500 ₮"
+                title="Өөрөөр ажиллая"
+                author="Зохиолч: Викториа Эвиярд"
+                link="/shop-ebook/1"
+                image="/ebook_img_1.png"
               />
             </Grid>
             <Grid item xs={2}>
               <NCardShopAudioBook
-                author="Евгений Трифонов"
-                publisher="Нэпко хэвлэлийн газар"
-                price="27,500 ₮"
+                title="Өөрөөр ажиллая"
+                author="Зохиолч: Викториа Эвиярд"
+                link="/shop-ebook/1"
+                image="/ebook_img_1.png"
               />
             </Grid>
             <Grid item xs={2}>
               <NCardShopAudioBook
-                author="Евгений Трифонов"
-                publisher="Нэпко хэвлэлийн газар"
-                price="27,500 ₮"
+                title="Өөрөөр ажиллая"
+                author="Зохиолч: Викториа Эвиярд"
+                link="/shop-ebook/1"
+                image="/ebook_img_1.png"
               />
             </Grid>
             <Grid item xs={2}>
               <NCardShopAudioBook
-                author="Евгений Трифонов"
-                publisher="Нэпко хэвлэлийн газар"
-                price="27,500 ₮"
+                title="Өөрөөр ажиллая"
+                author="Зохиолч: Викториа Эвиярд"
+                link="/shop-ebook/1"
+                image="/ebook_img_1.png"
               />
             </Grid>
             <Grid item xs={2}>
               <NCardShopAudioBook
-                author="Евгений Трифонов"
-                publisher="Нэпко хэвлэлийн газар"
+                title="Өөрөөр ажиллая"
+                author="Зохиолч: Викториа Эвиярд"
+                link="/shop-ebook/1"
+                image="/ebook_img_1.png"
               />
             </Grid>
             <Grid item xs={2}></Grid>

@@ -10,15 +10,15 @@ import NVerticalTabPanel from "../../../components/VerticalTabPanel";
 // import NBook from "./partials/Book";
 // import NArt from "./partials/Art";
 
-const NMegaResearch = ({ researchCurrentTab, onChangeResearchTab }) => {
+const NMegaResearch = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
   const classes = useStyles();
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
         <NVerticalTabs
-          value={researchCurrentTab}
-          onChange={(_, v) => onChangeResearchTab(v)}
+          value={currentMegaMenuTab?.research}
+          onChange={(_, v) => onChangeMegaMenuTab("research", v)}
           orientation="vertical"
           variant="scrollable"
           className={classes.tabs}
@@ -27,7 +27,7 @@ const NMegaResearch = ({ researchCurrentTab, onChangeResearchTab }) => {
         </NVerticalTabs>
       </Grid>
       <Grid item xs={10}>
-        <NVerticalTabPanel value={researchCurrentTab} index={0}>
+        <NVerticalTabPanel value={currentMegaMenuTab?.research} index={0}>
           Судалгаа
         </NVerticalTabPanel>
       </Grid>

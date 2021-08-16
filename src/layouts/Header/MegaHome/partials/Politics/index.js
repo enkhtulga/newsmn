@@ -53,7 +53,6 @@ const NPolitics = () => {
         <Button
           style={{ fontSize: 10 }}
           variant="outlined"
-          disableRipple
           onClick={() => router.push("/politics")}
         >
           Бүгдийг харах

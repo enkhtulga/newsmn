@@ -137,7 +137,6 @@ const NSociety = () => {
       >
         <Button
           variant="outlined"
-          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
           onClick={() => router.push("/politics")}
         >

@@ -46,7 +46,6 @@ const NYellowNews = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Button
           variant="outlined"
-          disableRipple
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
           onClick={() => router.push("/yellownews")}
         >

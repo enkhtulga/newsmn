@@ -10,15 +10,15 @@ import NVerticalTabPanel from "../../../components/VerticalTabPanel";
 import NInternal from "./partials/Internal";
 import NForeign from "./partials/Foreign";
 
-const NMegaTrip = ({ tripCurrentTab, onChangeTripTab }) => {
+const NMegaTrip = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
   const classes = useStyles();
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
         <NVerticalTabs
-          value={tripCurrentTab}
-          onChange={(_, v) => onChangeTripTab(v)}
+          value={currentMegaMenuTab?.trip}
+          onChange={(_, v) => onChangeMegaMenuTab("trip", v)}
           orientation="vertical"
           variant="scrollable"
           className={classes.tabs}
@@ -28,10 +28,10 @@ const NMegaTrip = ({ tripCurrentTab, onChangeTripTab }) => {
         </NVerticalTabs>
       </Grid>
       <Grid item xs={10}>
-        <NVerticalTabPanel value={tripCurrentTab} index={0}>
+        <NVerticalTabPanel value={currentMegaMenuTab?.trip} index={0}>
           <NInternal />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={tripCurrentTab} index={1}>
+        <NVerticalTabPanel value={currentMegaMenuTab?.trip} index={1}>
           <NForeign />
         </NVerticalTabPanel>
       </Grid>

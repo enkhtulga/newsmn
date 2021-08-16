@@ -9,16 +9,18 @@ import NVerticalTabPanel from "../../../components/VerticalTabPanel";
 // partials
 import NBook from "./partials/Book";
 import NArt from "./partials/Art";
+import NEbook from "./partials/Ebook";
+import NAudioBook from "./partials/AudioBook";
 
-const NMegaTrade = ({ tradeCurrentTab, onChangeTradeTab }) => {
+const NMegaTrade = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
   const classes = useStyles();
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
         <NVerticalTabs
-          value={tradeCurrentTab}
-          onChange={(_, v) => onChangeTradeTab(v)}
+          value={currentMegaMenuTab?.trade}
+          onChange={(_, v) => onChangeMegaMenuTab("trade", v)}
           orientation="vertical"
           variant="scrollable"
           className={classes.tabs}
@@ -30,17 +32,17 @@ const NMegaTrade = ({ tradeCurrentTab, onChangeTradeTab }) => {
         </NVerticalTabs>
       </Grid>
       <Grid item xs={10}>
-        <NVerticalTabPanel value={tradeCurrentTab} index={0}>
+        <NVerticalTabPanel value={currentMegaMenuTab?.trade} index={0}>
           <NBook />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={tradeCurrentTab} index={1}>
+        <NVerticalTabPanel value={currentMegaMenuTab?.trade} index={1}>
           <NArt />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={tradeCurrentTab} index={2}>
-          Цахим ном
+        <NVerticalTabPanel value={currentMegaMenuTab?.trade} index={2}>
+          <NEbook />
         </NVerticalTabPanel>
-        <NVerticalTabPanel value={tradeCurrentTab} index={3}>
-          Аудио ном
+        <NVerticalTabPanel value={currentMegaMenuTab?.trade} index={3}>
+          <NAudioBook />
         </NVerticalTabPanel>
       </Grid>
     </Grid>

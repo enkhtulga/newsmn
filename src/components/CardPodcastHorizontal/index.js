@@ -15,8 +15,14 @@ import {
 } from "@material-ui/icons";
 import Rating from "@material-ui/lab/Rating";
 
-const NCardHorizontal = ({ image, podcastName, rating, content }) => {
-  const classes = useStyles();
+const NCardHorizontal = ({
+  image,
+  podcastName,
+  rating,
+  content,
+  isTransparent,
+}) => {
+  const classes = useStyles({ isTransparent });
 
   return (
     <Box className={classes.wrap}>
@@ -84,7 +90,8 @@ const useStyles = makeStyles((theme) => ({
   shadowCardWrap: {
     display: "flex",
     paddingLeft: theme.spacing(0.5),
-    backgroundColor: Colors.white,
+    backgroundColor: (props) =>
+      props.isTransparent ? "transparent" : Colors.white,
     maxWidth: "100%",
     "& .rhap_main-controls .rhap_main-controls-button": {
       color: Colors.border_red,
@@ -102,7 +109,9 @@ const useStyles = makeStyles((theme) => ({
       color: Colors.border_red,
     },
   },
-  wrap: {},
+  wrap: {
+    background: "transparent",
+  },
   contentWrap: {
     paddingRight: 0,
     paddingLeft: 0,

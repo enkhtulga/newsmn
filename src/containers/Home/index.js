@@ -1,5 +1,16 @@
-import React from "react";
-import { Box, Grid, Typography, Button } from "@material-ui/core";
+import React, { useState } from "react";
+import {
+  Box,
+  Grid,
+  Typography,
+  Button,
+  RadioGroup,
+  Radio,
+  FormControl,
+  FormControlLabel,
+  Select,
+  MenuItem,
+} from "@material-ui/core";
 import StickySidebar from "../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../theme/colors";
@@ -36,6 +47,17 @@ import {
 
 const HomeContainer = () => {
   const classes = useStyles();
+
+  const [pollState, setPollState] = useState("");
+  const [pollCategory, setPollCategory] = useState(10);
+
+  const handleChange = (event) => {
+    setPollState(event.target.value);
+  };
+
+  const handleChangePollCategory = (event) => {
+    setPollCategory(event.target.value);
+  };
 
   return (
     <Box mt={5}>
@@ -889,6 +911,134 @@ const HomeContainer = () => {
             style={{ marginRight: "4px" }}
           />
         </NTitle>
+        <Box mb={10} />
+        <Grid container spacing={2}>
+          <Grid item xs={5}>
+            <Typography variant="h1" className={classes.pollTitle}>
+              Санал асуулга
+            </Typography>
+            <Typography variant="body1" className={classes.pollContent}>
+              Манай улс COVID-19-ийн эсрэг вакцинжуулалтыг энэ сарын 23-наас
+              эхлүүлэх гэж байна. Та ямар төрлийн вакцинд хамрагдах вэ?
+            </Typography>
+            <Typography variant="body1" className={classes.pollTotal}>
+              (Нийт санал: 6611)
+            </Typography>
+            <RadioGroup
+              aria-label="gender"
+              name="gender1"
+              value={pollState}
+              onChange={handleChange}
+              className={classes.pollOptionWrap}
+            >
+              <FormControlLabel
+                value="sinopharm"
+                control={<Radio />}
+                label={
+                  <Box display="flex">
+                    <Typography variant="body1" className={classes.pollOption}>
+                      БНХАУ - Синофарм
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      className={classes.pollOptionPercentage}
+                    >
+                      50%
+                    </Typography>
+                  </Box>
+                }
+              />
+              <FormControlLabel
+                value="astra_zeneca"
+                control={<Radio />}
+                label={
+                  <Box display="flex">
+                    <Typography variant="body1" className={classes.pollOption}>
+                      Их Британи - AstraZeneca
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      className={classes.pollOptionPercentage}
+                    >
+                      40%
+                    </Typography>
+                  </Box>
+                }
+              />
+              <FormControlLabel
+                value="pfizer"
+                control={<Radio />}
+                label={
+                  <Box display="flex">
+                    <Typography variant="body1" className={classes.pollOption}>
+                      АНУ - Pfizer
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      className={classes.pollOptionPercentage}
+                    >
+                      10%
+                    </Typography>
+                  </Box>
+                }
+              />
+            </RadioGroup>
+            <Box display="flex">
+              <Button variant="outlined" className={classes.pollButtonSubmit}>
+                Санал өгөх +
+              </Button>
+              <Button variant="outlined" className={classes.pollButtonResult}>
+                Бүгдийг харах+
+              </Button>
+            </Box>
+          </Grid>
+          <Grid item xs={7}>
+            <Box display="flex" justifyContent="space-between" mb={2}>
+              <Box display="flex" alignItems="center">
+                <Typography
+                  variant="body1"
+                  className={classes.pollCategoryLabel1}
+                >
+                  БНХАУ - Синофарм
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.pollCategoryLabel2}
+                >
+                  Их Британи - AstraZeneca
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.pollCategoryLabel3}
+                >
+                  АНУ - Pfizer
+                </Typography>
+              </Box>
+              <Box display="flex" alignItems="center">
+                <Typography variant="body1" className={classes.pollCategory}>
+                  Ангилах
+                </Typography>
+                <FormControl variant="outlined" size="small">
+                  <Select
+                    value={pollCategory}
+                    onChange={handleChangePollCategory}
+                  >
+                    <MenuItem value={10}>Бүгд</MenuItem>
+                    <MenuItem value={20}>БНХАУ - Синофарм</MenuItem>
+                    <MenuItem value={30}>Их Британи - AstraZeneca</MenuItem>
+                    <MenuItem value={40}>АНУ - Pfizer</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+            </Box>
+            <img
+              src="/poll_img.png"
+              width={836}
+              height={285}
+              style={{ width: "100%" }}
+            />
+          </Grid>
+        </Grid>
       </section>
     </Box>
   );
@@ -960,6 +1110,89 @@ const useStyles = makeStyles((theme) => ({
   realestateWrap: {
     marginLeft: "-3rem",
     marginRight: "-3rem",
+  },
+  pollTitle: {
+    lineHeight: "20px",
+    color: Colors.black,
+    marginBottom: theme.spacing(2),
+  },
+  pollContent: {
+    color: Colors.black,
+  },
+  pollTotal: {
+    color: Colors.black,
+    marginTop: theme.spacing(1),
+  },
+  pollOption: {
+    color: Colors.black,
+    marginRight: theme.spacing(2),
+  },
+  pollOptionPercentage: {
+    color: Colors.black,
+    fontWeight: 700,
+  },
+  pollOptionWrap: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+    marginLeft: theme.spacing(2),
+  },
+  pollButtonSubmit: {
+    color: Colors.black,
+    marginRight: theme.spacing(3),
+  },
+  pollButtonResult: {
+    color: Colors.black,
+  },
+  pollCategory: {
+    marginRight: theme.spacing(2),
+  },
+  pollCategoryLabel1: {
+    position: "relative",
+    marginLeft: theme.spacing(2),
+    paddingLeft: theme.spacing(3),
+    "&:before": {
+      content: "''",
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
+      left: 0,
+      width: 11,
+      height: 11,
+      borderRadius: 2,
+      backgroundColor: "#FFB5B0",
+    },
+  },
+  pollCategoryLabel2: {
+    position: "relative",
+    paddingLeft: theme.spacing(3),
+    marginLeft: theme.spacing(2),
+    "&:before": {
+      content: "''",
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
+      left: 0,
+      width: 11,
+      height: 11,
+      borderRadius: 2,
+      backgroundColor: "#E88D87",
+    },
+  },
+  pollCategoryLabel3: {
+    position: "relative",
+    paddingLeft: theme.spacing(3),
+    marginLeft: theme.spacing(2),
+    "&:before": {
+      content: "''",
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
+      left: 0,
+      width: 11,
+      height: 11,
+      borderRadius: 2,
+      backgroundColor: Colors.border_red,
+    },
   },
 }));
 

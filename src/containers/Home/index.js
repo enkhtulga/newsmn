@@ -118,13 +118,13 @@ const HomeContainer = () => {
         <Box className={classes.contentTop}>
           <NTopPost hasPhotoBy />
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost image="/home_img_1.jpg" />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost title="“Орон нутагт халдварын тархалт нэмэгдэж, 179 суманд хөл хорилоо”" />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost
                 image="/post_single.jpg"
                 title='"Шүгэл үлээгчдийг дэмжиж, эрх зүйн орчныг бүрдүүлнэ"'
@@ -132,38 +132,38 @@ const HomeContainer = () => {
                 postMetaProps={{ editedLabel: "2021.05.01 засвар хийсэн" }}
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost
                 image="/home_img_2.jpg"
                 title="“12-15 настай хүүхдүүдийг маргаашнаас вакцинжуулна"
                 postMetaProps={{ partnerLabel: "Түншлэл: Арт эженси ХХК" }}
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost
                 title='“Архангай аймаг наадам хүртэл "улаан түвшин"-д хатуу хөл хорино”'
                 image="/home_img_3.jpg"
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost
                 image="/home_img_4.jpg"
                 title="“Дельта” хувилбарын эсрэг вакцины нэмэлт тун хийх шаардлагатай”"
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost
                 image="/home_img_5.jpg"
                 title="Хар тэнгист нэвтэрсэн АНУ-ын сөнөөгч хөлгийг ажиглаж байна"
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost
                 image="/home_img_6.jpg"
                 title="“Монголын “ТОП-100 ААН”-ийг маргааш цахимаар тодруулна”"
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCardPost
                 image="/home_img_7.jpg"
                 title="“Дельта” хувилбарын эсрэг вакцины нэмэлт тун хийх шаардлагатай”"
@@ -175,10 +175,10 @@ const HomeContainer = () => {
       <section className={classes.sectionMiddle}>
         <Box mt={10}>
           <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <NAudioPlayer />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <NHighlightPosts>
                 <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
                 <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
@@ -193,7 +193,6 @@ const HomeContainer = () => {
           <NBanner
             src="/banner_home_1.jpg"
             width={1144}
-            height={201}
             link="https://recruitment.minii-suljee.mn/"
           />
         </Box>
@@ -207,25 +206,25 @@ const HomeContainer = () => {
           />
         </NTitle>
         <Grid container spacing={2}>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <NEditor />
             <Box mb={4} />
             <NEditorPost />
             <NEditorPost />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <NEditor image="/home_img_11.jpg" />
             <Box mb={4} />
             <NEditorPost />
             <NEditorPost />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <NEditor image="/home_img_12.jpg" />
             <Box mb={4} />
             <NEditorPost />
             <NEditorPost />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <NEditor image="/home_img_13.jpg" />
             <Box mb={4} />
             <NEditorPost />
@@ -234,10 +233,20 @@ const HomeContainer = () => {
         </Grid>
         <Box mt={10} mb={5}>
           <NCarousel
-            slidesPerView={4}
+            slidesPerView={1}
             spaceBetween={16}
             navigation
             pagination
+            breakpoints={{
+              600: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+              },
+              960: {
+                slidesPerView: 4,
+                slidesPerGroup: 1,
+              },
+            }}
             items={[
               <NCardSlidePost category="Дэлхий - Нийтлэл" />,
               <NCardSlidePost
@@ -319,19 +328,19 @@ const HomeContainer = () => {
           </NSelectTitle>
           <Box mt={5} />
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <NCardPostTitle image="/home_img_14.jpg" />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <NCardPostTitle title="Дабль стандарт: Ардын наадам болохоос ах дүү хоёрын баяр биш шүү!" />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <NCardPostTitle
                 title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
                 image="/home_img_15.jpg"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={4}>
               <Box display="flex" justifyContent="flex-end">
                 <Button variant="outlined" disableRipple>
                   Бүгдийг харах+
@@ -343,7 +352,6 @@ const HomeContainer = () => {
             <NBanner
               src="/banner_home_2.jpg"
               width={1028}
-              height={230}
               link="https://recruitment.minii-suljee.mn/"
             />
           </Box>
@@ -361,7 +369,7 @@ const HomeContainer = () => {
         </NTitle>
         <Box mt={5} mb={10}>
           <Grid container spacing={2}>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="• Baabar.mn" />
               <NInfoPartnerPost />
               <NInfoPartnerPost title="Атаархал" image="/home_img_16.jpg" />
@@ -374,7 +382,7 @@ const HomeContainer = () => {
                 image="/home_img_18.jpg"
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="• CCTV" />
               <NInfoPartnerPost
                 title="“70 агшин-70 түүх” уралдаан зарлав"
@@ -393,7 +401,7 @@ const HomeContainer = () => {
                 image="/home_img_22.jpg"
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="• Риа новости" />
               <NInfoPartnerPost
                 title='Оросын үндэсний төлбөрийн "Мир" систем БНСУ-д туршилтаа эхлүүллээ'
@@ -412,7 +420,7 @@ const HomeContainer = () => {
                 image="/home_img_26.jpg"
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="• Түнш" />
               <NInfoPartnerPost
                 title="Huawei Mate X хүйтэнд тэсвэр муутай"
@@ -436,10 +444,21 @@ const HomeContainer = () => {
       </section>
       <section>
         <NCarousel
-          slidesPerView={4}
+          slidesPerView={1}
           spaceBetween={16}
           navigation={false}
           pagination
+          breakpoints={{
+            1280: {
+              slidesPerView: 4,
+            },
+            960: {
+              slidesPerView: 3,
+            },
+            600: {
+              slidesPerView: 2,
+            },
+          }}
           items={[
             <>
               <NTitle title="News Brand">
@@ -552,7 +571,7 @@ const HomeContainer = () => {
         </NTitle>
         <Box mt={5} mb={9}>
           <Grid container spacing={2}>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Улс төр" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
@@ -566,7 +585,7 @@ const HomeContainer = () => {
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Нийгэм" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
@@ -580,7 +599,7 @@ const HomeContainer = () => {
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
               <NCardPostTitle paddingTop="54.21%" noImage />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Шар мэдээ" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" />
@@ -590,7 +609,7 @@ const HomeContainer = () => {
               <NCardPostTitle paddingTop="54.21%" />
               <NCardPostTitle paddingTop="54.21%" />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Дэлхий" hasBorder />
               <Box mt={2} />
               <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
@@ -622,10 +641,18 @@ const HomeContainer = () => {
             <Typography variant="h4">• Сэтгүүлчдийн платформ</Typography>
           </Box>
           <NCarousel
-            slidesPerView={6}
+            slidesPerView={1}
             spaceBetween={16}
             navigation
             pagination
+            breakpoints={{
+              960: {
+                slidesPerView: 6,
+              },
+              600: {
+                slidesPerView: 3,
+              },
+            }}
             items={[
               <NJournalist />,
               <NJournalist image="/journalist_2.jpeg" />,
@@ -640,7 +667,7 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section>
-        <Box mt={4} pt={10} pb={10} pl={20} pr={20} className={classes.blackBg}>
+        <Box mt={4} pt={10} pb={10} className={classes.blackBg}>
           <NSelectTitle
             title="Видео суваг"
             hasBorder
@@ -655,45 +682,45 @@ const HomeContainer = () => {
             />
           </NSelectTitle>
           <Grid container spacing={2}>
-            <Grid item sm={5}>
+            <Grid item sm={12} md={5}>
               <NCardVideoLarge
                 image="/video_page_img_1.jpg"
                 title="Н.Төгсцогт: Би ийм тулаан хийх гэж л төрсөн"
               />
             </Grid>
-            <Grid item sm={7}>
+            <Grid item sm={12} md={7}>
               <Grid container spacing={2}>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_2.jpg"
                     title="Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_3.jpg"
                     title="Монгол Улсын Ерөнхийлөгч Ухнаагийн Хүрэлсүх"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_4.jpg"
                     title="Загвар өмсөгч BILLY"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_5.jpg"
                     title="20 жил өнгөрсөн ч үнэн илэрсэнгүй"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_6.jpg"
                     title="Rokitbay: Монголоос үнэгүй тоглох боломжтой"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_7.jpg"
                     title="Мото гэр бүл"
@@ -722,24 +749,24 @@ const HomeContainer = () => {
         </NTitle>
         <Box mt={10} mb={10}>
           <Grid container spacing={2}>
-            <Grid item xs={2}>
+            <Grid item xs={12} sm={4} md={2}>
               <Box>
-                <NBanner src="/banner_home_3.jpg" width={216} height={369} />
+                <NBanner src="/banner_home_3.jpg" width={216} />
               </Box>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} sm={4} md={2}>
               <NShopItem image="/shop_item_2.jpg" />
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} sm={4} md={2}>
               <NShopItem image="/shop_item_3.jpg" />
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} sm={4} md={2}>
               <NShopItem image="/shop_item_4.jpg" />
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} sm={4} md={2}>
               <NShopItem image="/shop_item_5.jpg" />
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} sm={4} md={2}>
               <NShopItem />
               <Box display="flex" justifyContent="flex-end" mt={6}>
                 <Button disableRipple variant="outlined" disableRipple>
@@ -764,9 +791,20 @@ const HomeContainer = () => {
         </NTitle>
         <Box mt={5} className={classes.realestateWrap}>
           <NCarousel
-            slidesPerView={8}
+            slidesPerView={1}
             spaceBetween={16}
             pagination={false}
+            breakpoints={{
+              1280: {
+                slidesPerView: 8,
+              },
+              960: {
+                slidesPerView: 5,
+              },
+              600: {
+                slidesPerView: 3,
+              },
+            }}
             items={[
               <NRealEstateItem image="/realestate_item_1.jpg" />,
               <NRealEstateItem
@@ -815,7 +853,7 @@ const HomeContainer = () => {
       </section>
       <section className={classes.sectionStickyWrap}>
         <StickySidebar
-          className={classes.sidebar}
+          className={classes.sidebarFamous}
           offsetTop={16}
           offsetBottom={16}
         >
@@ -858,10 +896,10 @@ const HomeContainer = () => {
           <NSelectTitle title="Нийтлэл" hasBorder />
           <Box mt={4} />
           <Grid container spacing={2}>
-            <Grid item xs={5}>
+            <Grid item xs={12} sm={12} md={12}>
               <NCardArticlePost />
             </Grid>
-            <Grid item xs={7}>
+            <Grid item xs={12} sm={12}>
               <NCardArticleItem
                 image={"/card_article_item_1.jpg"}
                 editor={"Б.Дэлгэрцэцэг"}
@@ -913,7 +951,7 @@ const HomeContainer = () => {
         </NTitle>
         <Box mb={10} />
         <Grid container spacing={2}>
-          <Grid item xs={5}>
+          <Grid item sm={12} md={5}>
             <Typography variant="h1" className={classes.pollTitle}>
               Санал асуулга
             </Typography>
@@ -992,9 +1030,14 @@ const HomeContainer = () => {
               </Button>
             </Box>
           </Grid>
-          <Grid item xs={7}>
-            <Box display="flex" justifyContent="space-between" mb={2}>
-              <Box display="flex" alignItems="center">
+          <Grid item sm={12} md={7}>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              flexWrap="wrap"
+              mb={2}
+            >
+              <Box display="flex" alignItems="center" flexWrap="wrap">
                 <Typography
                   variant="body1"
                   className={classes.pollCategoryLabel1}
@@ -1080,6 +1123,10 @@ const useStyles = makeStyles((theme) => ({
     width: 340,
     paddingRight: theme.spacing(2),
   },
+  sidebarFamous: {
+    width: 340,
+    paddingRight: theme.spacing(2),
+  },
   content: {
     width: "calc(100% - 340px)",
   },
@@ -1092,6 +1139,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-4rem",
     marginRight: "-4rem",
     marginBottom: theme.spacing(9),
+    paddingRight: "4rem",
+    paddingLeft: "4rem",
     "& .MuiSelect-icon": {
       color: Colors.text_gray,
     },
@@ -1192,6 +1241,32 @@ const useStyles = makeStyles((theme) => ({
       height: 11,
       borderRadius: 2,
       backgroundColor: Colors.border_red,
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    stickySidebar: {
+      display: "none",
+    },
+    contentTop: {
+      width: "100%",
+      paddingRight: 0,
+    },
+    sidebar: {
+      display: "none",
+    },
+    sidebarFamous: {
+      display: "none",
+    },
+    content: {
+      width: "100%",
+    },
+    realestateWrap: {
+      marginRight: 0,
+      marginLeft: 0,
+    },
+    blackBg: {
+      marginRight: 0,
+      marginLeft: 0,
     },
   },
 }));

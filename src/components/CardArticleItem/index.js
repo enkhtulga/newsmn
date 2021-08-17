@@ -17,7 +17,7 @@ const NCardArticleItem = ({ image, editor, title, star, commentCount }) => {
       <Box className={classes.mediaOuterWrap}>
         <NCardMedia paddingTop="69.44%" image={image} />
       </Box>
-      <Box ml={2} width="100%">
+      <Box ml={2} width="100%" className={classes.contentWrap}>
         <Typography variant="body2" className={classes.editor}>
           {editor}
         </Typography>
@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     position: "relative",
     alignItems: "flex-start",
+    flexWrap: "wrap",
     paddingBottom: theme.spacing(2),
   },
   mediaOuterWrap: {
@@ -94,6 +95,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(2),
+  },
+  [theme.breakpoints.down("sm")]: {
+    contentWrap: {
+      marginLeft: 0,
+    },
   },
 }));
 

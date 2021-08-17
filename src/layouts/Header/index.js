@@ -15,6 +15,8 @@ import {
   Link,
   Badge,
   Menu,
+  useMediaQuery,
+  useTheme,
 } from "@material-ui/core";
 import {
   Menu as IconMenu,
@@ -74,6 +76,7 @@ const StyledBadge = withStyles((theme) => ({
 const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const classes = useStyles();
   const router = useRouter();
+  const _theme = useTheme();
 
   const [currentMegaMenuTab, setCurrentMegaMenuTab] = useState({
     home: 0,
@@ -185,38 +188,15 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
     }
   };
 
-  return (
-    <div className={classes.grow}>
-      {hasBanner && (
-        <Box mt={5} mb={5} textAlign="center">
-          <NBanner src="/banner_home_top.jpg" width={1180} height={204} />
+  const renderTopMenu = () => {
+    return (
+      <>
+        <Box mr={1}>
+          <NButtonPrimary onClick={() => setOpenLogin(!openLogin)}>
+            Нэвтрэх
+          </NButtonPrimary>
         </Box>
-      )}
-      <AppBar className={classes.appBar} position="static" elevation={0}>
-        <Toolbar
-          className={`${
-            yellow ? classes.toolbarYellow : classes.toolbar
-          } module__content`}
-          disableGutters
-        >
-          <Box className={classes.logoWrap}>
-            <Typography variant="h1" className={classes.slagon}>
-              Мэдээллийн эх сурвалж
-            </Typography>
-            <Link color="initial" href={"/"} underline="none">
-              <img
-                src="/logo_main.png"
-                alt="logo main"
-                width={149}
-                height={49}
-              />
-            </Link>
-          </Box>
-          <Box mr={1}>
-            <NButtonPrimary onClick={() => setOpenLogin(!openLogin)}>
-              Нэвтрэх
-            </NButtonPrimary>
-          </Box>
+        <Box>
           <IconButton
             color="inherit"
             aria-label="menu"
@@ -277,7 +257,68 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
           >
             <IconMenu />
           </IconButton>
+        </Box>
+      </>
+    );
+  };
+
+  return (
+    <div className={classes.grow}>
+      {hasBanner && (
+        <Box mt={5} mb={5} textAlign="center">
+          <NBanner src="/banner_home_top.jpg" width={1180} height={204} />
+        </Box>
+      )}
+      <AppBar className={classes.appBar} position="static" elevation={0}>
+        <Toolbar
+          className={`${yellow ? classes.toolbarYellow : classes.toolbar} `}
+          disableGutters
+        >
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="flex-end"
+            width="100%"
+            className="module__content"
+          >
+            <Box className={classes.logoWrap}>
+              <Typography variant="h1" className={classes.slagon}>
+                Мэдээллийн эх сурвалж
+              </Typography>
+              <Link
+                color="initial"
+                href={"/"}
+                underline="none"
+                className={classes.logoInnerWrap}
+              >
+                <img
+                  src="/logo_main.png"
+                  alt="logo main"
+                  width={149}
+                  height={49}
+                />
+              </Link>
+            </Box>
+            <Box
+              display="flex"
+              alignItems="center"
+              className={classes.topMenuWrap}
+            >
+              {renderTopMenu()}
+            </Box>
+          </Box>
         </Toolbar>
+        {useMediaQuery(_theme.breakpoints.down("md")) && (
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+            flexWrap="wrap"
+            className={`${classes.topMenuMobileWrap} module__content`}
+          >
+            {renderTopMenu()}
+          </Box>
+        )}
         <Box className={`${classes.navbarWrapper} module__content`}>
           <List
             component="nav"
@@ -367,7 +408,11 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
               </NMegaMenu>
             </Box>
           </List>
-          <Box display="flex" alignItems="center">
+          <Box
+            display="flex"
+            alignItems="center"
+            className={classes.rightSection}
+          >
             <Box display="flex" alignItems="center">
               <Box display="flex" alignItems="center" mr={2}>
                 <Typography
@@ -437,7 +482,6 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    margin: "0 -4rem",
   },
   appBar: {
     backgroundColor: "white",
@@ -471,18 +515,23 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
+  logoInnerWrap: {
+    height: 49,
+  },
   slagon: {
     paddingRight: 120,
     color: Colors.white,
     fontWeight: 700,
     fontSize: 16,
-    lineHeight: "35px",
+    lineHeight: "20px",
   },
   navbarWrapper: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    flexWrap: "wrap-reverse",
     alignItems: "center",
+    width: "100%",
   },
   rootNav: {
     display: "flex",
@@ -606,6 +655,40 @@ const useStyles = makeStyles((theme) => ({
   },
   volumeLabel: {
     marginRight: theme.spacing(1),
+  },
+  [theme.breakpoints.down("xs")]: {
+    logoInnerWrap: {
+      height: 40,
+      "& img": {
+        width: "auto",
+        height: 40,
+      },
+    },
+    slagon: {
+      paddingRight: 60,
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    navbarWrapper: {
+      display: "none",
+    },
+  },
+  [theme.breakpoints.down("md")]: {
+    navbarWrapper: {
+      justifyContent: "flex-start",
+    },
+    rightSection: {
+      marginTop: theme.spacing(2),
+    },
+    topMenuWrap: {
+      display: "none",
+    },
+    topMenuMobileWrap: {
+      backgroundColor: "#f6f6f6",
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2),
+      color: Colors.dark_blue,
+    },
   },
 }));
 

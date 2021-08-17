@@ -7,12 +7,15 @@ import {
   Button,
   Typography,
   Link,
+  useMediaQuery,
+  useTheme,
 } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import itemData from "./itemData";
 
 const NTourMasonry = () => {
   const classes = useStyles();
+  const _theme = useTheme();
 
   return (
     <Box className={classes.wrap}>

@@ -91,6 +91,19 @@ const useStyles = makeStyles((theme) => ({
   play: {
     fontSize: 50,
   },
+  [theme.breakpoints.down("md")]: {
+    playWrap: {
+      width: 40,
+      height: 40,
+    },
+    playInnerWrap: {
+      width: 36,
+      height: 36,
+    },
+    play: {
+      fontSize: 25,
+    },
+  },
 }));
 
 export default NCardVideoSmall;

@@ -19,7 +19,6 @@ const NHighlightPosts = ({ children }) => {
 const useStyles = makeStyles((theme) => ({
   wrap: {
     height: 200,
-    width: 680,
     maxWidth: "100%",
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),

@@ -112,13 +112,12 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 38,
     paddingRight: 0,
     backgroundColor: Colors.bg_gray,
-    width: 680,
     maxWidth: "100%",
     borderRadius: 5,
   },
   contentWrap: {
-    paddingRight: 0,
     paddingLeft: 0,
+    paddingRight: theme.spacing(2),
     width: "100%",
   },
   rating: {

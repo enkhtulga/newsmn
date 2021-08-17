@@ -21,7 +21,9 @@ body {
   margin: 0;
   background-color: #fff;
 }
-.main-wrapper {
+.main-wrapper main {
+  max-width: 110rem;
+  margin: 0 auto;
   padding: 0 4rem;
 }
 .module__content {
@@ -125,4 +127,49 @@ body.font-very-large .MuiTypography-body2:not(.freeze) {
 .imageIconHover {
   display: none;
   position: absolute;
+}
+.footer-wrap {
+  background-color: #001e64;
+  position: relative;
+  overflow: hidden;
+}
+.footer-wrap::after {
+  content: " ";
+  position: absolute;
+  background-image: url("/footer_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0px;
+  right: -350px;
+  width: 588px;
+  height: 100%;
+}
+@media (max-width: 600px) {
+  .module__content {
+    padding: 0 1rem;
+  }
+  .main-wrapper main {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 1279px) {
+  .footer-wrap::after {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .footer-wrap::after {
+    right: -175px;
+  }
+}
+@media (min-width: 1560px) {
+  .module__content {
+    max-width: 110rem;
+    margin: 0px auto;
+  }
+}
+@media (min-width: 1600px) {
+  .footer-wrap::after {
+    right: 0px;
+  }
 }

@@ -103,6 +103,12 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 48,
     },
   },
+  [theme.breakpoints.down("md")]: {
+    content: {
+      display: "none",
+    },
+    quote: { display: "none" },
+  },
 }));
 
 export default NTopPost;

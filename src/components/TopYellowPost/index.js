@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "flex-end",
     alignItems: "center",
+    width: "100%",
   },
   yellowCategory: {
     color: Colors.yellow,
@@ -74,6 +75,21 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis",
     marginBottom: theme.spacing(3),
     height: 70,
+  },
+  [theme.breakpoints.down("md")]: {
+    title: {
+      fontSize: 20,
+      lineHeight: "26px",
+      height: 56,
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    title: {
+      fontSize: 14,
+      lineHeight: "18px",
+      height: 36,
+      marginBottom: theme.spacing(2),
+    },
   },
 }));
 

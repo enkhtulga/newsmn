@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "1px solid",
     borderBottomColor: Colors.border_gray_2,
     justifyContent: (props) => props.justifyContent,
+    overflowX: "scroll",
   },
   list: {
     "&:first-child": {

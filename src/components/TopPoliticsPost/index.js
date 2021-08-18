@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 3,
     overflow: "hidden",
     textOverflow: "ellipsis",
-    paddingBottom: theme.spacing(1),
+    marginBottom: theme.spacing(1),
   },
   content: {
     marginBottom: theme.spacing(5),
@@ -74,7 +74,19 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 3,
     overflow: "hidden",
     textOverflow: "ellipsis",
-    height: 60,
+    height: 70,
+    color: "#ECE7E7",
+    width: "100%",
+  },
+  [theme.breakpoints.down("md")]: {
+    content: {
+      display: "none",
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    content: {
+      display: "-webkit-box",
+    },
   },
 }));
 

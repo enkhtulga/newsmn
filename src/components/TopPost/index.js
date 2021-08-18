@@ -109,6 +109,16 @@ const useStyles = makeStyles((theme) => ({
     },
     quote: { display: "none" },
   },
+  [theme.breakpoints.down("sm")]: {
+    cardWrap: {
+      flexDirection: "column",
+    },
+    contentWrap: {
+      paddingRight: 0,
+      paddingLeft: 0,
+      paddingTop: theme.spacing(2),
+    },
+  },
 }));
 
 export default NTopPost;

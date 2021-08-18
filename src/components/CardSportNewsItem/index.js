@@ -49,6 +49,15 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "25px",
     paddingBottom: theme.spacing(1),
   },
+  [theme.breakpoints.down("sm")]: {
+    cardWrap: {
+      flexDirection: "column",
+    },
+    contentWrap: {
+      paddingRight: 0,
+      paddingLeft: 0,
+    },
+  },
 }));
 
 export default NCardSportNewsItem;

@@ -26,7 +26,9 @@ const NAudioPlayer = ({ image, podcastName, rating, shadowLayout }) => {
         }`}
         square
       >
-        <NAvatar size={122} src={image || "/audio_pic.jpg"} />
+        <Box className={classes.avatarWrap}>
+          <NAvatar size={122} src={image || "/audio_pic.jpg"} />
+        </Box>
         <NCardContent className={classes.contentWrap}>
           <AudioPlayer
             autoPlay={false}
@@ -138,6 +140,24 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "30px",
     marginTop: theme.spacing(0.5),
     color: Colors.text_gray_2,
+  },
+  [theme.breakpoints.down("sm")]: {
+    cardWrap: {
+      flexDirection: "column",
+      alignItems: "center",
+      "& .rhap_progress-section": {
+        flexWrap: "wrap",
+      },
+      "& .rhap_progress-section .rhap_volume-controls": {
+        marginLeft: 0,
+      },
+    },
+    contentWrap: {
+      marginTop: theme.spacing(2),
+      "& > div": {
+        paddingLeft: 0,
+      },
+    },
   },
 }));
 

@@ -12,62 +12,57 @@ import NCardVideoSmallCentered from "../../components/CardVideoSmallCentered";
 import NCustomScrollArea from "../../components/CustomScrollArea";
 import NCardVideoHorizontal from "../../components/CardVideoHorizontal";
 import NCardVideoHorizontalSmall from "../../components/CardVideoHorizontalSmall";
+import clsx from "clsx";
 
 const VideoContainer = () => {
   const classes = useStyles();
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs dark className="module__content" title={"Видео суваг"} />
-      </Box>
-      <Box
-        pt={2}
-        pb={12}
-        className={`${classes.bgBlack} module__content_margin`}
-      >
+      <NBreadcrumbs dark title={"Видео суваг"} />
+      <Box className={clsx(classes.bgBlack, classes.videoWrap)}>
         <Box className="module__content">
           <Grid container spacing={2}>
-            <Grid item sm={5}>
+            <Grid item sm={6} md={5}>
               <NCardVideoLarge
                 image="/video_page_img_1.jpg"
                 title="Н.Төгсцогт: Би ийм тулаан хийх гэж л төрсөн"
                 largeTitle
               />
             </Grid>
-            <Grid item sm={7}>
+            <Grid item sm={6} md={7}>
               <Grid container spacing={2}>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_2.jpg"
                     title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_3.jpg"
                     title="Монгол Улсын Ерөнхийлөгч Ухнаагийн Хүрэлсүх"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_4.jpg"
                     title="Загвар өмсөгч BILLY"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_5.jpg"
                     title="20 жил өнгөрсөн ч үнэн илэрсэнгүй"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_6.jpg"
                     title="Rokitbay: Монголоос үнэгүй тоглох боломжтой"
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <NCardVideoSmall
                     image="/video_page_img_7.jpg"
                     title="Мото гэр бүл"
@@ -77,11 +72,7 @@ const VideoContainer = () => {
             </Grid>
             <Grid item xs={12}>
               <Box display="flex" justifyContent="flex-end">
-                <Button
-                  variant="outlined"
-                  disableRipple
-                  className={classes.buttonWhite}
-                >
+                <Button variant="outlined" className={classes.buttonWhite}>
                   Бүгдийг харах+
                 </Button>
               </Box>
@@ -89,11 +80,7 @@ const VideoContainer = () => {
           </Grid>
         </Box>
       </Box>
-      <Box
-        pt={12}
-        pb={12}
-        className={`${classes.bgGray} module__content_margin`}
-      >
+      <Box className={`${classes.bgGray} ${classes.gray1}`}>
         <Box className="module__content">
           <NSelectTitle
             coloredTitle="News"
@@ -111,49 +98,49 @@ const VideoContainer = () => {
           </NSelectTitle>
           <Box mb={4} />
           <Grid container spacing={2}>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_1.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_2.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_3.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_4.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_5.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_6.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_7.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_3.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
@@ -162,11 +149,7 @@ const VideoContainer = () => {
           </Grid>
         </Box>
       </Box>
-      <Box
-        pt={12}
-        pb={12}
-        className={`${classes.bgBlack} module__content_margin`}
-      >
+      <Box className={`${classes.bgBlack} ${classes.black1}`}>
         <Box className="module__content">
           <NSelectTitle
             coloredTitle="News"
@@ -184,7 +167,7 @@ const VideoContainer = () => {
           </NSelectTitle>
           <Box mt={2} />
           <Grid container spacing={2}>
-            <Grid item xs={8}>
+            <Grid item xs={8} sm={12} md={8}>
               <NCustomScrollArea height={1100} scrollColor={Colors.border_red}>
                 <NCardVideoHorizontal image="/video_post_horizontal_2.jpg" />
                 <NCardVideoHorizontal
@@ -224,7 +207,7 @@ const VideoContainer = () => {
                 />
               </NCustomScrollArea>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={4} sm={12} md={4}>
               <NCustomScrollArea height={548} scrollColor={Colors.border_red}>
                 <NCardVideoHorizontalSmall
                   title="Хорт хавдар хүүхдийн эрүүл мэндэд заналхийлж байна"
@@ -264,21 +247,13 @@ const VideoContainer = () => {
                 />
               </NCustomScrollArea>
               <Box mt={2}>
-                <NBanner
-                  src="/banner_video_page_1.jpg"
-                  width={448}
-                  height={279}
-                />
+                <NBanner src="/banner_video_page_1.jpg" width={448} />
               </Box>
             </Grid>
           </Grid>
         </Box>
       </Box>
-      <Box
-        pt={12}
-        pb={12}
-        className={`${classes.bgGray} module__content_margin`}
-      >
+      <Box className={`${classes.bgGray} ${classes.gray1}`}>
         <Box className="module__content">
           <NSelectTitle
             coloredTitle="News"
@@ -295,13 +270,13 @@ const VideoContainer = () => {
             />
           </NSelectTitle>
           <Grid container spacing={2}>
-            <Grid item xs={8}>
+            <Grid item xs={12} sm={6} md={8}>
               <NCardVideoLarge
                 image="/video_page_img_8.jpg"
                 title="БСШУСЯ 18 их дээд сургуулийн тусгай зөвшөөрлийг цуцлах уу?"
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <NCustomScrollArea height={548} scrollColor={Colors.border_red}>
                 <NCardVideoHorizontalSmall
                   title="Хорт хавдар хүүхдийн эрүүл мэндэд заналхийлж байна"
@@ -344,11 +319,7 @@ const VideoContainer = () => {
           </Grid>
         </Box>
       </Box>
-      <Box
-        pt={12}
-        pb={12}
-        className={`${classes.bgBlack} module__content_margin`}
-      >
+      <Box className={`${classes.bgBlack} ${classes.black1}`}>
         <Box className="module__content">
           <NSelectTitle
             coloredTitle="News"
@@ -365,10 +336,18 @@ const VideoContainer = () => {
             />
           </NSelectTitle>
           <NCarousel
-            slidesPerView={6}
+            slidesPerView={1}
             spaceBetween={16}
             pagination={false}
             navigation
+            breakpoints={{
+              960: {
+                slidesPerView: 6,
+              },
+              600: {
+                slidesPerView: 3,
+              },
+            }}
             items={[
               <NCardVideoSmallCentered
                 title="Монголыг төлөөлөх 5 сурагчийг хайж байна"
@@ -416,11 +395,7 @@ const VideoContainer = () => {
           />
         </Box>
       </Box>
-      <Box
-        pt={12}
-        pb={12}
-        className={`${classes.bgGray} module__content_margin`}
-      >
+      <Box className={`${classes.bgGray} ${classes.gray1}`}>
         <Box className="module__content">
           <NSelectTitle
             coloredTitle="News"
@@ -437,10 +412,15 @@ const VideoContainer = () => {
             />
           </NSelectTitle>
           <NCarousel
-            slidesPerView={2}
+            slidesPerView={1}
             spaceBetween={16}
             pagination={false}
             navigation
+            breakpoints={{
+              600: {
+                slidesPerView: 2,
+              },
+            }}
             items={[
               <NCardVideoLarge
                 title='"Дархлаажуулалтын төлөвлөгөөг иргэд давуулан биелүүлж байна"'
@@ -454,10 +434,18 @@ const VideoContainer = () => {
             ]}
           />
           <NCarousel
-            slidesPerView={6}
+            slidesPerView={1}
             spaceBetween={16}
             pagination={false}
             navigation
+            breakpoints={{
+              960: {
+                slidesPerView: 6,
+              },
+              600: {
+                slidesPerView: 3,
+              },
+            }}
             items={[
               <NCardVideoSmall
                 image={"/show_small_1.jpg"}
@@ -490,9 +478,17 @@ const VideoContainer = () => {
             ]}
           />
           <NCarousel
-            slidesPerView={6}
+            slidesPerView={1}
             spaceBetween={16}
             pagination={false}
+            breakpoints={{
+              960: {
+                slidesPerView: 6,
+              },
+              600: {
+                slidesPerView: 3,
+              },
+            }}
             items={[
               <NCardVideoSmall
                 image={"/show_small_7.jpg"}
@@ -526,15 +522,10 @@ const VideoContainer = () => {
           />
         </Box>
       </Box>
-      <Box
-        pb={15}
-        textAlign="center"
-        className={`${classes.bgGray} module__content_margin`}
-      >
+      <Box pb={15} textAlign="center" className={`${classes.bgGray}`}>
         <NBanner
           src="/banner_video_bottom.jpg"
           width={1144}
-          height={201}
           link="https://recruitment.minii-suljee.mn/"
         />
       </Box>
@@ -543,9 +534,6 @@ const VideoContainer = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   bgGray: {
     backgroundColor: Colors.title,
   },
@@ -559,6 +547,18 @@ const useStyles = makeStyles((theme) => ({
   buttonWhite: {
     borderColor: Colors.border_red,
     color: Colors.border_red,
+  },
+  videoWrap: {
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(12),
+  },
+  gray1: {
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(12),
+  },
+  black1: {
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(12),
   },
 }));
 

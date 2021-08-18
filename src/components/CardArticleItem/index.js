@@ -62,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     position: "relative",
     alignItems: "flex-start",
-    flexWrap: "wrap",
     paddingBottom: theme.spacing(2),
   },
   mediaOuterWrap: {
@@ -99,6 +98,9 @@ const useStyles = makeStyles((theme) => ({
   [theme.breakpoints.down("sm")]: {
     contentWrap: {
       marginLeft: 0,
+    },
+    wrap: {
+      flexWrap: "wrap",
     },
   },
 }));

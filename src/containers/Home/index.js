@@ -11,6 +11,7 @@ import {
   Select,
   MenuItem,
 } from "@material-ui/core";
+import clsx from "clsx";
 import StickySidebar from "../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../theme/colors";
@@ -61,8 +62,7 @@ const HomeContainer = () => {
 
   return (
     <Box mt={5}>
-      <section className={classes.sectionTop}></section>
-      <section className={classes.sectionWrap}>
+      <section className={`${classes.sectionWrap} module__content`}>
         <StickySidebar
           className={classes.stickySidebar}
           offsetTop={16}
@@ -172,7 +172,7 @@ const HomeContainer = () => {
           </Grid>
         </Box>
       </section>
-      <section className={classes.sectionMiddle}>
+      <section className={clsx(classes.sectionMiddle, "module__content")}>
         <Box mt={10}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={6}>
@@ -270,7 +270,7 @@ const HomeContainer = () => {
           />
         </Box>
       </section>
-      <section className={classes.sectionMiddle2}>
+      <section className={clsx(classes.sectionMiddle2, "module__content")}>
         <Box className={classes.sidebar}>
           <NSelectTitle title="Hit news" hasBorder>
             <img
@@ -357,7 +357,7 @@ const HomeContainer = () => {
           </Box>
         </Box>
       </section>
-      <section className={classes.sectionMiddle3}>
+      <section className={clsx(classes.sectionMiddle3, "module__content")}>
         <NTitle title="Мэдээллийн түншлэгч" hasBorder>
           <img
             src="/hee_4.png"
@@ -442,7 +442,7 @@ const HomeContainer = () => {
           </Grid>
         </Box>
       </section>
-      <section>
+      <section className="module__content">
         <NCarousel
           slidesPerView={1}
           spaceBetween={16}
@@ -559,7 +559,7 @@ const HomeContainer = () => {
           ]}
         />
       </section>
-      <section className={classes.sectionMiddle4}>
+      <section className={clsx(classes.sectionMiddle4, "module__content")}>
         <NTitle title="Дэлгэрэнгүй" hasBorder>
           <img
             src="/hee_6.png"
@@ -626,7 +626,7 @@ const HomeContainer = () => {
           </Grid>
         </Box>
       </section>
-      <section className={classes.sectionPress}>
+      <section className={clsx(classes.sectionPress, "module__content")}>
         <NTitle title="Нийтлэл" hasBorder>
           <img
             src="/hee_4.png"
@@ -668,82 +668,84 @@ const HomeContainer = () => {
       </section>
       <section>
         <Box mt={4} pt={10} pb={10} className={classes.blackBg}>
-          <NSelectTitle
-            title="Видео суваг"
-            hasBorder
-            className={classes.blackTitle}
-          >
-            <img
-              src="/hee_3.png"
-              alt="Видео суваг"
-              width="26"
-              height="26"
-              style={{ marginRight: "4px" }}
-            />
-          </NSelectTitle>
-          <Grid container spacing={2}>
-            <Grid item sm={12} md={5}>
-              <NCardVideoLarge
-                image="/video_page_img_1.jpg"
-                title="Н.Төгсцогт: Би ийм тулаан хийх гэж л төрсөн"
+          <Box className="module__content">
+            <NSelectTitle
+              title="Видео суваг"
+              hasBorder
+              className={classes.blackTitle}
+            >
+              <img
+                src="/hee_3.png"
+                alt="Видео суваг"
+                width="26"
+                height="26"
+                style={{ marginRight: "4px" }}
               />
-            </Grid>
-            <Grid item sm={12} md={7}>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={4}>
-                  <NCardVideoSmall
-                    image="/video_page_img_2.jpg"
-                    title="Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <NCardVideoSmall
-                    image="/video_page_img_3.jpg"
-                    title="Монгол Улсын Ерөнхийлөгч Ухнаагийн Хүрэлсүх"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <NCardVideoSmall
-                    image="/video_page_img_4.jpg"
-                    title="Загвар өмсөгч BILLY"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <NCardVideoSmall
-                    image="/video_page_img_5.jpg"
-                    title="20 жил өнгөрсөн ч үнэн илэрсэнгүй"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <NCardVideoSmall
-                    image="/video_page_img_6.jpg"
-                    title="Rokitbay: Монголоос үнэгүй тоглох боломжтой"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <NCardVideoSmall
-                    image="/video_page_img_7.jpg"
-                    title="Мото гэр бүл"
-                  />
+            </NSelectTitle>
+            <Grid container spacing={2}>
+              <Grid item sm={12} md={5}>
+                <NCardVideoLarge
+                  image="/video_page_img_1.jpg"
+                  title="Н.Төгсцогт: Би ийм тулаан хийх гэж л төрсөн"
+                />
+              </Grid>
+              <Grid item sm={12} md={7}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <NCardVideoSmall
+                      image="/video_page_img_2.jpg"
+                      title="Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <NCardVideoSmall
+                      image="/video_page_img_3.jpg"
+                      title="Монгол Улсын Ерөнхийлөгч Ухнаагийн Хүрэлсүх"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <NCardVideoSmall
+                      image="/video_page_img_4.jpg"
+                      title="Загвар өмсөгч BILLY"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <NCardVideoSmall
+                      image="/video_page_img_5.jpg"
+                      title="20 жил өнгөрсөн ч үнэн илэрсэнгүй"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <NCardVideoSmall
+                      image="/video_page_img_6.jpg"
+                      title="Rokitbay: Монголоос үнэгүй тоглох боломжтой"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <NCardVideoSmall
+                      image="/video_page_img_7.jpg"
+                      title="Мото гэр бүл"
+                    />
+                  </Grid>
                 </Grid>
               </Grid>
+              <Grid item xs={12}>
+                <Box display="flex" justifyContent="flex-end">
+                  <Button
+                    disableRipple
+                    variant="outlined"
+                    disableRipple
+                    className={classes.buttonWhite}
+                  >
+                    Бүгдийг харах+
+                  </Button>
+                </Box>
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <Box display="flex" justifyContent="flex-end">
-                <Button
-                  disableRipple
-                  variant="outlined"
-                  disableRipple
-                  className={classes.buttonWhite}
-                >
-                  Бүгдийг харах+
-                </Button>
-              </Box>
-            </Grid>
-          </Grid>
+          </Box>
         </Box>
       </section>
-      <section>
+      <section className="module__content">
         <NTitle title="Онлайн худалдаа" hasBorder>
           <IconShoppingCard style={{ marginRight: 8 }} />
         </NTitle>
@@ -777,7 +779,7 @@ const HomeContainer = () => {
           </Grid>
         </Box>
       </section>
-      <section>
+      <section className="module__content">
         <NTitle title="Аялал" hasBorder>
           <IconFlight style={{ marginRight: 8 }} />
         </NTitle>
@@ -786,9 +788,11 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section>
-        <NTitle title="Үл хөдлөх" hasBorder>
-          <IconHouse style={{ marginRight: 8 }} />
-        </NTitle>
+        <Box className="module__content">
+          <NTitle title="Үл хөдлөх" hasBorder>
+            <IconHouse style={{ marginRight: 8 }} />
+          </NTitle>
+        </Box>
         <Box mt={5} className={classes.realestateWrap}>
           <NCarousel
             slidesPerView={1}
@@ -839,7 +843,7 @@ const HomeContainer = () => {
           />
         </Box>
       </section>
-      <section>
+      <section className="module__content">
         <NTitle title="Нээлттэй платформ" hasBorder>
           <img
             src="/hee_2.png"
@@ -851,95 +855,104 @@ const HomeContainer = () => {
         </NTitle>
         <Box mt={4} />
       </section>
-      <section className={classes.sectionStickyWrap}>
-        <StickySidebar
-          className={classes.sidebarFamous}
-          offsetTop={16}
-          offsetBottom={16}
-        >
-          <NSelectTitle title="Алдартай" hasBorder />
-          <NFamousNewsItem
-            number={"1"}
-            editor={"Б.Дэлгэрцэцэг"}
-            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
-            star={5}
-            commentCount={58}
-          />
-          <NFamousNewsItem
-            number={"2"}
-            editor={"Б.Дэлгэрцэцэг"}
-            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
-            star={5}
-            commentCount={58}
-          />
-          <NFamousNewsItem
-            number={"3"}
-            editor={"Б.Дэлгэрцэцэг"}
-            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
-            star={4}
-            commentCount={58}
-          />
-          <NFamousNewsItem
-            number={"4"}
-            editor={"Б.Дэлгэрцэцэг"}
-            title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
-            star={3}
-            commentCount={58}
-          />
-          <Box mt={2}>
-            <Button disableRipple variant="outlined" disableRipple>
-              Бүгдийг харах
-            </Button>
-          </Box>
-        </StickySidebar>
-        <Box className={classes.content}>
-          <NSelectTitle title="Нийтлэл" hasBorder />
-          <Box mt={4} />
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={12} md={12}>
-              <NCardArticlePost />
-            </Grid>
-            <Grid item xs={12} sm={12}>
-              <NCardArticleItem
-                image={"/card_article_item_1.jpg"}
+      <section className={clsx(classes.sectionStickyWrap, "module__content")}>
+        <Grid container spacing={2}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={4}
+            lg={3}
+            className={classes.sidebarFamous}
+          >
+            <StickySidebar offsetTop={16} offsetBottom={16}>
+              <NSelectTitle title="Алдартай" hasBorder />
+              <NFamousNewsItem
+                number={"1"}
                 editor={"Б.Дэлгэрцэцэг"}
-                title={"Байр суурь: Үндэсний үйлдвэрлэл дампуурч байна"}
+                title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
                 star={5}
                 commentCount={58}
               />
-              <NCardArticleItem
-                image={"/card_article_item_2.jpg"}
+              <NFamousNewsItem
+                number={"2"}
                 editor={"Б.Дэлгэрцэцэг"}
-                title={"Зэсийн алтан үе айсуй"}
+                title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
                 star={5}
                 commentCount={58}
               />
-              <NCardArticleItem
-                image={"/card_article_item_3.jpg"}
+              <NFamousNewsItem
+                number={"3"}
                 editor={"Б.Дэлгэрцэцэг"}
-                title={
-                  "ПОЭЗЧУ-2021: Монгол, Оросын олон улсын интеграци ба хил орчмын хамтын ажиллагаа"
-                }
-                star={5}
+                title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+                star={4}
                 commentCount={58}
               />
-              <NCardArticleItem
-                image={"/card_article_item_4.jpg"}
+              <NFamousNewsItem
+                number={"4"}
                 editor={"Б.Дэлгэрцэцэг"}
-                title={
-                  "“ЭТТ” бонд: Гадаадын хөрөнгө оруулагчдыг татан оролцуулна"
-                }
-                star={5}
+                title={"Хүний зан чанарыг илчилж чаддаг хүчтэй зуршил.!"}
+                star={3}
                 commentCount={58}
               />
-              <Button disableRipple variant="outlined" disableRipple>
-                Бүгдийг харах
-              </Button>
-            </Grid>
+              <Box mt={2}>
+                <Button disableRipple variant="outlined" disableRipple>
+                  Бүгдийг харах
+                </Button>
+              </Box>
+            </StickySidebar>
           </Grid>
-        </Box>
+          <Grid item xs={12} sm={12} md={8} lg={9}>
+            <Box className={classes.content}>
+              <NSelectTitle title="Нийтлэл" hasBorder />
+              <Box mt={4} />
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={12} md={5}>
+                  <NCardArticlePost />
+                </Grid>
+                <Grid item xs={12} sm={12} md={7}>
+                  <NCardArticleItem
+                    image={"/card_article_item_1.jpg"}
+                    editor={"Б.Дэлгэрцэцэг"}
+                    title={"Байр суурь: Үндэсний үйлдвэрлэл дампуурч байна"}
+                    star={5}
+                    commentCount={58}
+                  />
+                  <NCardArticleItem
+                    image={"/card_article_item_2.jpg"}
+                    editor={"Б.Дэлгэрцэцэг"}
+                    title={"Зэсийн алтан үе айсуй"}
+                    star={5}
+                    commentCount={58}
+                  />
+                  <NCardArticleItem
+                    image={"/card_article_item_3.jpg"}
+                    editor={"Б.Дэлгэрцэцэг"}
+                    title={
+                      "ПОЭЗЧУ-2021: Монгол, Оросын олон улсын интеграци ба хил орчмын хамтын ажиллагаа"
+                    }
+                    star={5}
+                    commentCount={58}
+                  />
+                  <NCardArticleItem
+                    image={"/card_article_item_4.jpg"}
+                    editor={"Б.Дэлгэрцэцэг"}
+                    title={
+                      "“ЭТТ” бонд: Гадаадын хөрөнгө оруулагчдыг татан оролцуулна"
+                    }
+                    star={5}
+                    commentCount={58}
+                  />
+                  <Button disableRipple variant="outlined" disableRipple>
+                    Бүгдийг харах
+                  </Button>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+        </Grid>
       </section>
-      <section className={classes.sectionBottom}>
+      <section className={clsx(classes.sectionBottom, "module__content")}>
         <NTitle title="Судалгаа" hasBorder>
           <img
             src="/hee_3.png"
@@ -1088,7 +1101,6 @@ const HomeContainer = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  sectionTop: {},
   sectionWrap: {
     display: "flex",
     flexDirection: "row",
@@ -1123,12 +1135,9 @@ const useStyles = makeStyles((theme) => ({
     width: 340,
     paddingRight: theme.spacing(2),
   },
-  sidebarFamous: {
-    width: 340,
-    paddingRight: theme.spacing(2),
-  },
+  sidebarFamous: {},
   content: {
-    width: "calc(100% - 340px)",
+    // width: "calc(100% - 340px)",
   },
   sectionBottom: {
     marginTop: 50,
@@ -1136,11 +1145,7 @@ const useStyles = makeStyles((theme) => ({
   },
   blackBg: {
     backgroundColor: Colors.title,
-    marginLeft: "-4rem",
-    marginRight: "-4rem",
     marginBottom: theme.spacing(9),
-    paddingRight: "4rem",
-    paddingLeft: "4rem",
     "& .MuiSelect-icon": {
       color: Colors.text_gray,
     },
@@ -1157,8 +1162,8 @@ const useStyles = makeStyles((theme) => ({
     color: Colors.white,
   },
   realestateWrap: {
-    marginLeft: "-3rem",
-    marginRight: "-3rem",
+    paddingRight: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
   },
   pollTitle: {
     lineHeight: "20px",

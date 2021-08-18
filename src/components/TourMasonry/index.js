@@ -16,10 +16,12 @@ import itemData from "./itemData";
 const NTourMasonry = () => {
   const classes = useStyles();
   const _theme = useTheme();
+  // useMediaQuery(_theme.breakpoints.down("sm"));
+  const downSm = useMediaQuery(_theme.breakpoints.down("sm"));
 
   return (
     <Box className={classes.wrap}>
-      <ImageList rowHeight={369} cols={4} gap={20}>
+      <ImageList rowHeight={downSm ? 269 : 369} cols={downSm ? 2 : 4} gap={20}>
         {itemData.map((item) => (
           <ImageListItem
             className={classes.imageListItem}

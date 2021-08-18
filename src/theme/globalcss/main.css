@@ -21,13 +21,12 @@ body {
   margin: 0;
   background-color: #fff;
 }
-.main-wrapper main {
-  max-width: 110rem;
-  margin: 0 auto;
-  padding: 0 4rem;
-}
 .module__content {
-  padding: 0 4rem;
+  max-width: 110rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 .module__content_margin {
   margin: 0 -4rem;
@@ -148,9 +147,6 @@ body.font-very-large .MuiTypography-body2:not(.freeze) {
   .module__content {
     padding: 0 1rem;
   }
-  .main-wrapper main {
-    padding: 0 1rem;
-  }
 }
 @media (max-width: 1279px) {
   .footer-wrap::after {
@@ -160,12 +156,6 @@ body.font-very-large .MuiTypography-body2:not(.freeze) {
 @media (min-width: 1440px) {
   .footer-wrap::after {
     right: -175px;
-  }
-}
-@media (min-width: 1560px) {
-  .module__content {
-    max-width: 110rem;
-    margin: 0px auto;
   }
 }
 @media (min-width: 1600px) {

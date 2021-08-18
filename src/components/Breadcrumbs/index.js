@@ -11,34 +11,36 @@ const NBreadcrumbs = ({ dark, className, title }) => {
 
   return (
     <Box className={`${className} ${classes.wrap}`}>
-      <Typography variant="h1" className={classes.title}>
-        {title}
-      </Typography>
-      <Breadcrumbs
-        separator={
-          <IconNavigateNext fontSize="small" className={classes.separator} />
-        }
-        aria-label="breadcrumb"
-        className={classes.breadcrumbs}
-      >
-        <Link color="inherit" href="/" onClick={handleClick}>
-          <Typography variant="caption" className={classes.link}>
-            Улс төр
-          </Typography>
-        </Link>
-        <Link color="inherit" href="/" onClick={handleClick}>
-          <Typography variant="caption" className={classes.link}>
-            Онцлох мэдээ
-          </Typography>
-        </Link>
-        <Typography
-          variant="caption"
-          className={classes.link}
-          color="textPrimary"
-        >
-          Дэлгэрэнгүй
+      <Box className="module__content">
+        <Typography variant="h1" className={classes.title}>
+          {title}
         </Typography>
-      </Breadcrumbs>
+        <Breadcrumbs
+          separator={
+            <IconNavigateNext fontSize="small" className={classes.separator} />
+          }
+          aria-label="breadcrumb"
+          className={classes.breadcrumbs}
+        >
+          <Link color="inherit" href="/" onClick={handleClick}>
+            <Typography variant="caption" className={classes.link}>
+              Улс төр
+            </Typography>
+          </Link>
+          <Link color="inherit" href="/" onClick={handleClick}>
+            <Typography variant="caption" className={classes.link}>
+              Онцлох мэдээ
+            </Typography>
+          </Link>
+          <Typography
+            variant="caption"
+            className={classes.link}
+            color="textPrimary"
+          >
+            Дэлгэрэнгүй
+          </Typography>
+        </Breadcrumbs>
+      </Box>
     </Box>
   );
 };
@@ -48,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: (dark) => (dark == true ? Colors.black : Colors.bg_gray),
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
+    marginBottom: -1,
   },
   title: {
     fontWeight: 700,

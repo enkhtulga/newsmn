@@ -96,6 +96,16 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 48,
     },
   },
+  [theme.breakpoints.down("sm")]: {
+    cardWrap: {
+      flexDirection: "column",
+    },
+    contentWrap: {
+      paddingTop: theme.spacing(2),
+      paddingRight: 0,
+      paddingLeft: 0,
+    },
+  },
 }));
 
 export default NCardNewsItem;

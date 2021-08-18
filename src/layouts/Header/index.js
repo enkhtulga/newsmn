@@ -314,6 +314,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             alignItems="center"
             justifyContent="space-between"
             flexWrap="wrap"
+            width="100%"
             className={`${classes.topMenuMobileWrap} module__content`}
           >
             {renderTopMenu()}

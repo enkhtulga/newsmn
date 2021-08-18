@@ -42,6 +42,17 @@ const useStyles = makeStyles((theme) => ({
     overflowY: "scroll",
     paddingRight: theme.spacing(0.5),
   },
+  [theme.breakpoints.down("sm")]: {
+    wrap: {
+      flexDirection: "column",
+      height: 250,
+    },
+    title: {
+      margin: 0,
+      width: "100%",
+      marginBottom: theme.spacing(4),
+    },
+  },
 }));
 
 export default NHighlightPosts;

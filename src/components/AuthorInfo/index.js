@@ -16,7 +16,7 @@ const NAuthorInfo = () => {
       <Typography variant="body2" className={classes.occupation}>
         Сэтгүүлч
       </Typography>
-      <Box display="flex">
+      <Box display="flex" className={classes.metaWrap}>
         <Box textAlign="center" mr={2} ml={2}>
           <Typography variant="h4">594</Typography>
           <Typography variant="caption">нийтлэл</Typography>
@@ -52,6 +52,11 @@ const useStyles = makeStyles((theme) => ({
   },
   occupation: {
     paddingBottom: theme.spacing(1),
+  },
+  [theme.breakpoints.down("md")]: {
+    metaWrap: {
+      flexDirection: "column",
+    },
   },
 }));
 

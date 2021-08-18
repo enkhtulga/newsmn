@@ -25,6 +25,8 @@ import { useRouter } from "next/router";
 import { Colors } from "../../theme/colors";
 import NMegaMenu from "../../components/MegaMenu";
 import NBanner from "../../components/Banner";
+import clsx from "clsx";
+import NButtonPrimary from "../../components/ButtonPrimary";
 
 const VideoHeader = ({ toggleDrawer, open }) => {
   const classes = useStyles();
@@ -35,32 +37,33 @@ const VideoHeader = ({ toggleDrawer, open }) => {
   };
 
   return (
-    <div className={classes.grow}>
-      <AppBar className={classes.appBar} position="static" elevation={0}>
-        <Toolbar
-          className={`${classes.toolbar} module__content`}
-          disableGutters
-        >
-          <Box className={classes.logoWrap}>
+    <AppBar className={classes.appBar} position="static" elevation={0}>
+      <Toolbar className={`${classes.toolbar}`} disableGutters>
+        <Box className={clsx(classes.toolbarInner, "module__content")}>
+          <Box>
             <img src="/logo_main.png" alt="logo main" width={149} height={49} />
           </Box>
-          <Button variant="contained" className={classes.registerButton}>
-            Бүртгүүлэх
-          </Button>
-          <IconButton color="inherit" aria-label="menu">
-            <IconAccountCircle />
-          </IconButton>
-          <IconButton color="inherit" aria-label="menu">
-            <IconBookmark />
-          </IconButton>
-          <IconButton color="inherit" aria-label="menu">
-            <IconSearch />
-          </IconButton>
-          <IconButton color="inherit" aria-label="menu" edge="end">
-            <IconMenu />
-          </IconButton>
-        </Toolbar>
-        <Box className={`${classes.navbarWrapper} module__content`}>
+          <Box>
+            <NButtonPrimary className={classes.registerButton}>
+              Нэвтрэх
+            </NButtonPrimary>
+            <IconButton color="inherit" aria-label="menu">
+              <IconAccountCircle />
+            </IconButton>
+            <IconButton color="inherit" aria-label="menu">
+              <IconBookmark />
+            </IconButton>
+            <IconButton color="inherit" aria-label="menu">
+              <IconSearch />
+            </IconButton>
+            <IconButton color="inherit" aria-label="menu" edge="end">
+              <IconMenu />
+            </IconButton>
+          </Box>
+        </Box>
+      </Toolbar>
+      <Box className={`${classes.navbarWrapper}`}>
+        <Box className={clsx(classes.navbarInnerWrapper, "module__content")}>
           <List
             component="nav"
             aria-labelledby="nested-list-subheader"
@@ -161,16 +164,12 @@ const VideoHeader = ({ toggleDrawer, open }) => {
             </Link>
           </List>
         </Box>
-      </AppBar>
-    </div>
+      </Box>
+    </AppBar>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
-    margin: "0 -4rem",
-  },
   appBar: {
     backgroundColor: "white",
     borderBottom: "1px solid",
@@ -178,21 +177,13 @@ const useStyles = makeStyles((theme) => ({
     // zIndex: 1301,
   },
   toolbar: {
-    display: "flex",
-    alignItems: "center",
-    height: "100%",
-    justifyContent: "flex-end",
     background: Colors.black,
     height: 88,
-    position: "relative",
   },
-  logoWrap: {
-    position: "absolute",
-    left: "4rem",
-    top: "50%",
-    transform: "translateY(-50%)",
+  toolbarInner: {
     display: "flex",
-    alignItems: "center",
+    width: "100%",
+    justifyContent: "space-between",
   },
   registerButton: {
     marginRight: 8, //theme.spacing(1),
@@ -203,6 +194,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "center",
     backgroundColor: Colors.black,
+    marginTop: -1,
   },
   rootNav: {
     display: "flex",
@@ -212,6 +204,11 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     minWidth: 30,
     color: Colors.primary,
+  },
+  navbarInnerWrapper: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "flex-end",
   },
   list: {
     width: "initial",
@@ -261,6 +258,19 @@ const useStyles = makeStyles((theme) => ({
       right: -6,
       backgroundColor: Colors.border_red,
       position: "absolute",
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    toolbar: {
+      height: "auto",
+    },
+    toolbarInner: {
+      flexDirection: "column",
+      alignItems: "center",
+      marginTop: theme.spacing(2),
+    },
+    navbarWrapper: {
+      display: "none",
     },
   },
 }));

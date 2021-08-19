@@ -32,11 +32,7 @@ const NCardShopBook = ({ title, author, publisher, image, price }) => {
           {"Үндсэн үнэ: "}
           {price}
         </Typography>
-        <Button
-          variant="contained"
-          size="small"
-          style={{ backgroundColor: "#fff" }}
-        >
+        <Button variant="contained" size="small" className={classes.button}>
           Сагсанд нэмэх +
         </Button>
       </Box>
@@ -86,6 +82,19 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(0.5),
     paddingBottom: theme.spacing(1),
     display: "inline-block",
+  },
+  button: {
+    backgroundColor: Colors.white,
+    display: "block",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 8,
+  },
+  [theme.breakpoints.down("xs")]: {
+    wrap: {
+      paddingTop: theme.spacing(1),
+      paddingBottom: theme.spacing(1),
+    },
   },
 }));
 

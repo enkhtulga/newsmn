@@ -25,7 +25,7 @@ export default createTheme({
   typography: {
     fontFamily: font,
     h1: {
-      fontFamily: "Spectral",
+      fontFamily: "PT Serif",
       lineHeight: "27px",
       fontSize: 18,
       fontWeight: 600,

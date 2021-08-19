@@ -116,6 +116,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     color: Colors.light_blue_2,
   },
+  [theme.breakpoints.down("xs")]: {
+    wrap: {
+      flexDirection: "column",
+    },
+    contentWrap: {
+      paddingLeft: theme.spacing(0),
+    },
+    mediaOuterWrap: {
+      width: "100%",
+    },
+  },
 }));
 
 export default NTripItem;

@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 3,
     overflow: "hidden",
     textOverflow: "ellipsis",
-    height: 60,
+    height: 70,
     color: Colors.black,
   },
 }));

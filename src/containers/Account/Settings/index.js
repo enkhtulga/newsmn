@@ -22,198 +22,195 @@ const SettingsContainer = () => {
   return (
     <Box>
       <NBreadcrumbs title={"Тохиргоо"} />
-        <Box className="module__content">
-          <Box mt={5} />
-          <Grid container spacing={2}>
-            <Grid item xs={8}>
-              <Box className={classes.wrap}>
-                <Box display="flex" justifyContent="space-between" mb={4}>
-                  <Box display="flex">
-                    <Typography variant="body2" className={classes.role}>
-                      System Admin
-                    </Typography>
-                    <Typography variant="body2">07/05.2021</Typography>
-                  </Box>
-                  <Box display="flex" alignItems="center">
-                    <Button
-                      variant="outlined"
-                      color="primary"
-                      startIcon={<IconPrint fontSize="small" />}
-                      className={classes.button}
-                    >
-                      Print
-                    </Button>
-
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      className={classes.button}
-                    >
-                      Excel
-                    </Button>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      className={classes.button}
-                    >
-                      Pdf
-                    </Button>
-                  </Box>
-                </Box>
+      <Box className="module__content">
+        <Box mt={5} />
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <Box className={classes.wrap}>
+              <Box display="flex" justifyContent="space-between" mb={4}>
                 <Box display="flex">
-                  <Box
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                    mr={8}
+                  <Typography variant="body2" className={classes.role}>
+                    System Admin
+                  </Typography>
+                  <Typography variant="body2">07/05.2021</Typography>
+                </Box>
+                <Box display="flex" alignItems="center">
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    startIcon={<IconPrint fontSize="small" />}
+                    className={classes.button}
                   >
-                    <NAvatar size={110} />
-                    <Typography variant="body2" className={classes.name}>
-                      Алтай ОРГИЛ
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Grid container spacing={2}>
-                      <Grid item xs={6}>
-                        <FormControl
-                          variant="outlined"
-                          fullWidth
-                          className={classes.formControl}
-                        >
-                          <InputLabel htmlFor="surname">Овог</InputLabel>
-                          <OutlinedInput
-                            type={"text"}
-                            value={"Алтай"}
-                            disabled={true}
-                            labelWidth={35}
-                          />
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={6}>
-                        <FormControl
-                          variant="outlined"
-                          fullWidth
-                          className={classes.formControl}
-                        >
-                          <InputLabel htmlFor="fieldName">Нэр</InputLabel>
-                          <OutlinedInput
-                            type={"text"}
-                            value={"Оргил"}
-                            disabled={true}
-                            labelWidth={25}
-                          />
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={6}>
-                        <FormControl
-                          variant="outlined"
-                          fullWidth
-                          className={classes.formControl}
-                        >
-                          <InputLabel htmlFor="fieldName">
-                            Регистерийн дугаар
-                          </InputLabel>
-                          <OutlinedInput
-                            type={"text"}
-                            value={"Ч Б 78930205"}
-                            disabled={true}
-                            labelWidth={120}
-                          />
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={6}>
-                        <FormControl
-                          variant="outlined"
-                          fullWidth
-                          className={classes.formControl}
-                        >
-                          <InputLabel htmlFor="fieldName">
-                            Утасны дугаар
-                          </InputLabel>
-                          <OutlinedInput
-                            type={"text"}
-                            value={"88332299"}
-                            disabled={true}
-                            labelWidth={90}
-                          />
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={12}>
-                        <Box textAlign="right">
-                          <Button variant="outlined" color="primary">
-                            Хадгалах
-                          </Button>
-                        </Box>
-                      </Grid>
-                    </Grid>
-                  </Box>
+                    Print
+                  </Button>
+
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classes.button}
+                  >
+                    Excel
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classes.button}
+                  >
+                    Pdf
+                  </Button>
                 </Box>
               </Box>
-            </Grid>
-            <Grid item xs={4}>
-              <Box className={classes.wrap}>
-                <Grid container spacing={2}>
-                  <Grid item xs={12}>
-                    <FormControl
-                      variant="outlined"
-                      fullWidth
-                      className={classes.formControl}
-                    >
-                      <InputLabel htmlFor="password">Хуучин нууц үг</InputLabel>
-                      <OutlinedInput
-                        type={"password"}
-                        value={"Алтай"}
-                        disabled={true}
-                        labelWidth={85}
-                      />
-                    </FormControl>
+              <Box display="flex">
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                  mr={8}
+                >
+                  <NAvatar size={110} />
+                  <Typography variant="body2" className={classes.name}>
+                    Алтай ОРГИЛ
+                  </Typography>
+                </Box>
+                <Box>
+                  <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                      <FormControl
+                        variant="outlined"
+                        fullWidth
+                        className={classes.formControl}
+                      >
+                        <InputLabel htmlFor="surname">Овог</InputLabel>
+                        <OutlinedInput
+                          type={"text"}
+                          value={"Алтай"}
+                          disabled={true}
+                          labelWidth={35}
+                        />
+                      </FormControl>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <FormControl
+                        variant="outlined"
+                        fullWidth
+                        className={classes.formControl}
+                      >
+                        <InputLabel htmlFor="fieldName">Нэр</InputLabel>
+                        <OutlinedInput
+                          type={"text"}
+                          value={"Оргил"}
+                          disabled={true}
+                          labelWidth={25}
+                        />
+                      </FormControl>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <FormControl
+                        variant="outlined"
+                        fullWidth
+                        className={classes.formControl}
+                      >
+                        <InputLabel htmlFor="fieldName">
+                          Регистерийн дугаар
+                        </InputLabel>
+                        <OutlinedInput
+                          type={"text"}
+                          value={"Ч Б 78930205"}
+                          disabled={true}
+                          labelWidth={120}
+                        />
+                      </FormControl>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <FormControl
+                        variant="outlined"
+                        fullWidth
+                        className={classes.formControl}
+                      >
+                        <InputLabel htmlFor="fieldName">
+                          Утасны дугаар
+                        </InputLabel>
+                        <OutlinedInput
+                          type={"text"}
+                          value={"88332299"}
+                          disabled={true}
+                          labelWidth={90}
+                        />
+                      </FormControl>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Box textAlign="right">
+                        <Button variant="outlined" color="primary">
+                          Хадгалах
+                        </Button>
+                      </Box>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12}>
-                    <FormControl
-                      variant="outlined"
-                      fullWidth
-                      className={classes.formControl}
-                    >
-                      <InputLabel htmlFor="password-new">
-                        Шинэ нууц үг
-                      </InputLabel>
-                      <OutlinedInput
-                        type={"password"}
-                        value={"Оргил"}
-                        disabled={true}
-                        labelWidth={75}
-                      />
-                    </FormControl>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <FormControl
-                      variant="outlined"
-                      fullWidth
-                      className={classes.formControl}
-                    >
-                      <InputLabel htmlFor="password-repeat">
-                        Шинэ нууц үг давтах
-                      </InputLabel>
-                      <OutlinedInput
-                        type={"password"}
-                        value={"Ч Б 78930205"}
-                        disabled={true}
-                        labelWidth={120}
-                      />
-                    </FormControl>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Box mt={-1}>
-                      <Button variant="outlined" color="primary">
-                        Хадгалах
-                      </Button>
-                    </Box>
-                  </Grid>
-                </Grid>
+                </Box>
               </Box>
-            </Grid>
+            </Box>
           </Grid>
-        </Box>
+          <Grid item xs={4}>
+            <Box className={classes.wrap}>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <FormControl
+                    variant="outlined"
+                    fullWidth
+                    className={classes.formControl}
+                  >
+                    <InputLabel htmlFor="password">Хуучин нууц үг</InputLabel>
+                    <OutlinedInput
+                      type={"password"}
+                      value={"Алтай"}
+                      disabled={true}
+                      labelWidth={85}
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <FormControl
+                    variant="outlined"
+                    fullWidth
+                    className={classes.formControl}
+                  >
+                    <InputLabel htmlFor="password-new">Шинэ нууц үг</InputLabel>
+                    <OutlinedInput
+                      type={"password"}
+                      value={"Оргил"}
+                      disabled={true}
+                      labelWidth={75}
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <FormControl
+                    variant="outlined"
+                    fullWidth
+                    className={classes.formControl}
+                  >
+                    <InputLabel htmlFor="password-repeat">
+                      Шинэ нууц үг давтах
+                    </InputLabel>
+                    <OutlinedInput
+                      type={"password"}
+                      value={"Ч Б 78930205"}
+                      disabled={true}
+                      labelWidth={120}
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box mt={-1}>
+                    <Button variant="outlined" color="primary">
+                      Хадгалах
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

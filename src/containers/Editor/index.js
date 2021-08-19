@@ -11,115 +11,108 @@ const EditorsContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs
-          className="module__content"
-          title={"Сэтгүүлчдийн платформ"}
+      <NBreadcrumbs title={"Сэтгүүлчдийн платформ"} />
+      <Box className="module__content">
+        <NPageMenu
+          items={[
+            { name: "Улс төр", link: "/editors" },
+            { name: "Эдийн засаг", link: "/b" },
+            { name: "Нийгэм", link: "/atoms" },
+            { name: "Дэлхий", link: "/d" },
+            { name: "Спорт", link: "/eqq" },
+            { name: "Энтертайнмент", link: "/f" },
+            { name: "Шар мэдээ", link: "/g" },
+          ]}
+          primaryColor={Colors.primary}
         />
+        <Box mt={10} />
+        <Grid container spacing={2}>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover />
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
-      <NPageMenu
-        items={[
-          { name: "Улс төр", link: "/editors" },
-          { name: "Эдийн засаг", link: "/b" },
-          { name: "Нийгэм", link: "/atoms" },
-          { name: "Дэлхий", link: "/d" },
-          { name: "Спорт", link: "/eqq" },
-          { name: "Энтертайнмент", link: "/f" },
-          { name: "Шар мэдээ", link: "/g" },
-        ]}
-        primaryColor={Colors.primary}
-      />
-      <Box mt={10} />
-      <Grid container spacing={2}>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-        <Grid item xs={2}>
-          <Box mb={8}>
-            <NJournalist size={136} hasHover />
-          </Box>
-        </Grid>
-      </Grid>
     </Box>
   );
 };
 
-const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
-}));
+const useStyles = makeStyles((theme) => ({}));
 
 export default EditorsContainer;

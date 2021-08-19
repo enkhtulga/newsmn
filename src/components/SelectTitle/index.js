@@ -32,7 +32,22 @@ const NSelectTitle = ({
           <Typography variant="h4">{title}</Typography>
         </Box>
       </Box>
-      <Select id="simple-select" value={70} disableUnderline>
+      <Select
+        id="simple-select"
+        value={70}
+        disableUnderline
+        MenuProps={{
+          getContentAnchorEl: null,
+          anchorOrigin: {
+            vertical: "bottom",
+            horizontal: "center",
+          },
+          transformOrigin: {
+            vertical: "top",
+            horizontal: "center",
+          },
+        }}
+      >
         <MenuItem value={10}>Даваа 2021-05-09</MenuItem>
         <MenuItem value={20}>Мягмар 2021-05-10</MenuItem>
         <MenuItem value={30}>Лхагва 2021-05-11</MenuItem>

@@ -33,6 +33,7 @@ const NPageMenu = ({ items, primaryColor, justifyContent, isDark }) => {
                 <ListItemText
                   className={classes.listText}
                   primary={item.name}
+                  primaryTypographyProps={{ noWrap: true }}
                 />
               </ListItem>
             </Link>
@@ -52,7 +53,8 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "1px solid",
     borderBottomColor: Colors.border_gray_2,
     justifyContent: (props) => props.justifyContent,
-    overflowX: "scroll",
+    overflowX: "auto",
+    overflowY: "hidden",
   },
   list: {
     "&:first-child": {

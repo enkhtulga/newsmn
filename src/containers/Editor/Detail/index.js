@@ -18,25 +18,21 @@ const EditorDetailContainer = () => {
   return (
     <Box>
       <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs
-          className="module__content"
-          title={"Сэтгүүлчдийн платформ"}
-        />
+        <NBreadcrumbs title={"Сэтгүүлчдийн платформ"} />
       </Box>
-      <Box className={`${classes.editorDetailWrap} module__content_margin`}>
+      <Box className={`${classes.editorDetailWrap}`}>
         <Box className="module__content">
           <Grid container spacing={2}>
-            <Grid item xs="5">
+            <Grid item xs={12} sm={5} md={5}>
               <Box className={classes.imageWrap} textAlign="center">
                 <img
                   src="/editor_detail_img_1.png"
                   className={classes.image}
                   width={431}
-                  height={431}
                 />
               </Box>
             </Grid>
-            <Grid item xs="6">
+            <Grid item xs={12} sm={6}>
               <Typography variant="h1" className={classes.editorName}>
                 Ж. Нямсүрэн
               </Typography>
@@ -61,120 +57,129 @@ const EditorDetailContainer = () => {
           </Grid>
         </Box>
       </Box>
-      <Box className={`module__content_margin`}>
-        <Box className="module__content">
-          <Grid container spacing={2}>
-            <Grid item xs="3"></Grid>
-            <Grid item xs="6">
-              <Box mt={4} />
-              <Typography variant="body2" className={classes.date}>
-                2021.06.20
-              </Typography>
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <Box mt={2} />
-              <Typography variant="body2" className={classes.date}>
-                2021.05.16
-              </Typography>
-              <NEditorCardPost />
-              <Box mt={2} />
-              <Typography variant="body2" className={classes.date}>
-                2021.05.14
-              </Typography>
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <Box mt={2} />
-              <Typography variant="body2" className={classes.date}>
-                2021.05.10
-              </Typography>
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <Box mt={2} />
-              <Typography variant="body2" className={classes.date}>
-                2021.04.05
-              </Typography>
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <NEditorCardPost />
-              <Box mb={10} />
-            </Grid>
-            <Grid item xs="3"></Grid>
-            <Grid item xs="12">
-              <NTitle title="Редакцийн сонголт">
-                <img
-                  src="/hee_1.png"
-                  alt="Редакцийн сонголт"
-                  width="26"
-                  height="26"
-                  style={{ marginRight: "4px" }}
-                />
-              </NTitle>
-              <Grid container spacing={2}>
-                <Grid item xs={3}>
-                  <NEditor />
-                  <Box mb={4} />
-                  <NEditorPost />
-                  <NEditorPost />
-                </Grid>
-                <Grid item xs={3}>
-                  <NEditor />
-                  <Box mb={4} />
-                  <NEditorPost />
-                  <NEditorPost />
-                </Grid>
-                <Grid item xs={3}>
-                  <NEditor />
-                  <Box mb={4} />
-                  <NEditorPost />
-                  <NEditorPost />
-                </Grid>
-                <Grid item xs={3}>
-                  <NEditor />
-                  <Box mb={4} />
-                  <NEditorPost />
-                  <NEditorPost />
-                </Grid>
+      <Box className="module__content">
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={2} lg={3}></Grid>
+          <Grid item xs={12} md={8} lg={6}>
+            <Box mt={4} />
+            <Typography variant="body2" className={classes.date}>
+              2021.06.20
+            </Typography>
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <Box mt={2} />
+            <Typography variant="body2" className={classes.date}>
+              2021.05.16
+            </Typography>
+            <NEditorCardPost />
+            <Box mt={2} />
+            <Typography variant="body2" className={classes.date}>
+              2021.05.14
+            </Typography>
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <Box mt={2} />
+            <Typography variant="body2" className={classes.date}>
+              2021.05.10
+            </Typography>
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <Box mt={2} />
+            <Typography variant="body2" className={classes.date}>
+              2021.04.05
+            </Typography>
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <NEditorCardPost />
+            <Box mb={10} />
+          </Grid>
+          <Grid item xs={12} md={2} lg={3}></Grid>
+          <Grid item xs={12} md={12}>
+            <NTitle title="Редакцийн сонголт">
+              <img
+                src="/hee_1.png"
+                alt="Редакцийн сонголт"
+                width="26"
+                height="26"
+                style={{ marginRight: "4px" }}
+              />
+            </NTitle>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={3}>
+                <NEditor />
+                <Box mb={4} />
+                <NEditorPost />
+                <NEditorPost />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <NEditor />
+                <Box mb={4} />
+                <NEditorPost />
+                <NEditorPost />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <NEditor />
+                <Box mb={4} />
+                <NEditorPost />
+                <NEditorPost />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <NEditor />
+                <Box mb={4} />
+                <NEditorPost />
+                <NEditorPost />
               </Grid>
             </Grid>
-            <Grid xs="12">
-              <Box mt={9} />
-              <NTitle title="Нийтлэл" hasBorder>
-                <img
-                  src="/hee_4.png"
-                  alt="Нийтлэл"
-                  width="26"
-                  height="26"
-                  style={{ marginRight: "4px" }}
-                />
-              </NTitle>
-              <Box mb={10}>
-                <Box mt={5} mb={9}>
-                  <Typography variant="h4">• Сэтгүүлчдийн платформ</Typography>
-                </Box>
-                <NCarousel
-                  slidesPerView={6}
-                  spaceBetween={16}
-                  navigation
-                  pagination
-                  items={[
-                    <NJournalist />,
-                    <NJournalist />,
-                    <NJournalist />,
-                    <NJournalist />,
-                    <NJournalist />,
-                    <NJournalist />,
-                    <NJournalist />,
-                    <NJournalist />,
-                  ]}
-                />
-              </Box>
-            </Grid>
           </Grid>
-        </Box>
+          <Grid xs="12">
+            <Box mt={9} />
+            <NTitle title="Нийтлэл" hasBorder>
+              <img
+                src="/hee_4.png"
+                alt="Нийтлэл"
+                width="26"
+                height="26"
+                style={{ marginRight: "4px" }}
+              />
+            </NTitle>
+            <Box mb={10}>
+              <Box mt={5} mb={9}>
+                <Typography variant="h4">• Сэтгүүлчдийн платформ</Typography>
+              </Box>
+              <NCarousel
+                slidesPerView={2}
+                spaceBetween={16}
+                navigation
+                pagination
+                breakpoints={{
+                  1280: {
+                    slidesPerView: 6,
+                  },
+                  960: {
+                    slidesPerView: 4,
+                  },
+                  600: {
+                    slidesPerView: 3,
+                  },
+                }}
+                items={[
+                  <NJournalist />,
+                  <NJournalist />,
+                  <NJournalist />,
+                  <NJournalist />,
+                  <NJournalist />,
+                  <NJournalist />,
+                  <NJournalist />,
+                  <NJournalist />,
+                ]}
+              />
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
@@ -182,7 +187,6 @@ const EditorDetailContainer = () => {
 
 const useStyles = makeStyles((theme) => ({
   breadcrumbsWrap: {
-    margin: "0 -4rem",
     paddingBottom: theme.spacing(1),
   },
   imageWrap: {
@@ -212,6 +216,14 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "1px solid",
     borderBottomColor: Colors.primary,
     marginBottom: theme.spacing(5),
+  },
+  [theme.breakpoints.down("sm")]: {
+    editorName: {
+      paddingTop: theme.spacing(2),
+    },
+    image: {
+      paddingTop: theme.spacing(2),
+    },
   },
 }));
 

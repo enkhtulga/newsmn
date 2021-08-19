@@ -69,6 +69,18 @@ const useStyles = makeStyles((theme) => ({
       color: Colors.primary,
     },
   },
+  [theme.breakpoints.down("xs")]: {
+    wrap: {
+      flexWrap: "wrap",
+    },
+    contentWrap: {
+      paddingTop: theme.spacing(2),
+      paddingLeft: 0,
+    },
+    mediaOuterWrap: {
+      width: "100%",
+    },
+  },
 }));
 
 export default NEditorCardPost;

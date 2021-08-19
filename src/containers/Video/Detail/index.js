@@ -27,16 +27,11 @@ const VideoDetailContainer = ({ videoPostId }) => {
   const classes = useStyles();
 
   return (
-    <Box>
-      <Box
-        pt={12}
-        pb={12}
-        className={`${classes.bgBlack} module__content_margin`}
-        textAlign="center"
-      >
-        <NBanner src="/banner_post_single_long.jpg" width={1376} height={130} />
-      </Box>
-      <Box className={`${classes.bgBlack} module__content_margin`}>
+    <Box className={classes.bgBlack}>
+      <Box className={"module__content"}>
+        <Box pt={12} pb={12} textAlign="center">
+          <NBanner src="/banner_post_single_long.jpg" width={1376} />
+        </Box>
         <Box pb={9} maxWidth={1180} mr="auto" ml="auto">
           <Box className={classes.mediaOuterWrap}>
             <NCardMedia paddingTop="54.23%" image="/video_detail_img.jpg" />
@@ -65,85 +60,75 @@ const VideoDetailContainer = ({ videoPostId }) => {
             гүйцэтгэнэ
           </Typography>
         </Box>
-      </Box>
-      <Box className={`${classes.bgBlack} module__content_margin`}>
-        <Box className="module__content">
-          <NSelectTitle
-            coloredTitle="News"
-            color={Colors.primary}
-            title="content"
-            dark
-          >
-            <img
-              src="/hee_3.png"
-              alt="News content"
-              width="26"
-              height="26"
-              style={{ marginRight: "4px" }}
-            />
-          </NSelectTitle>
-          <Box mb={4} />
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_1.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_2.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_3.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_4.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_5.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_6.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_7.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardVideoSmall
-                image="/video_page_img_3.jpg"
-                title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
-              />
-            </Grid>
-          </Grid>
-        </Box>
-        <Box
-          pt={10}
-          pb={15}
-          textAlign="center"
-          className={`${classes.bgGray} module__content_margin`}
+        <NSelectTitle
+          coloredTitle="News"
+          color={Colors.primary}
+          title="content"
+          dark
         >
+          <img
+            src="/hee_3.png"
+            alt="News content"
+            width="26"
+            height="26"
+            style={{ marginRight: "4px" }}
+          />
+        </NSelectTitle>
+        <Box mb={4} />
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_1.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_2.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_3.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_4.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_5.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_6.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_7.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3}>
+            <NCardVideoSmall
+              image="/video_page_img_3.jpg"
+              title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
+            />
+          </Grid>
+        </Grid>
+        <Box pt={10} pb={15} textAlign="center" className={`${classes.bgGray}`}>
           <NBanner
             src="/banner_video_bottom.jpg"
             width={1144}
-            height={201}
             link="https://recruitment.minii-suljee.mn/"
           />
         </Box>

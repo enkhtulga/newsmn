@@ -142,7 +142,7 @@ const useStyles = makeStyles((theme) => ({
     flexBasis: "20%",
     maxWidth: "20%",
     marginRight: 0,
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 600,
     fontSize: 14,
     lineHeight: "10px",

@@ -9,6 +9,7 @@ import {
   IconButton,
   Link,
 } from "@material-ui/core";
+import { useRouter } from "next/router";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { Colors } from "../../theme/colors";
 import {
@@ -21,6 +22,7 @@ import NInfoPartnerPost from "../../components/InfoPartnerPost";
 
 const NDrawer = ({ open, toggleDrawer }) => {
   const classes = useStyles();
+  const router = useRouter();
 
   const [state, setState] = useState({
     home: false,
@@ -72,25 +74,53 @@ const NDrawer = ({ open, toggleDrawer }) => {
           </ListItem>
           <Collapse in={state["home"]} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/politics")}
+              >
                 <CustomListItemText primary="Улс төр" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/politics")}
+              >
                 <CustomListItemText primary="Эдийн засаг" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/politics")}
+              >
                 <CustomListItemText primary="Нийгэм" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/politics")}
+              >
                 <CustomListItemText primary="Дэлхий" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/sport")}
+              >
                 <CustomListItemText primary="Спорт" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/entertainment")}
+              >
                 <CustomListItemText primary="Энтертайнмент" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/yellownews")}
+              >
                 <CustomListItemText primary="Шар мэдээ" />
               </ListItem>
             </List>
@@ -108,10 +138,18 @@ const NDrawer = ({ open, toggleDrawer }) => {
           </ListItem>
           <Collapse in={state["article"]} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/editors")}
+              >
                 <CustomListItemText primary="Сэтгүүлчдийн платформ" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/politics")}
+              >
                 <CustomListItemText primary="Нээлттэй платформ" />
               </ListItem>
             </List>
@@ -129,10 +167,18 @@ const NDrawer = ({ open, toggleDrawer }) => {
           </ListItem>
           <Collapse in={state["content"]} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/podcast")}
+              >
                 <CustomListItemText primary="Подкаст" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/shop")}
+              >
                 <CustomListItemText primary="Видео сан" />
               </ListItem>
             </List>
@@ -147,7 +193,11 @@ const NDrawer = ({ open, toggleDrawer }) => {
           </ListItem>
           <Collapse in={state["trade"]} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/shop")}
+              >
                 <CustomListItemText primary="Ном" />
               </ListItem>
               <ListItem button className={classes.nested}>

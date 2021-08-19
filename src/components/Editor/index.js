@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(3),
   },
   name: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     fontSize: 14,
     lineHeight: "20px",

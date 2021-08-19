@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     marginTop: theme.spacing(1),
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     color: Colors.white,
     "&:hover": {
       color: Colors.primary,

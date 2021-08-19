@@ -14,171 +14,162 @@ const PodcastDetailContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Подкаст"} />
+      <NBreadcrumbs title={"Подкаст"} />
+      <Box
+        className={classes.sliderContent}
+        style={{ backgroundImage: 'url("/podcast_detail_img_1.jpg")' }}
+      >
+        <Box className={classes.sliderInnerContent}></Box>
       </Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <Box
-          className={classes.sliderContent}
-          style={{ backgroundImage: 'url("/podcast_detail_img_1.jpg")' }}
-        >
-          <Box className={classes.sliderInnerContent}></Box>
-        </Box>
-      </Box>
-      <Box className={`module__content_margin`}>
-        <Box className="module__content">
-          <Grid container spacing={2}>
-            <Grid item xs={2}></Grid>
-            <Grid item xs={8}>
-              <Box mt={-5}>
-                <NCardPodcastDetail />
-                <Box mt={4} mb={2}>
-                  <Button variant="contained" className={classes.comment}>
-                    Сэтгэгдэл харах /100/
+      <Box className="module__content">
+        <Grid container spacing={2}>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={8}>
+            <Box mt={-5}>
+              <NCardPodcastDetail />
+              <Box mt={4} mb={2}>
+                <Button variant="contained" className={classes.comment}>
+                  Сэтгэгдэл харах /100/
+                </Button>
+              </Box>
+              <Box>
+                <Typography variant="body2" className={classes.commentTitle}>
+                  Cэтгэгдэл:
+                </Typography>
+                <NComment
+                  name="Админ"
+                  commentDate="2020-01-05"
+                  comment="Proactively fabricate one-to-one materials via effective e-business. Completely synergize scalable e-commerce rather than high standards in e-services."
+                />
+                <NComment
+                  name="Зочин"
+                  image="/home_img_11.jpg"
+                  commentDate="2020-01-05"
+                  comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
+                  marginLeft={86}
+                />
+                <NComment
+                  name="Админ"
+                  commentDate="2020-01-05"
+                  comment="Proactively fabricate one-to-one materials via effective e-business. Completely synergize scalable e-commerce rather than high standards in e-services. Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology after plug-and-play networks."
+                />
+                <NComment
+                  name="Зочин"
+                  image="/home_img_11.jpg"
+                  commentDate="2020-01-05"
+                  comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
+                  marginLeft={86}
+                />
+                <TextField
+                  label="Бичих талбар"
+                  multiline
+                  fullWidth
+                  rows={6}
+                  variant="outlined"
+                />
+                <Box mt={3} />
+                <TextField label="И-Мэйл" fullWidth variant="outlined" />
+                <Box mt={3} mb={9} display="flex">
+                  <Button variant="contained" color="primary">
+                    Илгээх
+                  </Button>
+                  <Box mr={2} />
+                  <Button variant="outlined" color="primary">
+                    Арилгах
                   </Button>
                 </Box>
-                <Box>
-                  <Typography variant="body2" className={classes.commentTitle}>
-                    Cэтгэгдэл:
-                  </Typography>
-                  <NComment
-                    name="Админ"
-                    commentDate="2020-01-05"
-                    comment="Proactively fabricate one-to-one materials via effective e-business. Completely synergize scalable e-commerce rather than high standards in e-services."
-                  />
-                  <NComment
-                    name="Зочин"
-                    image="/home_img_11.jpg"
-                    commentDate="2020-01-05"
-                    comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
-                    marginLeft={86}
-                  />
-                  <NComment
-                    name="Админ"
-                    commentDate="2020-01-05"
-                    comment="Proactively fabricate one-to-one materials via effective e-business. Completely synergize scalable e-commerce rather than high standards in e-services. Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology after plug-and-play networks."
-                  />
-                  <NComment
-                    name="Зочин"
-                    image="/home_img_11.jpg"
-                    commentDate="2020-01-05"
-                    comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
-                    marginLeft={86}
-                  />
-                  <TextField
-                    label="Бичих талбар"
-                    multiline
-                    fullWidth
-                    rows={6}
-                    variant="outlined"
-                  />
-                  <Box mt={3} />
-                  <TextField label="И-Мэйл" fullWidth variant="outlined" />
-                  <Box mt={3} mb={9} display="flex">
-                    <Button variant="contained" color="primary">
-                      Илгээх
-                    </Button>
-                    <Box mr={2} />
-                    <Button variant="outlined" color="primary">
-                      Арилгах
-                    </Button>
-                  </Box>
-                </Box>
-                <Box mt={10} mb={4}>
-                  <Typography variant="h1">Подкаст</Typography>
-                  <Typography variant="body2" className={classes.label}>
-                    Шинэ дугаарууд
-                  </Typography>
-                </Box>
-                <NAudioPlayer shadowLayout image="/podcast_img_4.jpg" />
-                <NAudioPlayer shadowLayout image="/podcast_img_5.jpg" />
-                <NAudioPlayer shadowLayout image="/podcast_img_6.jpg" />
-                <NAudioPlayer shadowLayout image="/podcast_img_4.jpg" />
-                <NAudioPlayer shadowLayout image="/podcast_img_5.jpg" />
-                <Box mt={8} mb={5}>
-                  <Typography variant="h1">Боловсрол</Typography>
-                  <Typography variant="body2" className={classes.label}>
-                    Шинэ дугаарууд
-                  </Typography>
-                </Box>
-                <NCarousel
-                  slidesPerView={4}
-                  spaceBetween={16}
-                  pagination
-                  navigation
-                  arrowSpacing={"-30px"}
-                  items={[
-                    <NCardPodcast image="/podcast_card_img_1.jpg" />,
-                    <NCardPodcast image="/podcast_card_img_2.jpg" />,
-                    <NCardPodcast image="/podcast_card_img_3.jpg" />,
-                    <NCardPodcast image="/podcast_card_img_4.jpg" />,
-                    <NCardPodcast />,
-                    <NCardPodcast image="/podcast_card_img_1.jpg" />,
-                    <NCardPodcast />,
-                    <NCardPodcast image="/podcast_card_img_2.jpg" />,
-                    <NCardPodcast />,
-                    <NCardPodcast image="/podcast_card_img_3.jpg" />,
-                  ]}
-                />
-                <Box mt={5} mb={5}>
-                  <Typography variant="h1">Боловсрол</Typography>
-                  <Typography variant="body2" className={classes.label}>
-                    Шинэ дугаарууд
-                  </Typography>
-                </Box>
-                <Grid container spacing={2}>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_1.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_2.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_3.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_4.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_2.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_3.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_4.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_1.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_3.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_4.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_1.jpg" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <NCardPodcast image="/podcast_card_img_2.jpg" />
-                  </Grid>
-                </Grid>
-                <Box mb={12} />
               </Box>
-            </Grid>
-            <Grid item xs={2}></Grid>
+              <Box mt={10} mb={4}>
+                <Typography variant="h1">Подкаст</Typography>
+                <Typography variant="body2" className={classes.label}>
+                  Шинэ дугаарууд
+                </Typography>
+              </Box>
+              <NAudioPlayer shadowLayout image="/podcast_img_4.jpg" />
+              <NAudioPlayer shadowLayout image="/podcast_img_5.jpg" />
+              <NAudioPlayer shadowLayout image="/podcast_img_6.jpg" />
+              <NAudioPlayer shadowLayout image="/podcast_img_4.jpg" />
+              <NAudioPlayer shadowLayout image="/podcast_img_5.jpg" />
+              <Box mt={8} mb={5}>
+                <Typography variant="h1">Боловсрол</Typography>
+                <Typography variant="body2" className={classes.label}>
+                  Шинэ дугаарууд
+                </Typography>
+              </Box>
+              <NCarousel
+                slidesPerView={4}
+                spaceBetween={16}
+                pagination
+                navigation
+                arrowSpacing={"-30px"}
+                items={[
+                  <NCardPodcast image="/podcast_card_img_1.jpg" />,
+                  <NCardPodcast image="/podcast_card_img_2.jpg" />,
+                  <NCardPodcast image="/podcast_card_img_3.jpg" />,
+                  <NCardPodcast image="/podcast_card_img_4.jpg" />,
+                  <NCardPodcast />,
+                  <NCardPodcast image="/podcast_card_img_1.jpg" />,
+                  <NCardPodcast />,
+                  <NCardPodcast image="/podcast_card_img_2.jpg" />,
+                  <NCardPodcast />,
+                  <NCardPodcast image="/podcast_card_img_3.jpg" />,
+                ]}
+              />
+              <Box mt={5} mb={5}>
+                <Typography variant="h1">Боловсрол</Typography>
+                <Typography variant="body2" className={classes.label}>
+                  Шинэ дугаарууд
+                </Typography>
+              </Box>
+              <Grid container spacing={2}>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_1.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_2.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_3.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_4.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_2.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_3.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_4.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_1.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_3.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_4.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_1.jpg" />
+                </Grid>
+                <Grid item xs={3}>
+                  <NCardPodcast image="/podcast_card_img_2.jpg" />
+                </Grid>
+              </Grid>
+              <Box mb={12} />
+            </Box>
           </Grid>
-        </Box>
+          <Grid item xs={2}></Grid>
+        </Grid>
       </Box>
     </Box>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   sliderContent: {
     height: 107,
     backgroundPosition: "center center",

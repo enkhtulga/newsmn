@@ -11,6 +11,7 @@ import {
   Select,
   MenuItem,
 } from "@material-ui/core";
+import { useRouter } from "next/router";
 import clsx from "clsx";
 import StickySidebar from "../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
@@ -48,6 +49,7 @@ import {
 
 const HomeContainer = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   const [pollState, setPollState] = useState("");
   const [pollCategory, setPollCategory] = useState(10);
@@ -271,91 +273,103 @@ const HomeContainer = () => {
         </Box>
       </section>
       <section className={clsx(classes.sectionMiddle2, "module__content")}>
-        <Box className={classes.sidebar}>
-          <NSelectTitle title="Hit news" hasBorder>
-            <img
-              src="/hee_2.png"
-              alt="hit news"
-              width="26"
-              height="26"
-              style={{ marginRight: "4px" }}
-            />
-          </NSelectTitle>
-          <NHitNewsItem
-            isFirst
-            number={"1"}
-            text={"Цаг агаарын аюулт үзэгдлээс сэрэмжлүүлж байна"}
-          />
-          <NHitNewsItem
-            number={"2"}
-            text={
-              "Л.Оюун-Эрдэнэ: Бид парламентын тогтолцооноосоо ухарч болохгүй"
-            }
-          />
-          <NHitNewsItem
-            number={"3"}
-            text={
-              "Путин: Бид нацизмыг сөнөөсөн үндэстэн гэдгээрээ үеийн үед бахархах ёстой!"
-            }
-          />
-          <NHitNewsItem
-            number={"4"}
-            text={"'Миний хувьд энэ вакцины асуудалд нөлөөлөх боломжгүй'"}
-          />
-          <NHitNewsItem
-            number={"5"}
-            text={"Дуучин М.Нарантуяа У.Хүрэлсүхэд шаардлага хүргүүлэв"}
-          />
-          <NHitNewsItem
-            number={"6"}
-            text={"Төрийн банк: Харилцагчдын анхааралд"}
-          />
-          <NHitNewsItem
-            number={"7"}
-            text={"Элон Маск Аспергерийн синдромтой гэдгээ зарлав"}
-          />
-          <Box mb={5} />
-        </Box>
-        <Box className={classes.content}>
-          <NSelectTitle title="Цогц мэдээ" hasBorder>
-            <img
-              src="/hee_4.png"
-              alt="Цогц мэдээ"
-              width="26"
-              height="26"
-              style={{ marginRight: "4px" }}
-            />
-          </NSelectTitle>
-          <Box mt={5} />
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={4}>
-              <NCardPostTitle image="/home_img_14.jpg" />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <NCardPostTitle title="Дабль стандарт: Ардын наадам болохоос ах дүү хоёрын баяр биш шүү!" />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <NCardPostTitle
-                title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
-                image="/home_img_15.jpg"
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={3}>
+            {" "}
+            <Box className={classes.sidebar}>
+              <NSelectTitle title="Hit news" hasBorder>
+                <img
+                  src="/hee_2.png"
+                  alt="hit news"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NSelectTitle>
+              <NHitNewsItem
+                isFirst
+                number={"1"}
+                text={"Цаг агаарын аюулт үзэгдлээс сэрэмжлүүлж байна"}
               />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Box display="flex" justifyContent="flex-end">
-                <Button variant="outlined" disableRipple>
-                  Бүгдийг харах+
-                </Button>
-              </Box>
-            </Grid>
+              <NHitNewsItem
+                number={"2"}
+                text={
+                  "Л.Оюун-Эрдэнэ: Бид парламентын тогтолцооноосоо ухарч болохгүй"
+                }
+              />
+              <NHitNewsItem
+                number={"3"}
+                text={
+                  "Путин: Бид нацизмыг сөнөөсөн үндэстэн гэдгээрээ үеийн үед бахархах ёстой!"
+                }
+              />
+              <NHitNewsItem
+                number={"4"}
+                text={"'Миний хувьд энэ вакцины асуудалд нөлөөлөх боломжгүй'"}
+              />
+              <NHitNewsItem
+                number={"5"}
+                text={"Дуучин М.Нарантуяа У.Хүрэлсүхэд шаардлага хүргүүлэв"}
+              />
+              <NHitNewsItem
+                number={"6"}
+                text={"Төрийн банк: Харилцагчдын анхааралд"}
+              />
+              <NHitNewsItem
+                number={"7"}
+                text={"Элон Маск Аспергерийн синдромтой гэдгээ зарлав"}
+              />
+              <Box mb={5} />
+            </Box>
           </Grid>
-          <Box mt={5} mb={5} textAlign="center">
-            <NBanner
-              src="/banner_home_2.jpg"
-              width={1028}
-              link="https://recruitment.minii-suljee.mn/"
-            />
-          </Box>
-        </Box>
+          <Grid item xs={12} md={9}>
+            {" "}
+            <Box className={classes.content}>
+              <NSelectTitle title="Цогц мэдээ" hasBorder>
+                <img
+                  src="/hee_4.png"
+                  alt="Цогц мэдээ"
+                  width="26"
+                  height="26"
+                  style={{ marginRight: "4px" }}
+                />
+              </NSelectTitle>
+              <Box mt={5} />
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={4}>
+                  <NCardPostTitle image="/home_img_14.jpg" />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <NCardPostTitle title="Дабль стандарт: Ардын наадам болохоос ах дүү хоёрын баяр биш шүү!" />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <NCardPostTitle
+                    title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
+                    image="/home_img_15.jpg"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={12}>
+                  <Box display="flex" justifyContent="flex-end">
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      onClick={() => router.push("/comprehensive")}
+                    >
+                      Бүгдийг харах+
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
+              <Box mt={5} mb={5} textAlign="center">
+                <NBanner
+                  src="/banner_home_2.jpg"
+                  width={1028}
+                  link="https://recruitment.minii-suljee.mn/"
+                />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
       </section>
       <section className={clsx(classes.sectionMiddle3, "module__content")}>
         <NTitle title="Мэдээллийн түншлэгч" hasBorder>
@@ -734,8 +748,8 @@ const HomeContainer = () => {
                   <Button
                     disableRipple
                     variant="outlined"
-                    disableRipple
                     className={classes.buttonWhite}
+                    onClick={() => router.push("/video")}
                   >
                     Бүгдийг харах+
                   </Button>
@@ -751,27 +765,47 @@ const HomeContainer = () => {
         </NTitle>
         <Box mt={10} mb={10}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={4} md={2}>
+            <Grid item xs={12} md={3} lg={2}>
               <Box>
-                <NBanner src="/banner_home_3.jpg" width={216} />
+                <NBanner src="/banner_shop_page_3.jpg" width={216} />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
-              <NShopItem image="/shop_item_2.jpg" />
+            <Grid item xs={12} md={3} lg={2}>
+              <NShopItem
+                title="Алхимичид"
+                image="/shop_book_bestseller_1.jpg"
+                paddingTop="133.12%"
+              />
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
-              <NShopItem image="/shop_item_3.jpg" />
+            <Grid item xs={12} md={3} lg={2}>
+              <NShopItem
+                title="Даяарчлал ба түүний хохирогсод"
+                image="/shop_book_bestseller_2.jpg"
+                paddingTop="133.12%"
+              />
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
-              <NShopItem image="/shop_item_4.jpg" />
+            <Grid item xs={12} md={3} lg={2}>
+              <NShopItem
+                title="Аялалын хийлдэг 8 хүний майхан"
+                image="/shop_book_bestseller_3.jpg"
+                paddingTop="133.12%"
+              />
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
-              <NShopItem image="/shop_item_5.jpg" />
+            <Grid item xs={12} md={3} lg={2}>
+              <NShopItem
+                title="Өөдөө тэмүүл"
+                image="/shop_book_bestseller_4.jpg"
+                paddingTop="133.12%"
+              />
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
-              <NShopItem />
+            <Grid item xs={12} md={3} lg={2}>
+              <NShopItem
+                title="The right to dream"
+                image="/shop_book_bestseller_5.jpg"
+                paddingTop="133.12%"
+              />
               <Box display="flex" justifyContent="flex-end" mt={6}>
-                <Button disableRipple variant="outlined" disableRipple>
+                <Button variant="outlined" onClick={() => router.push("/shop")}>
                   Бүгдийг харах+
                 </Button>
               </Box>
@@ -810,34 +844,44 @@ const HomeContainer = () => {
               },
             }}
             items={[
-              <NRealEstateItem image="/realestate_item_1.jpg" />,
+              <NRealEstateItem
+                image="/realestate_item_1.jpg"
+                link="/realestate"
+              />,
               <NRealEstateItem
                 title="River Garden 2"
                 image="/realestate_item_2.jpg"
+                link="/realestate"
               />,
               <NRealEstateItem
                 title="Tokyo residence"
                 image="/realestate_item_3.jpg"
+                link="/realestate"
               />,
               <NRealEstateItem
                 title="Tokyo Tower"
                 image="/realestate_item_4.jpg"
+                link="/realestate"
               />,
               <NRealEstateItem
                 title="Garden City"
                 image="/realestate_item_5.jpg"
+                link="/realestate"
               />,
               <NRealEstateItem
                 title="Tokyo residence"
                 image="/realestate_item_6.jpg"
+                link="/realestate"
               />,
               <NRealEstateItem
                 title="River Garden 2"
                 image="/realestate_item_7.jpg"
+                link="/realestate"
               />,
               <NRealEstateItem
                 title="River Garden 3"
                 image="/realestate_item_8.jpg"
+                link="/realestate"
               />,
             ]}
           />
@@ -896,7 +940,7 @@ const HomeContainer = () => {
                 commentCount={58}
               />
               <Box mt={2}>
-                <Button disableRipple variant="outlined" disableRipple>
+                <Button disableRipple variant="outlined">
                   Бүгдийг харах
                 </Button>
               </Box>
@@ -1131,10 +1175,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     alignItems: "flex-start",
   },
-  sidebar: {
-    width: 340,
-    paddingRight: theme.spacing(2),
-  },
+  sidebar: {},
   sidebarFamous: {},
   content: {
     // width: "calc(100% - 340px)",

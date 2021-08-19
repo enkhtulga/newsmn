@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   title: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontSize: 18,
     lineHeight: "30px",
   },

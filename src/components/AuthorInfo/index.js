@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
   },
   author: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     paddingTop: theme.spacing(2),
   },

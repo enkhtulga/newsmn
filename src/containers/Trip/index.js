@@ -161,7 +161,7 @@ const TripContainer = () => {
             <NPageMenu
               items={[
                 { name: "Дотоод", link: "/trip" },
-                { name: "Гадаад", link: "/b" },
+                { name: "Гадаад", link: "#b" },
               ]}
               primaryColor={Colors.primary}
             />

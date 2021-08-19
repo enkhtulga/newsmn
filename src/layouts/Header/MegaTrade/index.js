@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
       color: (props) => (props.yellow ? Colors.yellow : Colors.primary),
     },
     "& > span": {
-      fontFamily: "Spectral",
+      fontFamily: "PT Serif",
       fontWeight: 600,
       fontSize: 14,
       lineHeight: "35px",

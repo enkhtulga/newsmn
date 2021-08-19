@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   name: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     fontSize: 14,
     lineHeight: "20px",

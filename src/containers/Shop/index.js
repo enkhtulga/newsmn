@@ -402,11 +402,11 @@ const ShopContainer = () => {
             <Box mb={5}>
               <NPageMenu
                 items={[
-                  { name: "Уран зохиол", link: "/trip" },
+                  { name: "Уран зохиол", link: "#trip" },
                   { name: "Нийгэм", link: "/shop" },
-                  { name: "Бизнес", link: "/b" },
-                  { name: "Улс төр", link: "/b" },
-                  { name: "Боловсрол гэх мэт", link: "/b" },
+                  { name: "Бизнес", link: "#b" },
+                  { name: "Улс төр", link: "#bbbb" },
+                  { name: "Боловсрол гэх мэт", link: "#bere" },
                 ]}
                 primaryColor={Colors.primary}
                 justifyContent="center"

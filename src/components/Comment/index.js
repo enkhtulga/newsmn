@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(4),
   },
   name: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     fontSize: 14,
     lineHeight: "20px",

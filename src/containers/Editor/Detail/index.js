@@ -209,7 +209,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
   },
   date: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     color: Colors.border_red,
     paddingBottom: theme.spacing(0.5),

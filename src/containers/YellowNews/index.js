@@ -50,10 +50,10 @@ const YellowNewsContainer = () => {
           <Grid item xs={12} sm={12} md={8} lg={9}>
             <NPageMenu
               items={[
-                { name: "Шар мэдээ", link: "/ad" },
+                { name: "Шар мэдээ", link: "#ad" },
                 { name: "Дуулиан", link: "/yellownews" },
-                { name: "Оддын амьдрал", link: "/ssd" },
-                { name: "Урт чихт", link: "/d" },
+                { name: "Оддын амьдрал", link: "#ssd" },
+                { name: "Урт чихт", link: "#d" },
               ]}
               primaryColor={Colors.yellow}
             />

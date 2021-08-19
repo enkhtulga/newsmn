@@ -25,156 +25,149 @@ const FollowingContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Дагаж байна"} />
-      </Box>
-      <Box className={`module__content_margin`}>
-        <Box className="module__content">
-          <Box mt={5} />
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
-              <Typography variant="h1" className={classes.title}>
-                Өдөр тутмын имэйлийн анхааруулга авах
+      <NBreadcrumbs title={"Дагаж байна"} />
+      <Box className="module__content">
+        <Box mt={5} />
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <Typography variant="h1" className={classes.title}>
+              Өдөр тутмын имэйлийн анхааруулга авах
+            </Typography>
+            <Box display="flex" justifyContent="space-between" mb={3}>
+              <Typography variant="h1" className={classes.content}>
+                Идэвхгүй / Идэвхтэй
               </Typography>
-              <Box display="flex" justifyContent="space-between" mb={3}>
-                <Typography variant="h1" className={classes.content}>
-                  Идэвхгүй / Идэвхтэй
-                </Typography>
-                <Switch
-                  checked={state.checkedA}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedA"
-                  size="small"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={9}></Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Улс төр
-                </Typography>
-                <Checkbox
-                  checked={state.checkedB}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedB"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Нийгэм
-                </Typography>
-                <Checkbox
-                  checked={state.checkedC}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedC"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Спорт
-                </Typography>
-                <Checkbox
-                  checked={state.checkedD}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedD"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Энтертайнмент
-                </Typography>
-                <Checkbox
-                  checked={state.checkedE}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedE"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Эдийн засаг
-                </Typography>
-                <Checkbox
-                  checked={state.checkedF}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedF"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Дэлхий
-                </Typography>
-                <Checkbox
-                  checked={state.checkedG}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedG"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Улс төр
-                </Typography>
-                <Checkbox
-                  checked={state.checkedH}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedH"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Box className={classes.itemWrap}>
-                <Typography variant="h1" className={classes.itemLabel}>
-                  Шар мэдээ
-                </Typography>
-                <Checkbox
-                  checked={state.checkedI}
-                  onChange={handleChange}
-                  color="primary"
-                  name="checkedI"
-                  inputProps={{ "aria-label": "primary checkbox" }}
-                />
-              </Box>
-            </Grid>
+              <Switch
+                checked={state.checkedA}
+                onChange={handleChange}
+                color="primary"
+                name="checkedA"
+                size="small"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
           </Grid>
-          <Box mb={30} />
-        </Box>
+          <Grid item xs={9}></Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Улс төр
+              </Typography>
+              <Checkbox
+                checked={state.checkedB}
+                onChange={handleChange}
+                color="primary"
+                name="checkedB"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Нийгэм
+              </Typography>
+              <Checkbox
+                checked={state.checkedC}
+                onChange={handleChange}
+                color="primary"
+                name="checkedC"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Спорт
+              </Typography>
+              <Checkbox
+                checked={state.checkedD}
+                onChange={handleChange}
+                color="primary"
+                name="checkedD"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Энтертайнмент
+              </Typography>
+              <Checkbox
+                checked={state.checkedE}
+                onChange={handleChange}
+                color="primary"
+                name="checkedE"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Эдийн засаг
+              </Typography>
+              <Checkbox
+                checked={state.checkedF}
+                onChange={handleChange}
+                color="primary"
+                name="checkedF"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Дэлхий
+              </Typography>
+              <Checkbox
+                checked={state.checkedG}
+                onChange={handleChange}
+                color="primary"
+                name="checkedG"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Улс төр
+              </Typography>
+              <Checkbox
+                checked={state.checkedH}
+                onChange={handleChange}
+                color="primary"
+                name="checkedH"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box className={classes.itemWrap}>
+              <Typography variant="h1" className={classes.itemLabel}>
+                Шар мэдээ
+              </Typography>
+              <Checkbox
+                checked={state.checkedI}
+                onChange={handleChange}
+                color="primary"
+                name="checkedI"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+        <Box mb={30} />
       </Box>
     </Box>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   title: {
     borderBottom: "1px solid",
     borderBottomColor: Colors.black,

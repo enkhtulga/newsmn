@@ -53,7 +53,7 @@ const NPodcast = () => {
         <Button
           variant="outlined"
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
-          onClick={() => router.push("/shop-audio-book")}
+          onClick={() => router.push("/podcast")}
         >
           Бүгдийг харах
         </Button>

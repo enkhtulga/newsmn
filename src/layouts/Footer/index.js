@@ -578,7 +578,7 @@ const Footer = () => {
 const useStyles = makeStyles((theme) => ({
   navList: {
     marginRight: theme.spacing(2),
-    minWidth: 109,
+    minWidth: 108,
     marginBottom: theme.spacing(2),
   },
   footerContact: {

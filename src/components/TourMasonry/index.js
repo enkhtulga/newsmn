@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: theme.spacing(2),
     color: Colors.white,
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     fontSize: 24,
     lineHeight: "30px",

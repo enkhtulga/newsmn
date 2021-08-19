@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       top: theme.spacing(3),
       position: "absolute",
-      fontFamily: "Spectral",
+      fontFamily: "PT Serif",
       fontSize: 48,
     },
   },

@@ -7,7 +7,7 @@ import NCardMedia from "../Card/CardMedia";
 import NCardContent from "../Card/CardContent";
 import Rating from "@material-ui/lab/Rating";
 
-const NRealEstateItem = ({ title, rating, image }) => {
+const NRealEstateItem = ({ title, rating, image, link }) => {
   const classes = useStyles();
 
   return (
@@ -17,10 +17,11 @@ const NRealEstateItem = ({ title, rating, image }) => {
           <NCardMedia
             paddingTop="64.81%"
             image={image || "/realstate_item.jpg"}
+            link={link}
           />
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Link color="initial" href={"/posts/1"} underline="none">
+          <Link color="initial" href={link || "/posts/1"} underline="none">
             <Typography variant="h1" className={classes.title}>
               {title || "Нарны хороолол"}
             </Typography>

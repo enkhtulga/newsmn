@@ -77,11 +77,11 @@ const ShopAudioBook = () => {
               <Box mt={7} mb={5}>
                 <NPageMenu
                   items={[
-                    { name: "Уран зохиол", link: "/trip" },
-                    { name: "Нийгэм", link: "/shop" },
-                    { name: "Бизнес", link: "/b" },
-                    { name: "Улс төр", link: "/b" },
-                    { name: "Боловсрол гэх мэт", link: "/b" },
+                    { name: "Уран зохиол", link: "#trip" },
+                    { name: "Нийгэм", link: "#shop" },
+                    { name: "Бизнес", link: "#b" },
+                    { name: "Улс төр", link: "#bb" },
+                    { name: "Боловсрол гэх мэт", link: "#ccb" },
                   ]}
                   primaryColor={Colors.primary}
                   justifyContent="center"

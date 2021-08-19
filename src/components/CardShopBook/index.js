@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(2),
   },
   title: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 600,
     display: "-webkit-box",
     WebkitBoxOrient: "vertical",

@@ -21,10 +21,7 @@ const SettingsContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Тохиргоо"} />
-      </Box>
-      <Box className={`module__content_margin`}>
+      <NBreadcrumbs title={"Тохиргоо"} />
         <Box className="module__content">
           <Box mt={5} />
           <Grid container spacing={2}>
@@ -223,9 +220,6 @@ const SettingsContainer = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   wrap: {
     background: Colors.white,
     boxShadow: "0px 4px 4px #E8E8E8",

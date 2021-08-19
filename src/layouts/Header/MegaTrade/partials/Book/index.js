@@ -64,7 +64,7 @@ const NBook = () => {
         <Button
           variant="outlined"
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
-          onClick={() => router.push("/shop-ebook")}
+          onClick={() => router.push("/shop")}
         >
           Бүгдийг харах
         </Button>

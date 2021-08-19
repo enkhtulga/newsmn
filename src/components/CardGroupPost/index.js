@@ -85,14 +85,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   category: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     color: Colors.border_red,
     display: "inline-block",
     paddingRight: theme.spacing(0.5),
   },
   title: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     marginBottom: theme.spacing(1),
     display: "-webkit-box",

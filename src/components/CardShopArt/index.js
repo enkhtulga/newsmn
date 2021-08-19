@@ -76,12 +76,12 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: (props) => (props.small ? theme.spacing(1) : theme.spacing(5)),
   },
   info: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 600,
     color: Colors.white,
   },
   price: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 800,
     color: Colors.border_red,
   },

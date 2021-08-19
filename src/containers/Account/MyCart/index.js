@@ -11,16 +11,13 @@ const MyCartContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Миний сагс"} />
-      </Box>
-      <Box className={`module__content_margin`}>
-        <Box className="module__content"></Box>
+      <NBreadcrumbs title={"Миний сагс"} />
+      <Box className="module__content">
         <Grid container spacing={2}>
           <Grid item xs={2}></Grid>
           <Grid item xs={8}>
             <Box mt={8} className={classes.outerWrap}>
-              <Box display="flex" justifyContent="space-betweeb">
+              <Box display="flex" justifyContent="space-between">
                 <Typography variant="body2">Бараа</Typography>
                 <Typography variant="body2">Нэгж үнэ</Typography>
                 <Typography variant="body2">Тоо ширхэг</Typography>
@@ -128,7 +125,7 @@ const MyCartContainer = () => {
             </Box>
             <Box display="flex" justifyContent="flex-end" mb={12}>
               <Button variant="contained" color="primary">
-                Худаладаж авах
+                Худалдаж авах
               </Button>
             </Box>
           </Grid>
@@ -140,9 +137,6 @@ const MyCartContainer = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   bookName: {
     fontSize: 14,
     color: Colors.black,

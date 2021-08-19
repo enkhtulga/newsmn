@@ -1,16 +1,16 @@
 import MainLayout from "../../src/layouts/MainLayout";
-import EntertaimentContainer from "../../src/containers/Entertaiment";
+import BookmarkContainer from "../../src/containers/Bookmark";
 
-const EntertaimentPage = () => {
+const BookmarkPage = () => {
   const headerProps = {
     hasBanner: false,
   };
 
   return (
     <MainLayout headerProps={headerProps}>
-      <EntertaimentContainer />
+      <BookmarkContainer />
     </MainLayout>
   );
 };
 
-export default EntertaimentPage;
+export default BookmarkPage;

@@ -372,7 +372,7 @@ const useStyles = makeStyles((theme) => ({
   quote: {
     paddingTop: theme.spacing(2),
     fontWeight: 700,
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     color: Colors.black,
     position: "relative",
     paddingLeft: theme.spacing(6),
@@ -390,7 +390,7 @@ const useStyles = makeStyles((theme) => ({
       left: theme.spacing(2),
       top: theme.spacing(4),
       position: "absolute",
-      fontFamily: "Spectral",
+      fontFamily: "PT Serif",
       fontSize: 48,
     },
   },

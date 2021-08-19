@@ -43,122 +43,115 @@ const ComprehensiveContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Булангууд"} />
-      </Box>
-      <Box className={`module__content_margin`}>
-        <Box className="module__content">
-          <Box mt={10} mb={9}>
-            <List
-              component="nav"
-              aria-label="alpha"
-              disablePadding
-              className={classes.listWrap}
-            >
-              {alphList.map((item, index) => (
-                <ListItem
-                  key={index}
-                  className={classes.listItem}
-                  component="a"
-                  href={item.link}
-                  disableGutters
-                  selected={item.selected}
-                >
-                  <ListItemText primary={item.name} />
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle image="/home_img_14.jpg" />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle
-                title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
-                image="/home_img_15.jpg"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle image="/home_img_14.jpg" />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle
-                title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
-                image="/home_img_15.jpg"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle image="/home_img_14.jpg" />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle
-                title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
-                image="/home_img_15.jpg"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle image="/home_img_14.jpg" />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle
-                title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
-                image="/home_img_15.jpg"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle image="/home_img_14.jpg" />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle
-                title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
-                image="/home_img_15.jpg"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <NCardPostTitle />
-            </Grid>
-            <Box mb={10}>
-              <Pagination count={10} variant="outlined" color="primary" />
-            </Box>
-          </Grid>
+      <NBreadcrumbs title={"Цогц мэдээ"} />
+      <Box className="module__content">
+        <Box mt={10} mb={9}>
+          <List
+            component="nav"
+            aria-label="alpha"
+            disablePadding
+            className={classes.listWrap}
+          >
+            {alphList.map((item, index) => (
+              <ListItem
+                key={index}
+                className={classes.listItem}
+                component="a"
+                href={item.link}
+                disableGutters
+                selected={item.selected}
+              >
+                <ListItemText primary={item.name} />
+              </ListItem>
+            ))}
+          </List>
         </Box>
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle image="/home_img_14.jpg" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle
+              title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
+              image="/home_img_15.jpg"
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle image="/home_img_14.jpg" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle
+              title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
+              image="/home_img_15.jpg"
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle image="/home_img_14.jpg" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle
+              title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
+              image="/home_img_15.jpg"
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle image="/home_img_14.jpg" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle
+              title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
+              image="/home_img_15.jpg"
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle image="/home_img_14.jpg" />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle
+              title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
+              image="/home_img_15.jpg"
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <NCardPostTitle />
+          </Grid>
+          <Box mb={10}>
+            <Pagination count={10} variant="outlined" color="primary" />
+          </Box>
+        </Grid>
       </Box>
     </Box>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   listWrap: {
     display: "flex",
   },

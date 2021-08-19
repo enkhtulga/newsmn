@@ -25,6 +25,7 @@ import {
   AccountCircle as IconAccountCircle,
   Home as IconHome,
   VolumeUp as IconVolumeUp,
+  ShoppingCart as IconShoppingCart,
 } from "@material-ui/icons";
 import { NRoutes } from "./../../constants/route.constants";
 import { useRouter } from "next/router";
@@ -43,6 +44,7 @@ import NButtonPrimary from "../../components/ButtonPrimary";
 import NDialog from "../../components/Dialog";
 import NLogin from "./Login";
 import NRegister from "./Register";
+import NSearch from "./Search";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -184,7 +186,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
           />
         );
       case "search":
-        return <>Search</>;
+        return <NSearch handleClose={handleCloseSearch} />;
     }
   };
 
@@ -243,12 +245,29 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             </MenuItem>
             <MenuItem onClick={handleCloseAccount}>Гарах</MenuItem>
           </Menu>
-          <IconButton color="inherit" aria-label="menu">
+          <IconButton
+            color="inherit"
+            aria-label="menu"
+            onClick={() => router.push("/bookmark")}
+          >
             <IconBookmark />
           </IconButton>
-          <IconButton color="inherit" aria-label="menu">
+          <IconButton
+            color="inherit"
+            aria-label="menu"
+            onClick={() => setOpenSearch(!openSearch)}
+          >
             <IconSearch />
           </IconButton>
+          {router.pathname == "/shop" && (
+            <IconButton
+              color="inherit"
+              aria-label="menu"
+              onClick={() => router.push("/account/my-cart")}
+            >
+              <IconShoppingCart />
+            </IconButton>
+          )}
           <IconButton
             color="inherit"
             aria-label="menu"
@@ -473,7 +492,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
       <NDialog open={openRegister} handleClose={handleCloseRegister}>
         {renderDialogContent("register")}
       </NDialog>
-      <NDialog open={openSearch} handleClose={handleCloseSearch}>
+      <NDialog open={openSearch} isDark handleClose={handleCloseSearch}>
         {renderDialogContent("search")}
       </NDialog>
     </div>

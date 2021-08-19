@@ -1,31 +1,23 @@
 import React from "react";
-import { Box, Grid, List, ListItem, ListItemText } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import NBreadcrumbs from "../../components/Breadcrumbs";
 import { Colors } from "../../theme/colors";
 import NCarousel from "../../components/Carousel";
 import NTitle from "../../components/Title";
-import NCardPostTitle from "../../components/CardPostTitle";
 import NCardGroupPost from "../../components/CardGroupPost";
 import NBanner from "../../components/Banner";
 import NCardVideoSmall from "../../components/CardVideoSmall";
 import NPageMenu from "../../components/PageMenu";
-import NCardVideoLarge from "../../components/CardVideoLarge";
 
-const EntertaimentContainer = () => {
+const EntertainmentContainer = () => {
   const classes = useStyles();
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Энтертайнмент"} />
-      </Box>
-      <Box
-        pt={10}
-        pb={10}
-        className={`${classes.bgBlack} module__content_margin`}
-      >
-        <Box className="module__content">
+      <NBreadcrumbs title={"Энтертайнмент"} />
+      <Box pt={10} pb={10} className={`${classes.bgBlack} module__content`}>
+        <Box>
           <NCarousel
             slidesPerView={3}
             spaceBetween={16}
@@ -53,7 +45,7 @@ const EntertaimentContainer = () => {
           />
         </Box>
       </Box>
-      <Box pt={8} pb={8} className={`${classes.bgGray} module__content_margin`}>
+      <Box pt={8} pb={8} className={`${classes.bgGray}`}>
         <Box className="module__content">
           <Grid container spacing={2}>
             <Grid item xs={3}></Grid>
@@ -61,12 +53,12 @@ const EntertaimentContainer = () => {
               <Box mb={6} mr={5} ml={5}>
                 <NPageMenu
                   items={[
-                    { name: "Мэдээ", link: "/trip" },
+                    { name: "Мэдээ", link: "#trip" },
                     { name: "Ярилцлага", link: "/entertaiment" },
-                    { name: "Нийтлэл", link: "/b" },
-                    { name: "АРТ", link: "/b" },
-                    { name: "Технологи", link: "/b" },
-                    { name: "Бусад", link: "/b" },
+                    { name: "Нийтлэл", link: "#b" },
+                    { name: "АРТ", link: "#b" },
+                    { name: "Технологи", link: "#b" },
+                    { name: "Бусад", link: "#bc" },
                   ]}
                   primaryColor={Colors.white}
                   justifyContent="center"
@@ -334,9 +326,6 @@ const EntertaimentContainer = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   bgGray: {
     backgroundColor: Colors.title,
   },
@@ -345,4 +334,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default EntertaimentContainer;
+export default EntertainmentContainer;

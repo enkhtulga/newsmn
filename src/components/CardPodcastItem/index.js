@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(2),
   },
   title: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     color: Colors.white,
     lineHeight: "16px",
     fontWeight: 600,

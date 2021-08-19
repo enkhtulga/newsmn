@@ -61,7 +61,7 @@ const NEntertaiment = () => {
         <Button
           variant="outlined"
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
-          onClick={() => router.push("/entertaiment")}
+          onClick={() => router.push("/entertainment")}
         >
           Бүгдийг харах
         </Button>

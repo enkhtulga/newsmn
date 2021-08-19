@@ -7,12 +7,14 @@ import {
   FormControlLabel,
   Radio,
 } from "@material-ui/core";
+import { useRouter } from "next/router";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NRealEstateNewsItem from "../../../../../components/RealEstateNewsItem";
 import { Colors } from "../../../../../theme/colors";
 
 const NOpenPlatform = ({ isDark }) => {
   const classes = useStyles({ isDark });
+  const router = useRouter();
   const [openPlatformChecked, setEarchCategoryChecked] = useState("a");
 
   const handleChangeOpenPlatformCategory = (event) => {
@@ -109,6 +111,7 @@ const NOpenPlatform = ({ isDark }) => {
         <Button
           variant="outlined"
           style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/politics")}
         >
           Бүгдийг харах
         </Button>
@@ -125,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
     flexBasis: "20%",
     maxWidth: "20%",
     marginRight: 0,
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 600,
     fontSize: 14,
     lineHeight: "10px",

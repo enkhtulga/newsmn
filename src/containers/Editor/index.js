@@ -16,12 +16,12 @@ const EditorsContainer = () => {
         <NPageMenu
           items={[
             { name: "Улс төр", link: "/editors" },
-            { name: "Эдийн засаг", link: "/b" },
-            { name: "Нийгэм", link: "/atoms" },
-            { name: "Дэлхий", link: "/d" },
-            { name: "Спорт", link: "/eqq" },
-            { name: "Энтертайнмент", link: "/f" },
-            { name: "Шар мэдээ", link: "/g" },
+            { name: "Эдийн засаг", link: "#b" },
+            { name: "Нийгэм", link: "#atoms" },
+            { name: "Дэлхий", link: "#d" },
+            { name: "Спорт", link: "#eqq" },
+            { name: "Энтертайнмент", link: "#f" },
+            { name: "Шар мэдээ", link: "#g" },
           ]}
           primaryColor={Colors.primary}
         />

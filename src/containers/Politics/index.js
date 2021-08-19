@@ -65,14 +65,14 @@ const PoliticsContainer = () => {
             <Box mb={2}>
               <NPageMenu
                 items={[
-                  { name: "Мэдээ", link: "/aa" },
-                  { name: "Ярилцлага", link: "/b" },
+                  { name: "Мэдээ", link: "#aa" },
+                  { name: "Ярилцлага", link: "#b" },
                   { name: "Нийтлэл", link: "/politics" },
-                  { name: "Ерөнхийлөгч", link: "/d" },
-                  { name: "УИХ", link: "/e" },
-                  { name: "Засгийн газар", link: "/f" },
-                  { name: "Намууд", link: "/g" },
-                  { name: "Бусад", link: "/h" },
+                  { name: "Ерөнхийлөгч", link: "#d" },
+                  { name: "УИХ", link: "#e" },
+                  { name: "Засгийн газар", link: "#f" },
+                  { name: "Намууд", link: "#g" },
+                  { name: "Бусад", link: "#h" },
                 ]}
                 primaryColor={Colors.primary}
               />

@@ -100,12 +100,12 @@ const SportContainer = () => {
             <NPageMenu
               items={[
                 { name: "Мэдээ", link: "/sport" },
-                { name: "Ярилцлага", link: "/b" },
-                { name: "Нийтлэл", link: "/politics" },
-                { name: "Спорт тоглоом", link: "/d" },
-                { name: "Бөхийн төрлүүд", link: "/e" },
-                { name: "Үндэсний спорт", link: "/f" },
-                { name: "Бусад", link: "/h" },
+                { name: "Ярилцлага", link: "#b" },
+                { name: "Нийтлэл", link: "#politics" },
+                { name: "Спорт тоглоом", link: "#d" },
+                { name: "Бөхийн төрлүүд", link: "#e" },
+                { name: "Үндэсний спорт", link: "#f" },
+                { name: "Бусад", link: "#h" },
               ]}
               primaryColor={Colors.primary}
             />

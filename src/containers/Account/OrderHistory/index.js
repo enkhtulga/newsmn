@@ -11,11 +11,8 @@ const OrderHistoryContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Захиалгын түүх"} />
-      </Box>
-      <Box className={`module__content_margin`}>
-        <Box className="module__content"></Box>
+      <NBreadcrumbs title={"Захиалгын түүх"} />
+      <Box className="module__content">
         <Grid container spacing={2}>
           <Grid item xs={2}></Grid>
           <Grid item xs={8}>
@@ -105,9 +102,6 @@ const OrderHistoryContainer = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
   title: {
     fontSize: 24,
     color: Colors.black,

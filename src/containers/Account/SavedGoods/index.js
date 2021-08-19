@@ -12,83 +12,75 @@ const SavedGoodsContainer = () => {
 
   return (
     <Box>
-      <Box className={classes.breadcrumbsWrap}>
-        <NBreadcrumbs className="module__content" title={"Хадгалсан бараа"} />
-      </Box>
-      <Box className={`module__content_margin`}>
-        <Box className="module__content">
-          <Box mt={10} />
-          <Grid container spacing={2}>
-            <Grid item xs={2}>
-              <Box mb={5}>
-                <NShopBookItem
-                  title="Шилэн илд"
-                  author="Викториа Эвиярд"
-                  price="19,900 ₮"
-                />
-                <Box display="flex" flexDirection="column" alignItems="center">
-                  <Box mb={2} mt={2}>
-                    <Button variant="contained" color="primary">
-                      Сагсанд нэмэх
-                    </Button>
-                  </Box>
-                  <Button startIcon={<IconDelete color="primary" />}>
-                    Устгах
+      <NBreadcrumbs title={"Хадгалсан бараа"} />
+      <Box className="module__content">
+        <Box mt={10} />
+        <Grid container spacing={2}>
+          <Grid item xs={2}>
+            <Box mb={5}>
+              <NShopBookItem
+                title="Шилэн илд"
+                author="Викториа Эвиярд"
+                price="19,900 ₮"
+              />
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Box mb={2} mt={2}>
+                  <Button variant="contained" color="primary">
+                    Сагсанд нэмэх
                   </Button>
                 </Box>
+                <Button startIcon={<IconDelete color="primary" />}>
+                  Устгах
+                </Button>
               </Box>
-            </Grid>
-            <Grid item xs={2}>
-              <Box mb={5}>
-                <NShopBookItem
-                  title="Шилэн илд"
-                  author="Викториа Эвиярд"
-                  price="19,900 ₮"
-                  image="/shop_book_item_2.jpg"
-                />
-                <Box display="flex" flexDirection="column" alignItems="center">
-                  <Box mb={2} mt={2}>
-                    <Button variant="contained" color="primary">
-                      Сагсанд нэмэх
-                    </Button>
-                  </Box>
-                  <Button startIcon={<IconDelete color="primary" />}>
-                    Устгах
-                  </Button>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item xs={2}>
-              <Box mb={5}>
-                <NShopBookItem
-                  title="Шилэн илд"
-                  author="Викториа Эвиярд"
-                  price="19,900 ₮"
-                  image="/shop_book_item_3.jpg"
-                />
-                <Box display="flex" flexDirection="column" alignItems="center">
-                  <Box mb={2} mt={2}>
-                    <Button variant="contained" color="primary">
-                      Сагсанд нэмэх
-                    </Button>
-                  </Box>
-                  <Button startIcon={<IconDelete color="primary" />}>
-                    Устгах
-                  </Button>
-                </Box>
-              </Box>
-            </Grid>
+            </Box>
           </Grid>
-        </Box>
+          <Grid item xs={2}>
+            <Box mb={5}>
+              <NShopBookItem
+                title="Шилэн илд"
+                author="Викториа Эвиярд"
+                price="19,900 ₮"
+                image="/shop_book_item_2.jpg"
+              />
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Box mb={2} mt={2}>
+                  <Button variant="contained" color="primary">
+                    Сагсанд нэмэх
+                  </Button>
+                </Box>
+                <Button startIcon={<IconDelete color="primary" />}>
+                  Устгах
+                </Button>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={2}>
+            <Box mb={5}>
+              <NShopBookItem
+                title="Шилэн илд"
+                author="Викториа Эвиярд"
+                price="19,900 ₮"
+                image="/shop_book_item_3.jpg"
+              />
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Box mb={2} mt={2}>
+                  <Button variant="contained" color="primary">
+                    Сагсанд нэмэх
+                  </Button>
+                </Box>
+                <Button startIcon={<IconDelete color="primary" />}>
+                  Устгах
+                </Button>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
 };
 
-const useStyles = makeStyles((theme) => ({
-  breadcrumbsWrap: {
-    margin: "0 -4rem",
-  },
-}));
+const useStyles = makeStyles((theme) => ({}));
 
 export default SavedGoodsContainer;

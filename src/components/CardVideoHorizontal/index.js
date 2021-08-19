@@ -8,15 +8,21 @@ import NCardContent from "../Card/CardContent";
 import NPostMeta from "../PostMeta";
 import NAvatar from "../Avatar";
 
-const NCardVideoHorizontal = ({ category, title, excerpt, image, dark }) => {
-  const classes = useStyles({ dark });
+const NCardVideoHorizontal = ({
+  category,
+  title,
+  excerpt,
+  image,
+  paddingTop,
+}) => {
+  const classes = useStyles();
 
   return (
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
           <NCardMedia
-            paddingTop="65.06%"
+            paddingTop={paddingTop || "65.06%"}
             image={image || "/video_post_horizontal_1.jpg"}
           />
         </Box>
@@ -83,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
   },
   name: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontWeight: 700,
     fontSize: 14,
     lineHeight: "20px",

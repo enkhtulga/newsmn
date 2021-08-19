@@ -52,13 +52,13 @@ const useStyles = makeStyles((theme) => ({
     top: -11,
   },
   number: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontSize: 14,
     lineHeight: "20px",
     color: Colors.white,
   },
   text: {
-    fontFamily: "Spectral",
+    fontFamily: "PT Serif",
     fontSize: 14,
     lineHeight: "20px",
     paddingLeft: theme.spacing(2),

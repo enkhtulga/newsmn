@@ -8,7 +8,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const NDialog = ({ open, handleClose, children, isDark }) => {
+const NDialog = ({ open, handleClose, children, fullScreen }) => {
   const classes = useStyles();
   return (
     <Dialog
@@ -17,6 +17,7 @@ const NDialog = ({ open, handleClose, children, isDark }) => {
       aria-labelledby="modal"
       aria-describedby="modal-description"
       open={open}
+      fullScreen={fullScreen}
       onClose={handleClose}
       BackdropProps={{
         classes: { root: classes.backDrop },
@@ -30,7 +31,7 @@ const NDialog = ({ open, handleClose, children, isDark }) => {
           e.preventDefault();
         },
       }}
-      PaperProps={{ classes: { root: isDark ? classes.paper : "" } }}
+      PaperProps={{ classes: { root: fullScreen ? classes.paper : "" } }}
     >
       {children}
     </Dialog>

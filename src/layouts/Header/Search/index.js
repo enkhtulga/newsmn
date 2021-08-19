@@ -36,7 +36,7 @@ const NSearch = ({ handleClose }) => {
         className={classes.topWrap}
       >
         <Link color="initial" href={"/"} underline="none">
-          <img src="/logo_side_menu.png" width={149} height={49} />
+          <img src="/logo_side_menu.png" width={200} height={"auto"} />
         </Link>
         <IconButton className={classes.closeButton} onClick={handleClose}>
           <IconClose fontSize="small" className={classes.close} />
@@ -48,11 +48,12 @@ const NSearch = ({ handleClose }) => {
           fullWidth
           className={classes.formControl}
         >
-          <InputLabel htmlFor="email" color="primary">
+          {/* <InputLabel htmlFor="email" color="primary">
             Хайх
-          </InputLabel>
+          </InputLabel> */}
           <OutlinedInput
             type={"text"}
+            placeholder="Хайх"
             value={searchValue}
             onChange={handleChangeValue}
             className={classes.searchInput}
@@ -77,9 +78,7 @@ const NSearch = ({ handleClose }) => {
 
 const useStyles = makeStyles((theme) => ({
   wrap: {
-    maxWidth: "100%",
-    width: 800,
-    padding: theme.spacing(3),
+    padding: theme.spacing(10),
   },
   topWrap: {
     position: "relative",
@@ -102,14 +101,12 @@ const useStyles = makeStyles((theme) => ({
   },
   formControl: {
     marginBottom: theme.spacing(2),
-    "& > label": {
-      color: "#4b4b4b",
-      fontWeight: 700,
-      transform: "translate(14px, 8px) scale(1)",
-    },
   },
   outlinedInput: {
-    padding: "6px 14px",
+    paddingLeft: 44,
+    fontWeight: 700,
+    fontSize: 36,
+    textAlign: "center",
   },
   searchInput: {
     width: "100%",

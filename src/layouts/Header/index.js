@@ -492,7 +492,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
       <NDialog open={openRegister} handleClose={handleCloseRegister}>
         {renderDialogContent("register")}
       </NDialog>
-      <NDialog open={openSearch} isDark handleClose={handleCloseSearch}>
+      <NDialog open={openSearch} fullScreen handleClose={handleCloseSearch}>
         {renderDialogContent("search")}
       </NDialog>
     </div>

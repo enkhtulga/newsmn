@@ -168,6 +168,7 @@ export default createTheme({
     MuiButton: {
       root: {
         fontSize: 10,
+        textTransform: "initial",
       },
       outlined: {
         transition: "all 0.25s ease",
@@ -207,7 +208,7 @@ export default createTheme({
       outlinedPrimary: {
         fontWeight: 700,
         borderColor: Colors.border_gray,
-        margin: "0 5px",
+        margin: "2px 5px",
         color: Colors.border_gray,
         "&.Mui-selected": {
           color: Colors.white,
@@ -218,6 +219,11 @@ export default createTheme({
             borderColor: Colors.border_red,
           },
         },
+      },
+    },
+    MuiInputLabel: {
+      asterisk: {
+        color: Colors.border_red,
       },
     },
   },

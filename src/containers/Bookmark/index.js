@@ -48,8 +48,8 @@ const BookmarkContainer = () => {
       <NBreadcrumbs title={"Хадгалсан мэдээ"} />
       <Box className="module__content">
         <Grid container spacing={2}>
-          <Grid item xs={1} />
-          <Grid item xs={10}>
+          <Grid item xs={12} md={1} className={classes.leftSidebar} />
+          <Grid item xs={12} md={10}>
             <Box className={classes.topBorder} />
             <NCardBookmarkItem title="Жефф Безосын компани Элон Масктай барьцаж, засгийн газрыг шүүхэд дуудлаа Жефф Безосын компани Элон Масктай барьцаж, засгийн газрыг шүүхэд дуудлаа" />
             <NCardBookmarkItem image="/video_post_horizontal_2.jpg" />
@@ -61,7 +61,7 @@ const BookmarkContainer = () => {
               <Pagination count={10} variant="outlined" color="primary" />
             </Box>
           </Grid>
-          <Grid item xs={1} />
+          <Grid item xs={12} md={1} className={classes.rightSidebar} />
         </Grid>
       </Box>
     </Box>
@@ -74,6 +74,14 @@ const useStyles = makeStyles((theme) => ({
     borderBottomColor: Colors.border_gray,
     marginBottom: theme.spacing(2),
     marginTop: theme.spacing(10),
+  },
+  [theme.breakpoints.down("sm")]: {
+    rightSidebar: {
+      display: "none",
+    },
+    leftSidebar: {
+      display: "none",
+    },
   },
 }));
 

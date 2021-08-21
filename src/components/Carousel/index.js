@@ -134,6 +134,14 @@ const useStyles = makeStyles((theme) => ({
   slideWidth: {
     maxWidth: "none",
   },
+  [theme.breakpoints.down("xs")]: {
+    sliderButtonNext: {
+      display: "none",
+    },
+    sliderButtonPrev: {
+      display: "none",
+    },
+  },
 }));
 
 export default NCarousel;

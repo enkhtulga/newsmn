@@ -99,6 +99,19 @@ const useStyles = makeStyles((theme) => ({
     top: "50%",
     transform: "translateY(-50%)",
   },
+  [theme.breakpoints.down("xs")]: {
+    cardWrap: {
+      flexDirection: "column",
+    },
+    contentWrap: {
+      paddingLeft: 0,
+      paddingTop: theme.spacing(2),
+      paddingRight: theme.spacing(4),
+    },
+    removeButton: {
+      right: theme.spacing(0),
+    },
+  },
 }));
 
 export default NCardBookmarkItem;

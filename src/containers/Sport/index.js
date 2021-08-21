@@ -249,11 +249,7 @@ const SportContainer = () => {
           >
             <Box mt={2} />
             <StickySidebar offsetTop={16} offsetBottom={16}>
-              <NBanner
-                src="/banner_post_single_sidebar.jpg"
-                width={330}
-                height={299}
-              />
+              <NBanner src="/banner_post_single_sidebar.jpg" width={330} />
               <Box className={classes.sidebar} mt={3} mb={5}>
                 <NSelectPopularTitle hasBorder>
                   <img

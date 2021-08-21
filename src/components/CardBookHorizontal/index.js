@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography, IconButton } from "@material-ui/core";
+import { Box, Typography, IconButton, Button } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardContent from "../Card/CardContent";
@@ -12,7 +12,7 @@ import {
   ChevronRight as IconChevronRight,
 } from "@material-ui/icons";
 import Rating from "@material-ui/lab/Rating";
-import NButtonPrimary from "../ButtonPrimary";
+import NCartQuantity from "../CartQuantity";
 
 const NCardBookHorizontal = ({
   image,
@@ -83,7 +83,7 @@ const NCardBookHorizontal = ({
             {content ||
               "Энэхүү ном нь бүтээлч соёл бүхий байгууллагыг бүтээхийн тулд чухам юу шаарддагийг харуулсан хамгийн сайн ном юм. Яагаад гэвэл Катмулын цэцэн ухаан, даруу зан чанар, ухамсар номын хуудас бүрд шингэснээрээ хамгийн сайныг нь гэрчилнэ. Тэрээр Пиксарын агуу сүр жавхлан нь тэдний хийдэг өчүүхэн жижиг зүйлүүдийг (ямар ч байгууллагад хэний ч хийж л байдаг дийлэнх зүйлүүд) нэгтгэхээс эхлээд компанийн бүх ажилчдыг хөдөлгөх хүч болдог кино бүтээх, түүгээрээ бие биенээрээ бахархах сэтгэл төрүүлж байдаг нэгэн том зорилгын төлөө болгодог байв."}
           </Typography>
-          <Box display="flex" mb={4}>
+          <Box display="flex" mb={4} className={classes.metaWrap}>
             <Box flex="1">
               <Box display="flex" alignItems="baseline">
                 <Typography variant="h1" className={classes.categoryName}>
@@ -139,7 +139,9 @@ const NCardBookHorizontal = ({
           </Box>
           {hasListenPrice && (
             <Box display="flex" alignItems="center" mb={2}>
-              <NButtonPrimary>Сонсох</NButtonPrimary>
+              <Button variant="contained" color="primary">
+                Сонсох
+              </Button>
               <IconChevronRight fontSize="small" className={classes.chevron} />
               <Typography variant="h1" className={classes.salePrice}>
                 8700₮
@@ -152,8 +154,10 @@ const NCardBookHorizontal = ({
               </Typography>
             </Box>
           )}
-          <Box display="flex" alignItems="center">
-            <NButtonPrimary>Унших</NButtonPrimary>
+          <Box display="flex" alignItems="center" mb={2}>
+            <Button variant="contained" color="primary">
+              Унших
+            </Button>
             <IconChevronRight fontSize="small" className={classes.chevron} />
             <Typography variant="h1" className={classes.salePrice}>
               6500₮
@@ -164,6 +168,24 @@ const NCardBookHorizontal = ({
             <Typography variant="h1" className={classes.percentage}>
               -50%
             </Typography>
+          </Box>
+          <Box mb={2}>
+            <NCartQuantity />
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Button
+              variant="outlined"
+              className={classes.cart}
+              style={{
+                color: Colors.border_red,
+                borderColor: Colors.border_red,
+              }}
+            >
+              Сагсанд нэмэх
+            </Button>
+            <Button variant="contained" color="primary">
+              Худалдаж авах
+            </Button>
           </Box>
         </NCardContent>
       </NCard>
@@ -246,6 +268,9 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  cart: {
+    marginRight: theme.spacing(2),
+  },
   icon: {
     color: Colors.text_gray_3,
   },
@@ -294,6 +319,24 @@ const useStyles = makeStyles((theme) => ({
   },
   musicImage: {
     marginRight: 2,
+  },
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {
+    shadowCardWrap: {
+      flexDirection: "column",
+    },
+    contentWrap: {
+      paddingLeft: 0,
+    },
+    metaWrap: {
+      flexDirection: "column",
+    },
+  },
+  [theme.breakpoints.down("xs")]: {
+    mediaOuterWrap: {
+      minWidth: "100%",
+      maxWidth: "100%",
+    },
   },
 }));
 

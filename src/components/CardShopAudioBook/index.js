@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mediaOuterWrap: {
     width: 74,
+    height: 74,
     minWidth: 74,
     position: "relative",
   },

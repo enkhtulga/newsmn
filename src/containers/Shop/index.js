@@ -11,9 +11,11 @@ import NTitle from "../../components/Title";
 import NShopBookItem from "../../components/ShopBookItem";
 import NShopItem from "../../components/ShopItem";
 import { ShoppingCart as IconShoppingCart } from "@material-ui/icons";
+import { useRouter } from "next/router";
 
 const ShopContainer = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <Box>
@@ -247,9 +249,7 @@ const ShopContainer = () => {
               paddingTop="133.12%"
             />
             <Box display="flex" justifyContent="flex-end" mt={6}>
-              <Button variant="outlined" disableRipple>
-                Бүгдийг харах+
-              </Button>
+              <Button variant="outlined">Бүгдийг харах+</Button>
             </Box>
           </Grid>
         </Grid>
@@ -392,9 +392,7 @@ const ShopContainer = () => {
           </Grid>
           <Grid item xs={12}>
             <Box mb={9} textAlign="center">
-              <Button variant="outlined" disableRipple>
-                Бүгдийг харах+
-              </Button>
+              <Button variant="outlined">Бүгдийг харах+</Button>
             </Box>
           </Grid>
           <Grid item xs={12} sm={3}></Grid>
@@ -413,7 +411,6 @@ const ShopContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} sm={3}></Grid>
           <Grid item xs={12} md={3} lg={2}>
             <Box mb={9}>
               <NShopBookItem
@@ -612,9 +609,7 @@ const ShopContainer = () => {
           </Grid>
           <Grid item xs={12}>
             <Box mb={9} textAlign="center">
-              <Button variant="outlined" disableRipple>
-                Бүгдийг харах+
-              </Button>
+              <Button variant="outlined">Бүгдийг харах+</Button>
             </Box>
           </Grid>
           <Box mb={10} />
@@ -634,7 +629,7 @@ const ShopContainer = () => {
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6}>
             <Grid container spacing={2}>
-              <Grid item xs="6">
+              <Grid item xs={12} sm={6}>
                 <NCardShopArt
                   artName=""
                   artist="С.Заяасайхан"
@@ -645,7 +640,7 @@ const ShopContainer = () => {
                   small
                 />
               </Grid>
-              <Grid item xs="6">
+              <Grid item xs={12} sm={6}>
                 <NCardShopArt
                   artName=""
                   artist="С.Заяасайхан"
@@ -656,7 +651,7 @@ const ShopContainer = () => {
                   small
                 />
               </Grid>
-              <Grid item xs="6">
+              <Grid item xs={12} sm={6}>
                 <NCardShopArt
                   artName=""
                   artist="С.Заяасайхан"
@@ -667,7 +662,7 @@ const ShopContainer = () => {
                   small
                 />
               </Grid>
-              <Grid item xs="6">
+              <Grid item xs={12} sm={6}>
                 <NCardShopArt
                   artName=""
                   artist="С.Заяасайхан"
@@ -679,6 +674,16 @@ const ShopContainer = () => {
                 />
               </Grid>
             </Grid>
+          </Grid>
+          <Grid item xs={12}>
+            <Box mb={9} mt={3} textAlign="center">
+              <Button
+                variant="outlined"
+                onClick={() => router.push("/shop-art")}
+              >
+                Бүгдийг харах+
+              </Button>
+            </Box>
           </Grid>
         </Grid>
         <Box mt={10} mb={10} textAlign="center">

@@ -15,7 +15,7 @@ const NMegaArticle = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={2}>
+      <Grid item md={3} lg={2}>
         <NVerticalTabs
           value={currentMegaMenuTab?.article}
           onChange={(_, v) => onChangeMegaMenuTab("article", v)}
@@ -35,7 +35,7 @@ const NMegaArticle = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
           />
         </NVerticalTabs>
       </Grid>
-      <Grid item xs={10}>
+      <Grid item md={9} lg={10}>
         <NVerticalTabPanel value={currentMegaMenuTab?.article} index={0}>
           <NJournalistPlatform />
         </NVerticalTabPanel>

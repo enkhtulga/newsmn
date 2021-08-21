@@ -27,14 +27,14 @@ const NSociety = () => {
         items={[
           <Box>
             <Grid container spacing={2}>
-              <Grid item xs="7" className={classes.grid60}>
+              <Grid item md={7} lg={7} className={classes.grid60}>
                 <NCardSlideMenuPost
                   paddingTop="34.55%"
                   image="/mega_home_img_6.jpg"
                   title="Д.Сумъяабазар: Аж ахуйн нэгжүүд вакцинд хамрагдаагүй иргэдэд бүү үйлчил!"
                 />
               </Grid>
-              <Grid item xs="5" className={classes.grid40}>
+              <Grid item md={5} lg={5} className={classes.grid40}>
                 <NCardSlideMenuPost
                   paddingTop="52.45%"
                   image="/mega_home_img_7.jpg"

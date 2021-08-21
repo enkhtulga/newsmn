@@ -60,7 +60,11 @@ const NArchive = () => {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Box display="flex" mb={3}>
-              <Box flex={4} style={{ marginRight: "14px" }}>
+              <Box
+                flex={4}
+                style={{ marginRight: "14px" }}
+                className={classes.searchInput}
+              >
                 <FormControl variant="outlined" fullWidth>
                   <InputLabel htmlFor="outlined-adornment-password">
                     Архиваас хайх
@@ -190,10 +194,15 @@ const NArchive = () => {
         </Grid>
       </Box>
       <NMenuCarousel
-        slidesPerView={5}
+        slidesPerView={3}
         spaceBetween={16}
         navigation
         pagination={false}
+        breakpoints={{
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
         items={[
           <NRealEstateNewsItem
             large
@@ -258,6 +267,11 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 70,
     marginRight: 15,
     marginBottom: theme.spacing(1),
+  },
+  [theme.breakpoints.down("md")]: {
+    searchInput: {
+      flex: 2,
+    },
   },
 }));
 

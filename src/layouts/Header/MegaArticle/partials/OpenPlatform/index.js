@@ -76,10 +76,15 @@ const NOpenPlatform = ({ isDark }) => {
         </RadioGroup>
       </Box>
       <NMenuCarousel
-        slidesPerView={5}
+        slidesPerView={3}
         spaceBetween={16}
         navigation
         pagination={false}
+        breakpoints={{
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
         items={[
           <NRealEstateNewsItem
             title="МАН УЗ: Л.Оюун-Эрдэнийг намын даргад дэвшүүлнэ"

@@ -12,10 +12,15 @@ const NPodcast = () => {
   return (
     <>
       <NMenuCarousel
-        slidesPerView={5}
+        slidesPerView={3}
         spaceBetween={16}
         navigation
         pagination={false}
+        breakpoints={{
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
         items={[
           <NCardPodcastItem
             title="Шинэ подкаст"

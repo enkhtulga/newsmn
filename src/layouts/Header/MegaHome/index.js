@@ -22,7 +22,7 @@ const NMegaHome = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={2}>
+      <Grid item md={3} lg={2}>
         <NVerticalTabs
           value={currentMegaMenuTab.home}
           onChange={(_, v) => onChangeMegaMenuTab("home", v)}
@@ -43,7 +43,7 @@ const NMegaHome = ({ currentMegaMenuTab, onChangeMegaMenuTab }) => {
           <NVerticalTab label="Шар мэдээ" className={classes.tab} value={6} />
         </NVerticalTabs>
       </Grid>
-      <Grid item xs={10}>
+      <Grid item md={9} lg={10}>
         <NVerticalTabPanel value={currentMegaMenuTab.home} index={0}>
           <NPolitics />
         </NVerticalTabPanel>

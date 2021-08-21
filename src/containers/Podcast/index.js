@@ -15,7 +15,6 @@ const PodcastContainer = () => {
   return (
     <Box>
       <NBreadcrumbs title={"Подкаст"} />
-
       <NTopCarousel
         slidesPerView={1}
         spaceBetween={0}

@@ -59,7 +59,7 @@ const EntertainmentContainer = () => {
       <Box pt={8} pb={8} className={`${classes.bgGray}`}>
         <Box className="module__content">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={1} lg={6}></Grid>
+            <Grid item xs={12} md={1} lg={3}></Grid>
             <Grid item xs={12} md={10} lg={6}>
               <Box mb={6} mr={5} ml={5}>
                 <NPageMenu
@@ -77,7 +77,7 @@ const EntertainmentContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} md={1} lg={6}></Grid>
+            <Grid item xs={12} md={1} lg={3}></Grid>
           </Grid>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={4} md={3}>

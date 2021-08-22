@@ -122,11 +122,6 @@ export default createTheme({
         padding: "12px 14px",
       },
     },
-    MuiInputLabel: {
-      outlined: {
-        transform: "translate(14px, 14px) scale(1)",
-      },
-    },
     MuiSlider: {
       rail: {
         height: 5,
@@ -222,6 +217,9 @@ export default createTheme({
       },
     },
     MuiInputLabel: {
+      outlined: {
+        transform: "translate(14px, 14px) scale(1)",
+      },
       asterisk: {
         color: Colors.border_red,
       },

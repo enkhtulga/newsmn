@@ -19,8 +19,14 @@ const ShopEbookDetailContainer = ({ ebookId }) => {
       <NBreadcrumbs title={"Худалдаа цахим ном дэлгэрэнгүй"} />
       <Box className="module__content">
         <Grid container spacing={2}>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={8}>
+          <Grid
+            item
+            xs={12}
+            md={12}
+            lg={2}
+            className={classes.leftSidebar}
+          ></Grid>
+          <Grid item xs={12} md={12} lg={8}>
             <Box mt={8}>
               <NCardBookHorizontal
                 title={ebookId == 1 ? "The Girl in My Mirror" : "Алхимичид"}
@@ -49,7 +55,7 @@ const ShopEbookDetailContainer = ({ ebookId }) => {
                 image="/home_img_11.jpg"
                 commentDate="2020-01-05"
                 comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
-                marginLeft={86}
+                hasIndent
               />
               <NComment
                 name="Админ"
@@ -84,48 +90,54 @@ Distinctively re-engineer revolutionary meta-services and premium architectures.
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={2}></Grid>
+          <Grid
+            item
+            xs={12}
+            md={12}
+            lg={2}
+            className={classes.rightSidebar}
+          ></Grid>
           <Grid item xs={12}>
             <NTitle title="Ижил төстэй номнууд" hasBorder>
               <IconShoppingCart style={{ marginRight: 8 }} />
             </NTitle>
             <Box mb={3} />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={4} md={3} lg={2}>
             <NCardShopAudioBook
               author="Евгений Трифонов"
               publisher="Нэпко хэвлэлийн газар"
             />
           </Grid>
-          <Grid item xs={2}>
-            <NCardShopAudioBook
-              author="Евгений Трифонов"
-              publisher="Нэпко хэвлэлийн газар"
-              price="27,500 ₮"
-            />
-          </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={4} md={3} lg={2}>
             <NCardShopAudioBook
               author="Евгений Трифонов"
               publisher="Нэпко хэвлэлийн газар"
               price="27,500 ₮"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={4} md={3} lg={2}>
             <NCardShopAudioBook
               author="Евгений Трифонов"
               publisher="Нэпко хэвлэлийн газар"
               price="27,500 ₮"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={4} md={3} lg={2}>
             <NCardShopAudioBook
               author="Евгений Трифонов"
               publisher="Нэпко хэвлэлийн газар"
               price="27,500 ₮"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={4} md={3} lg={2}>
+            <NCardShopAudioBook
+              author="Евгений Трифонов"
+              publisher="Нэпко хэвлэлийн газар"
+              price="27,500 ₮"
+            />
+          </Grid>
+          <Grid item xs={12} sm={4} md={3} lg={2}>
             <NCardShopAudioBook
               author="Евгений Трифонов"
               publisher="Нэпко хэвлэлийн газар"
@@ -133,11 +145,7 @@ Distinctively re-engineer revolutionary meta-services and premium architectures.
           </Grid>
           <Grid item xs={12}>
             <Box textAlign="center" mb={10} mt={10}>
-              <NBanner
-                src="/banner_shop_page_1.jpg"
-                width={1167}
-                height={233}
-              />
+              <NBanner src="/banner_shop_page_1.jpg" width={1167} />
             </Box>
           </Grid>
         </Grid>
@@ -159,6 +167,14 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     borderBottom: "1px solid #dcdcdc",
     marginBottom: theme.spacing(2),
+  },
+  [theme.breakpoints.down("md")]: {
+    leftSidebar: {
+      display: "none",
+    },
+    rightSidebar: {
+      display: "none",
+    },
   },
 }));
 

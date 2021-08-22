@@ -221,6 +221,15 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             keepMounted
             open={Boolean(accountAnchorEl)}
             onClose={handleCloseAccount}
+            getContentAnchorEl={null}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "center",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "center",
+            }}
           >
             <MenuItem onClick={() => router.push("/account")}>
               Миний булан
@@ -259,7 +268,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
           >
             <IconSearch />
           </IconButton>
-          {router.pathname == "/shop" && (
+          {router.pathname.startsWith("/shop") && (
             <IconButton
               color="inherit"
               aria-label="menu"
@@ -475,6 +484,17 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
               disableUnderline
               displayEmpty
               className={classes.variant}
+              MenuProps={{
+                getContentAnchorEl: null,
+                anchorOrigin: {
+                  vertical: "bottom",
+                  horizontal: "center",
+                },
+                transformOrigin: {
+                  vertical: "top",
+                  horizontal: "center",
+                },
+              }}
             >
               <MenuItem value="" disabled>
                 Хувилбар

@@ -45,7 +45,7 @@ const ComprehensiveContainer = () => {
     <Box>
       <NBreadcrumbs title={"Цогц мэдээ"} />
       <Box className="module__content">
-        <Box mt={10} mb={9}>
+        <Box mt={10} mb={9} overflow="auto">
           <List
             component="nav"
             aria-label="alpha"
@@ -67,79 +67,79 @@ const ComprehensiveContainer = () => {
           </List>
         </Box>
         <Grid container spacing={2}>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle image="/home_img_14.jpg" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle
               title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
               image="/home_img_15.jpg"
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle image="/home_img_14.jpg" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle
               title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
               image="/home_img_15.jpg"
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle image="/home_img_14.jpg" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle
               title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
               image="/home_img_15.jpg"
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle image="/home_img_14.jpg" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle
               title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
               image="/home_img_15.jpg"
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle image="/home_img_14.jpg" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle
               title="100 жилийн ойгоор 150 мянга орчим медаль бүтээнэ"
               image="/home_img_15.jpg"
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={6} sm={4} md={3}>
             <NCardPostTitle />
           </Grid>
           <Box mb={10}>

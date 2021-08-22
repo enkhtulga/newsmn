@@ -148,6 +148,17 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     color: Colors.black,
   },
+  [theme.breakpoints.down("md")]: {
+    shadowCardWrap: {
+      flexWrap: "wrap",
+    },
+    contentWrap: {
+      paddingTop: theme.spacing(2),
+      "& div.rhap_container": {
+        paddingLeft: 0,
+      },
+    },
+  },
 }));
 
 export default NCardHorizontal;

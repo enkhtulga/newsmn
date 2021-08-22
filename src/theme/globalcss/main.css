@@ -84,6 +84,9 @@ div.rhap_container {
   background-color: #c4c4c4;
   height: 6px;
 }
+.rhap_volume-controls .rhap_volume-bar-area {
+  width: 50px;
+}
 .rhap_volume-controls .rhap_volume-button {
   color: #1a1a1a;
 }
@@ -152,7 +155,7 @@ body.font-very-large .MuiTypography-body2:not(.freeze) {
 }
 @media (min-width: 1440px) {
   .footer-wrap::after {
-    right: -175px;
+    right: -200px;
   }
 }
 @media (min-width: 1600px) {

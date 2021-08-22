@@ -16,12 +16,23 @@ const EntertainmentContainer = () => {
   return (
     <Box>
       <NBreadcrumbs title={"Энтертайнмент"} />
-      <Box pt={10} pb={10} className={`${classes.bgBlack} module__content`}>
-        <Box>
+      <Box pt={10} pb={10} className={`${classes.bgBlack}`}>
+        <Box className="module__content">
           <NCarousel
-            slidesPerView={3}
+            slidesPerView={1}
             spaceBetween={16}
             pagination={false}
+            breakpoints={{
+              1280: {
+                slidesPerView: 3,
+              },
+              960: {
+                slidesPerView: 3,
+              },
+              600: {
+                slidesPerView: 3,
+              },
+            }}
             navigation
             items={[
               <NCardVideoSmall
@@ -48,156 +59,156 @@ const EntertainmentContainer = () => {
       <Box pt={8} pb={8} className={`${classes.bgGray}`}>
         <Box className="module__content">
           <Grid container spacing={2}>
-            <Grid item xs={3}></Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={1} lg={6}></Grid>
+            <Grid item xs={12} md={10} lg={6}>
               <Box mb={6} mr={5} ml={5}>
                 <NPageMenu
                   items={[
                     { name: "Мэдээ", link: "#trip" },
-                    { name: "Ярилцлага", link: "/entertaiment" },
+                    { name: "Ярилцлага", link: "/entertainment" },
                     { name: "Нийтлэл", link: "#b" },
                     { name: "АРТ", link: "#b" },
                     { name: "Технологи", link: "#b" },
                     { name: "Бусад", link: "#bc" },
                   ]}
-                  primaryColor={Colors.white}
+                  primaryColor={Colors.border_red}
                   justifyContent="center"
                   isDark
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}></Grid>
+            <Grid item xs={12} md={1} lg={6}></Grid>
           </Grid>
           <Grid container spacing={2}>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_1.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_2.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_3.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_4.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_5.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_6.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_7.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_3.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_5.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_6.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_7.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_3.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_1.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_2.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_3.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_4.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_5.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_6.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
                 hasVideo={false}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_7.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <NCardVideoSmall
                 image="/video_page_img_3.jpg"
                 title='“Танил хятад дуу: Сар шинийн үдэшлэгт зориулсан дуу"'
@@ -209,17 +220,27 @@ const EntertainmentContainer = () => {
             <NBanner
               src="/banner_video_bottom.jpg"
               width={1144}
-              height={201}
               link="https://recruitment.minii-suljee.mn/"
             />
           </Box>
         </Box>
       </Box>
-      <Box mb={10} mt={10}>
+      <Box mb={10} mt={10} className="module__content">
         <NCarousel
-          slidesPerView={4}
+          slidesPerView={1}
           spaceBetween={16}
           navigation={false}
+          breakpoints={{
+            1280: {
+              slidesPerView: 4,
+            },
+            960: {
+              slidesPerView: 3,
+            },
+            600: {
+              slidesPerView: 2,
+            },
+          }}
           pagination
           items={[
             <>

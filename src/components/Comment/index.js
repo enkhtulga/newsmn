@@ -4,8 +4,8 @@ import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NAvatar from "../Avatar";
 
-const NComment = ({ image, name, commentDate, comment, marginLeft }) => {
-  const classes = useStyles({ marginLeft });
+const NComment = ({ image, name, commentDate, comment, hasIndent }) => {
+  const classes = useStyles({ hasIndent });
 
   return (
     <Box className={classes.wrap}>
@@ -35,7 +35,7 @@ const NComment = ({ image, name, commentDate, comment, marginLeft }) => {
 const useStyles = makeStyles((theme) => ({
   wrap: {
     display: "flex",
-    marginLeft: (props) => props.marginLeft,
+    marginLeft: (props) => (props.hasIndent ? 86 : 0),
   },
   contentWrap: {
     marginLeft: theme.spacing(3),
@@ -59,6 +59,14 @@ const useStyles = makeStyles((theme) => ({
     color: Colors.primary,
     "&:hover": {
       color: Colors.primary,
+    },
+  },
+  [theme.breakpoints.down("xs")]: {
+    wrap: {
+      marginLeft: (props) => (props.hasIndent ? 46 : 0),
+    },
+    comment: {
+      marginRight: 0,
     },
   },
 }));

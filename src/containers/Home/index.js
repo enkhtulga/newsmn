@@ -1122,6 +1122,17 @@ const HomeContainer = () => {
                   <Select
                     value={pollCategory}
                     onChange={handleChangePollCategory}
+                    MenuProps={{
+                      getContentAnchorEl: null,
+                      anchorOrigin: {
+                        vertical: "bottom",
+                        horizontal: "center",
+                      },
+                      transformOrigin: {
+                        vertical: "top",
+                        horizontal: "center",
+                      },
+                    }}
                   >
                     <MenuItem value={10}>Бүгд</MenuItem>
                     <MenuItem value={20}>БНХАУ - Синофарм</MenuItem>

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -14,6 +14,7 @@ const NCardShopArt = ({
   image,
   paddingTop,
   small,
+  link,
 }) => {
   const classes = useStyles({ small });
 
@@ -27,24 +28,26 @@ const NCardShopArt = ({
           />
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Box className={classes.contentInnerWrap}>
-            <Typography variant="body1" className={classes.info}>
-              {"Нэр: "}
-              {artName}
-            </Typography>
-            <Typography variant="body1" className={classes.info}>
-              {"Зураач: "}
-              {artist}
-            </Typography>
-            <Typography variant="body1" className={classes.info}>
-              {"Зурагын хэмжээ: "}
-              {aspectRatio}
-            </Typography>
-            <Typography variant="body1" className={classes.price}>
-              {"Үнэ: "}
-              {price}
-            </Typography>
-          </Box>
+          <Link color="initial" href={link || "/posts/1"} underline="none">
+            <Box className={classes.contentInnerWrap}>
+              <Typography variant="body1" className={classes.info}>
+                {"Нэр: "}
+                {artName}
+              </Typography>
+              <Typography variant="body1" className={classes.info}>
+                {"Зураач: "}
+                {artist}
+              </Typography>
+              <Typography variant="body1" className={classes.info}>
+                {"Зурагын хэмжээ: "}
+                {aspectRatio}
+              </Typography>
+              <Typography variant="body1" className={classes.price}>
+                {"Үнэ: "}
+                {price}
+              </Typography>
+            </Box>
+          </Link>
         </NCardContent>
       </NCard>
     </Box>
@@ -74,6 +77,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: (props) =>
       props.small ? theme.spacing(3) : theme.spacing(6),
     paddingLeft: (props) => (props.small ? theme.spacing(1) : theme.spacing(5)),
+    "&:hover > p": {
+      color: Colors.primary,
+    },
   },
   info: {
     fontFamily: "PT Serif",

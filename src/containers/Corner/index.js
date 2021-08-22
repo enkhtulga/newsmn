@@ -17,15 +17,15 @@ const CornerContainer = () => {
       <Box className="module__content">
         <Box mt={5}>
           <Grid container spacing={2}>
-            <Grid item xs={2}></Grid>
-            <Grid item xs={1}>
+            <Grid item xs={12} lg={2}></Grid>
+            <Grid item xs={12} lg={1} className={classes.leftSidebar}>
               <StickySidebar offsetTop={16} offsetBottom={16}>
                 <Box display="flex" justifyContent={"center"}>
                   <NSocialVertical />
                 </Box>
               </StickySidebar>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={9} lg={6}>
               <NTripItem
                 hasLocation={false}
                 hasPrice={false}
@@ -90,7 +90,7 @@ const CornerContainer = () => {
                 <Pagination count={10} variant="outlined" color="primary" />
               </Box>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={2} md={3} lg={2} className={classes.rightSidebar}>
               <NSideNewsItem
                 category="Энтертайнмент"
                 title="QUIZ"
@@ -145,6 +145,17 @@ const CornerContainer = () => {
   );
 };
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  [theme.breakpoints.down("md")]: {
+    leftSidebar: {
+      display: "none",
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    rightSidebar: {
+      display: "none",
+    },
+  },
+}));
 
 export default CornerContainer;

@@ -155,7 +155,19 @@ const useStyles = makeStyles((theme) => ({
     contentWrap: {
       marginTop: theme.spacing(2),
       "& > div": {
-        paddingLeft: 0,
+        paddingLeft: theme.spacing(2),
+      },
+    },
+  },
+  [theme.breakpoints.down("xs")]: {
+    shadowCardWrap: {
+      flexDirection: "column",
+      alignItems: "center",
+      "& .rhap_progress-section": {
+        flexWrap: "wrap",
+      },
+      "& .rhap_progress-section .rhap_volume-controls": {
+        marginLeft: 0,
       },
     },
   },

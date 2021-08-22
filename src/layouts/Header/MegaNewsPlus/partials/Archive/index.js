@@ -105,6 +105,17 @@ const NArchive = () => {
                     }
                     label="Сонгох"
                     size="small"
+                    MenuProps={{
+                      getContentAnchorEl: null,
+                      anchorOrigin: {
+                        vertical: "bottom",
+                        horizontal: "center",
+                      },
+                      transformOrigin: {
+                        vertical: "top",
+                        horizontal: "center",
+                      },
+                    }}
                   >
                     <MenuItem value={"Сонгох"} disabled>
                       <em>Сонгох</em>
@@ -126,6 +137,17 @@ const NArchive = () => {
                     onChange={(event) => handleChangeFilter("startYear", event)}
                     label="Он"
                     size="small"
+                    MenuProps={{
+                      getContentAnchorEl: null,
+                      anchorOrigin: {
+                        vertical: "bottom",
+                        horizontal: "center",
+                      },
+                      transformOrigin: {
+                        vertical: "top",
+                        horizontal: "center",
+                      },
+                    }}
                   >
                     <MenuItem value={"Он"} disabled>
                       <em>Он</em>
@@ -149,6 +171,17 @@ const NArchive = () => {
                     }
                     label="Сар"
                     size="small"
+                    MenuProps={{
+                      getContentAnchorEl: null,
+                      anchorOrigin: {
+                        vertical: "bottom",
+                        horizontal: "center",
+                      },
+                      transformOrigin: {
+                        vertical: "top",
+                        horizontal: "center",
+                      },
+                    }}
                   >
                     <MenuItem value={"Сар"} disabled>
                       <em>Сар</em>
@@ -174,6 +207,17 @@ const NArchive = () => {
                     onChange={(event) => handleChangeFilter("startDay", event)}
                     label="Өдөр"
                     size="small"
+                    MenuProps={{
+                      getContentAnchorEl: null,
+                      anchorOrigin: {
+                        vertical: "bottom",
+                        horizontal: "center",
+                      },
+                      transformOrigin: {
+                        vertical: "top",
+                        horizontal: "center",
+                      },
+                    }}
                   >
                     <MenuItem value={"Өдөр"} disabled>
                       <em>Өдөр</em>
@@ -187,7 +231,9 @@ const NArchive = () => {
                     )}
                   </Select>
                 </FormControl>
-                <NButtonPrimary>Шүүх</NButtonPrimary>
+                <NButtonPrimary onClick={() => router.push("/archive")}>
+                  Шүүх
+                </NButtonPrimary>
               </Box>
             </Box>
           </Grid>

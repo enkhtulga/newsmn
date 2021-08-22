@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -15,6 +15,7 @@ const NShopBookItem = ({
   salePrice,
   rating,
   hasAudioIcon,
+  link,
 }) => {
   const classes = useStyles();
 
@@ -25,6 +26,7 @@ const NShopBookItem = ({
           <NCardMedia
             paddingTop="133.12%"
             image={image || "/shop_book_item_1.jpg"}
+            link={link}
           />
           {salePrice && (
             <Box className={classes.saleLabelWrap}>
@@ -55,9 +57,11 @@ const NShopBookItem = ({
                 className={classes.rating}
               />
             )}
-            <Typography variant="body2" className={classes.title}>
-              {title}
-            </Typography>
+            <Link color="initial" href={link || "/posts/1"} underline="none">
+              <Typography variant="body2" className={classes.title}>
+                {title}
+              </Typography>
+            </Link>
             <Typography variant="body2" className={classes.author}>
               {"Зохиолч: "}
               {author}
@@ -99,6 +103,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: Colors.title,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   author: {
     color: Colors.text,

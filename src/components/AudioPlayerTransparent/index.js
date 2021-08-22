@@ -28,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
   shadowCardWrap: {
     display: "flex",
     paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
     paddingTop: theme.spacing(5),
     paddingBottom: 38,
-    paddingRight: 0,
     backgroundColor: "transparent",
     maxWidth: "100%",
     width: 670,
@@ -39,13 +39,26 @@ const useStyles = makeStyles((theme) => ({
   wrap: {},
   contentWrap: {
     paddingRight: 0,
-    paddingLeft: 0,
+    paddingLeft: theme.spacing(2),
     width: "100%",
   },
   title: {
     fontSize: 48,
     lineHeight: "48px",
     color: Colors.white,
+  },
+  [theme.breakpoints.down("sm")]: {
+    shadowCardWrap: { width: "auto" },
+    title: {
+      fontSize: 30,
+      lineHeight: "36px",
+    },
+  },
+  [theme.breakpoints.down("xs")]: {
+    shadowCardWrap: { flexDirection: "column" },
+    contentWrap: {
+      paddingLeft: 0,
+    },
   },
 }));
 

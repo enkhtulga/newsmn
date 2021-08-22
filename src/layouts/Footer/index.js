@@ -558,7 +558,6 @@ const Footer = () => {
               <img
                 src="/googleplay.png"
                 className={classes.googleplay}
-                width={82}
                 height={29}
               />
             </a>
@@ -566,7 +565,7 @@ const Footer = () => {
               href="https://play.google.com/store/apps/details?id=com.sodonsolution.android.newsmn&hl=en"
               target="_blank"
             >
-              <img src="/appstore.png" width={82} height={29} />
+              <img src="/appstore.png" height={29} />
             </a>
           </Box>
         </Box>

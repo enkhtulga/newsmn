@@ -29,6 +29,7 @@ const NArt = () => {
             price="6.000.000₮"
             image="/shop_art_img_2.jpg"
             paddingTop="81.48%"
+            link="/shop-art"
             small
           />,
           <NCardShopArt
@@ -38,6 +39,7 @@ const NArt = () => {
             price="6.000.000₮"
             image="/shop_art_img_2.jpg"
             paddingTop="81.48%"
+            link="/shop-art"
             small
           />,
           <NCardShopArt
@@ -47,6 +49,7 @@ const NArt = () => {
             price="6.000.000₮"
             image="/shop_art_img_2.jpg"
             paddingTop="81.48%"
+            link="/shop-art"
             small
           />,
           <NCardShopArt
@@ -56,6 +59,7 @@ const NArt = () => {
             price="6.000.000₮"
             image="/shop_art_img_2.jpg"
             paddingTop="81.48%"
+            link="/shop-art"
             small
           />,
           <NCardShopArt
@@ -65,6 +69,7 @@ const NArt = () => {
             price="6.000.000₮"
             image="/shop_art_img_2.jpg"
             paddingTop="81.48%"
+            link="/shop-art"
             small
           />,
           <NCardShopArt
@@ -74,6 +79,7 @@ const NArt = () => {
             price="6.000.000₮"
             image="/shop_art_img_2.jpg"
             paddingTop="81.48%"
+            link="/shop-art"
             small
           />,
         ]}

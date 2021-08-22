@@ -190,6 +190,19 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: Colors.text_gray_3,
   },
+  [theme.breakpoints.down("sm")]: {
+    shadowCardWrap: {
+      flexDirection: "column",
+    },
+    contentWrap: {
+      "& div.rhap_container": {
+        paddingLeft: theme.spacing(0),
+      },
+    },
+    title: {
+      marginTop: theme.spacing(2),
+    },
+  },
 }));
 
 export default NCardPodcastDetail;

@@ -23,8 +23,8 @@ const PodcastDetailContainer = () => {
       </Box>
       <Box className="module__content">
         <Grid container spacing={2}>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={8}>
+          <Grid item xs={12} md={12} lg={2}></Grid>
+          <Grid item xs={12} lg={8}>
             <Box mt={-5}>
               <NCardPodcastDetail />
               <Box mt={4} mb={2}>
@@ -46,7 +46,7 @@ const PodcastDetailContainer = () => {
                   image="/home_img_11.jpg"
                   commentDate="2020-01-05"
                   comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
-                  marginLeft={86}
+                  hasIndent
                 />
                 <NComment
                   name="Админ"
@@ -58,7 +58,7 @@ const PodcastDetailContainer = () => {
                   image="/home_img_11.jpg"
                   commentDate="2020-01-05"
                   comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
-                  marginLeft={86}
+                  hasIndent
                 />
                 <TextField
                   label="Бичих талбар"
@@ -97,11 +97,22 @@ const PodcastDetailContainer = () => {
                 </Typography>
               </Box>
               <NCarousel
-                slidesPerView={4}
+                slidesPerView={1}
                 spaceBetween={16}
                 pagination
                 navigation
                 arrowSpacing={"-30px"}
+                breakpoints={{
+                  1280: {
+                    slidesPerView: 4,
+                  },
+                  960: {
+                    slidesPerView: 4,
+                  },
+                  600: {
+                    slidesPerView: 3,
+                  },
+                }}
                 items={[
                   <NCardPodcast image="/podcast_card_img_1.jpg" />,
                   <NCardPodcast image="/podcast_card_img_2.jpg" />,
@@ -122,47 +133,47 @@ const PodcastDetailContainer = () => {
                 </Typography>
               </Box>
               <Grid container spacing={2}>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_1.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_2.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_3.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_4.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_2.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_3.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_4.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_1.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_3.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_4.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_1.jpg" />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={4} md={3}>
                   <NCardPodcast image="/podcast_card_img_2.jpg" />
                 </Grid>
               </Grid>
               <Box mb={12} />
             </Box>
           </Grid>
-          <Grid item xs={2}></Grid>
+          <Grid item xs={12} md={12} lg={2}></Grid>
         </Grid>
       </Box>
     </Box>

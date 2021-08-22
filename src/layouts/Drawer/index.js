@@ -316,6 +316,9 @@ const useStyles = makeStyles((theme) => ({
   },
   nested: {
     paddingLeft: theme.spacing(4),
+    marginLeft: theme.spacing(2),
+    borderLeft: "1px solid",
+    borderLeftColor: Colors.border_red,
   },
 }));
 

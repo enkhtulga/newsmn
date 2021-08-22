@@ -153,34 +153,34 @@ const RealEstateContainer = () => {
         </NTitle>
         <Box mb={5} />
         <Grid container spacing={2}>
-          <Grid item xs={2}>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <NRealEstateNewsItem />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <NRealEstateNewsItem
               title="“Бүх айлын захиалгыг м.кв нь 2.7 сая болгож нэмэгдүүлээгүй”"
               image="/realestate_news_img_2.jpg"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <NRealEstateNewsItem
               title="2021-2025 онд иргэдийг орон сууцжуулах хорооллууд баригдана"
               image="/realestate_news_img_3.jpg"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <NRealEstateNewsItem
               title="Шинэ музей 2021 онд баригдаж дуусах ч хийх компани шалгараагүй"
               image="/realestate_news_img_4.jpg"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <NRealEstateNewsItem
               title="2021-2025 онд иргэдийг орон сууцжуулах хорооллууд баригдана"
               image="/realestate_news_img_5.jpg"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <NRealEstateNewsItem
               title="2021-2025 онд иргэдийг орон сууцжуулах хорооллууд баригдана"
               image="/realestate_news_img_6.jpg"
@@ -189,7 +189,7 @@ const RealEstateContainer = () => {
         </Grid>
         <Box mt={10}>
           <Grid container spacing={2}>
-            <Grid item xs={2}>
+            <Grid item xs={6} sm={4} md={2}>
               <FormControl
                 variant="outlined"
                 disableRipple
@@ -203,6 +203,17 @@ const RealEstateContainer = () => {
                   onChange={(event) => handleChange("category", event)}
                   label="Төрөл"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Бүгд"}>
                     <em>Бүгд</em>
@@ -213,7 +224,7 @@ const RealEstateContainer = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={6} sm={4} md={3}>
               <FormControl
                 variant="outlined"
                 disableRipple
@@ -226,6 +237,17 @@ const RealEstateContainer = () => {
                   onChange={(event) => handleChange("district", event)}
                   label="Дүүрэг"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Бүгд"}>
                     <em>Бүгд</em>
@@ -236,7 +258,7 @@ const RealEstateContainer = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={6} sm={4} md={3}>
               <FormControl
                 variant="outlined"
                 disableRipple
@@ -249,6 +271,17 @@ const RealEstateContainer = () => {
                   onChange={(event) => handleChange("rank", event)}
                   label="Зэрэглэл"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Бүгд"}>
                     <em>Бүгд</em>
@@ -259,7 +292,7 @@ const RealEstateContainer = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={6} sm={6} md={2}>
               <FormControl
                 variant="outlined"
                 disableRipple
@@ -272,6 +305,17 @@ const RealEstateContainer = () => {
                   onChange={(event) => handleChange("room", event)}
                   label="Өрөө"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Бүгд"}>
                     <em>Бүгд</em>
@@ -282,7 +326,7 @@ const RealEstateContainer = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={6} sm={6} md={2}>
               <FormControl
                 variant="outlined"
                 disableRipple
@@ -295,6 +339,17 @@ const RealEstateContainer = () => {
                   onChange={(event) => handleChange("percentage", event)}
                   label="Барилгын явц"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Бүгд"}>
                     <em>Бүгд</em>
@@ -308,7 +363,7 @@ const RealEstateContainer = () => {
           </Grid>
           <Box mt={5} />
           <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <Box className={classes.priceSliderWrap}>
                 <Box display="flex" justifyContent="space-between">
                   <Box>
@@ -349,7 +404,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <Box className={classes.priceSliderWrap}>
                 <Box display="flex" justifyContent="space-between">
                   <Box>
@@ -392,14 +447,12 @@ const RealEstateContainer = () => {
             </Grid>
             <Grid item xs={12}>
               <Box display="flex" justifyContent="flex-end" mb={5}>
-                <Button
-                  variant="outlined"
-                  disableRipple
-                  style={{ marginRight: 16 }}
-                >
+                <Button variant="outlined" style={{ marginRight: 16 }}>
                   Арилгах
                 </Button>
-                <Button variant="contained">Хайх</Button>
+                <Button variant="contained" color="primary">
+                  Хайх
+                </Button>
               </Box>
             </Grid>
             <Grid item xs={12}>
@@ -413,7 +466,7 @@ const RealEstateContainer = () => {
               />
               <Box mb={4} />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Garden City хотхон"
@@ -421,7 +474,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="River Garden 2"
@@ -429,7 +482,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Tokyo residence"
@@ -437,7 +490,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Tokyo Tower"
@@ -445,7 +498,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Garden City"
@@ -453,7 +506,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Tokyo residence"
@@ -461,7 +514,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Нарны хороолол"
@@ -469,7 +522,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Нарны хороолол"
@@ -477,7 +530,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Garden City"
@@ -485,7 +538,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Garden City"
@@ -493,7 +546,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Garden City"
@@ -501,7 +554,7 @@ const RealEstateContainer = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Box mb={10}>
                 <NRealEstateItem
                   title="Garden City"
@@ -511,23 +564,30 @@ const RealEstateContainer = () => {
             </Grid>
             <Grid item xs={12}>
               <Box mb={10} textAlign="center">
-                <NBanner
-                  src="/banner_realestate_1.jpg"
-                  width={1144}
-                  height={200}
-                />
+                <NBanner src="/banner_realestate_1.jpg" width={1144} />
               </Box>
             </Grid>
           </Grid>
         </Box>
-        <NTitle title="Үл хөдлөх холбоотой мэдээ" hasBorder>
+        <NTitle title="Үл хөдлөх" hasBorder>
           <IconHouse style={{ marginRight: 8 }} />
         </NTitle>
         <Box mt={5} mb={20} className={classes.carouselWrap}>
           <NCarousel
-            slidesPerView={8}
+            slidesPerView={2}
             spaceBetween={16}
             pagination={false}
+            breakpoints={{
+              1280: {
+                slidesPerView: 8,
+              },
+              960: {
+                slidesPerView: 6,
+              },
+              600: {
+                slidesPerView: 3,
+              },
+            }}
             items={[
               <NRealEstateItem
                 title="Garden City хотхон"
@@ -644,6 +704,12 @@ const useStyles = makeStyles((theme) => ({
   carouselWrap: {
     marginLeft: "-3rem",
     marginRight: "-3rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    carouselWrap: {
+      marginLeft: 0,
+      marginRight: 0,
+    },
   },
 }));
 

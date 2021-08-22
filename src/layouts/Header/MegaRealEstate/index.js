@@ -22,34 +22,42 @@ const NMegaRealEstate = () => {
             <NRealEstateItem
               title="Garden City хотхон"
               image="/realestate_item_1.jpg"
+              link="/realestate"
             />,
             <NRealEstateItem
               title="River Garden 2"
               image="/realestate_item_2.jpg"
+              link="/realestate"
             />,
             <NRealEstateItem
               title="Tokyo residence"
               image="/realestate_item_3.jpg"
+              link="/realestate"
             />,
             <NRealEstateItem
               title="Tokyo Tower"
               image="/realestate_item_4.jpg"
+              link="/realestate"
             />,
             <NRealEstateItem
               title="Garden City"
               image="/realestate_item_5.jpg"
+              link="/realestate"
             />,
             <NRealEstateItem
               title="Tokyo residence"
               image="/realestate_item_6.jpg"
+              link="/realestate"
             />,
             <NRealEstateItem
               title="Нарны хороолол"
               image="/realestate_item_7.jpg"
+              link="/realestate"
             />,
             <NRealEstateItem
               title="Нарны хороолол"
               image="/realestate_item_8.jpg"
+              link="/realestate"
             />,
           ]}
         />

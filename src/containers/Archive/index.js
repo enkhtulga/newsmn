@@ -75,8 +75,8 @@ const ArchiveContainer = () => {
       <NBreadcrumbs title={"Архив"} />
       <Box className="module__content">
         <Grid container spacing={2}>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={7}>
+          <Grid item xs={12} md={12} lg={1}></Grid>
+          <Grid item xs={12} md={12} lg={7}>
             <Box mt={5} mb={3}>
               <FormControl variant="outlined" fullWidth>
                 <InputLabel htmlFor="outlined-adornment-password">
@@ -116,6 +116,17 @@ const ArchiveContainer = () => {
                   onChange={(event) => handleChangeFilter("filterType", event)}
                   label="Сонгох"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Сонгох"} disabled>
                     <em>Сонгох</em>
@@ -137,6 +148,17 @@ const ArchiveContainer = () => {
                   onChange={(event) => handleChangeFilter("startYear", event)}
                   label="Он"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Он"} disabled>
                     <em>Он</em>
@@ -158,6 +180,17 @@ const ArchiveContainer = () => {
                   onChange={(event) => handleChangeFilter("startMonth", event)}
                   label="Сар"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Сар"} disabled>
                     <em>Сар</em>
@@ -183,6 +216,17 @@ const ArchiveContainer = () => {
                   onChange={(event) => handleChangeFilter("startDay", event)}
                   label="Өдөр"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Өдөр"} disabled>
                     <em>Өдөр</em>
@@ -208,6 +252,17 @@ const ArchiveContainer = () => {
                   onChange={(event) => handleChangeFilter("endYear", event)}
                   label="Он"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Он"} disabled>
                     <em>Он</em>
@@ -229,6 +284,17 @@ const ArchiveContainer = () => {
                   onChange={(event) => handleChangeFilter("endMonth", event)}
                   label="Сар"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Сар"} disabled>
                     <em>Сар</em>
@@ -254,6 +320,17 @@ const ArchiveContainer = () => {
                   onChange={(event) => handleChangeFilter("endDay", event)}
                   label="Өдөр"
                   size="small"
+                  MenuProps={{
+                    getContentAnchorEl: null,
+                    anchorOrigin: {
+                      vertical: "bottom",
+                      horizontal: "center",
+                    },
+                    transformOrigin: {
+                      vertical: "top",
+                      horizontal: "center",
+                    },
+                  }}
                 >
                   <MenuItem value={"Өдөр"} disabled>
                     <em>Өдөр</em>
@@ -270,18 +347,24 @@ const ArchiveContainer = () => {
               <NButtonPrimary>Шүүх</NButtonPrimary>
             </Box>
           </Grid>
-          <Grid item xs={4}></Grid>
+          <Grid item xs={12} md={12} lg={1}></Grid>
         </Grid>
         <Grid container spacing={2}>
-          <Grid item xs={1} />
-          <Grid item xs={1}>
+          <Grid item xs={12} lg={1} />
+          <Grid
+            item
+            xs={false}
+            md={false}
+            lg={1}
+            className={classes.leftSidebar}
+          >
             <StickySidebar offsetTop={16} offsetBottom={16}>
               <Box display="flex" justifyContent={"center"}>
                 <NSocialVertical />
               </Box>
             </StickySidebar>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={8} lg={6}>
             <NTripItem hasLocation={false} hasPrice={false} hasReview={false} />
             <NTripItem hasLocation={false} hasPrice={false} hasReview={false} />
             <NTripItem hasLocation={false} hasPrice={false} hasReview={false} />
@@ -298,7 +381,7 @@ const ArchiveContainer = () => {
               <Pagination count={10} variant="outlined" color="primary" />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={3} lg={3} className={classes.rightSidebar}>
             <Box mb={4}>
               <List component="nav" aria-label="sidebar" disablePadding>
                 <Typography variant="body1" className={classes.category}>
@@ -430,7 +513,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
   },
   formControl: {
-    minWidth: 90,
+    minWidth: 89,
     marginRight: 14,
     marginBottom: theme.spacing(1),
   },
@@ -472,6 +555,14 @@ const useStyles = makeStyles((theme) => ({
       "& span": {
         color: Colors.border_red,
       },
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    leftSidebar: {
+      display: "none",
+    },
+    rightSidebar: {
+      display: "none",
     },
   },
 }));

@@ -192,7 +192,20 @@ const StepTwo = ({ handleNext, handleBack }) => {
               </InputLabel>
             </Box>
             <FormControl variant="outlined" size="small" fullWidth>
-              <Select value={10}>
+              <Select
+                value={10}
+                MenuProps={{
+                  getContentAnchorEl: null,
+                  anchorOrigin: {
+                    vertical: "bottom",
+                    horizontal: "center",
+                  },
+                  transformOrigin: {
+                    vertical: "top",
+                    horizontal: "center",
+                  },
+                }}
+              >
                 <MenuItem value={10}>
                   <em>Сонгох</em>
                 </MenuItem>
@@ -207,7 +220,20 @@ const StepTwo = ({ handleNext, handleBack }) => {
               </InputLabel>
             </Box>
             <FormControl variant="outlined" size="small" fullWidth>
-              <Select value={10}>
+              <Select
+                value={10}
+                MenuProps={{
+                  getContentAnchorEl: null,
+                  anchorOrigin: {
+                    vertical: "bottom",
+                    horizontal: "center",
+                  },
+                  transformOrigin: {
+                    vertical: "top",
+                    horizontal: "center",
+                  },
+                }}
+              >
                 <MenuItem value={10}>
                   <em>Сонгох</em>
                 </MenuItem>
@@ -222,7 +248,20 @@ const StepTwo = ({ handleNext, handleBack }) => {
               </InputLabel>
             </Box>
             <FormControl variant="outlined" size="small" fullWidth>
-              <Select value={10}>
+              <Select
+                value={10}
+                MenuProps={{
+                  getContentAnchorEl: null,
+                  anchorOrigin: {
+                    vertical: "bottom",
+                    horizontal: "center",
+                  },
+                  transformOrigin: {
+                    vertical: "top",
+                    horizontal: "center",
+                  },
+                }}
+              >
                 <MenuItem value={10}>
                   <em>Сонгох</em>
                 </MenuItem>

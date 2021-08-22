@@ -26,42 +26,49 @@ const NBook = () => {
             title="Шилэн илд"
             author="Викториа Эвиярд"
             price="19,900 ₮"
+            link="/shop-ebook/1"
           />,
           <NShopBookItem
             title="Цойлогсод"
             author="Викториа Эвиярд"
             price="19,900 ₮"
             image="/shop_book_item_2.jpg"
+            link="/shop-ebook/1"
           />,
           <NShopBookItem
             title="Цойлогсод"
             author="Викториа Эвиярд"
             price="19,900 ₮"
             image="/shop_book_item_3.jpg"
+            link="/shop-ebook/1"
           />,
           <NShopBookItem
             title="Цойлогсод"
             author="Викториа Эвиярд"
             price="19,900 ₮"
             image="/shop_book_item_4.jpg"
+            link="/shop-ebook/1"
           />,
           <NShopBookItem
             title="Цойлогсод"
             author="Викториа Эвиярд"
             price="19,900 ₮"
             image="/shop_book_item_5.jpg"
+            link="/shop-ebook/1"
           />,
           <NShopBookItem
             title="Цойлогсод"
             author="Викториа Эвиярд"
             price="19,900 ₮"
             image="/shop_book_item_6.jpg"
+            link="/shop-ebook/1"
           />,
           <NShopBookItem
             title="Цойлогсод"
             author="Викториа Эвиярд"
             price="19,900 ₮"
             image="/shop_book_item_7.jpg"
+            link="/shop-ebook/1"
           />,
         ]}
       />

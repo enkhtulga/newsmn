@@ -13,6 +13,7 @@ import {
 } from "@material-ui/icons";
 import Rating from "@material-ui/lab/Rating";
 import NCartQuantity from "../CartQuantity";
+import { useRouter } from "next/router";
 
 const NCardBookHorizontal = ({
   image,
@@ -26,6 +27,7 @@ const NCardBookHorizontal = ({
   hasListenPrice = false,
 }) => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <Box className={classes.wrap}>
@@ -180,10 +182,15 @@ const NCardBookHorizontal = ({
                 color: Colors.border_red,
                 borderColor: Colors.border_red,
               }}
+              onClick={() => router.push("/account/my-cart")}
             >
               Сагсанд нэмэх
             </Button>
-            <Button variant="contained" color="primary">
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => router.push("/account/my-cart")}
+            >
               Худалдаж авах
             </Button>
           </Box>

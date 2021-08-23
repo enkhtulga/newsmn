@@ -574,7 +574,7 @@ const HomeContainer = () => {
         />
       </section>
       <section className={clsx(classes.sectionMiddle4, "module__content")}>
-        <NTitle title="Дэлгэрэнгүй" hasBorder>
+        <NTitle title="Цогц мэдээ" hasBorder>
           <img
             src="/hee_6.png"
             alt="Дэлгэрэнгүй"

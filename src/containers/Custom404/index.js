@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Colors } from "../../theme/colors";
 import { useRouter } from "next/router";
 
 const SearchContainer = () => {
@@ -13,9 +12,9 @@ const SearchContainer = () => {
       <Box className="module__content">
         <Grid container spacing={2}>
           <Grid item xs={12} className={classes.content}>
-            <Typography variant="h1" className={classes.title}>
-              404
-            </Typography>
+            <Box textAlign="center">
+              <img src="/text404.png" className={classes.text404} />
+            </Box>
             <Typography
               variant="body2"
               align={"center"}
@@ -44,16 +43,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(15),
     marginBottom: theme.spacing(15),
   },
-  title: {
-    textShadow: "0 30px 10px rgb(0 0 0 / 15%)",
-    fontSize: 160,
-    lineHeight: "160px",
-    textAlign: "center",
-    fontWeight: "800",
-    color: "#929292",
+  text404: {
+    width: 754,
+    maxWidth: "100%",
   },
   description: {
-    marginTop: theme.spacing(3),
+    marginTop: 0,
     marginBottom: theme.spacing(3),
   },
   [theme.breakpoints.down("md")]: {},

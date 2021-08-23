@@ -18,6 +18,7 @@ const NCardVideoSmall = ({ title, image, hasVideo = true }) => {
           <NCardMedia
             paddingTop="54.21%"
             image={image || "/card_video_small.jpg"}
+            link={"/video/1"}
           />
           {hasVideo && (
             <Box className={classes.playWrap}>
@@ -29,7 +30,7 @@ const NCardVideoSmall = ({ title, image, hasVideo = true }) => {
         </Box>
         <NCardContent className={classes.contentWrap}>
           <NPostMeta videoIcon />
-          <Link color="initial" href={"/posts/1"} underline="none">
+          <Link color="initial" href={"/video/1"} underline="none">
             <Typography variant="h1" className={classes.title}>
               {title || "Дуучин Д.Болд: Би сураггүй алга болоогүй"}
             </Typography>

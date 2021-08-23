@@ -28,7 +28,7 @@ const NCardShopArt = ({
           />
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Link color="initial" href={link || "/posts/1"} underline="none">
+          <Link color="initial" href={link || "/shop-art"} underline="none">
             <Box className={classes.contentInnerWrap}>
               <Typography variant="body1" className={classes.info}>
                 {"Нэр: "}

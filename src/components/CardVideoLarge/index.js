@@ -14,6 +14,7 @@ const NCardVideoLarge = ({
   largeTitle,
   paddingTop,
   maxWidth,
+  hasVideo = true,
 }) => {
   const classes = useStyles({ largeTitle, maxWidth });
 
@@ -24,16 +25,19 @@ const NCardVideoLarge = ({
           <NCardMedia
             paddingTop={paddingTop || "55.88%"}
             image={image || "/card_video_large.jpg"}
+            link={"/video/1"}
           />
-          <Box className={classes.playWrap}>
-            <Box className={classes.playInnerWrap}>
-              <IconPlayArrow className={classes.play} />
+          {hasVideo && (
+            <Box className={classes.playWrap}>
+              <Box className={classes.playInnerWrap}>
+                <IconPlayArrow className={classes.play} />
+              </Box>
             </Box>
-          </Box>
+          )}
         </Box>
         <NCardContent className={classes.contentWrap}>
           <NPostMeta videoIcon />
-          <Link color="initial" href={"/posts/1"} underline="none">
+          <Link color="initial" href={"/video/1"} underline="none">
             <Typography variant="h1" className={classes.title}>
               {title ||
                 "ХӨСҮТ-ийн эмч А.Амбасэлмаад Эрүүлийг хамгаалахын гавъяат ажилтан цол хүртлээ"}

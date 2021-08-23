@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCardMedia from "../Card/CardMedia";
 import Rating from "@material-ui/lab/Rating";
@@ -29,9 +29,11 @@ const NTripItem = ({
         />
       </Box>
       <Box className={classes.contentWrap}>
-        <Typography variant="h1" className={classes.title}>
-          {title || '"Сарлагийн баяр" арга хэмжээ'}
-        </Typography>
+        <Link color="initial" href={"/posts/1"} underline="none">
+          <Typography variant="h1" className={classes.title}>
+            {title || '"Сарлагийн баяр" арга хэмжээ'}
+          </Typography>
+        </Link>
         {hasLocation && (
           <Box display="flex" alignItems="center" mt={1} mb={0.5}>
             <IconRoom fontSmall="small" className={classes.pinIcon} />
@@ -95,6 +97,9 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 2,
     overflow: "hidden",
     textOverflow: "ellipsis",
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   price: {
     color: Colors.light_blue_3,

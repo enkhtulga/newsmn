@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -17,9 +17,11 @@ const NCardSportNewsItem = ({ title, excerpt, image }) => {
           <NCardMedia paddingTop="69.44%" image={image} />
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Typography variant="h1" className={classes.title}>
-            {title}
-          </Typography>
+          <Link color="initial" href={"/sport/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              {title}
+            </Typography>
+          </Link>
           <Typography variant="body2" className={classes.content}>
             {excerpt}
           </Typography>
@@ -48,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
     lineHeight: "25px",
     paddingBottom: theme.spacing(1),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   [theme.breakpoints.down("sm")]: {
     cardWrap: {

@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 2,
     overflow: "hidden",
     textOverflow: "ellipsis",
-    height: 40,
+    height: 50,
     "&:hover": {
       color: Colors.primary,
     },

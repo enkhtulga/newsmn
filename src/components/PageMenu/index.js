@@ -33,7 +33,7 @@ const NPageMenu = ({ items, primaryColor, justifyContent, isDark }) => {
                 <ListItemText
                   className={classes.listText}
                   primary={item.name}
-                  primaryTypographyProps={{ noWrap: true }}
+                  // primaryTypographyProps={{ noWrap: true }}
                 />
               </ListItem>
             </Link>

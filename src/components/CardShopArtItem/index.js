@@ -25,6 +25,7 @@ const NCardShopArtItem = ({
           <NCardMedia
             paddingTop={paddingTop || "52.71%"}
             image={image || "/shop_art_img_1.jpg"}
+            link="#"
           />
         </Box>
         <NCardContent className={classes.contentWrap}>

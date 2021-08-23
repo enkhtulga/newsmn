@@ -19,6 +19,7 @@ const NShopItem = ({ title, image, paddingTop }) => {
             <NCardMedia
               paddingTop={paddingTop || "105.09%"}
               image={image || "/shop_item.jpg"}
+              link="/shop-ebook/1"
             />
           </Box>
           <IconShoppingCart className={classes.cartIcon} fontSize="small" />
@@ -36,7 +37,7 @@ const NShopItem = ({ title, image, paddingTop }) => {
               className={classes.rating}
             />
           </Box>
-          <Link color="initial" href={"/posts/1"} underline="none">
+          <Link color="initial" href={"/shop-ebook/1"} underline="none">
             <Typography variant="h1" className={classes.title}>
               {title || "WIC. T CYCLING BEAR"}
             </Typography>

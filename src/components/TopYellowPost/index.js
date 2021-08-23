@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -25,9 +25,11 @@ const NTopYellowPost = ({ image, yellowCategory, category, title }) => {
                 {category}
               </Typography>
             </Box>
-            <Typography variant="h1" className={classes.title}>
-              {title}
-            </Typography>
+            <Link color="initial" href={"/posts/1"} underline="none">
+              <Typography variant="h1" className={classes.title}>
+                {title}
+              </Typography>
+            </Link>
           </Box>
         </NCardContent>
       </NCard>
@@ -75,6 +77,9 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis",
     marginBottom: theme.spacing(3),
     height: 70,
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   [theme.breakpoints.down("md")]: {
     title: {

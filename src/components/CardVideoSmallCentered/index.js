@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -15,7 +15,7 @@ const NCardVideoSmallCentered = ({ title, image, star, dark }) => {
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia paddingTop="62.03%" image={image} />
+          <NCardMedia paddingTop="62.03%" image={image} link="/video/1" />
           <Box className={classes.playWrap}>
             <Box className={classes.playInnerWrap}>
               <IconPlayArrow className={classes.play} />
@@ -23,9 +23,11 @@ const NCardVideoSmallCentered = ({ title, image, star, dark }) => {
           </Box>
         </Box>
         <NCardContent className={classes.contentWrap}>
-          <Typography variant="h1" className={classes.title}>
-            {title}
-          </Typography>
+          <Link color="initial" href={"/video/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              {title}
+            </Typography>
+          </Link>
           <Rating
             name="read-only"
             value={star}
@@ -55,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "20px",
     paddingBottom: theme.spacing(1),
     color: (props) => (props.dark ? Colors.white : "inherit"),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   mediaOuterWrap: {
     position: "relative",

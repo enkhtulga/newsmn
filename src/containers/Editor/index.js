@@ -34,7 +34,37 @@ const EditorsContainer = () => {
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_2.jpeg" />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover image="/journalist_3.jpeg" />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover image="/journalist_4.jpeg" />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover image="/journalist_5.jpeg" />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover image="/journalist_6.jpeg" />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover image="/journalist_7.jpeg" />
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Box mb={8}>
+              <NJournalist size={136} hasHover image="/journalist_8.jpeg" />
             </Box>
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
@@ -44,67 +74,37 @@ const EditorsContainer = () => {
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_2.jpeg" />
             </Box>
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_3.jpeg" />
             </Box>
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_4.jpeg" />
             </Box>
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_5.jpeg" />
             </Box>
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_6.jpeg" />
             </Box>
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_7.jpeg" />
             </Box>
           </Grid>
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Box mb={8}>
-              <NJournalist size={136} hasHover />
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3} lg={2}>
-            <Box mb={8}>
-              <NJournalist size={136} hasHover />
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3} lg={2}>
-            <Box mb={8}>
-              <NJournalist size={136} hasHover />
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3} lg={2}>
-            <Box mb={8}>
-              <NJournalist size={136} hasHover />
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3} lg={2}>
-            <Box mb={8}>
-              <NJournalist size={136} hasHover />
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3} lg={2}>
-            <Box mb={8}>
-              <NJournalist size={136} hasHover />
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3} lg={2}>
-            <Box mb={8}>
-              <NJournalist size={136} hasHover />
+              <NJournalist size={136} hasHover image="/journalist_8.jpeg" />
             </Box>
           </Grid>
         </Grid>

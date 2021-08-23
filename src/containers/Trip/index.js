@@ -97,7 +97,7 @@ const TripContainer = () => {
           >
             <Box mt={2} />
             <NSelectTitle
-              title="Алдартай бичлэгүүд"
+              title="Алдартай бичлэг"
               hasBorder
               className={classes.blackTitle}
             >
@@ -157,7 +157,7 @@ const TripContainer = () => {
               </Box>
             </StickySidebar>
           </Grid>
-          <Grid item xs={12} sm={12} md={8}>
+          <Grid item xs={12} sm={12} md={8} lg={6}>
             <NPageMenu
               items={[
                 { name: "Дотоод", link: "/trip" },

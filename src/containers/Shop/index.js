@@ -249,7 +249,9 @@ const ShopContainer = () => {
               paddingTop="133.12%"
             />
             <Box display="flex" justifyContent="flex-end" mt={6}>
-              <Button variant="outlined">Бүгдийг харах+</Button>
+              <Button variant="outlined" onClick={() => router.push("/shop")}>
+                Бүгдийг харах+
+              </Button>
             </Box>
           </Grid>
         </Grid>
@@ -392,7 +394,9 @@ const ShopContainer = () => {
           </Grid>
           <Grid item xs={12}>
             <Box mb={9} textAlign="center">
-              <Button variant="outlined">Бүгдийг харах+</Button>
+              <Button variant="outlined" onClick={() => router.push("/shop")}>
+                Бүгдийг харах+
+              </Button>
             </Box>
           </Grid>
           <Grid item xs={12} sm={3}></Grid>
@@ -609,7 +613,9 @@ const ShopContainer = () => {
           </Grid>
           <Grid item xs={12}>
             <Box mb={9} textAlign="center">
-              <Button variant="outlined">Бүгдийг харах+</Button>
+              <Button variant="outlined" onClick={() => router.push("/shop")}>
+                Бүгдийг харах+
+              </Button>
             </Box>
           </Grid>
           <Box mb={10} />

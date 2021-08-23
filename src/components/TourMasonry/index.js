@@ -33,7 +33,7 @@ const NTourMasonry = () => {
               <Typography className={classes.subtitle}>
                 {item.subtitle}
               </Typography>
-              <Link color="initial" href={"/posts/1"} underline="none">
+              <Link color="initial" href={"/trip"} underline="none">
                 <Typography className={classes.title}>{item.title}</Typography>
               </Link>
             </Box>

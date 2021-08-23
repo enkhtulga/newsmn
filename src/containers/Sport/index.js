@@ -26,21 +26,41 @@ const SportContainer = () => {
           <Box className="module__content">
             <Grid container spacing={2}>
               <Grid item sm={12} md={6}>
-                <NCardVideoLarge />
+                <NCardVideoLarge
+                  image={"/sport_top_img_1.jpg"}
+                  title="Тоглолтын өмнө: Гурван өнгөтнүүдийн том сорилт"
+                  hasVideo={false}
+                />
               </Grid>
               <Grid item sm={12} md={6}>
                 <Grid container spacing={2}>
                   <Grid item xs={6} sm={6} md={6}>
-                    <NCardVideoSmall />
+                    <NCardVideoSmall
+                      image={"/sport_top_img_2.jpg"}
+                      title="Тоглолтын өмнө: Испанийн эсрэг Хорват"
+                      hasVideo={false}
+                    />
                   </Grid>
                   <Grid item xs={6} sm={6} md={6}>
-                    <NCardVideoSmall />
+                    <NCardVideoSmall
+                      image={"/sport_top_img_3.jpg"}
+                      title="О.Гүндэгмаа ялсан ч Ц.Анударьд боломж олгож, нэрээ татжээ"
+                      hasVideo={false}
+                    />
                   </Grid>
                   <Grid item xs={6} sm={6} md={6}>
-                    <NCardVideoSmall />
+                    <NCardVideoSmall
+                      image={"/sport_top_img_4.jpg"}
+                      title="Хурдан морьдыг ялгах ажилд УИХ-ын гишүүд оролцоно"
+                      hasVideo={false}
+                    />
                   </Grid>
                   <Grid item xs={6} sm={6} md={6}>
-                    <NCardVideoSmall />
+                    <NCardVideoSmall
+                      image={"/sport_top_img_5.jpg"}
+                      title="Өдрийн тойм: Нисдэг Голландын сүйрэл, хүчирхэг Португалын харуусал"
+                      hasVideo={false}
+                    />
                   </Grid>
                 </Grid>
               </Grid>

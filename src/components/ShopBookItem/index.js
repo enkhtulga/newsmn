@@ -26,7 +26,7 @@ const NShopBookItem = ({
           <NCardMedia
             paddingTop="133.12%"
             image={image || "/shop_book_item_1.jpg"}
-            link={link}
+            link={link || "/shop-ebook/1"}
           />
           {salePrice && (
             <Box className={classes.saleLabelWrap}>
@@ -57,7 +57,11 @@ const NShopBookItem = ({
                 className={classes.rating}
               />
             )}
-            <Link color="initial" href={link || "/posts/1"} underline="none">
+            <Link
+              color="initial"
+              href={link || "/shop-ebook/1"}
+              underline="none"
+            >
               <Typography variant="body2" className={classes.title}>
                 {title}
               </Typography>

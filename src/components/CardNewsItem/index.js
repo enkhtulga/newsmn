@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 import NCard from "../Card";
 import NCardMedia from "../Card/CardMedia";
@@ -25,9 +25,11 @@ const NCardNewsItem = ({ hasPhotoBy }) => {
           <Typography variant="overline" className={classes.subtitle}>
             Дэлхий - Хөрш орнууд
           </Typography>
-          <Typography variant="h1" className={classes.title}>
-            Хүч, хариуцлага тэнцсэн шинэ намын дарга
-          </Typography>
+          <Link color="initial" href={"/posts/1"} underline="none">
+            <Typography variant="h1" className={classes.title}>
+              Хүч, хариуцлага тэнцсэн шинэ намын дарга
+            </Typography>
+          </Link>
           <Typography variant="body2" className={classes.content}>
             Монгол Улсын Ерөнхийлөгчөөр сонгогдсон У.Хүрэлсүх Баасан гаригт
             тангаргаа өргөхийн өмнө намын Бага хурлаа хуралдуулж, намын даргын
@@ -77,6 +79,9 @@ const useStyles = makeStyles((theme) => ({
     color: Colors.title,
     lineHeight: "30px",
     paddingBottom: theme.spacing(1),
+    "&:hover": {
+      color: Colors.primary,
+    },
   },
   quote: {
     paddingTop: theme.spacing(1),

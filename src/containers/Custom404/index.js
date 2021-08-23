@@ -2,13 +2,14 @@ import React from "react";
 import { Box, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useRouter } from "next/router";
+import { Colors } from "../../theme/colors";
 
 const SearchContainer = () => {
   const classes = useStyles();
   const router = useRouter();
 
   return (
-    <Box>
+    <Box style={{ backgroundColor: Colors.bg_gray }}>
       <Box className="module__content">
         <Grid container spacing={2}>
           <Grid item xs={12} className={classes.content}>
@@ -22,11 +23,12 @@ const SearchContainer = () => {
             >
               Уучлаарай хуудас олдсонгүй.
             </Typography>
-            <Box align="center">
+            <Box align="center" width={200} margin="0 auto">
               <Button
                 variant="contained"
                 color="primary"
                 onClick={() => router.back()}
+                fullWidth
               >
                 Буцах
               </Button>

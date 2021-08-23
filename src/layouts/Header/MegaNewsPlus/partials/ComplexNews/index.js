@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Grid } from "@material-ui/core";
+import { Box, Grid, Button } from "@material-ui/core";
 import { useRouter } from "next/router";
 import NMenuCarousel from "../../../../../components/MenuCarousel";
 import NSelectTitle from "../../../../../components/SelectTitle";
@@ -62,6 +62,15 @@ const NComplexNews = () => {
           </Grid>,
         ]}
       />
+      <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Button
+          variant="outlined"
+          style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/comprehensive")}
+        >
+          Бүгдийг харах
+        </Button>
+      </Box>
     </>
   );
 };

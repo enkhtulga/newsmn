@@ -54,6 +54,15 @@ const NCorners = () => {
           />,
         ]}
       />
+      <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Button
+          variant="outlined"
+          style={{ borderColor: "#FF1313", color: "#FF1313" }}
+          onClick={() => router.push("/corners")}
+        >
+          Бүгдийг харах
+        </Button>
+      </Box>
     </>
   );
 };

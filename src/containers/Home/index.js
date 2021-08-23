@@ -588,54 +588,133 @@ const HomeContainer = () => {
             <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Улс төр" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title="Путин: Бид нацизмыг сөнөөсөн үндэстэн гэдгээрээ үеийн үед бахархах ёстой!"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                title="ЗГ: УИХ-аар Covid-19-ийг давах санхүүжилтийг хэлэлцүүлнэ"
+                image="/complex_img_1.jpg"
+              />
               <NSelectTitle title="Спорт" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                hasBorder
+                title="Их гүрнүүдийн тулаан: Англи vs Герман түүхэнд үлдсэн шилдэг 5 тоглолт"
+                image="/complex_img_2.jpg"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                title="Танилц: Токиогийн олимпод оролцох Монголын жүдогийн баг"
+                noImage
+                hasBorder
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Нийгэм" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" />
-              <NCardPostTitle paddingTop="54.21%" noImage />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title="Covid-19-өөр өвдсөн иргэдэд эмнэлгийн ор хүрэлцэхгүй байна"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title="Сэрэмжлүүлэг: Зарим нутгаар дуу цахилгаантай аадар бороо орно"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                title="Хориглосон хугацаанд загас баривал Зөрчлийн хуулиар торгоно"
+              />
               <NSelectTitle title="Эдийн засаг" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                hasBorder
+                title="Цахилгаан тамхины тухай мэдвэл зохих зүйлс"
+                image="/complex_img_3.jpg"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title="Цахим төлбөр тооцоо хийхдээ тусгай зөвшөөрлийг нь шалгаарай!"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title="647,749 ширхэг хувьцаа арилжжээ"
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Шар мэдээ" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" />
-              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                title="Москвад суугаа Барууны элчин сайдууд “хууль зөрчив”"
+                image="/complex_img_4.jpg"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                title="Ерөнхийлөгч Х.Баттулга МАН-ын хоёр ЖДҮ-чинг уучлав"
+              />
               <NSelectTitle title="Парламент 76" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" />
-              <NCardPostTitle paddingTop="54.21%" />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title="Путин: Бид нацизмыг сөнөөсөн үндэстэн гэдгээрээ үеийн үед бахархах ёстой!"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                image="/complex_img_5.jpg"
+                title="Ерөнхийлөгч У.Хүрэлсүхэд УИХ-ын дарга, Ерөнхий сайд нар бараалхав"
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
               <NSelectTitle title="Дэлхий" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
-              <NCardPostTitle paddingTop="54.21%" />
-              <NCardPostTitle paddingTop="54.21%" noImage hasBorder />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title='"Бээжинг тусгаарлахаар сүрдүүлсэн нь улс төрийн манипуляци"'
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                hasBorder
+                title="Майамид 12 давхар барилга нурж, 99 хүн олдоогүй байна"
+              />
               <NSelectTitle title="Эдийн засаг" hasBorder />
               <Box mt={2} />
-              <NCardPostTitle paddingTop="54.21%" />
-              <NCardPostTitle paddingTop="54.21%" noImage />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                title="Өнгөрснөөсөө үл хамааран нээлттэй байцгаая"
+                image="/complex_img_5.jpg"
+              />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                title="Путин: Бид нацизмыг сөнөөсөн үндэстэн гэдгээрээ үеийн үед бахархах ёстой!"
+              />
+              <NSelectTitle title="Энтертайнмент" hasBorder />
+              <Box mt={2} />
+              <NCardPostTitle
+                paddingTop="54.21%"
+                noImage
+                title="Долоо хоногийн өрнийн зурхай /2021.VI.28-2021.VII.4/"
+              />
             </Grid>
           </Grid>
         </Box>

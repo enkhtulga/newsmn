@@ -8,7 +8,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const NDialog = ({ open, handleClose, children, fullScreen }) => {
+const NDialog = ({ open, handleClose, children, fullScreen, transparent }) => {
   const classes = useStyles();
   return (
     <Dialog
@@ -31,7 +31,15 @@ const NDialog = ({ open, handleClose, children, fullScreen }) => {
           e.preventDefault();
         },
       }}
-      PaperProps={{ classes: { root: fullScreen ? classes.paper : "" } }}
+      PaperProps={{
+        classes: {
+          root: fullScreen
+            ? transparent
+              ? classes.paperTransparent
+              : classes.paper
+            : "",
+        },
+      }}
     >
       {children}
     </Dialog>
@@ -46,6 +54,9 @@ const useStyles = makeStyles({
   paper: {
     backgroundColor: Colors.title,
     boxShadow: "none",
+  },
+  paperTransparent: {
+    backgroundColor: "transparent",
   },
 });
 

@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Grid, Typography, Button } from "@material-ui/core";
+import React, { useState } from "react";
+import { Box, Grid, Typography, Button, IconButton } from "@material-ui/core";
 import StickySidebar from "../../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../theme/colors";
@@ -22,9 +22,60 @@ import {
   Share as IconShare,
   PlayArrow as IconPlayArrow,
 } from "@material-ui/icons";
+import NDialog from "../../../components/Dialog";
+import NStepOne from "./StepOne";
+import NStepTwo from "./StepTwo";
+import NStepThree from "./StepThree";
 
 const VideoDetailContainer = ({ videoPostId }) => {
   const classes = useStyles();
+
+  const [openSubscribeStepOne, setOpenSubscribeStepOne] = useState(false);
+  const [openSubscribeStepTwo, setOpenSubscribeStepTwo] = useState(false);
+  const [openSubscribeStepThree, setOpenSubscribeStepThree] = useState(false);
+
+  const handleCloseSubscribeStepOne = () => {
+    setOpenSubscribeStepOne(false);
+  };
+
+  const handleCloseSubscribeStepTwo = () => {
+    setOpenSubscribeStepTwo(false);
+  };
+
+  const handleCloseSubscribeStepThree = () => {
+    setOpenSubscribeStepThree(false);
+  };
+
+  const handleStepTwo = () => {
+    setOpenSubscribeStepOne(false);
+    setOpenSubscribeStepTwo(true);
+  };
+
+  const handleStepThree = () => {
+    setOpenSubscribeStepTwo(false);
+    setOpenSubscribeStepThree(true);
+  };
+
+  const renderDialogContent = (value) => {
+    switch (value) {
+      case "subscribeStepOne":
+        return (
+          <NStepOne
+            handleClose={handleCloseSubscribeStepOne}
+            handleNext={handleStepTwo}
+          />
+        );
+      case "subscribeStepTwo":
+        return (
+          <NStepTwo
+            handleClose={handleCloseSubscribeStepTwo}
+            handleNext={handleStepThree}
+          />
+        );
+      case "subscribeStepThree":
+        return <NStepThree handleClose={handleCloseSubscribeStepThree} />;
+    }
+  };
 
   return (
     <Box className={classes.bgBlack}>
@@ -37,7 +88,11 @@ const VideoDetailContainer = ({ videoPostId }) => {
             <NCardMedia paddingTop="54.23%" image="/video_detail_img.jpg" />
             <Box className={classes.playWrap}>
               <Box className={classes.playInnerWrap}>
-                <IconPlayArrow className={classes.play} />
+                <IconButton
+                  onClick={() => setOpenSubscribeStepOne(!openSubscribeStepOne)}
+                >
+                  <IconPlayArrow className={classes.play} />
+                </IconButton>
               </Box>
             </Box>
           </Box>
@@ -133,6 +188,30 @@ const VideoDetailContainer = ({ videoPostId }) => {
           />
         </Box>
       </Box>
+      <NDialog
+        open={openSubscribeStepOne}
+        fullScreen
+        transparent
+        handleClose={handleCloseSubscribeStepOne}
+      >
+        {renderDialogContent("subscribeStepOne")}
+      </NDialog>
+      <NDialog
+        open={openSubscribeStepTwo}
+        fullScreen
+        transparent
+        handleClose={handleCloseSubscribeStepTwo}
+      >
+        {renderDialogContent("subscribeStepTwo")}
+      </NDialog>
+      <NDialog
+        open={openSubscribeStepThree}
+        fullScreen
+        transparent
+        handleClose={handleCloseSubscribeStepThree}
+      >
+        {renderDialogContent("subscribeStepThree")}
+      </NDialog>
     </Box>
   );
 };
@@ -184,6 +263,7 @@ const useStyles = makeStyles((theme) => ({
   },
   play: {
     fontSize: 50,
+    color: Colors.white,
   },
 }));
 

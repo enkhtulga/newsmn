@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 
-const NTitleRed = ({ title, subtitle, subtitleMaxWidth }) => {
-  const classes = useStyles({ subtitleMaxWidth });
+const NTitleRed = ({ title, subtitle, subtitleMaxWidth, dark }) => {
+  const classes = useStyles({ subtitleMaxWidth, dark });
 
   return (
     <Box className={classes.wrap}>
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   title: {
-    color: "#2C2A2A",
+    color: (props) => (props.dark ? Colors.white : "#2C2A2A"),
     paddingBottom: theme.spacing(2),
     position: "relative",
     "&::before": {
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     paddingTop: theme.spacing(2),
-    color: Colors.secondary,
+    color: (props) => (props.dark ? "#EBEBEB" : Colors.secondary),
     lineHeight: "15px",
     fontSize: 13,
     maxWidth: (props) =>

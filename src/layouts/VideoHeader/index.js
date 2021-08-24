@@ -117,6 +117,12 @@ const VideoHeader = ({ toggleDrawer, open }) => {
         );
       case "search":
         return <NSearch handleClose={handleCloseSearch} />;
+      case "subscribeStepOne":
+        return <>subscribeStepOne</>;
+      case "subscribeStepTwo":
+        return <>subscribeStepTwo</>;
+      case "subscribeStepThree":
+        return <>subscribeStepThree</>;
     }
   };
 

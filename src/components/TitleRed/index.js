@@ -3,17 +3,19 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography } from "@material-ui/core";
 import { Colors } from "../../theme/colors";
 
-const NTitleRed = ({ title, subtitle }) => {
-  const classes = useStyles();
+const NTitleRed = ({ title, subtitle, subtitleMaxWidth }) => {
+  const classes = useStyles({ subtitleMaxWidth });
 
   return (
     <Box className={classes.wrap}>
       <Typography variant="h4" className={classes.title}>
         {title}
       </Typography>
-      <Typography variant="body1" className={classes.subtitle}>
-        {subtitle}
-      </Typography>
+      {subtitle && (
+        <Typography variant="body1" className={classes.subtitle}>
+          {subtitle}
+        </Typography>
+      )}
     </Box>
   );
 };
@@ -41,7 +43,11 @@ const useStyles = makeStyles((theme) => ({
   subtitle: {
     paddingTop: theme.spacing(2),
     color: Colors.secondary,
+    lineHeight: "15px",
     fontSize: 13,
+    maxWidth: (props) =>
+      props.subtitleMaxWidth ? props.subtitleMaxWidth : "initial",
+    margin: (props) => (props.subtitleMaxWidth ? "0 auto" : "initial"),
   },
 }));
 

@@ -507,7 +507,7 @@ const Footer = () => {
               <ListItem
                 className={classes.bottomListItem}
                 component="a"
-                href="#simple-list"
+                href="/about-us"
                 disableGutters
               >
                 <ListItemText primary="Бидний тухай" />
@@ -523,7 +523,7 @@ const Footer = () => {
               <ListItem
                 className={classes.bottomListItem}
                 component="a"
-                href="#simple-list"
+                href="/contact-us"
                 disableGutters
               >
                 <ListItemText primary="Холбоо барих" />
@@ -531,7 +531,7 @@ const Footer = () => {
               <ListItem
                 className={classes.bottomListItem}
                 component="a"
-                href="#simple-list"
+                href="/developed-by"
                 disableGutters
               >
                 <ListItemText primary="Вэб сайт хөгжүүлэгч" />

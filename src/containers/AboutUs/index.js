@@ -147,11 +147,6 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: Colors.border_red,
     },
   },
-  [theme.breakpoints.down("md")]: {
-    // leftSidebar: {
-    //   display: "none",
-    // },
-  },
 }));
 
 export default AboutUsContainer;

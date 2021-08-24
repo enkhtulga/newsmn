@@ -252,6 +252,9 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
             <MenuItem onClick={() => router.push("/account/settings")}>
               Тохиргоо
             </MenuItem>
+            <MenuItem onClick={() => router.push("/account/subscribe")}>
+              Төлбөрийн мэдээлэл
+            </MenuItem>
             <MenuItem onClick={handleCloseAccount}>Гарах</MenuItem>
           </Menu>
           <IconButton

@@ -224,5 +224,15 @@ export default createTheme({
         color: Colors.border_red,
       },
     },
+    MuiTimelineConnector: {
+      root: {
+        backgroundColor: Colors.border_red,
+      },
+    },
+    MuiTimelineContent: {
+      root: {
+        flex: 3,
+      },
+    },
   },
 });

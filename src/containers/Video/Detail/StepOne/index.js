@@ -29,7 +29,10 @@ const NStepOne = ({ handleClose, handleNext }) => {
 
 const useStyles = makeStyles((theme) => ({
   wrap: {
-    padding: 48,
+    padding: "100px 48px",
+    width: 1125,
+    margin: "0 auto",
+    maxWidth: "100%",
   },
   closeButton: {
     position: "absolute",

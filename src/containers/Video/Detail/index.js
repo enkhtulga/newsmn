@@ -1,20 +1,9 @@
 import React, { useState } from "react";
-import { Box, Grid, Typography, Button, IconButton } from "@material-ui/core";
-import StickySidebar from "../../../components/StickySidebar";
+import { Box, Grid, Typography, IconButton } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../theme/colors";
 import NBanner from "../../../components/Banner";
-import NBreadcrumbs from "../../../components/Breadcrumbs";
-import NTitle from "../../../components/Title";
-import NAuthorInfo from "../../../components/AuthorInfo";
-import NSocialVertical from "../../../components/SocialVertical";
-import NPostMeta from "../../../components/PostMeta";
-import NPostEdited from "../../../components/PostEdited";
 import NSelectTitle from "../../../components/SelectTitle";
-import NCardPostTitle from "../../../components/CardPostTitle";
-import NHitNewsItem from "../../../components/HitNewsItem";
-import NSelectPopularTitle from "../../../components/SelectPopularTitle";
-import NCardVideoLarge from "../../../components/CardVideoLarge";
 import NCardMedia from "../../../components/Card/CardMedia";
 import NCardVideoSmall from "../../../components/CardVideoSmall";
 import {
@@ -31,7 +20,7 @@ const VideoDetailContainer = ({ videoPostId }) => {
   const classes = useStyles();
 
   const [openSubscribeStepOne, setOpenSubscribeStepOne] = useState(false);
-  const [openSubscribeStepTwo, setOpenSubscribeStepTwo] = useState(false);
+  const [openSubscribeStepTwo, setOpenSubscribeStepTwo] = useState(true);
   const [openSubscribeStepThree, setOpenSubscribeStepThree] = useState(false);
 
   const handleCloseSubscribeStepOne = () => {
@@ -85,7 +74,11 @@ const VideoDetailContainer = ({ videoPostId }) => {
         </Box>
         <Box pb={9} maxWidth={1180} mr="auto" ml="auto">
           <Box className={classes.mediaOuterWrap}>
-            <NCardMedia paddingTop="54.23%" image="/video_detail_img.jpg" />
+            <NCardMedia
+              paddingTop="54.23%"
+              image="/video_detail_img.jpg"
+              link="#"
+            />
             <Box className={classes.playWrap}>
               <Box className={classes.playInnerWrap}>
                 <IconButton

@@ -74,7 +74,7 @@ const NForgotPassword = ({ handleClose }) => {
             type={"text"}
             value={email}
             onChange={handleChangeEmail}
-            labelWidth={75}
+            labelWidth={55}
             classes={{ input: classes.outlinedInput }}
           />
         </FormControl>
@@ -88,7 +88,7 @@ const NForgotPassword = ({ handleClose }) => {
             type={"text"}
             value={code}
             onChange={handleChangeCode}
-            labelWidth={125}
+            labelWidth={90}
             classes={{ input: classes.outlinedInput }}
           />
         </FormControl>
@@ -102,7 +102,7 @@ const NForgotPassword = ({ handleClose }) => {
             type={"password"}
             value={password}
             onChange={handleChangePassword}
-            labelWidth={90}
+            labelWidth={70}
             classes={{ input: classes.outlinedInput }}
           />
         </FormControl>
@@ -118,7 +118,7 @@ const NForgotPassword = ({ handleClose }) => {
             type={"password"}
             value={passwordRepeat}
             onChange={handleChangePasswordRepeat}
-            labelWidth={175}
+            labelWidth={135}
             classes={{ input: classes.outlinedInput }}
           />
         </FormControl>
@@ -153,6 +153,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     "& > label": {
       transform: "translate(14px, 8px) scale(1)",
+      fontSize: 10,
     },
   },
   note: {

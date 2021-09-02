@@ -16,7 +16,7 @@ const SavedGoodsContainer = () => {
       <Box className="module__content">
         <Box mt={10} />
         <Grid container spacing={2}>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <Box mb={5}>
               <NShopBookItem
                 title="Шилэн илд"
@@ -35,7 +35,7 @@ const SavedGoodsContainer = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <Box mb={5}>
               <NShopBookItem
                 title="Шилэн илд"
@@ -55,7 +55,7 @@ const SavedGoodsContainer = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <Box mb={5}>
               <NShopBookItem
                 title="Шилэн илд"

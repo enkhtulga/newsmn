@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grid, Typography, Switch } from "@material-ui/core";
+import { Box, Grid, Typography, Switch, Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../theme/colors";
 import NBreadcrumbs from "../../../components/Breadcrumbs";
@@ -22,8 +22,10 @@ const NotificationContainer = () => {
       <Box className="module__content">
         <Box mt={9} />
         <Grid container spacing={2}>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={3}>
+          <Hidden smDown>
+            <Grid item md={1} lg={1} />
+          </Hidden>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Typography variant="h1" className={classes.title}>
               Имэйлийн мэдэгдэл
             </Typography>
@@ -54,7 +56,7 @@ const NotificationContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Typography variant="h1" className={classes.title}>
               CONTENT
             </Typography>
@@ -72,7 +74,9 @@ const NotificationContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={1}></Grid>
+          <Hidden smDown>
+            <Grid item md={1} lg={1} />
+          </Hidden>
         </Grid>
         <Box mb={9} />
       </Box>

@@ -7,6 +7,7 @@ import {
   FormControl,
   InputLabel,
   OutlinedInput,
+  Hidden,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../theme/colors";
@@ -25,10 +26,15 @@ const SettingsContainer = () => {
       <Box className="module__content">
         <Box mt={5} />
         <Grid container spacing={2}>
-          <Grid item xs={8}>
+          <Grid item xs={12} sm={12} md={8}>
             <Box className={classes.wrap}>
-              <Box display="flex" justifyContent="space-between" mb={4}>
-                <Box display="flex">
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                mb={4}
+                flexWrap="wrap"
+              >
+                <Box display="flex" className={classes.topContent}>
                   <Typography variant="body2" className={classes.role}>
                     System Admin
                   </Typography>
@@ -60,7 +66,7 @@ const SettingsContainer = () => {
                   </Button>
                 </Box>
               </Box>
-              <Box display="flex">
+              <Box display="flex" className={classes.contentWrap}>
                 <Box
                   display="flex"
                   flexDirection="column"
@@ -150,7 +156,7 @@ const SettingsContainer = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={12} md={4}>
             <Box className={classes.wrap}>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -209,6 +215,9 @@ const SettingsContainer = () => {
                 </Grid>
               </Grid>
             </Box>
+            <Hidden mdUp>
+              <Box mb={10} />
+            </Hidden>
           </Grid>
         </Grid>
       </Box>
@@ -244,6 +253,27 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     "& > label": {
       transform: "translate(14px, 8px) scale(1)",
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    wrap: {
+      paddingBottom: theme.spacing(2),
+      marginBottom: 0,
+    },
+  },
+  [theme.breakpoints.down("xs")]: {
+    wrap: {
+      padding: theme.spacing(1),
+    },
+    contentWrap: {
+      flexWrap: "wrap",
+    },
+    name: {
+      marginBottom: theme.spacing(3),
+    },
+    topContent: {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
     },
   },
 }));

@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Grid, Typography, Button, IconButton } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Typography,
+  Button,
+  IconButton,
+  Hidden,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../theme/colors";
 import NBreadcrumbs from "../../../components/Breadcrumbs";
@@ -14,8 +21,10 @@ const OrderHistoryContainer = () => {
       <NBreadcrumbs title={"Захиалгын түүх"} />
       <Box className="module__content">
         <Grid container spacing={2}>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={8}>
+          <Hidden smDown>
+            <Grid item md={2} />
+          </Hidden>
+          <Grid item sm={12} md={8}>
             <Box mt={8} className={classes.outerWrap}>
               <Typography variant="h1" className={classes.title}>
                 Захиалгын түүх
@@ -26,22 +35,24 @@ const OrderHistoryContainer = () => {
               </Box>
               <Box className={classes.orderContentItem}>
                 <Box display="flex" alignItems="center">
-                  <IconButton size="small">
-                    <IconClose />
-                  </IconButton>
-                  <Box className={classes.mediaOuterWrap}>
-                    <NCardMedia
-                      paddingTop="140.62%"
-                      image="/shop_book_bestseller_1.jpg"
-                    />
+                  <Box mb={1}>
+                    <IconButton size="small">
+                      <IconClose />
+                    </IconButton>
+                  </Box>
+                  <Box display="flex" alignItems="center" mb={1}>
+                    <Box className={classes.mediaOuterWrap}>
+                      <NCardMedia
+                        paddingTop="140.62%"
+                        image="/shop_book_bestseller_1.jpg"
+                      />
+                    </Box>
+                    <Typography variant="h1" className={classes.bookName}>
+                      The Girl in My Mirror
+                    </Typography>
                   </Box>
                 </Box>
-                <Box>
-                  <Typography variant="h1" className={classes.bookName}>
-                    The Girl in My Mirror
-                  </Typography>
-                </Box>
-                <Box display="flex">
+                <Box display="flex" mb={1}>
                   <Typography variant="h1" className={classes.salePrice}>
                     8700₮
                   </Typography>
@@ -60,22 +71,24 @@ const OrderHistoryContainer = () => {
               </Box>
               <Box className={classes.orderContentItem}>
                 <Box display="flex" alignItems="center">
-                  <IconButton size="small">
-                    <IconClose />
-                  </IconButton>
-                  <Box className={classes.mediaOuterWrap}>
-                    <NCardMedia
-                      paddingTop="140.62%"
-                      image="/shop_book_bestseller_2.jpg"
-                    />
+                  <Box mb={1}>
+                    <IconButton size="small">
+                      <IconClose />
+                    </IconButton>
+                  </Box>
+                  <Box display="flex" alignItems="center" mb={1}>
+                    <Box className={classes.mediaOuterWrap}>
+                      <NCardMedia
+                        paddingTop="140.62%"
+                        image="/shop_book_bestseller_2.jpg"
+                      />
+                    </Box>
+                    <Typography variant="h1" className={classes.bookName}>
+                      The Girl in My Mirror
+                    </Typography>
                   </Box>
                 </Box>
-                <Box>
-                  <Typography variant="h1" className={classes.bookName}>
-                    The Girl in My Mirror
-                  </Typography>
-                </Box>
-                <Box display="flex">
+                <Box display="flex" mb={1}>
                   <Typography variant="h1" className={classes.salePrice}>
                     8700₮
                   </Typography>
@@ -94,7 +107,9 @@ const OrderHistoryContainer = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={2}></Grid>
+          <Hidden smDown>
+            <Grid item md={2} />
+          </Hidden>
         </Grid>
       </Box>
     </Box>
@@ -111,6 +126,8 @@ const useStyles = makeStyles((theme) => ({
   bookName: {
     fontSize: 14,
     color: Colors.black,
+    width: 145,
+    maxWidth: "100%",
   },
   orderContentItem: {
     display: "flex",
@@ -120,6 +137,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     borderTop: "1px solid",
     borderTopColor: Colors.border_gray,
+    flexWrap: "wrap",
   },
   outerWrap: {
     borderBottom: "1px solid",
@@ -137,7 +155,8 @@ const useStyles = makeStyles((theme) => ({
   mediaOuterWrap: {
     width: 64,
     minWidth: 64,
-    marginLeft: 55,
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
   },
   salePrice: {
     color: Colors.border_red,
@@ -162,6 +181,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     lineHeight: "20px",
     marginLeft: 8,
+  },
+  [theme.breakpoints.down("md")]: {
+    salePrice: {
+      fontSize: 18,
+    },
+  },
+  [theme.breakpoints.down("xs")]: {
+    removeButton: {
+      padding: 0,
+    },
   },
 }));
 

@@ -9,19 +9,28 @@ import {
   Button,
 } from "@material-ui/core";
 import { Colors } from "../../../theme/colors";
-import { Facebook as IconFacebook } from "@material-ui/icons";
 
-const NLogin = ({ onHandleRegister, onHandleForgotPassword }) => {
+const NForgotPassword = ({ handleClose }) => {
   const classes = useStyles();
   const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordRepeat, setPasswordRepeat] = useState("");
 
   const handleChangeEmail = (event) => {
     setEmail(event.target.value);
   };
 
+  const handleChangeCode = (event) => {
+    setCode(event.target.value);
+  };
+
   const handleChangePassword = (event) => {
     setPassword(event.target.value);
+  };
+
+  const handleChangePasswordRepeat = (event) => {
+    setPasswordRepeat(event.target.value);
   };
 
   return (
@@ -37,11 +46,22 @@ const NLogin = ({ onHandleRegister, onHandleForgotPassword }) => {
         justifyContent="flex-start"
       >
         <Box>
-          <img src="/icon_account.png" width={20} height={20} />
+          <img src="/icon_forgot_password.png" width={20} height={20} />
         </Box>
         <Box mb={2}>
           <Typography variant="body2" className={classes.loginLabel}>
-            Нэвтрэх
+            Нууц үг сэргээх
+          </Typography>
+        </Box>
+        <Box mb={3}>
+          <Typography className={classes.note}>
+            {"Та гар утсандаа ирсэн"}
+          </Typography>
+          <Typography className={classes.note}>
+            {"баталгаажуулах код болон шинэ"}
+          </Typography>
+          <Typography className={classes.note}>
+            {"нууц үгээ оруулна уу"}
           </Typography>
         </Box>
         <FormControl
@@ -49,12 +69,12 @@ const NLogin = ({ onHandleRegister, onHandleForgotPassword }) => {
           fullWidth
           className={classes.formControl}
         >
-          <InputLabel htmlFor="email">Имэйл хаяг</InputLabel>
+          <InputLabel htmlFor="email">Имэйл хаяг*</InputLabel>
           <OutlinedInput
             type={"text"}
             value={email}
             onChange={handleChangeEmail}
-            labelWidth={65}
+            labelWidth={75}
             classes={{ input: classes.outlinedInput }}
           />
         </FormControl>
@@ -63,66 +83,55 @@ const NLogin = ({ onHandleRegister, onHandleForgotPassword }) => {
           fullWidth
           className={classes.formControl}
         >
-          <InputLabel htmlFor="password">Нууц үг</InputLabel>
+          <InputLabel htmlFor="password">Баталгаажуулах код*</InputLabel>
+          <OutlinedInput
+            type={"text"}
+            value={code}
+            onChange={handleChangeCode}
+            labelWidth={125}
+            classes={{ input: classes.outlinedInput }}
+          />
+        </FormControl>
+        <FormControl
+          variant="outlined"
+          fullWidth
+          className={classes.formControl}
+        >
+          <InputLabel htmlFor="password">Нууц үг үүсгэх*</InputLabel>
           <OutlinedInput
             type={"password"}
             value={password}
             onChange={handleChangePassword}
-            labelWidth={45}
+            labelWidth={90}
+            classes={{ input: classes.outlinedInput }}
+          />
+        </FormControl>
+        <FormControl
+          variant="outlined"
+          fullWidth
+          className={classes.formControl}
+        >
+          <InputLabel htmlFor="password">
+            Шинэ нууц үг давтан оруулах*
+          </InputLabel>
+          <OutlinedInput
+            type={"password"}
+            value={passwordRepeat}
+            onChange={handleChangePasswordRepeat}
+            labelWidth={175}
             classes={{ input: classes.outlinedInput }}
           />
         </FormControl>
         <Box mb={2} width="100%">
-          <Button variant="contained" color="primary" fullWidth>
-            Нэвтрэх
-          </Button>
-        </Box>
-        <Box mb={5} width="100%">
-          <Button variant="outlined" fullWidth onClick={onHandleForgotPassword}>
-            Нууц үг сэргээх
-          </Button>
-        </Box>
-        <Box mb={2} width="100%">
           <Button
             variant="contained"
+            color="primary"
             fullWidth
-            style={{ backgroundColor: Colors.dark_blue, color: "#F9F7F7" }}
-            onClick={onHandleRegister}
+            onClick={handleClose}
           >
-            Шинээр бүртгүүлэх
+            Сэргээх
           </Button>
         </Box>
-        <Box display="flex" justifyContent="space-between" width="100%" mb={3}>
-          <Button
-            variant="contained"
-            style={{
-              backgroundColor: "#0569FF",
-              color: Colors.white,
-              width: 88,
-            }}
-          >
-            <IconFacebook fontSize="small" />
-          </Button>
-          <Button
-            variant="contained"
-            style={{
-              backgroundColor: "#ECEFF1",
-              color: Colors.white,
-              width: 88,
-            }}
-          >
-            <img src="/icon_gmail.png" width={16} />
-          </Button>
-        </Box>
-        <Typography className={classes.note}>
-          {`Та шинээр бүртгэл үүсгэн`}
-        </Typography>
-        <Typography className={classes.note}>
-          {`www.news.mn сайтаас хүссэн`}
-        </Typography>
-        <Typography className={classes.note}>
-          {`мэдээллээ цаг алдахгүй унших болно`}
-        </Typography>
       </Box>
     </Box>
   );
@@ -147,8 +156,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   note: {
-    fontSize: 10,
-    lineHeight: "12px",
+    fontSize: 12,
+    lineHeight: "14px",
     color: "#767474",
     textAlign: "center",
   },
@@ -157,4 +166,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default NLogin;
+export default NForgotPassword;

@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Box, Grid, Typography, Switch, Checkbox } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Typography,
+  Switch,
+  Checkbox,
+  Hidden,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../theme/colors";
 import NBreadcrumbs from "../../../components/Breadcrumbs";
@@ -29,7 +36,7 @@ const FollowingContainer = () => {
       <Box className="module__content">
         <Box mt={5} />
         <Grid container spacing={2}>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={7} md={6} lg={3}>
             <Typography variant="h1" className={classes.title}>
               Өдөр тутмын имэйлийн анхааруулга авах
             </Typography>
@@ -47,8 +54,9 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={9}></Grid>
-          <Grid item xs={3}>
+        </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Улс төр
@@ -62,7 +70,7 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Нийгэм
@@ -76,7 +84,7 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Спорт
@@ -90,7 +98,7 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Энтертайнмент
@@ -104,7 +112,7 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Эдийн засаг
@@ -118,7 +126,7 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Дэлхий
@@ -132,7 +140,7 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Улс төр
@@ -146,7 +154,7 @@ const FollowingContainer = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <Box className={classes.itemWrap}>
               <Typography variant="h1" className={classes.itemLabel}>
                 Шар мэдээ

@@ -177,7 +177,7 @@ const NDrawer = ({ open, toggleDrawer }) => {
               <ListItem
                 button
                 className={classes.nested}
-                onClick={() => router.push("/shop")}
+                onClick={() => router.push("/video")}
               >
                 <CustomListItemText primary="Видео сан" />
               </ListItem>
@@ -200,13 +200,25 @@ const NDrawer = ({ open, toggleDrawer }) => {
               >
                 <CustomListItemText primary="Ном" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/shop-art")}
+              >
                 <CustomListItemText primary="Уран зураг" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/shop-ebook")}
+              >
                 <CustomListItemText primary="Цахим ном" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/shop-audio-book")}
+              >
                 <CustomListItemText primary="Аудио ном" />
               </ListItem>
             </List>
@@ -221,21 +233,29 @@ const NDrawer = ({ open, toggleDrawer }) => {
           </ListItem>
           <Collapse in={state["trip"]} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/trip")}
+              >
                 <CustomListItemText primary="Дотоод" />
               </ListItem>
-              <ListItem button className={classes.nested}>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/trip")}
+              >
                 <CustomListItemText primary="Гадаад" />
               </ListItem>
             </List>
           </Collapse>
-          <ListItem button>
+          <ListItem button onClick={() => router.push("/realestate")}>
             <CustomListItemText primary="Үл хөдлөх" />
           </ListItem>
-          <ListItem button>
+          <ListItem button onClick={() => router.push("/")}>
             <CustomListItemText primary="Судалгаа" />
           </ListItem>
-          <ListItem button>
+          <ListItem button onClick={() => router.push("/corners")}>
             <CustomListItemText primary="News+" />
           </ListItem>
         </List>
@@ -286,8 +306,8 @@ const NDrawer = ({ open, toggleDrawer }) => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    maxWidth: 390,
     width: "100%",
-    width: 390,
     height: "100%",
     backgroundColor: Colors.title,
   },

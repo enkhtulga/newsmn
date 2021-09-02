@@ -45,6 +45,7 @@ import NDialog from "../../components/Dialog";
 import NLogin from "./Login";
 import NRegister from "./Register";
 import NSearch from "./Search";
+import NForgotPassword from "./ForgotPassword";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -95,6 +96,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const [selectedVeryLarge, setSelectedVeryLarge] = useState("");
 
   const [openLogin, setOpenLogin] = useState(false);
+  const [openForgotPassword, setOpenForgotPassword] = useState(false);
   const [openRegister, setOpenRegister] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
 
@@ -104,6 +106,10 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
     setOpenLogin(false);
   };
 
+  const handleCloseForgotPassword = () => {
+    setOpenForgotPassword(false);
+  };
+
   const handleCloseRegister = () => {
     setOpenRegister(false);
   };
@@ -111,6 +117,11 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const onHandleRegister = () => {
     setOpenLogin(false);
     setOpenRegister(true);
+  };
+
+  const onHandleForgotPassword = () => {
+    setOpenLogin(false);
+    setOpenForgotPassword(true);
   };
 
   const handleCloseSearch = () => {
@@ -177,7 +188,14 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
   const renderDialogContent = (value) => {
     switch (value) {
       case "login":
-        return <NLogin onHandleRegister={onHandleRegister} />;
+        return (
+          <NLogin
+            onHandleRegister={onHandleRegister}
+            onHandleForgotPassword={onHandleForgotPassword}
+          />
+        );
+      case "forgotPassword":
+        return <NForgotPassword handleClose={handleCloseForgotPassword} />;
       case "register":
         return (
           <NRegister
@@ -244,7 +262,7 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
               Миний сагс
             </MenuItem>
             <MenuItem onClick={() => router.push("/account/notifications")}>
-              мэдэгдэл
+              Мэдэгдэл
             </MenuItem>
             <MenuItem onClick={() => router.push("/account/following")}>
               Дагаж байна
@@ -511,6 +529,12 @@ const Header = ({ toggleDrawer, open, yellow, hasBanner }) => {
       </AppBar>
       <NDialog open={openLogin} handleClose={handleCloseLogin}>
         {renderDialogContent("login")}
+      </NDialog>
+      <NDialog
+        open={openForgotPassword}
+        handleClose={handleCloseForgotPassword}
+      >
+        {renderDialogContent("forgotPassword")}
       </NDialog>
       <NDialog open={openRegister} handleClose={handleCloseRegister}>
         {renderDialogContent("register")}

@@ -129,6 +129,7 @@ const useStyles = makeStyles((theme) => ({
     "& > fieldset": {
       border: "none",
       boxShadow: "inset 0 -2px 0 0 #333",
+      WebkitBoxShadow: "inset 0 -2px 0 0 #333",
       borderRadius: 0,
     },
   },

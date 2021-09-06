@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Grid, Typography, Button } from "@material-ui/core";
+import { Box, Grid, Typography, Button, TextField } from "@material-ui/core";
 import StickySidebar from "../../components/StickySidebar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../theme/colors";
@@ -14,16 +14,22 @@ import NSelectTitle from "../../components/SelectTitle";
 import NCardPostTitle from "../../components/CardPostTitle";
 import NHitNewsItem from "../../components/HitNewsItem";
 import NSelectPopularTitle from "../../components/SelectPopularTitle";
+import NComment from "../../components/Comment";
 
 const PostDetailContainer = ({ postId }) => {
   const classes = useStyles();
   const [hasEditable, setHasEditable] = useState(false);
+  const [showComment, setShowComment] = useState(false);
 
   useEffect(() => {
     if (postId && postId == 2) {
       setHasEditable(true);
     }
   }, [postId]);
+
+  const toggleComment = () => {
+    setShowComment(!showComment);
+  };
 
   return (
     <Box>
@@ -244,9 +250,63 @@ const PostDetailContainer = ({ postId }) => {
           <Grid item xs={12} sm={1} md={2} lg={3}></Grid>
           <Grid item xs={12} sm={10} md={8} lg={6}>
             <Box mt={10} textAlign="center" mb={11}>
-              <Button variant="contained" className={classes.comment}>
+              <Button
+                variant="contained"
+                className={classes.comment}
+                onClick={toggleComment}
+              >
                 Сэтгэгдэл харах /37/
               </Button>
+              {showComment && (
+                <Box textAlign="left" mt={2}>
+                  <Typography variant="body2" className={classes.commentTitle}>
+                    Cэтгэгдэл:
+                  </Typography>
+                  <NComment
+                    name="Админ"
+                    commentDate="2020-01-05"
+                    comment="Proactively fabricate one-to-one materials via effective e-business. Completely synergize scalable e-commerce rather than high standards in e-services."
+                  />
+                  <NComment
+                    name="Зочин"
+                    image="/home_img_11.jpg"
+                    commentDate="2020-01-05"
+                    comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
+                    hasIndent
+                  />
+                  <NComment
+                    name="Админ"
+                    commentDate="2020-01-05"
+                    comment="Proactively fabricate one-to-one materials via effective e-business. Completely synergize scalable e-commerce rather than high standards in e-services.
+Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology after plug-and-play networks."
+                  />
+                  <NComment
+                    name="Зочин"
+                    image="/home_img_11.jpg"
+                    commentDate="2020-01-05"
+                    comment="Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products."
+                    marginLeft={86}
+                  />
+                  <TextField
+                    label="Бичих талбар"
+                    multiline
+                    fullWidth
+                    rows={6}
+                    variant="outlined"
+                  />
+                  <Box mt={3} />
+                  <TextField label="И-Мэйл" fullWidth variant="outlined" />
+                  <Box mt={3} mb={9} display="flex">
+                    <Button variant="contained" color="primary">
+                      Илгээх
+                    </Button>
+                    <Box mr={2} />
+                    <Button variant="outlined" color="primary">
+                      Арилгах
+                    </Button>
+                  </Box>
+                </Box>
+              )}
             </Box>
             <NSelectTitle title="Холбоотой сэдэв" hasBorder>
               <img
@@ -405,6 +465,12 @@ const useStyles = makeStyles((theme) => ({
     borderLeft: "1px solid",
     borderLeftColor: Colors.border_gray,
     paddingLeft: theme.spacing(3),
+  },
+  commentTitle: {
+    fontWeight: "700",
+    paddingBottom: theme.spacing(2),
+    borderBottom: "1px solid #dcdcdc",
+    marginBottom: theme.spacing(2),
   },
   [theme.breakpoints.down("md")]: {
     leftSidebar: {

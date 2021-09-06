@@ -128,8 +128,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     "& > fieldset": {
       border: "none",
-      boxShadow: "inset 0 -2px 0 0 #333",
-      WebkitBoxShadow: "inset 0 -2px 0 0 #333",
+      borderBottom: "2px solid #333 !important",
+      // boxShadow: "inset 0 -2px 0 0 #333",
       borderRadius: 0,
     },
   },

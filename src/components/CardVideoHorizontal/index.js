@@ -23,18 +23,20 @@ const NCardVideoHorizontal = ({
     <Box className={classes.wrap}>
       <NCard className={classes.cardWrap} square>
         <Box className={classes.mediaOuterWrap}>
-          <NCardMedia
-            paddingTop={paddingTop || "65.06%"}
-            image={image || "/video_post_horizontal_1.jpg"}
-            link="/video/1"
-          />
-          {hasVideo && (
-            <Box className={classes.playWrap}>
-              <Box className={classes.playInnerWrap}>
-                <IconPlayArrow className={classes.play} />
+          <Box position="relative">
+            <NCardMedia
+              paddingTop={paddingTop || "65.06%"}
+              image={image || "/video_post_horizontal_1.jpg"}
+              link="/video/1"
+            />
+            {hasVideo && (
+              <Box className={classes.playWrap}>
+                <Box className={classes.playInnerWrap}>
+                  <IconPlayArrow className={classes.play} />
+                </Box>
               </Box>
-            </Box>
-          )}
+            )}
+          </Box>
         </Box>
         <NCardContent className={classes.contentWrap}>
           <Typography variant="overline" className={classes.subtitle}>
@@ -143,6 +145,14 @@ const useStyles = makeStyles((theme) => ({
   },
   play: {
     fontSize: 50,
+  },
+  [theme.breakpoints.down("xs")]: {
+    cardWrap: {
+      display: "block",
+    },
+    contentWrap: {
+      padding: 0,
+    },
   },
 }));
 

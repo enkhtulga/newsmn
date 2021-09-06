@@ -111,11 +111,6 @@ const HomeContainer = () => {
             noImage
             hasBorder
           />
-          <NCardPostTitle
-            title="Москвад суугаа Барууны элчин сайдууд “хууль зөрчив”"
-            noImage
-            hasBorder
-          />
         </StickySidebar>
         <Box className={classes.contentTop}>
           <NTopPost hasPhotoBy />

@@ -167,7 +167,7 @@ const VideoContainer = () => {
           </NSelectTitle>
           <Box mt={2} />
           <Grid container spacing={2}>
-            <Grid item xs={8} sm={12} md={8}>
+            <Grid item xs={12} sm={12} md={8}>
               <NCustomScrollArea height={1100} scrollColor={Colors.border_red}>
                 <NCardVideoHorizontal image="/video_post_horizontal_2.jpg" />
                 <NCardVideoHorizontal
@@ -207,7 +207,7 @@ const VideoContainer = () => {
                 />
               </NCustomScrollArea>
             </Grid>
-            <Grid item xs={4} sm={12} md={4}>
+            <Grid item xs={12} sm={12} md={4}>
               <NCustomScrollArea height={548} scrollColor={Colors.border_red}>
                 <NCardVideoHorizontalSmall
                   title="Хорт хавдар хүүхдийн эрүүл мэндэд заналхийлж байна"

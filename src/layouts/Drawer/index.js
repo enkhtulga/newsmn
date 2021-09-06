@@ -30,6 +30,7 @@ const NDrawer = ({ open, toggleDrawer }) => {
     content: false,
     trade: false,
     trip: false,
+    newsPlus: false,
   });
 
   const toggleListItem = (anchor, open) => (event) => {
@@ -255,9 +256,49 @@ const NDrawer = ({ open, toggleDrawer }) => {
           <ListItem button onClick={() => router.push("/")}>
             <CustomListItemText primary="Судалгаа" />
           </ListItem>
-          <ListItem button onClick={() => router.push("/corners")}>
+          <ListItem
+            button
+            onClick={toggleListItem("newsPlus", !state["newsPlus"])}
+          >
             <CustomListItemText primary="News+" />
+            {state["newsPlus"] ? (
+              <IconExpandLess style={{ color: "#fff" }} />
+            ) : (
+              <IconExpandMore style={{ color: "#fff" }} />
+            )}
           </ListItem>
+          <Collapse in={state["newsPlus"]} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/archive")}
+              >
+                <CustomListItemText primary="Архив" />
+              </ListItem>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/corners")}
+              >
+                <CustomListItemText primary="News брэнд" />
+              </ListItem>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/corners")}
+              >
+                <CustomListItemText primary="Булангууд" />
+              </ListItem>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => router.push("/comprehensive")}
+              >
+                <CustomListItemText primary="Цогц мэдээ" />
+              </ListItem>
+            </List>
+          </Collapse>
         </List>
         <Box className={classes.bottomWrap}>
           <NTitle title="Hit news" hasBorder>
@@ -323,6 +364,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(6),
     paddingRight: theme.spacing(6),
     paddingBottom: theme.spacing(2),
+    backgroundColor: Colors.title,
   },
   bottomWrap: {
     paddingTop: theme.spacing(3),
